@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="4">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="5"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="6">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="7"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКонтрольный" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрольный параметр</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа контрольный</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаКонтрольныйРасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<InputField name="ФлагМножественногоВыбора" id="1">
+					<DataPath>ФлагМножественногоВыбора</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметр возможности группового редактирования</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По занчению контрольного параметра в грузопереовзке/заказе, определяется необходимость группового редактирования параметров, указанных в списке параметров групового редактирования.
+Допустимый тип значения контрольного параметра - "Булево"</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ФлагМножественногоВыбораКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ФлагМножественногоВыбораРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список параметров группового редактирования</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="34"/>
+			<ChildItems>
+				<Table name="СписокПараметров" id="8">
+					<Representation>List</Representation>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>СписокПараметров</DataPath>
+					<RowPictureDataPath>СписокПараметров.Picture</RowPictureDataPath>
+					<ContextMenu name="СписокПараметровКонтекстноеМеню" id="9"/>
+					<AutoCommandBar name="СписокПараметровКоманднаяПанель" id="10">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="СписокПараметровДобавить" id="24">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Item.СписокПараметров.StandardCommand.Add</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="СписокПараметровДобавитьРасширеннаяПодсказка" id="25"/>
+							</Button>
+							<Button name="СписокПараметровУдалить" id="26">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Item.СписокПараметров.StandardCommand.Delete</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="СписокПараметровУдалитьРасширеннаяПодсказка" id="27"/>
+							</Button>
+							<Button name="СписокПараметровОткрытьЗначение" id="37">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОткрытьЗначениеЭлемента</CommandName>
+								<ExtendedTooltip name="СписокПараметровОткрытьЗначениеРасширеннаяПодсказка" id="38"/>
+							</Button>
+							<Button name="СписокПараметровЗапистьОбработкуВРеквизитПараметра" id="28">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗаписатьОбработкуВРеквизитПараметра</CommandName>
+								<ExtendedTooltip name="СписокПараметровЗапистьОбработкуВРеквизитПараметраРасширеннаяПодсказка" id="29"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СписокПараметровРасширеннаяПодсказка" id="11"/>
+					<SearchStringAddition name="СписокПараметровСтрокаПоиска" id="12">
+						<AdditionSource>
+							<Item>СписокПараметров</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокПараметровСтрокаПоискаКонтекстноеМеню" id="13"/>
+						<ExtendedTooltip name="СписокПараметровСтрокаПоискаРасширеннаяПодсказка" id="14"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокПараметровСостояниеПросмотра" id="15">
+						<AdditionSource>
+							<Item>СписокПараметров</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокПараметровСостояниеПросмотраКонтекстноеМеню" id="16"/>
+						<ExtendedTooltip name="СписокПараметровСостояниеПросмотраРасширеннаяПодсказка" id="17"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокПараметровУправлениеПоиском" id="18">
+						<AdditionSource>
+							<Item>СписокПараметров</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокПараметровУправлениеПоискомКонтекстноеМеню" id="19"/>
+						<ExtendedTooltip name="СписокПараметровУправлениеПоискомРасширеннаяПодсказка" id="20"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="СписокПараметровЗначение" id="21">
+							<DataPath>СписокПараметров.Value</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoChoiceIncomplete>false</AutoChoiceIncomplete>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+							<ContextMenu name="СписокПараметровЗначениеКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="СписокПараметровЗначениеРасширеннаяПодсказка" id="23"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.CW_ПримерГрупповогоРедактированияПараметров</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ФлагМножественногоВыбора" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметр множественного выбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.CW_ПараметрыГрузоперевозок</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокПараметров" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список параметров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.CW_ПараметрыГрузоперевозок</v8:Type>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьИЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьИЗакрыть</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаписатьОбработкуВРеквизитПараметра" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать обработку в реквизит параметра</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать обработку в реквизит параметра</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ОбновлениеРО16</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаписатьОбработкуВРеквизитПараметра</Action>
+		</Command>
+		<Command name="ОткрытьЗначениеЭлемента" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть значение элемента</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть значение элемента</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьЗначениеЭлемента</Action>
+		</Command>
+	</Commands>
+</Form>

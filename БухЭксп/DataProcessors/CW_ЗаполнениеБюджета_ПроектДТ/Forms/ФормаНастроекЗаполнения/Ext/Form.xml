@@ -1,0 +1,806 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаТД" id="97">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таможенные декларации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ТД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаТДРасширеннаяПодсказка" id="98"/>
+			<ChildItems>
+				<Table name="ТаблицаДеклараций" id="99">
+					<Representation>List</Representation>
+					<RowSelectionMode>Row</RowSelectionMode>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>ТаблицаДеклараций</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТаблицаДекларацийКонтекстноеМеню" id="100"/>
+					<AutoCommandBar name="ТаблицаДекларацийКоманднаяПанель" id="101">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ТаблицаДекларацийРасширеннаяПодсказка" id="102"/>
+					<SearchStringAddition name="ТаблицаДекларацийСтрокаПоиска" id="103">
+						<AdditionSource>
+							<Item>ТаблицаДеклараций</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаДекларацийСтрокаПоискаКонтекстноеМеню" id="106"/>
+						<ExtendedTooltip name="ТаблицаДекларацийСтрокаПоискаРасширеннаяПодсказка" id="107"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТаблицаДекларацийСостояниеПросмотра" id="108">
+						<AdditionSource>
+							<Item>ТаблицаДеклараций</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаДекларацийСостояниеПросмотраКонтекстноеМеню" id="111"/>
+						<ExtendedTooltip name="ТаблицаДекларацийСостояниеПросмотраРасширеннаяПодсказка" id="112"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТаблицаДекларацийУправлениеПоиском" id="113">
+						<AdditionSource>
+							<Item>ТаблицаДеклараций</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаДекларацийУправлениеПоискомКонтекстноеМеню" id="116"/>
+						<ExtendedTooltip name="ТаблицаДекларацийУправлениеПоискомРасширеннаяПодсказка" id="117"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">ТаблицаДекларацийВыбор</Event>
+					</Events>
+					<ChildItems>
+						<CheckBoxField name="ТаблицаДекларацийВыбрана" id="136">
+							<DataPath>ТаблицаДеклараций.Выбрана</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаДекларацийВыбранаКонтекстноеМеню" id="137"/>
+							<ExtendedTooltip name="ТаблицаДекларацийВыбранаРасширеннаяПодсказка" id="138"/>
+							<Events>
+								<Event name="OnChange">ТаблицаДекларацийВыбранаПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="ТаблицаДекларацийНомерГТД" id="118">
+							<DataPath>ТаблицаДеклараций.НомерГТД</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаДекларацийНомерГТДКонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="ТаблицаДекларацийНомерГТДРасширеннаяПодсказка" id="120"/>
+						</InputField>
+						<InputField name="ТаблицаДекларацийКлиент" id="121">
+							<DataPath>ТаблицаДеклараций.Клиент</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаДекларацийКлиентКонтекстноеМеню" id="122"/>
+							<ExtendedTooltip name="ТаблицаДекларацийКлиентРасширеннаяПодсказка" id="123"/>
+						</InputField>
+						<InputField name="ТаблицаДекларацийИмпортер" id="124">
+							<DataPath>ТаблицаДеклараций.Импортер</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаДекларацийИмпортерКонтекстноеМеню" id="125"/>
+							<ExtendedTooltip name="ТаблицаДекларацийИмпортерРасширеннаяПодсказка" id="126"/>
+						</InputField>
+						<InputField name="ТаблицаДекларацийВалютаИнвойса" id="127">
+							<DataPath>ТаблицаДеклараций.Валюта</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаДекларацийВалютаИнвойсаКонтекстноеМеню" id="128"/>
+							<ExtendedTooltip name="ТаблицаДекларацийВалютаИнвойсаРасширеннаяПодсказка" id="129"/>
+						</InputField>
+						<InputField name="ТаблицаДекларацийВсегоРуб" id="130">
+							<DataPath>ТаблицаДеклараций.ВсегоРуб</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Всего платежей (Руб.)</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаДекларацийВсегоРубКонтекстноеМеню" id="131"/>
+							<ExtendedTooltip name="ТаблицаДекларацийВсегоРубРасширеннаяПодсказка" id="132"/>
+						</InputField>
+						<InputField name="ТаблицаДекларацийНетарифкаРуб" id="133">
+							<DataPath>ТаблицаДеклараций.НетарифкаРуб</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаДекларацийНетарифкаРубКонтекстноеМеню" id="134"/>
+							<ExtendedTooltip name="ТаблицаДекларацийНетарифкаРубРасширеннаяПодсказка" id="135"/>
+						</InputField>
+						<InputField name="ТаблицаДекларацийБрокерскиеУслугиРуб" id="169">
+							<DataPath>ТаблицаДеклараций.БрокерскиеУслугиРуб</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаДекларацийБрокерскиеУслугиРубКонтекстноеМеню" id="170"/>
+							<ExtendedTooltip name="ТаблицаДекларацийБрокерскиеУслугиРубРасширеннаяПодсказка" id="171"/>
+						</InputField>
+						<InputField name="ТаблицаДекларацийПроектДТ" id="164">
+							<DataPath>ТаблицаДеклараций.ПроектДТ</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаДекларацийПроектДТКонтекстноеМеню" id="165"/>
+							<ExtendedTooltip name="ТаблицаДекларацийПроектДТРасширеннаяПодсказка" id="166"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПараметры" id="139">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа параметры</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="140"/>
+			<ChildItems>
+				<InputField name="Организация" id="141">
+					<DataPath>Организация</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="142"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="143"/>
+				</InputField>
+				<UsualGroup name="ГруппаКолонки" id="144">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа колонки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа колонки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКолонкиРасширеннаяПодсказка" id="145"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКолонка1" id="146">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа колонка1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа колонка1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКолонка1РасширеннаяПодсказка" id="147"/>
+							<ChildItems>
+								<InputField name="ТамПлатежи_Номенклатура" id="150">
+									<DataPath>ТамПлатежи_Номенклатура</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<ContextMenu name="ТамПлатежи_НоменклатураКонтекстноеМеню" id="151"/>
+									<ExtendedTooltip name="ТамПлатежи_НоменклатураРасширеннаяПодсказка" id="152"/>
+								</InputField>
+								<InputField name="Нетарифка_Номенклатура" id="156">
+									<DataPath>Нетарифка_Номенклатура</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<ContextMenu name="Нетарифка_НоменклатураКонтекстноеМеню" id="157"/>
+									<ExtendedTooltip name="Нетарифка_НоменклатураРасширеннаяПодсказка" id="158"/>
+								</InputField>
+								<InputField name="БрокерскиеУслуги_Номенклатура" id="172">
+									<DataPath>БрокерскиеУслуги_Номенклатура</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<ContextMenu name="БрокерскиеУслуги_НоменклатураКонтекстноеМеню" id="173"/>
+									<ExtendedTooltip name="БрокерскиеУслуги_НоменклатураРасширеннаяПодсказка" id="174"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКолонка2" id="148">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа колонка2</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа колонка2</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКолонка2РасширеннаяПодсказка" id="149"/>
+							<ChildItems>
+								<InputField name="ТамПлатежи_Контрагент" id="153">
+									<DataPath>ТамПлатежи_Контрагент</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<ContextMenu name="ТамПлатежи_КонтрагентКонтекстноеМеню" id="154"/>
+									<ExtendedTooltip name="ТамПлатежи_КонтрагентРасширеннаяПодсказка" id="155"/>
+								</InputField>
+								<InputField name="Нетарифка_Контрагент" id="159">
+									<DataPath>Нетарифка_Контрагент</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<ContextMenu name="Нетарифка_КонтрагентКонтекстноеМеню" id="160"/>
+									<ExtendedTooltip name="Нетарифка_КонтрагентРасширеннаяПодсказка" id="161"/>
+								</InputField>
+								<InputField name="БрокерскиеУслуги_Контрагент" id="175">
+									<DataPath>БрокерскиеУслуги_Контрагент</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<ContextMenu name="БрокерскиеУслуги_КонтрагентКонтекстноеМеню" id="176"/>
+									<ExtendedTooltip name="БрокерскиеУслуги_КонтрагентРасширеннаяПодсказка" id="177"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<CommandBar name="КП" id="61">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КП</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КП</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="КПExtendedTooltip" id="95"/>
+			<ChildItems>
+				<Button name="Выполнить" id="62">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.ВыполнитьДействие</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполнить</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ВыполнитьExtendedTooltip" id="96"/>
+				</Button>
+				<Button name="Закрыть" id="167">
+					<Type>CommandBarButton</Type>
+					<Representation>Text</Representation>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отмена</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="168"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.CW_ЗаполнениеБюджета_ПроектДТ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ВерсияБюджета" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия бюджета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.CW_ВерсииБюджетов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Аналитика" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.CW_Заказы</v8:Type>
+				<v8:Type>cfg:CatalogRef.CW_Грузоперевозки</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Обработка" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработка</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="Организация" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаДеклараций" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица деклараций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="НомерГТД" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер ГТД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.НомераГТД</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Клиент" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Клиент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Импортер" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Импортер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Валюта" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюта инвойса</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВсегоРуб" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Всего (Руб.)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НетарифкаРуб" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нетарифка (Руб.)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Выбрана" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбрана</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПроектДТ" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проект ДТ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.CW_ПроектыДТ</v8:Type>
+					</Type>
+				</Column>
+				<Column name="БрокерскиеУслугиРуб" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Брокерские услуги (Руб.)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТамПлатежи_Номенклатура" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таможенные платежи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТамПлатежи_Контрагент" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Нетарифка_Контрагент" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Нетарифка_Номенклатура" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нетарифка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтавкаБезНДС" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ставка без НДС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.СтавкиНДС</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КешТаблицаДеклараций" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица деклараций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="НомерГТД" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер ГТД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.НомераГТД</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Клиент" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Клиент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Импортер" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Импортер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Валюта" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюта инвойса</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВсегоРуб" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Всего (Руб.)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НетарифкаРуб" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нетарифка (Руб.)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Грузоперевозка" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Грузоперевозка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.CW_Грузоперевозки</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтавкаНДС" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ставка НДС</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.СтавкиНДС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПроектДТ" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проект ДТ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.CW_ПроектыДТ</v8:Type>
+					</Type>
+				</Column>
+				<Column name="БрокерскиеУслугиРуб" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Брокерские услуги (Руб.)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Валюта" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокСтавкиНДС" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список ставки НДС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:EnumRef.СтавкиНДС</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="СтавкаНДС" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ставка НДС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.СтавкиНДС</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыбранныйПроектДТ" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранный проект ДТ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.CW_ПроектыДТ</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="БрокерскиеУслуги_Контрагент" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="БрокерскиеУслуги_Номенклатура" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Брокерские услуги</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СнятьВыделение" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять выделение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять выделение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьВыделение</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Выделить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Выделить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыполнитьДействие" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить действие</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить действие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьДействие</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

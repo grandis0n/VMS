@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Width>70</Width>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ВидСубъектаОтбор" id="16">
+			<DataPath>ВидСубъекта</DataPath>
+			<BackColor>style:ToolTipBackColor</BackColor>
+			<ContextMenu name="ВидСубъектаОтборКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ВидСубъектаОтборExtendedTooltip" id="25"/>
+			<Events>
+				<Event name="OnChange">ВидСубъектаОтборПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>Top</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="СписокСоздать" id="22">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<CommandName>Form.Item.Список.StandardCommand.Create</CommandName>
+						<ExtendedTooltip name="СписокСоздатьExtendedTooltip" id="26"/>
+					</Button>
+					<Button name="СписокСкопировать" id="23">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Список.StandardCommand.Copy</CommandName>
+						<ExtendedTooltip name="СписокСкопироватьExtendedTooltip" id="27"/>
+					</Button>
+					<Button name="СписокУдалить" id="24">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Список.StandardCommand.Delete</CommandName>
+						<ExtendedTooltip name="СписокУдалитьExtendedTooltip" id="28"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="29"/>
+			<SearchStringAddition name="СписокSearchString" id="38">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокSearchStringContextMenu" id="39"/>
+				<ExtendedTooltip name="СписокSearchStringExtendedTooltip" id="40"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокViewStatus" id="41">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокViewStatusContextMenu" id="42"/>
+				<ExtendedTooltip name="СписокViewStatusExtendedTooltip" id="43"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокSearchControl" id="44">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокSearchControlContextMenu" id="45"/>
+				<ExtendedTooltip name="СписокSearchControlExtendedTooltip" id="46"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ВидСубъекта" id="4">
+					<DataPath>Список.ВидСубъекта</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ВидСубъектаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ВидСубъектаExtendedTooltip" id="30"/>
+				</LabelField>
+				<LabelField name="Субъект" id="6">
+					<DataPath>Список.Субъект</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="СубъектКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="СубъектExtendedTooltip" id="31"/>
+				</LabelField>
+				<LabelField name="Параметр" id="8">
+					<DataPath>Список.Параметр</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ПараметрКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ПараметрExtendedTooltip" id="32"/>
+				</LabelField>
+				<LabelField name="Значение" id="10">
+					<DataPath>Список.Значение</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ЗначениеКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ЗначениеExtendedTooltip" id="33"/>
+				</LabelField>
+				<LabelField name="ЗначениеПлан" id="12">
+					<DataPath>Список.ЗначениеПлан</DataPath>
+					<Visible>false</Visible>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ЗначениеПланКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ЗначениеПланExtendedTooltip" id="34"/>
+				</LabelField>
+				<LabelField name="ЗначениеФакт" id="14">
+					<DataPath>Список.ЗначениеФакт</DataPath>
+					<Visible>false</Visible>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ЗначениеФактКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ЗначениеФактExtendedTooltip" id="35"/>
+				</LabelField>
+				<CheckBoxField name="ДляЗаявок" id="50">
+					<DataPath>Список.ДляЗаявок</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<FixingInTable>Right</FixingInTable>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.CW_Заявки</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДляЗаявокКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ДляЗаявокРасширеннаяПодсказка" id="52"/>
+				</CheckBoxField>
+				<CheckBoxField name="ДляЗаказов" id="53">
+					<DataPath>Список.ДляЗаказов</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<FixingInTable>Right</FixingInTable>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.CW_Коробка</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДляЗаказовКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ДляЗаказовРасширеннаяПодсказка" id="55"/>
+				</CheckBoxField>
+				<CheckBoxField name="ДляГрузоперевозок" id="47">
+					<DataPath>Список.ДляГрузоперевозок</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<FixingInTable>Right</FixingInTable>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.CW_Грузоперевозки</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДляГрузоперевозокКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ДляГрузоперевозокРасширеннаяПодсказка" id="49"/>
+				</CheckBoxField>
+				<CheckBoxField name="ДобавлятьАвтоматически" id="18">
+					<DataPath>Список.ДобавлятьАвтоматически</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<FixingInTable>Right</FixingInTable>
+					<HeaderPicture>
+						<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДобавлятьАвтоматическиКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ДобавлятьАвтоматическиExtendedTooltip" id="36"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПерезаполнятьАвтоматически" id="20">
+					<DataPath>Список.ПерезаполнятьАвтоматически</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<FixingInTable>Right</FixingInTable>
+					<HeaderPicture>
+						<xr:Ref>StdPicture.Refresh</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПерезаполнятьАвтоматическиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПерезаполнятьАвтоматическиExtendedTooltip" id="37"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.ВидСубъекта</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	РегистрСведенийCW_СвязанныеПараметры.ВидСубъекта КАК ВидСубъекта,
+	РегистрСведенийCW_СвязанныеПараметры.Субъект КАК Субъект,
+	РегистрСведенийCW_СвязанныеПараметры.Параметр КАК Параметр,
+	РегистрСведенийCW_СвязанныеПараметры.Значение КАК Значение,
+	РегистрСведенийCW_СвязанныеПараметры.ЗначениеПлан КАК ЗначениеПлан,
+	РегистрСведенийCW_СвязанныеПараметры.ЗначениеФакт КАК ЗначениеФакт,
+	РегистрСведенийCW_СвязанныеПараметры.ДобавлятьАвтоматически КАК ДобавлятьАвтоматически,
+	РегистрСведенийCW_СвязанныеПараметры.ПерезаполнятьАвтоматически КАК ПерезаполнятьАвтоматически,
+	РегистрСведенийCW_СвязанныеПараметры.ДляГрузоперевозок КАК ДляГрузоперевозок,
+	РегистрСведенийCW_СвязанныеПараметры.ДляЗаявок КАК ДляЗаявок,
+	РегистрСведенийCW_СвязанныеПараметры.ДляЗаказов КАК ДляЗаказов
+ИЗ
+	РегистрСведений.CW_ПредопределенныеЗначенияПараметров КАК РегистрСведенийCW_СвязанныеПараметры</QueryText>
+				<MainTable>InformationRegister.CW_ПредопределенныеЗначенияПараметров</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ВидСубъекта</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Субъект</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Параметр</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Субъект</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+					</dcsset:item>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ВидСубъекта" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид субъекта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.CW_ВидыСубъектовСвязанныхПараметров</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимОбщегоСписка" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим общего списка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДляГрузоперевозок" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для грузоперевозок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДляЗаявок" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для заявок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

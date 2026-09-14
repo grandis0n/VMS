@@ -1,0 +1,2096 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Журнал грузоперевозок</v8:content>
+		</v8:item>
+	</Title>
+	<Width>100</Width>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer" callType="After">VMS_ПриСозданииНаСервереПосле</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ЖурГпГруппаОсновная" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Жур гп группа основная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Жур гп группа основная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ЖурГпГруппаОсновнаяExtendedTooltip" id="101"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКомандыЖурнала" id="62">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа команды журнала</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа команды журнала</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКомандыЖурналаExtendedTooltip" id="102"/>
+					<ChildItems>
+						<CommandBar name="ГруппаКоманднаяПанель" id="93">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа командная панель</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа командная панель</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаКоманднаяПанельExtendedTooltip" id="103"/>
+							<ChildItems>
+								<ButtonGroup name="ГруппаВыбор" id="154">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа выбор</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа выбор</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаВыборРасширеннаяПодсказка" id="155"/>
+									<ChildItems>
+										<Button name="Журнал_Выбрать" id="156">
+											<Type>CommandBarButton</Type>
+											<DefaultButton>true</DefaultButton>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<ExtendedTooltip name="Журнал_ВыбратьРасширеннаяПодсказка" id="157"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<ButtonGroup name="ЖурналГруппаОсновные" id="14">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Журнал группа основные</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Журнал группа основные</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>Compact</Representation>
+									<ExtendedTooltip name="ЖурналГруппаОсновныеExtendedTooltip" id="104"/>
+									<ChildItems>
+										<Button name="ЖурналДобавить" id="7">
+											<Type>CommandBarButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Добавить грузоперевозку</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЖурналДобавитьExtendedTooltip" id="105">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Добавить новую грузоперевозку</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+										</Button>
+										<Button name="ЖурналСкопировать" id="8">
+											<Type>CommandBarButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Копировать грузоперевозку</v8:content>
+												</v8:item>
+											</Title>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ЖурналСкопироватьExtendedTooltip" id="106">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Скопировать грузоперевозку</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+										</Button>
+										<Button name="ЖурналИзменить" id="9">
+											<Type>CommandBarButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Редактировать грузоперевозку</v8:content>
+												</v8:item>
+											</Title>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ЖурналИзменитьExtendedTooltip" id="107">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Редактировать грузоперевозку</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+										</Button>
+										<Button name="ЖурналУдалить" id="10">
+											<Type>CommandBarButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Установить/снять пометку удаления</v8:content>
+												</v8:item>
+											</Title>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ЖурналУдалитьExtendedTooltip" id="108">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Удалить грузоперевозку</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<ButtonGroup name="ЖурналГруппаОтбор" id="15">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Журнал группа отбор</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Журнал группа отбор</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>Compact</Representation>
+									<ExtendedTooltip name="ЖурналГруппаОтборExtendedTooltip" id="109"/>
+									<ChildItems>
+										<Button name="ЖурналОтборПоЗначению" id="11">
+											<Type>CommandBarButton</Type>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Picture>
+												<xr:Ref>CommonPicture.CW_Отбор</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+												<xr:TransparentPixel x="12" y="11"/>
+											</Picture>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по значению</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЖурналОтборПоЗначениюExtendedTooltip" id="110"/>
+										</Button>
+										<Button name="ЖурналОтборПоСпискуЗначений" id="97">
+											<Type>CommandBarButton</Type>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Picture>
+												<xr:Ref>CommonPicture.CW_ОтборПоСписку</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+												<xr:TransparentPixel x="4" y="10"/>
+											</Picture>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по списку значений</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЖурналОтборПоСпискуЗначенийРасширеннаяПодсказка" id="111"/>
+										</Button>
+										<Button name="ЖурналОтборКонтейнеровПоТексту" id="98">
+											<Type>CommandBarButton</Type>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Picture>
+												<xr:Ref>CommonPicture.CW_ОтборПоНомеру</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+												<xr:TransparentPixel x="2" y="9"/>
+											</Picture>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по тексту</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЖурналОтборКонтейнеровПоТекстуРасширеннаяПодсказка" id="112"/>
+										</Button>
+										<Button name="ЖурналОтборПоПериоду" id="194">
+											<Type>CommandBarButton</Type>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<ExtendedTooltip name="ЖурналОтборПоПериодуРасширеннаяПодсказка" id="195"/>
+										</Button>
+										<Button name="ЖурналОтборИСортировка" id="12">
+											<Type>CommandBarButton</Type>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Picture>
+												<xr:Ref>CommonPicture.CW_ОтборНастройка</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+												<xr:TransparentPixel x="1" y="10"/>
+											</Picture>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Произвольный отбор</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЖурналОтборИСортировкаExtendedTooltip" id="113"/>
+										</Button>
+										<Button name="ЖурналОтключитьОтбор" id="13">
+											<Type>CommandBarButton</Type>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Picture>
+												<xr:Ref>CommonPicture.CW_ОтборОтменить</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отменить все отборы</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЖурналОтключитьОтборExtendedTooltip" id="114"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<ButtonGroup name="ГруппаОТборПоСтатусам" id="206">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа о тбор по статусам</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа о тбор по статусам</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>Compact</Representation>
+									<ExtendedTooltip name="ГруппаОТборПоСтатусамРасширеннаяПодсказка" id="207"/>
+									<ChildItems>
+										<Button name="ЖурналОтборПоСтатусам" id="96">
+											<Type>CommandBarButton</Type>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по логистическим статусам</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЖурналОтборПоСтатусамРасширеннаяПодсказка" id="115"/>
+										</Button>
+										<Button name="ЖурналОтборПоФинансовымСтатусам" id="192">
+											<Type>CommandBarButton</Type>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отбор по финансовым статусам</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЖурналОтборПоФинансовымСтатусамРасширеннаяПодсказка" id="193"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<ButtonGroup name="ЖурналГруппаПоиск" id="59">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Журнал группа поиск</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Журнал группа поиск</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>Compact</Representation>
+									<ExtendedTooltip name="ЖурналГруппаПоискExtendedTooltip" id="116"/>
+									<ChildItems>
+										<Button name="ЖурналПоиск" id="60">
+											<Type>CommandBarButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Поиск</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЖурналПоискExtendedTooltip" id="117"/>
+										</Button>
+										<Button name="ЖурналОтменитьПоиск" id="61">
+											<Type>CommandBarButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отменить поиск</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЖурналОтменитьПоискExtendedTooltip" id="118"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<ButtonGroup name="ГруппаПечать" id="204">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа печать</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа печать</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>Compact</Representation>
+									<ExtendedTooltip name="ГруппаПечатьРасширеннаяПодсказка" id="205"/>
+									<ChildItems>
+										<Button name="Печать" id="200">
+											<Type>CommandBarButton</Type>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+											<ExtendedTooltip name="ПечатьРасширеннаяПодсказка" id="201"/>
+										</Button>
+										<Button name="ПечатьПакетнаяПечать" id="202">
+											<Type>CommandBarButton</Type>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+											<ExtendedTooltip name="ПечатьПакетнаяПечатьРасширеннаяПодсказка" id="203"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<ButtonGroup name="ЖурналГруппаСортировка" id="50">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Журнал группа сортировка</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Журнал группа сортировка</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>Compact</Representation>
+									<ExtendedTooltip name="ЖурналГруппаСортировкаExtendedTooltip" id="119"/>
+									<ChildItems>
+										<Button name="ЖурналСортироватьПоВозрастанию" id="51">
+											<Type>CommandBarButton</Type>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сортировать по возрастанию</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЖурналСортироватьПоВозрастаниюExtendedTooltip" id="120"/>
+										</Button>
+										<Button name="ЖурналСортироватьПоУбыванию" id="52">
+											<Type>CommandBarButton</Type>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сортировать по убыванию</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЖурналСортироватьПоУбываниюExtendedTooltip" id="121"/>
+										</Button>
+										<Button name="ЖурналСброситьСортировку" id="53">
+											<Type>CommandBarButton</Type>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отменить все сортировки</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЖурналСброситьСортировкуExtendedTooltip" id="122"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<Button name="ЖурналРежимЕкселя" id="31">
+									<Type>CommandBarButton</Type>
+									<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Включить/отключить режим "Excel"</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ЖурналРежимЕкселяExtendedTooltip" id="126"/>
+								</Button>
+								<ButtonGroup name="ЖурналГруппаДополнительно" id="20">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Журнал группа дополнительно</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Журнал группа дополнительно</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>Compact</Representation>
+									<ExtendedTooltip name="ЖурналГруппаДополнительноExtendedTooltip" id="123"/>
+									<ChildItems>
+										<Button name="ЖурналРаскрасить" id="19">
+											<Type>CommandBarButton</Type>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выделить цветом</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЖурналРаскраситьExtendedTooltip" id="124"/>
+										</Button>
+										<Button name="ЖурналСуммаВыделенныхЯчеек" id="30">
+											<Type>CommandBarButton</Type>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Вычислить значение</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЖурналСуммаВыделенныхЯчеекExtendedTooltip" id="125"/>
+										</Button>
+										<Button name="ЖурналОчиститьЗначения" id="38">
+											<Type>CommandBarButton</Type>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Очистить значение</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЖурналОчиститьЗначенияExtendedTooltip" id="127"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<ButtonGroup name="ГруппаДинамическиеПараметры" id="162">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа динамические параметры</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа динамические параметры</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>Compact</Representation>
+									<ExtendedTooltip name="ГруппаДинамическиеПараметрыРасширеннаяПодсказка" id="163"/>
+									<ChildItems>
+										<Button name="Журнал_ПересчитатьДинамическиеПараметры" id="185">
+											<Type>CommandBarButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Picture>
+												<xr:Ref>CommonPicture.CW_Автосинхронизация</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="Журнал_ПересчитатьДинамическиеПараметрыРасширеннаяПодсказка" id="186"/>
+										</Button>
+										<Button name="Журнал_ДобавитьДинамическийПараметр" id="158">
+											<Type>CommandBarButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="Журнал_ДобавитьДинамическийПараметрРасширеннаяПодсказка" id="159"/>
+										</Button>
+										<Button name="Журнал_УдалитьДинамическийПараметр" id="160">
+											<Type>CommandBarButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="Журнал_УдалитьДинамическийПараметрРасширеннаяПодсказка" id="161"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<ButtonGroup name="ЖурналГруппаФинансовыеКоманды" id="152">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Журнал группа финансовые команды</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Финансовые команды</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ЖурналГруппаФинансовыеКомандыРасширеннаяПодсказка" id="153"/>
+									<ChildItems>
+										<Button name="ЖурналФормированиеДокументовПоБюджету" id="100">
+											<Type>CommandBarButton</Type>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Формирование документов на основании бюджета</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЖурналФормированиеДокументовПоБюджетуРасширеннаяПодсказка" id="133"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<ButtonGroup name="Группа2" id="198">
+									<Representation>Compact</Representation>
+									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="199"/>
+									<ChildItems>
+										<Button name="ЖурналСохранитьНастройку" id="36">
+											<Type>CommandBarButton</Type>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сохранить настройку</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЖурналСохранитьНастройкуExtendedTooltip" id="128"/>
+										</Button>
+										<Button name="ЖурналЗагрузитьНастройку" id="37">
+											<Type>CommandBarButton</Type>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Восстановить настройку</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЖурналЗагрузитьНастройкуExtendedTooltip" id="129"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<Button name="ЖурналНастройкаСписка" id="18">
+									<Type>CommandBarButton</Type>
+									<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройка колонок</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ЖурналНастройкаСпискаExtendedTooltip" id="130"/>
+								</Button>
+								<Button name="ЖурналФинансовыйОтчет" id="99">
+									<Type>CommandBarButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.Report</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Финансовый отчёт по грузоперевозкам</v8:content>
+										</v8:item>
+									</Title>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ЖурналФинансовыйОтчетРасширеннаяПодсказка" id="132">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Финансовый отчёт по грузоперевозкам</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+								<Button name="ВывестиСписок" id="168">
+									<Type>CommandBarButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ВывестиСписокРасширеннаяПодсказка" id="169"/>
+								</Button>
+								<ButtonGroup name="ГруппаВнешниеДействия" id="166">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа внешние действия</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа внешние действия</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаВнешниеДействияРасширеннаяПодсказка" id="167"/>
+								</ButtonGroup>
+								<ButtonGroup name="ЖурналГруппа1" id="49">
+									<ExtendedTooltip name="ЖурналГруппа1ExtendedTooltip" id="134"/>
+									<ChildItems>
+										<Button name="ЖурналОбновить" id="6">
+											<Type>CommandBarButton</Type>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Обновить список грузоперевозок</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЖурналОбновитьExtendedTooltip" id="135"/>
+										</Button>
+										<Button name="КомандаФоновоеОбновление" id="187">
+											<Type>CommandBarButton</Type>
+											<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Обновить в фоне</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="КомандаФоновоеОбновлениеРасширеннаяПодсказка" id="188"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+							</ChildItems>
+						</CommandBar>
+						<LabelDecoration name="ДекорацияРазделитель" id="91">
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ДекорацияРазделительКонтекстноеМеню" id="92"/>
+							<ExtendedTooltip name="ДекорацияРазделительExtendedTooltip" id="136"/>
+						</LabelDecoration>
+						<CommandBar name="ЖурналПанельОтборПоСтатусу" id="56">
+							<Visible>false</Visible>
+							<Enabled>false</Enabled>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Журнал панель отбор по статусу</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отбор по статусу грузоперевозки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="ЖурналПанельОтборПоСтатусуРасширеннаяПодсказка" id="137"/>
+						</CommandBar>
+					</ChildItems>
+				</UsualGroup>
+				<Table name="Журнал" id="1">
+					<Representation>List</Representation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<InitialListView>Beginning</InitialListView>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>2</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ЖурналКонтекстноеМеню" id="2"/>
+					<AutoCommandBar name="ЖурналКоманднаяПанель" id="3">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ЖурналExtendedTooltip" id="139"/>
+					<SearchStringAddition name="ЖурналСтрокаПоиска" id="176">
+						<AdditionSource>
+							<Item>Журнал</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ЖурналСтрокаПоискаКонтекстноеМеню" id="177"/>
+						<ExtendedTooltip name="ЖурналСтрокаПоискаРасширеннаяПодсказка" id="178"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ЖурналСостояниеПросмотра" id="179">
+						<AdditionSource>
+							<Item>Журнал</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ЖурналСостояниеПросмотраКонтекстноеМеню" id="180"/>
+						<ExtendedTooltip name="ЖурналСостояниеПросмотраРасширеннаяПодсказка" id="181"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ЖурналУправлениеПоиском" id="182">
+						<AdditionSource>
+							<Item>Журнал</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ЖурналУправлениеПоискомКонтекстноеМеню" id="183"/>
+						<ExtendedTooltip name="ЖурналУправлениеПоискомРасширеннаяПодсказка" id="184"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<PictureField name="ЖурналКартинкаСтатуса" id="4">
+							<DataPath>2/1</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<ReadOnly>true</ReadOnly>
+							<SkipOnInput>true</SkipOnInput>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>МС</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Top</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Мониторинговый статус</v8:content>
+								</v8:item>
+							</ToolTip>
+							<EditMode>EnterOnInput</EditMode>
+							<FixingInTable>Left</FixingInTable>
+							<AutoCellHeight>true</AutoCellHeight>
+							<Width>1</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>1</MaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="ЖурналКартинкаСтатусаКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ЖурналКартинкаСтатусаExtendedTooltip" id="140"/>
+						</PictureField>
+						<PictureField name="ЖурналКартинкаФинансовогоСтатуса" id="189">
+							<DataPath>2/7</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<SkipOnInput>true</SkipOnInput>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ФС</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Top</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Финансовый статус</v8:content>
+								</v8:item>
+							</ToolTip>
+							<EditMode>EnterOnInput</EditMode>
+							<FixingInTable>Left</FixingInTable>
+							<AutoCellHeight>true</AutoCellHeight>
+							<Width>2</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>2</MaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="ЖурналКартинкаФинансовогоСтатусаКонтекстноеМеню" id="190"/>
+							<ExtendedTooltip name="ЖурналКартинкаФинансовогоСтатусаРасширеннаяПодсказка" id="191"/>
+						</PictureField>
+						<PictureField name="ЖурналФайлы" id="208">
+							<DataPath>2/9</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<SkipOnInput>true</SkipOnInput>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ф</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<FixingInTable>Left</FixingInTable>
+							<HeaderPicture>
+								<xr:Ref>CommonPicture.CW_Архив</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</HeaderPicture>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.CW_Архив</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="ЖурналФайлыКонтекстноеМеню" id="209"/>
+							<ExtendedTooltip name="ЖурналФайлыРасширеннаяПодсказка" id="210"/>
+						</PictureField>
+					</ChildItems>
+				</Table>
+				<UsualGroup name="ЖурналГруппаПодвал" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Журнал группа подвал</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Журнал группа подвал</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ЖурналГруппаПодвалРасширеннаяПодсказка" id="141"/>
+					<ChildItems>
+						<UsualGroup name="ЖурналГруппаКоличествоВыделенных" id="42">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Журнал группа количество выделенных</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Журнал группа количество выделенных</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ЖурналГруппаКоличествоВыделенныхРасширеннаяПодсказка" id="142"/>
+							<ChildItems>
+								<LabelDecoration name="ЖурГпДекорация1" id="54">
+									<Width>13</Width>
+									<TextColor>#9F6500</TextColor>
+									<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Грузоперевозок:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ЖурГпДекорация1КонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="ЖурГпДекорация1ExtendedTooltip" id="143"/>
+								</LabelDecoration>
+								<LabelField name="ЖурналКоличествоСтрок" id="40">
+									<DataPath>11</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество строк</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<Width>5</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=10; ЧДЦ=0; ЧН=</v8:content>
+										</v8:item>
+									</Format>
+									<TextColor>#9F6500</TextColor>
+									<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<ContextMenu name="ЖурналКоличествоСтрокКонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="ЖурналКоличествоСтрокРасширеннаяПодсказка" id="144"/>
+								</LabelField>
+								<LabelDecoration name="ЖурГпДекорация2" id="94">
+									<Width>8</Width>
+									<TextColor>#9F6500</TextColor>
+									<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выделено:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ЖурГпДекорация2КонтекстноеМеню" id="95"/>
+									<ExtendedTooltip name="ЖурГпДекорация2ExtendedTooltip" id="145"/>
+								</LabelDecoration>
+								<LabelField name="ЖурналКоличествоВыделенныхСтрок" id="43">
+									<DataPath>12</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество выделенных строк</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<Width>3</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=10; ЧДЦ=0; ЧН=</v8:content>
+										</v8:item>
+									</Format>
+									<TextColor>#9F6500</TextColor>
+									<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<ContextMenu name="ЖурналКоличествоВыделенныхСтрокКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="ЖурналКоличествоВыделенныхСтрокРасширеннаяПодсказка" id="146"/>
+								</LabelField>
+								<LabelDecoration name="Декорация1" id="173">
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="174"/>
+									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="175"/>
+								</LabelDecoration>
+								<CheckBoxField name="ВыводитьАрхивные" id="170">
+									<DataPath>24</DataPath>
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выводить архивные</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВыводитьАрхивныеКонтекстноеМеню" id="171"/>
+									<ExtendedTooltip name="ВыводитьАрхивныеРасширеннаяПодсказка" id="172"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ЖурналГруппаПризнакОтбора" id="45">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Журнал группа признак отбора</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Журнал группа признак отбора</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>StrongSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ЖурналГруппаПризнакОтбораРасширеннаяПодсказка" id="147"/>
+							<ChildItems>
+								<LabelField name="ЖурналРасшифровкаОтбора" id="57">
+									<DataPath>13</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="ЖурналРасшифровкаОтбораКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="ЖурналРасшифровкаОтбораРасширеннаяПодсказка" id="149"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ЖурналГруппаОтборПоСтатусуВнеш" id="23">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Журнал группа отбор по статусу внеш</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отбор по статусу грузоперевозки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>StrongSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ЖурналГруппаОтборПоСтатусуВнешРасширеннаяПодсказка" id="150"/>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<LabelField name="ЖурналТекстСтатуснойСтроки" id="33">
+					<DataPath>14</DataPath>
+					<Visible>false</Visible>
+					<TitleLocation>None</TitleLocation>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ContextMenu name="ЖурналТекстСтатуснойСтрокиКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ЖурналТекстСтатуснойСтрокиРасширеннаяПодсказка" id="151"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+	<BaseForm version="2.20">
+		<Title>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Журнал грузоперевозок</v8:content>
+			</v8:item>
+		</Title>
+		<Width>100</Width>
+		<AutoTitle>false</AutoTitle>
+		<CommandBarLocation>None</CommandBarLocation>
+		<VerticalScroll>useIfNecessary</VerticalScroll>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<HorizontalAlign>Right</HorizontalAlign>
+			<Autofill>false</Autofill>
+		</AutoCommandBar>
+		<ChildItems>
+			<UsualGroup name="ЖурГпГруппаОсновная" id="32">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Жур гп группа основная</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Жур гп группа основная</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Group>Vertical</Group>
+				<Behavior>Usual</Behavior>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ЖурГпГруппаОсновнаяExtendedTooltip" id="101"/>
+				<ChildItems>
+					<UsualGroup name="ГруппаКомандыЖурнала" id="62">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа команды журнала</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа команды журнала</v8:content>
+							</v8:item>
+						</ToolTip>
+						<HorizontalStretch>true</HorizontalStretch>
+						<Group>Horizontal</Group>
+						<Behavior>Usual</Behavior>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаКомандыЖурналаExtendedTooltip" id="102"/>
+						<ChildItems>
+							<CommandBar name="ГруппаКоманднаяПанель" id="93">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа командная панель</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа командная панель</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ГруппаКоманднаяПанельExtendedTooltip" id="103"/>
+								<ChildItems>
+									<ButtonGroup name="ГруппаВыбор" id="154">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа выбор</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа выбор</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ГруппаВыборРасширеннаяПодсказка" id="155"/>
+										<ChildItems>
+											<Button name="Журнал_Выбрать" id="156">
+												<Type>CommandBarButton</Type>
+												<DefaultButton>true</DefaultButton>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<ExtendedTooltip name="Журнал_ВыбратьРасширеннаяПодсказка" id="157"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ЖурналГруппаОсновные" id="14">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Журнал группа основные</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Журнал группа основные</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="ЖурналГруппаОсновныеExtendedTooltip" id="104"/>
+										<ChildItems>
+											<Button name="ЖурналДобавить" id="7">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Добавить грузоперевозку</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЖурналДобавитьExtendedTooltip" id="105">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Добавить новую грузоперевозку</v8:content>
+														</v8:item>
+													</Title>
+												</ExtendedTooltip>
+											</Button>
+											<Button name="ЖурналСкопировать" id="8">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Копировать грузоперевозку</v8:content>
+													</v8:item>
+												</Title>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="ЖурналСкопироватьExtendedTooltip" id="106">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Скопировать грузоперевозку</v8:content>
+														</v8:item>
+													</Title>
+												</ExtendedTooltip>
+											</Button>
+											<Button name="ЖурналИзменить" id="9">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Редактировать грузоперевозку</v8:content>
+													</v8:item>
+												</Title>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="ЖурналИзменитьExtendedTooltip" id="107">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Редактировать грузоперевозку</v8:content>
+														</v8:item>
+													</Title>
+												</ExtendedTooltip>
+											</Button>
+											<Button name="ЖурналУдалить" id="10">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Установить/снять пометку удаления</v8:content>
+													</v8:item>
+												</Title>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="ЖурналУдалитьExtendedTooltip" id="108">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Удалить грузоперевозку</v8:content>
+														</v8:item>
+													</Title>
+												</ExtendedTooltip>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ЖурналГруппаОтбор" id="15">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Журнал группа отбор</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Журнал группа отбор</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="ЖурналГруппаОтборExtendedTooltip" id="109"/>
+										<ChildItems>
+											<Button name="ЖурналОтборПоЗначению" id="11">
+												<Type>CommandBarButton</Type>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Picture>
+													<xr:Ref>CommonPicture.CW_Отбор</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+													<xr:TransparentPixel x="12" y="11"/>
+												</Picture>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Отбор по значению</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЖурналОтборПоЗначениюExtendedTooltip" id="110"/>
+											</Button>
+											<Button name="ЖурналОтборПоСпискуЗначений" id="97">
+												<Type>CommandBarButton</Type>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Picture>
+													<xr:Ref>CommonPicture.CW_ОтборПоСписку</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+													<xr:TransparentPixel x="4" y="10"/>
+												</Picture>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Отбор по списку значений</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЖурналОтборПоСпискуЗначенийРасширеннаяПодсказка" id="111"/>
+											</Button>
+											<Button name="ЖурналОтборКонтейнеровПоТексту" id="98">
+												<Type>CommandBarButton</Type>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Picture>
+													<xr:Ref>CommonPicture.CW_ОтборПоНомеру</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+													<xr:TransparentPixel x="2" y="9"/>
+												</Picture>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Отбор по тексту</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЖурналОтборКонтейнеровПоТекстуРасширеннаяПодсказка" id="112"/>
+											</Button>
+											<Button name="ЖурналОтборПоПериоду" id="194">
+												<Type>CommandBarButton</Type>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<ExtendedTooltip name="ЖурналОтборПоПериодуРасширеннаяПодсказка" id="195"/>
+											</Button>
+											<Button name="ЖурналОтборИСортировка" id="12">
+												<Type>CommandBarButton</Type>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Picture>
+													<xr:Ref>CommonPicture.CW_ОтборНастройка</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+													<xr:TransparentPixel x="1" y="10"/>
+												</Picture>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Произвольный отбор</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЖурналОтборИСортировкаExtendedTooltip" id="113"/>
+											</Button>
+											<Button name="ЖурналОтключитьОтбор" id="13">
+												<Type>CommandBarButton</Type>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Picture>
+													<xr:Ref>CommonPicture.CW_ОтборОтменить</xr:Ref>
+													<xr:LoadTransparent>false</xr:LoadTransparent>
+												</Picture>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Отменить все отборы</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЖурналОтключитьОтборExtendedTooltip" id="114"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ГруппаОТборПоСтатусам" id="206">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа о тбор по статусам</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа о тбор по статусам</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="ГруппаОТборПоСтатусамРасширеннаяПодсказка" id="207"/>
+										<ChildItems>
+											<Button name="ЖурналОтборПоСтатусам" id="96">
+												<Type>CommandBarButton</Type>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Отбор по логистическим статусам</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЖурналОтборПоСтатусамРасширеннаяПодсказка" id="115"/>
+											</Button>
+											<Button name="ЖурналОтборПоФинансовымСтатусам" id="192">
+												<Type>CommandBarButton</Type>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Отбор по финансовым статусам</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЖурналОтборПоФинансовымСтатусамРасширеннаяПодсказка" id="193"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ЖурналГруппаПоиск" id="59">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Журнал группа поиск</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Журнал группа поиск</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="ЖурналГруппаПоискExtendedTooltip" id="116"/>
+										<ChildItems>
+											<Button name="ЖурналПоиск" id="60">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Поиск</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЖурналПоискExtendedTooltip" id="117"/>
+											</Button>
+											<Button name="ЖурналОтменитьПоиск" id="61">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Отменить поиск</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЖурналОтменитьПоискExtendedTooltip" id="118"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ГруппаПечать" id="204">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа печать</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа печать</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="ГруппаПечатьРасширеннаяПодсказка" id="205"/>
+										<ChildItems>
+											<Button name="Печать" id="200">
+												<Type>CommandBarButton</Type>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+												<ExtendedTooltip name="ПечатьРасширеннаяПодсказка" id="201"/>
+											</Button>
+											<Button name="ПечатьПакетнаяПечать" id="202">
+												<Type>CommandBarButton</Type>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+												<ExtendedTooltip name="ПечатьПакетнаяПечатьРасширеннаяПодсказка" id="203"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ЖурналГруппаСортировка" id="50">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Журнал группа сортировка</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Журнал группа сортировка</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="ЖурналГруппаСортировкаExtendedTooltip" id="119"/>
+										<ChildItems>
+											<Button name="ЖурналСортироватьПоВозрастанию" id="51">
+												<Type>CommandBarButton</Type>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Сортировать по возрастанию</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЖурналСортироватьПоВозрастаниюExtendedTooltip" id="120"/>
+											</Button>
+											<Button name="ЖурналСортироватьПоУбыванию" id="52">
+												<Type>CommandBarButton</Type>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Сортировать по убыванию</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЖурналСортироватьПоУбываниюExtendedTooltip" id="121"/>
+											</Button>
+											<Button name="ЖурналСброситьСортировку" id="53">
+												<Type>CommandBarButton</Type>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Отменить все сортировки</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЖурналСброситьСортировкуExtendedTooltip" id="122"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="ЖурналРежимЕкселя" id="31">
+										<Type>CommandBarButton</Type>
+										<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Включить/отключить режим "Excel"</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ЖурналРежимЕкселяExtendedTooltip" id="126"/>
+									</Button>
+									<ButtonGroup name="ЖурналГруппаДополнительно" id="20">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Журнал группа дополнительно</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Журнал группа дополнительно</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="ЖурналГруппаДополнительноExtendedTooltip" id="123"/>
+										<ChildItems>
+											<Button name="ЖурналРаскрасить" id="19">
+												<Type>CommandBarButton</Type>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Выделить цветом</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЖурналРаскраситьExtendedTooltip" id="124"/>
+											</Button>
+											<Button name="ЖурналСуммаВыделенныхЯчеек" id="30">
+												<Type>CommandBarButton</Type>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Вычислить значение</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЖурналСуммаВыделенныхЯчеекExtendedTooltip" id="125"/>
+											</Button>
+											<Button name="ЖурналОчиститьЗначения" id="38">
+												<Type>CommandBarButton</Type>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Очистить значение</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЖурналОчиститьЗначенияExtendedTooltip" id="127"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ГруппаДинамическиеПараметры" id="162">
+										<Visible>false</Visible>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа динамические параметры</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа динамические параметры</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="ГруппаДинамическиеПараметрыРасширеннаяПодсказка" id="163"/>
+										<ChildItems>
+											<Button name="Журнал_ПересчитатьДинамическиеПараметры" id="185">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Picture>
+													<xr:Ref>CommonPicture.CW_Автосинхронизация</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="Журнал_ПересчитатьДинамическиеПараметрыРасширеннаяПодсказка" id="186"/>
+											</Button>
+											<Button name="Журнал_ДобавитьДинамическийПараметр" id="158">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="Журнал_ДобавитьДинамическийПараметрРасширеннаяПодсказка" id="159"/>
+											</Button>
+											<Button name="Журнал_УдалитьДинамическийПараметр" id="160">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="Журнал_УдалитьДинамическийПараметрРасширеннаяПодсказка" id="161"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ЖурналГруппаФинансовыеКоманды" id="152">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Журнал группа финансовые команды</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Финансовые команды</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ЖурналГруппаФинансовыеКомандыРасширеннаяПодсказка" id="153"/>
+										<ChildItems>
+											<Button name="ЖурналФормированиеДокументовПоБюджету" id="100">
+												<Type>CommandBarButton</Type>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Формирование документов на основании бюджета</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЖурналФормированиеДокументовПоБюджетуРасширеннаяПодсказка" id="133"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="Группа2" id="198">
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="199"/>
+										<ChildItems>
+											<Button name="ЖурналСохранитьНастройку" id="36">
+												<Type>CommandBarButton</Type>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Сохранить настройку</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЖурналСохранитьНастройкуExtendedTooltip" id="128"/>
+											</Button>
+											<Button name="ЖурналЗагрузитьНастройку" id="37">
+												<Type>CommandBarButton</Type>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Восстановить настройку</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЖурналЗагрузитьНастройкуExtendedTooltip" id="129"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="ЖурналНастройкаСписка" id="18">
+										<Type>CommandBarButton</Type>
+										<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройка колонок</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ЖурналНастройкаСпискаExtendedTooltip" id="130"/>
+									</Button>
+									<Button name="ЖурналФинансовыйОтчет" id="99">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.Report</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Финансовый отчёт по грузоперевозкам</v8:content>
+											</v8:item>
+										</Title>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ЖурналФинансовыйОтчетРасширеннаяПодсказка" id="132">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Финансовый отчёт по грузоперевозкам</v8:content>
+												</v8:item>
+											</Title>
+										</ExtendedTooltip>
+									</Button>
+									<Button name="ВывестиСписок" id="168">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ВывестиСписокРасширеннаяПодсказка" id="169"/>
+									</Button>
+									<ButtonGroup name="ГруппаВнешниеДействия" id="166">
+										<Visible>false</Visible>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа внешние действия</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа внешние действия</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ГруппаВнешниеДействияРасширеннаяПодсказка" id="167"/>
+									</ButtonGroup>
+									<ButtonGroup name="ЖурналГруппа1" id="49">
+										<ExtendedTooltip name="ЖурналГруппа1ExtendedTooltip" id="134"/>
+										<ChildItems>
+											<Button name="ЖурналОбновить" id="6">
+												<Type>CommandBarButton</Type>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Обновить список грузоперевозок</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ЖурналОбновитьExtendedTooltip" id="135"/>
+											</Button>
+											<Button name="КомандаФоновоеОбновление" id="187">
+												<Type>CommandBarButton</Type>
+												<CommandName>0:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Обновить в фоне</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="КомандаФоновоеОбновлениеРасширеннаяПодсказка" id="188"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+								</ChildItems>
+							</CommandBar>
+							<LabelDecoration name="ДекорацияРазделитель" id="91">
+								<HorizontalStretch>true</HorizontalStretch>
+								<ContextMenu name="ДекорацияРазделительКонтекстноеМеню" id="92"/>
+								<ExtendedTooltip name="ДекорацияРазделительExtendedTooltip" id="136"/>
+							</LabelDecoration>
+							<CommandBar name="ЖурналПанельОтборПоСтатусу" id="56">
+								<Visible>false</Visible>
+								<Enabled>false</Enabled>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Журнал панель отбор по статусу</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Отбор по статусу грузоперевозки</v8:content>
+									</v8:item>
+								</ToolTip>
+								<HorizontalStretch>true</HorizontalStretch>
+								<HorizontalLocation>Right</HorizontalLocation>
+								<ExtendedTooltip name="ЖурналПанельОтборПоСтатусуРасширеннаяПодсказка" id="137"/>
+							</CommandBar>
+						</ChildItems>
+					</UsualGroup>
+					<Table name="Журнал" id="1">
+						<Representation>List</Representation>
+						<CommandBarLocation>None</CommandBarLocation>
+						<ChangeRowOrder>false</ChangeRowOrder>
+						<InitialListView>Beginning</InitialListView>
+						<FileDragMode>AsFile</FileDragMode>
+						<DataPath>2</DataPath>
+						<SearchStringLocation>None</SearchStringLocation>
+						<ViewStatusLocation>None</ViewStatusLocation>
+						<SearchControlLocation>None</SearchControlLocation>
+						<RowFilter xsi:nil="true"/>
+						<ContextMenu name="ЖурналКонтекстноеМеню" id="2"/>
+						<AutoCommandBar name="ЖурналКоманднаяПанель" id="3">
+							<Autofill>false</Autofill>
+						</AutoCommandBar>
+						<ExtendedTooltip name="ЖурналExtendedTooltip" id="139"/>
+						<SearchStringAddition name="ЖурналСтрокаПоиска" id="176">
+							<AdditionSource>
+								<Item>Журнал</Item>
+								<Type>SearchStringRepresentation</Type>
+							</AdditionSource>
+							<ContextMenu name="ЖурналСтрокаПоискаКонтекстноеМеню" id="177"/>
+							<ExtendedTooltip name="ЖурналСтрокаПоискаРасширеннаяПодсказка" id="178"/>
+						</SearchStringAddition>
+						<ViewStatusAddition name="ЖурналСостояниеПросмотра" id="179">
+							<AdditionSource>
+								<Item>Журнал</Item>
+								<Type>ViewStatusRepresentation</Type>
+							</AdditionSource>
+							<ContextMenu name="ЖурналСостояниеПросмотраКонтекстноеМеню" id="180"/>
+							<ExtendedTooltip name="ЖурналСостояниеПросмотраРасширеннаяПодсказка" id="181"/>
+						</ViewStatusAddition>
+						<SearchControlAddition name="ЖурналУправлениеПоиском" id="182">
+							<AdditionSource>
+								<Item>Журнал</Item>
+								<Type>SearchControl</Type>
+							</AdditionSource>
+							<ContextMenu name="ЖурналУправлениеПоискомКонтекстноеМеню" id="183"/>
+							<ExtendedTooltip name="ЖурналУправлениеПоискомРасширеннаяПодсказка" id="184"/>
+						</SearchControlAddition>
+						<ChildItems>
+							<PictureField name="ЖурналКартинкаСтатуса" id="4">
+								<DataPath>2/1</DataPath>
+								<DefaultItem>true</DefaultItem>
+								<ReadOnly>true</ReadOnly>
+								<SkipOnInput>true</SkipOnInput>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>МС</v8:content>
+									</v8:item>
+								</Title>
+								<TitleLocation>Top</TitleLocation>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Мониторинговый статус</v8:content>
+									</v8:item>
+								</ToolTip>
+								<EditMode>EnterOnInput</EditMode>
+								<FixingInTable>Left</FixingInTable>
+								<AutoCellHeight>true</AutoCellHeight>
+								<Width>1</Width>
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>1</MaxWidth>
+								<HorizontalStretch>false</HorizontalStretch>
+								<FileDragMode>AsFile</FileDragMode>
+								<ContextMenu name="ЖурналКартинкаСтатусаКонтекстноеМеню" id="5"/>
+								<ExtendedTooltip name="ЖурналКартинкаСтатусаExtendedTooltip" id="140"/>
+							</PictureField>
+							<PictureField name="ЖурналКартинкаФинансовогоСтатуса" id="189">
+								<DataPath>2/7</DataPath>
+								<ReadOnly>true</ReadOnly>
+								<SkipOnInput>true</SkipOnInput>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ФС</v8:content>
+									</v8:item>
+								</Title>
+								<TitleLocation>Top</TitleLocation>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Финансовый статус</v8:content>
+									</v8:item>
+								</ToolTip>
+								<EditMode>EnterOnInput</EditMode>
+								<FixingInTable>Left</FixingInTable>
+								<AutoCellHeight>true</AutoCellHeight>
+								<Width>2</Width>
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>2</MaxWidth>
+								<HorizontalStretch>false</HorizontalStretch>
+								<FileDragMode>AsFile</FileDragMode>
+								<ContextMenu name="ЖурналКартинкаФинансовогоСтатусаКонтекстноеМеню" id="190"/>
+								<ExtendedTooltip name="ЖурналКартинкаФинансовогоСтатусаРасширеннаяПодсказка" id="191"/>
+							</PictureField>
+							<PictureField name="ЖурналФайлы" id="208">
+								<DataPath>2/9</DataPath>
+								<ReadOnly>true</ReadOnly>
+								<SkipOnInput>true</SkipOnInput>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Ф</v8:content>
+									</v8:item>
+								</Title>
+								<TitleLocation>None</TitleLocation>
+								<EditMode>EnterOnInput</EditMode>
+								<FixingInTable>Left</FixingInTable>
+								<HeaderPicture>
+									<xr:Ref>CommonPicture.CW_Архив</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</HeaderPicture>
+								<ValuesPicture>
+									<xr:Ref>CommonPicture.CW_Архив</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</ValuesPicture>
+								<ContextMenu name="ЖурналФайлыКонтекстноеМеню" id="209"/>
+								<ExtendedTooltip name="ЖурналФайлыРасширеннаяПодсказка" id="210"/>
+							</PictureField>
+						</ChildItems>
+					</Table>
+					<UsualGroup name="ЖурналГруппаПодвал" id="35">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Журнал группа подвал</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Журнал группа подвал</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Group>Vertical</Group>
+						<Behavior>Usual</Behavior>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ЖурналГруппаПодвалРасширеннаяПодсказка" id="141"/>
+						<ChildItems>
+							<UsualGroup name="ЖурналГруппаКоличествоВыделенных" id="42">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Журнал группа количество выделенных</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Журнал группа количество выделенных</v8:content>
+									</v8:item>
+								</ToolTip>
+								<Group>Horizontal</Group>
+								<Behavior>Usual</Behavior>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ЖурналГруппаКоличествоВыделенныхРасширеннаяПодсказка" id="142"/>
+								<ChildItems>
+									<LabelDecoration name="ЖурГпДекорация1" id="54">
+										<Width>13</Width>
+										<TextColor>#9F6500</TextColor>
+										<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Грузоперевозок:</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="ЖурГпДекорация1КонтекстноеМеню" id="55"/>
+										<ExtendedTooltip name="ЖурГпДекорация1ExtendedTooltip" id="143"/>
+									</LabelDecoration>
+									<LabelField name="ЖурналКоличествоСтрок" id="40">
+										<DataPath>11</DataPath>
+										<TitleLocation>None</TitleLocation>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Количество строк</v8:content>
+											</v8:item>
+										</ToolTip>
+										<HorizontalAlign>Left</HorizontalAlign>
+										<Width>5</Width>
+										<Format>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>ЧЦ=10; ЧДЦ=0; ЧН=</v8:content>
+											</v8:item>
+										</Format>
+										<TextColor>#9F6500</TextColor>
+										<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<ContextMenu name="ЖурналКоличествоСтрокКонтекстноеМеню" id="41"/>
+										<ExtendedTooltip name="ЖурналКоличествоСтрокРасширеннаяПодсказка" id="144"/>
+									</LabelField>
+									<LabelDecoration name="ЖурГпДекорация2" id="94">
+										<Width>8</Width>
+										<TextColor>#9F6500</TextColor>
+										<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Выделено:</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="ЖурГпДекорация2КонтекстноеМеню" id="95"/>
+										<ExtendedTooltip name="ЖурГпДекорация2ExtendedTooltip" id="145"/>
+									</LabelDecoration>
+									<LabelField name="ЖурналКоличествоВыделенныхСтрок" id="43">
+										<DataPath>12</DataPath>
+										<TitleLocation>None</TitleLocation>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Количество выделенных строк</v8:content>
+											</v8:item>
+										</ToolTip>
+										<HorizontalAlign>Left</HorizontalAlign>
+										<Width>3</Width>
+										<Format>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>ЧЦ=10; ЧДЦ=0; ЧН=</v8:content>
+											</v8:item>
+										</Format>
+										<TextColor>#9F6500</TextColor>
+										<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+										<ContextMenu name="ЖурналКоличествоВыделенныхСтрокКонтекстноеМеню" id="44"/>
+										<ExtendedTooltip name="ЖурналКоличествоВыделенныхСтрокРасширеннаяПодсказка" id="146"/>
+									</LabelField>
+									<LabelDecoration name="Декорация1" id="173">
+										<HorizontalStretch>true</HorizontalStretch>
+										<ContextMenu name="Декорация1КонтекстноеМеню" id="174"/>
+										<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="175"/>
+									</LabelDecoration>
+									<CheckBoxField name="ВыводитьАрхивные" id="170">
+										<DataPath>24</DataPath>
+										<Visible>false</Visible>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>выводить архивные</v8:content>
+											</v8:item>
+										</Title>
+										<TitleLocation>Right</TitleLocation>
+										<CheckBoxType>Auto</CheckBoxType>
+										<ContextMenu name="ВыводитьАрхивныеКонтекстноеМеню" id="171"/>
+										<ExtendedTooltip name="ВыводитьАрхивныеРасширеннаяПодсказка" id="172"/>
+									</CheckBoxField>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ЖурналГруппаПризнакОтбора" id="45">
+								<Visible>false</Visible>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Журнал группа признак отбора</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Журнал группа признак отбора</v8:content>
+									</v8:item>
+								</ToolTip>
+								<Group>Vertical</Group>
+								<Behavior>Usual</Behavior>
+								<Representation>StrongSeparation</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ЖурналГруппаПризнакОтбораРасширеннаяПодсказка" id="147"/>
+								<ChildItems>
+									<LabelField name="ЖурналРасшифровкаОтбора" id="57">
+										<DataPath>13</DataPath>
+										<TitleLocation>None</TitleLocation>
+										<HorizontalAlign>Center</HorizontalAlign>
+										<ContextMenu name="ЖурналРасшифровкаОтбораКонтекстноеМеню" id="58"/>
+										<ExtendedTooltip name="ЖурналРасшифровкаОтбораРасширеннаяПодсказка" id="149"/>
+									</LabelField>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ЖурналГруппаОтборПоСтатусуВнеш" id="23">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Журнал группа отбор по статусу внеш</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Отбор по статусу грузоперевозки</v8:content>
+									</v8:item>
+								</ToolTip>
+								<Group>Horizontal</Group>
+								<Behavior>Usual</Behavior>
+								<Representation>StrongSeparation</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ЖурналГруппаОтборПоСтатусуВнешРасширеннаяПодсказка" id="150"/>
+							</UsualGroup>
+						</ChildItems>
+					</UsualGroup>
+					<LabelField name="ЖурналТекстСтатуснойСтроки" id="33">
+						<DataPath>14</DataPath>
+						<Visible>false</Visible>
+						<TitleLocation>None</TitleLocation>
+						<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						<ContextMenu name="ЖурналТекстСтатуснойСтрокиКонтекстноеМеню" id="34"/>
+						<ExtendedTooltip name="ЖурналТекстСтатуснойСтрокиРасширеннаяПодсказка" id="151"/>
+					</LabelField>
+				</ChildItems>
+			</UsualGroup>
+		</ChildItems>
+		<Attributes/>
+	</BaseForm>
+</Form>

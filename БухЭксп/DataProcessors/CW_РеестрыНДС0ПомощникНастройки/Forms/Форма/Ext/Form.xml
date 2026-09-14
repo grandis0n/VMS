@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Помощник заполнения параметра приложения реестра</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>OpenFromMainServer</ExcludedCommand>
+		<ExcludedCommand>OpenFromStandaloneServer</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаМониторинговыйПараметр" id="63">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>1. Создать параметр грузоперевозки для определения приложения к декларации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа мониторинговый параметр</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>70</Width>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<ExtendedTooltip name="ГруппаМониторинговыйПараметрРасширеннаяПодсказка" id="64"/>
+			<ChildItems>
+				<LabelDecoration name="Декорация1" id="97">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Создайте или выберите параметр для определения приложения к декларации для подтверждения НДС 0%</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowRight</ToolTipRepresentation>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="98"/>
+					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="99">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<HorizontalStretch>true</HorizontalStretch>
+					</ExtendedTooltip>
+				</LabelDecoration>
+				<UsualGroup name="Группа5" id="100">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="101"/>
+					<ChildItems>
+						<InputField name="МониторинговыйПараметр" id="69">
+							<DataPath>МониторинговыйПараметр</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="МониторинговыйПараметрКонтекстноеМеню" id="70"/>
+							<ExtendedTooltip name="МониторинговыйПараметрРасширеннаяПодсказка" id="71"/>
+							<Events>
+								<Event name="OnChange">МониторинговыйПараметрПриИзменении</Event>
+							</Events>
+						</InputField>
+						<Button name="СоздатьПараметр" id="61">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.СоздатьПараметр</CommandName>
+							<ExtendedTooltip name="СоздатьПараметрРасширеннаяПодсказка" id="62"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТипыПеревозок" id="65">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>2. Заполнить параметр в типы перевозок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа типы перевозок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>70</Width>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<ExtendedTooltip name="ГруппаТипыПеревозокРасширеннаяПодсказка" id="66"/>
+			<ChildItems>
+				<LabelDecoration name="Декорация2" id="102">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавьте параметр в состав типов перевозок для определения приложения к декларации для подтверждения НДС 0%</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowRight</ToolTipRepresentation>
+					<ContextMenu name="Декорация2КонтекстноеМеню" id="103"/>
+					<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="104">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<HorizontalStretch>true</HorizontalStretch>
+					</ExtendedTooltip>
+				</LabelDecoration>
+				<Table name="СписокТиповПеревозок" id="72">
+					<Representation>List</Representation>
+					<HeightInTableRows>5</HeightInTableRows>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<VerticalStretch>false</VerticalStretch>
+					<DataPath>СписокТиповПеревозок</DataPath>
+					<RowPictureDataPath>СписокТиповПеревозок.Picture</RowPictureDataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>CancelSearch</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>Find</ExcludedCommand>
+						<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>Pickup</ExcludedCommand>
+						<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+						<ExcludedCommand>SearchHistory</ExcludedCommand>
+						<ExcludedCommand>SelectAll</ExcludedCommand>
+						<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+						<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+					</CommandSet>
+					<ContextMenu name="СписокТиповПеревозокКонтекстноеМеню" id="73"/>
+					<AutoCommandBar name="СписокТиповПеревозокКоманднаяПанель" id="74">
+						<ChildItems>
+							<ButtonGroup name="СписокТиповПеревозокГруппа1" id="95">
+								<Representation>Compact</Representation>
+								<ExtendedTooltip name="СписокТиповПеревозокГруппа1РасширеннаяПодсказка" id="96"/>
+								<ChildItems>
+									<Button name="УстановитьФлажки" id="91">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.СписокТиповПеревозок.StandardCommand.CheckAll</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="УстановитьФлажкиРасширеннаяПодсказка" id="92"/>
+									</Button>
+									<Button name="СнятьФлажки" id="93">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.СписокТиповПеревозок.StandardCommand.UncheckAll</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="СнятьФлажкиРасширеннаяПодсказка" id="94"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<Button name="ЗаполнитьПараметрВТипыПеревозок" id="67">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗаполнитьПараметрВТипыПеревозок</CommandName>
+								<ExtendedTooltip name="ЗаполнитьПараметрВТипыПеревозокРасширеннаяПодсказка" id="68"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СписокТиповПеревозокРасширеннаяПодсказка" id="75"/>
+					<SearchStringAddition name="СписокТиповПеревозокСтрокаПоиска" id="76">
+						<AdditionSource>
+							<Item>СписокТиповПеревозок</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокТиповПеревозокСтрокаПоискаКонтекстноеМеню" id="77"/>
+						<ExtendedTooltip name="СписокТиповПеревозокСтрокаПоискаРасширеннаяПодсказка" id="78"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокТиповПеревозокСостояниеПросмотра" id="79">
+						<AdditionSource>
+							<Item>СписокТиповПеревозок</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокТиповПеревозокСостояниеПросмотраКонтекстноеМеню" id="80"/>
+						<ExtendedTooltip name="СписокТиповПеревозокСостояниеПросмотраРасширеннаяПодсказка" id="81"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокТиповПеревозокУправлениеПоиском" id="82">
+						<AdditionSource>
+							<Item>СписокТиповПеревозок</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокТиповПеревозокУправлениеПоискомКонтекстноеМеню" id="83"/>
+						<ExtendedTooltip name="СписокТиповПеревозокУправлениеПоискомРасширеннаяПодсказка" id="84"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<CheckBoxField name="СписокТиповПеревозокПометка" id="88">
+							<DataPath>СписокТиповПеревозок.Check</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СписокТиповПеревозокПометкаКонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="СписокТиповПеревозокПометкаРасширеннаяПодсказка" id="90"/>
+						</CheckBoxField>
+						<InputField name="СписокТиповПеревозокЗначение" id="85">
+							<DataPath>СписокТиповПеревозок.Value</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СписокТиповПеревозокЗначениеКонтекстноеМеню" id="86"/>
+							<ExtendedTooltip name="СписокТиповПеревозокЗначениеРасширеннаяПодсказка" id="87"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЗаполнитьЗначенияПараметра" id="105">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>3. Установить значение параметра в грузоперевозоки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа заполнить значения параметра</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>70</Width>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<ExtendedTooltip name="ГруппаЗаполнитьЗначенияПараметраРасширеннаяПодсказка" id="106"/>
+			<ChildItems>
+				<LabelDecoration name="Декорация3" id="110">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заполниите значения мониторингового параметра в грузоперевозки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowRight</ToolTipRepresentation>
+					<ContextMenu name="Декорация3КонтекстноеМеню" id="111"/>
+					<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="112">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<HorizontalStretch>true</HorizontalStretch>
+					</ExtendedTooltip>
+				</LabelDecoration>
+				<UsualGroup name="Группа2" id="113">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="114"/>
+					<ChildItems>
+						<InputField name="ПериодОбработки" id="107">
+							<DataPath>ПериодОбработки</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПериодОбработкиКонтекстноеМеню" id="108"/>
+							<ExtendedTooltip name="ПериодОбработкиРасширеннаяПодсказка" id="109"/>
+						</InputField>
+						<InputField name="Организация" id="7">
+							<DataPath>Организация</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<Button name="КомандаЗаполнить" id="12">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.КомандаЗаполнить</CommandName>
+							<ExtendedTooltip name="КомандаЗаполнитьРасширеннаяПодсказка" id="13"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<Table name="ТаблицаПеревозок" id="17">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>ТаблицаПеревозок</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>OutputList</ExcludedCommand>
+						<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+						<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+						<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+					</CommandSet>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТаблицаПеревозокКонтекстноеМеню" id="18"/>
+					<AutoCommandBar name="ТаблицаПеревозокКоманднаяПанель" id="19">
+						<ChildItems>
+							<Popup name="ТаблицаПеревозокГруппа1" id="118">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Установить значение параметра</v8:content>
+									</v8:item>
+								</Title>
+								<Picture>
+									<xr:Ref>StdPicture.ChooseValue</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ТаблицаПеревозокГруппа1РасширеннаяПодсказка" id="119"/>
+								<ChildItems>
+									<Button name="ТаблицаПеревозокУстановитьЗначениеДляВыделенныхСтрок" id="45">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьЗначениеДляВыделенныхСтрок</CommandName>
+										<ExtendedTooltip name="ТаблицаПеревозокУстановитьЗначениеДляВыделенныхСтрокРасширеннаяПодсказка" id="46"/>
+									</Button>
+									<Button name="ТаблицаПеревозокУстанвоитьЗначениеПоТипуПеревозки" id="120">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстанвоитьЗначениеПоТипуПеревозки</CommandName>
+										<ExtendedTooltip name="ТаблицаПеревозокУстанвоитьЗначениеПоТипуПеревозкиРасширеннаяПодсказка" id="121"/>
+									</Button>
+								</ChildItems>
+							</Popup>
+							<Button name="ТаблицаПеревозокЗаписатьПеревозки" id="49">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗаписатьПеревозки</CommandName>
+								<ExtendedTooltip name="ТаблицаПеревозокЗаписатьПеревозкиРасширеннаяПодсказка" id="50"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ТаблицаПеревозокРасширеннаяПодсказка" id="20"/>
+					<SearchStringAddition name="ТаблицаПеревозокСтрокаПоиска" id="21">
+						<AdditionSource>
+							<Item>ТаблицаПеревозок</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаПеревозокСтрокаПоискаКонтекстноеМеню" id="22"/>
+						<ExtendedTooltip name="ТаблицаПеревозокСтрокаПоискаРасширеннаяПодсказка" id="23"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТаблицаПеревозокСостояниеПросмотра" id="24">
+						<AdditionSource>
+							<Item>ТаблицаПеревозок</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаПеревозокСостояниеПросмотраКонтекстноеМеню" id="25"/>
+						<ExtendedTooltip name="ТаблицаПеревозокСостояниеПросмотраРасширеннаяПодсказка" id="26"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТаблицаПеревозокУправлениеПоиском" id="27">
+						<AdditionSource>
+							<Item>ТаблицаПеревозок</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаПеревозокУправлениеПоискомКонтекстноеМеню" id="28"/>
+						<ExtendedTooltip name="ТаблицаПеревозокУправлениеПоискомРасширеннаяПодсказка" id="29"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<CheckBoxField name="ТаблицаПеревозокФлаг" id="51">
+							<DataPath>ТаблицаПеревозок.Флаг</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаПеревозокФлагКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="ТаблицаПеревозокФлагРасширеннаяПодсказка" id="53"/>
+						</CheckBoxField>
+						<InputField name="ТаблицаПеревозокГрузоперевозка" id="30">
+							<DataPath>ТаблицаПеревозок.Грузоперевозка</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<OpenButton>true</OpenButton>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТаблицаПеревозокГрузоперевозкаКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ТаблицаПеревозокГрузоперевозкаРасширеннаяПодсказка" id="32"/>
+						</InputField>
+						<InputField name="ТаблицаПеревозокТипПеревозки" id="115">
+							<DataPath>ТаблицаПеревозок.ТипПеревозки</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТаблицаПеревозокТипПеревозкиКонтекстноеМеню" id="116"/>
+							<ExtendedTooltip name="ТаблицаПеревозокТипПеревозкиРасширеннаяПодсказка" id="117"/>
+						</InputField>
+						<InputField name="ТаблицаПеревозокПараметр" id="36">
+							<DataPath>ТаблицаПеревозок.Параметр</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТаблицаПеревозокПараметрКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="ТаблицаПеревозокПараметрРасширеннаяПодсказка" id="38"/>
+						</InputField>
+						<InputField name="ТаблицаПеревозокЗнаначениеПараметра" id="33">
+							<DataPath>ТаблицаПеревозок.ЗнаначениеПараметра</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<TypeLink>
+								<xr:DataPath>МониторинговыйПараметр</xr:DataPath>
+								<xr:LinkItem>0</xr:LinkItem>
+							</TypeLink>
+							<ContextMenu name="ТаблицаПеревозокЗнаначениеПараметраКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="ТаблицаПеревозокЗнаначениеПараметраРасширеннаяПодсказка" id="35"/>
+							<Events>
+								<Event name="OnChange">ТаблицаПеревозокЗнаначениеПараметраПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.CW_РеестрыНДС0ПомощникНастройки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДатаНачала" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаОкончания" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата окончания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Организация" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ТаблицаПеревозок" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица перевозок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Грузоперевозка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Грузоперевозка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.CW_Грузоперевозки</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЗнаначениеПараметра" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение параметра</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:Characteristic.CW_ПараметрыГрузоперевозок</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Параметр" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметр</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:ChartOfCharacteristicTypesRef.CW_ПараметрыГрузоперевозок</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Флаг" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Флаг</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипПеревозки" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип перевозки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.CW_ТипыПеревозок</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="МониторинговыйПараметр" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мониторинговый параметр</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.CW_ПараметрыГрузоперевозок</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="СписокТиповПеревозок" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список типов перевозок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.CW_ТипыПеревозок</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПериодОбработки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период обработки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаЗаполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить грузоперевозки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаполнить</Action>
+		</Command>
+		<Command name="УстановитьЗначениеДляВыделенныхСтрок" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить значение для выделенных строк</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить значение для выделенных строк</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьЗначениеДляВыделенныхСтрок</Action>
+		</Command>
+		<Command name="ЗаписатьПеревозки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать грузоперевозки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать перевозки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаписатьПеревозки</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СоздатьПараметр" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать параметр</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать параметр</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_Звезда</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьПараметр</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗаполнитьПараметрВТипыПеревозок" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать параметр в выбраные типы перевозок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить параметр в типы перевозок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_Компас</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьПараметрВТипыПеревозок</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="УстанвоитьЗначениеПоТипуПеревозки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить значение по типу перевозки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Устанвоить значение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстанвоитьЗначениеПоТипуПеревозки</Action>
+		</Command>
+	</Commands>
+</Form>

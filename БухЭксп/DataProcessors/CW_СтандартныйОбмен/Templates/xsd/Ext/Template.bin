@@ -1,0 +1,117 @@
+﻿<xs:schema xmlns:tns="http://www.coralway.ru/af/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.coralway.ru/af/xdto" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<xs:complexType name="Валюты">
+		<xs:sequence>
+			<xs:element name="Наименование" type="xs:string"/>
+			<xs:element name="Код" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ВыгружаемыйОбъект">
+		<xs:sequence>
+			<xs:element name="ДатаВыгрузки" type="xs:dateTime"/>
+			<xs:element name="Тип" type="xs:string"/>
+			<xs:element name="Режим" type="xs:string"/>
+			<xs:element name="Представление" type="xs:string"/>
+			<xs:element name="Идентификатор" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ВыгружаемыйТип">
+		<xs:sequence>
+			<xs:element name="ЛокальноеИмя" type="xs:string"/>
+			<xs:element name="Имя" type="xs:string"/>
+			<xs:element name="Синоним" type="xs:string"/>
+			<xs:element name="Синхронизация" type="xs:string"/>
+			<xs:element name="Подтверждение" type="xs:boolean"/>
+			<xs:element name="ТипXDTO" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Договоры">
+		<xs:sequence>
+			<xs:element name="Организация" type="xs:string"/>
+			<xs:element name="Контрагент" type="xs:string"/>
+			<xs:element name="НомерДоговора" type="xs:string"/>
+			<xs:element name="ДатаДоговора" type="xs:date"/>
+			<xs:element name="СрокДействияДоговора" type="xs:date"/>
+			<xs:element name="Наименование" type="xs:string"/>
+			<xs:element name="РедактироватьНаименование" type="xs:boolean"/>
+			<xs:element name="Валюта" type="xs:string"/>
+			<xs:element name="УсловныеЕдиницы" type="xs:boolean"/>
+			<xs:element name="ВидДоговора" type="xs:string"/>
+			<xs:element name="ТипДоговора" type="xs:string"/>
+			<xs:element name="Комментарий" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Доходы">
+		<xs:sequence>
+			<xs:element name="Номер" type="xs:string"/>
+			<xs:element name="Дата" type="xs:dateTime"/>
+			<xs:element name="Организация" type="xs:string"/>
+			<xs:element name="Контрагент" type="xs:string"/>
+			<xs:element name="Договор" type="xs:string"/>
+			<xs:element name="Валюта" type="xs:string"/>
+			<xs:element name="СпособЗачетаАвансов" type="xs:string"/>
+			<xs:element name="СуммаДокумента" type="xs:double"/>
+			<xs:element name="Комментарий" type="xs:string"/>
+			<xs:element name="Услуги" type="tns:ДоходыУслуги"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ДоходыУслуги">
+		<xs:sequence>
+			<xs:element name="Услуга" type="tns:ДоходыУслугиСтрока" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ДоходыУслугиСтрока">
+		<xs:sequence>
+			<xs:element name="Номенклатура" type="xs:string"/>
+			<xs:element name="Количество" type="xs:double"/>
+			<xs:element name="Цена" type="xs:double"/>
+			<xs:element name="Сумма" type="xs:double"/>
+			<xs:element name="НДС" type="xs:double"/>
+			<xs:element name="Всего" type="xs:double"/>
+			<xs:element name="ПорядокОтражения" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ЗаголовокПакета">
+		<xs:sequence>
+			<xs:element name="ДатаВыгрузки" type="xs:dateTime"/>
+			<xs:element name="ВерсияФорматаОбмена" type="xs:string"/>
+			<xs:element name="ИдентификаторИнформационнойБазы" type="xs:string"/>
+			<xs:element name="НаименованиеИнформационнойБазы" type="xs:string"/>
+			<xs:element name="ИспользованиеUID" type="xs:boolean"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Контрагенты">
+		<xs:sequence>
+			<xs:element name="Наименование" type="xs:string"/>
+			<xs:element name="ПолноеНаименование" type="xs:string"/>
+			<xs:element name="ИНН" type="xs:string"/>
+			<xs:element name="КПП" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Номенклатура">
+		<xs:sequence>
+			<xs:element name="Наименование" type="xs:string"/>
+			<xs:element name="ПолноеНаименование" type="xs:string"/>
+			<xs:element name="СтавкаНДС" type="xs:string"/>
+			<xs:element name="Услуга" type="xs:boolean"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Организации">
+		<xs:sequence>
+			<xs:element name="Наименование" type="xs:string"/>
+			<xs:element name="ПолноеНаименование" type="xs:string"/>
+			<xs:element name="ИНН" type="xs:string"/>
+			<xs:element name="КПП" type="xs:string"/>
+			<xs:element name="Префикс" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="СписокВыгружаемыхОбъектов">
+		<xs:sequence>
+			<xs:element name="Объект" type="tns:ВыгружаемыйОбъект" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="СписокВыгружаемыхТипов">
+		<xs:sequence>
+			<xs:element name="Тип" type="tns:ВыгружаемыйТип" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
