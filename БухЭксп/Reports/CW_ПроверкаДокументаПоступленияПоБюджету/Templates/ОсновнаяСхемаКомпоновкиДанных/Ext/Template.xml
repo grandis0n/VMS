@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Грузоперевозка</dataPath>
+			<field>Грузоперевозка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтавкаНДС</dataPath>
+			<field>СтавкаНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ставка</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерСтроки</dataPath>
+			<field>НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВсегоПоБюджету</dataPath>
+			<field>ВсегоПоБюджету</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Бюджет</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2; ЧН=-</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВсегоПоДокументу</dataPath>
+			<field>ВсегоПоДокументу</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2; ЧН=-</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВсегоПоПрочимДокументам</dataPath>
+			<field>ВсегоПоПрочимДокументам</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие документы</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2; ЧН=-</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Бюджет</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>ВсегоПоБюджету</presentationExpression>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2; ЧН=-</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	CW_РасходыПоГрузоперевозкеУслуги.НомерСтроки,
+	CW_РасходыПоГрузоперевозкеУслуги.Ссылка.Контрагент,
+	CW_РасходыПоГрузоперевозкеУслуги.Грузоперевозка,
+	CW_РасходыПоГрузоперевозкеУслуги.Ссылка.Валюта,
+	CW_РасходыПоГрузоперевозкеУслуги.Номенклатура,
+	CW_РасходыПоГрузоперевозкеУслуги.СтавкаНДС,
+	CW_РасходыПоГрузоперевозкеУслуги.Всего КАК ВсегоПоДокументу
+ПОМЕСТИТЬ ТабличнаяЧасть
+ИЗ
+	Документ.CW_РасходыПоГрузоперевозке.Услуги КАК CW_РасходыПоГрузоперевозкеУслуги
+ГДЕ
+	CW_РасходыПоГрузоперевозкеУслуги.Ссылка = &amp;Документ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	CW_ПлановыеСтатьиЗатратИДоходов.Контрагент,
+	CW_ПлановыеСтатьиЗатратИДоходов.Владелец КАК Грузоперевозка,
+	CW_ПлановыеСтатьиЗатратИДоходов.Валюта,
+	CW_ПлановыеСтатьиЗатратИДоходов.Номенклатура,
+	CW_ПлановыеСтатьиЗатратИДоходов.СтавкаНДС,
+	СУММА(CW_ПлановыеСтатьиЗатратИДоходов.СуммаВсего) КАК ВсегоПоБюджету,
+	CW_ПлановыеСтатьиЗатратИДоходов.Ссылка
+ПОМЕСТИТЬ Бюджет
+ИЗ
+	Справочник.CW_ПлановыеСтатьиЗатратИДоходов КАК CW_ПлановыеСтатьиЗатратИДоходов
+ГДЕ
+	CW_ПлановыеСтатьиЗатратИДоходов.Владелец В(&amp;Грузоперевозки)
+	И CW_ПлановыеСтатьиЗатратИДоходов.ВидСтатьиПланирования = &amp;ВидСтатьиПланирования
+	И CW_ПлановыеСтатьиЗатратИДоходов.ВерсияБюджета = &amp;ВерсияБюджета
+	И CW_ПлановыеСтатьиЗатратИДоходов.Контрагент = &amp;Контрагент
+	И CW_ПлановыеСтатьиЗатратИДоходов.Валюта = &amp;Валюта
+	И CW_ПлановыеСтатьиЗатратИДоходов.Организация = &amp;Организация
+
+СГРУППИРОВАТЬ ПО
+	CW_ПлановыеСтатьиЗатратИДоходов.Контрагент,
+	CW_ПлановыеСтатьиЗатратИДоходов.Номенклатура,
+	CW_ПлановыеСтатьиЗатратИДоходов.СтавкаНДС,
+	CW_ПлановыеСтатьиЗатратИДоходов.Владелец,
+	CW_ПлановыеСтатьиЗатратИДоходов.Валюта,
+	CW_ПлановыеСтатьиЗатратИДоходов.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	CW_ЗатратыПоГрузоперевозкам.Контрагент,
+	CW_ЗатратыПоГрузоперевозкам.Грузоперевозка,
+	CW_ЗатратыПоГрузоперевозкам.Валюта,
+	CW_ЗатратыПоГрузоперевозкам.Номенклатура,
+	CW_ЗатратыПоГрузоперевозкам.СтавкаНДС,
+	СУММА(CW_ЗатратыПоГрузоперевозкам.Всего_Валюта) КАК ВсегоПоПрочим
+ПОМЕСТИТЬ ПрочиеДокументы
+ИЗ
+	РегистрНакопления.CW_РасходыПоГрузоперевозкам КАК CW_ЗатратыПоГрузоперевозкам
+ГДЕ
+	CW_ЗатратыПоГрузоперевозкам.Грузоперевозка В(&amp;Грузоперевозки)
+	И CW_ЗатратыПоГрузоперевозкам.Контрагент = &amp;Контрагент
+	И CW_ЗатратыПоГрузоперевозкам.Валюта = &amp;Валюта
+	И CW_ЗатратыПоГрузоперевозкам.ДокументРасходов.Организация = &amp;Организация
+	И CW_ЗатратыПоГрузоперевозкам.ДокументРасходов &lt;&gt; &amp;Документ
+
+СГРУППИРОВАТЬ ПО
+	CW_ЗатратыПоГрузоперевозкам.Контрагент,
+	CW_ЗатратыПоГрузоперевозкам.Валюта,
+	CW_ЗатратыПоГрузоперевозкам.Номенклатура,
+	CW_ЗатратыПоГрузоперевозкам.Грузоперевозка,
+	CW_ЗатратыПоГрузоперевозкам.СтавкаНДС
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ТабличнаяЧасть.НомерСтроки,
+	ТабличнаяЧасть.Контрагент,
+	ТабличнаяЧасть.Грузоперевозка,
+	ТабличнаяЧасть.Валюта,
+	ТабличнаяЧасть.Номенклатура,
+	ТабличнаяЧасть.СтавкаНДС,
+	ТабличнаяЧасть.ВсегоПоДокументу,
+	Бюджет.ВсегоПоБюджету,
+	ПрочиеДокументы.ВсегоПоПрочим,
+	Бюджет.Ссылка
+ПОМЕСТИТЬ Результат
+ИЗ
+	ТабличнаяЧасть КАК ТабличнаяЧасть
+		ЛЕВОЕ СОЕДИНЕНИЕ Бюджет КАК Бюджет
+		ПО ТабличнаяЧасть.Контрагент = Бюджет.Контрагент
+			И ТабличнаяЧасть.Грузоперевозка = Бюджет.Грузоперевозка
+			И ТабличнаяЧасть.Валюта = Бюджет.Валюта
+			И ТабличнаяЧасть.Номенклатура = Бюджет.Номенклатура
+			И ТабличнаяЧасть.СтавкаНДС = Бюджет.СтавкаНДС
+		ЛЕВОЕ СОЕДИНЕНИЕ ПрочиеДокументы КАК ПрочиеДокументы
+		ПО ТабличнаяЧасть.Контрагент = ПрочиеДокументы.Контрагент
+			И ТабличнаяЧасть.Грузоперевозка = ПрочиеДокументы.Грузоперевозка
+			И ТабличнаяЧасть.Валюта = ПрочиеДокументы.Валюта
+			И ТабличнаяЧасть.Номенклатура = ПрочиеДокументы.Номенклатура
+			И ТабличнаяЧасть.СтавкаНДС = ПрочиеДокументы.СтавкаНДС
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Результат.НомерСтроки КАК НомерСтроки,
+	Результат.Контрагент,
+	Результат.Грузоперевозка,
+	Результат.Валюта,
+	Результат.Номенклатура,
+	Результат.СтавкаНДС,
+	Результат.ВсегоПоДокументу,
+	ЕСТЬNULL(Результат.ВсегоПоБюджету, 0) КАК ВсегоПоБюджету,
+	ЕСТЬNULL(Результат.ВсегоПоПрочим, 0) КАК ВсегоПоПрочимДокументам,
+	Результат.Ссылка
+ИЗ
+	Результат КАК Результат
+
+УПОРЯДОЧИТЬ ПО
+	НомерСтроки</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>Отклонение</dataPath>
+		<expression>ВсегоПоБюджету - (ВсегоПоДокументу + ВсегоПоПрочимДокументам)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отклонение</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2; ЧН=-</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<totalField>
+		<dataPath>ВсегоПоБюджету</dataPath>
+		<expression>Сумма(ВсегоПоБюджету)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВсегоПоДокументу</dataPath>
+		<expression>Сумма(ВсегоПоДокументу)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВсегоПоПрочимДокументам</dataPath>
+		<expression>Сумма(ВсегоПоПрочимДокументам)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Отклонение</dataPath>
+		<expression>Сумма(Отклонение)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Ссылка</dataPath>
+		<expression>Сумма(ВсегоПоБюджету)</expression>
+	</totalField>
+	<parameter>
+		<name>Контрагент</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Контрагент</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Контрагенты</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Валюта</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Валюта</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ВерсияБюджета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Версия бюджета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.CW_ВерсииБюджетов</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВидСтатьиПланирования</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид статьи планирования</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.CW_ВидыСтатейПланирования</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.CW_ВидыСтатейПланирования.Расходы</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Грузоперевозки</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Грузоперевозки</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.CW_Грузоперевозки</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Документ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Документ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.CW_РасходыПоГрузоперевозке</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НомерСтроки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Грузоперевозка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтавкаНДС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВсегоПоДокументу</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВсегоПоПрочимДокументам</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Отклонение</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Документ</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>НомерСтроки</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>НомерСтроки</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">CW_ОсновнойМакетСКД</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

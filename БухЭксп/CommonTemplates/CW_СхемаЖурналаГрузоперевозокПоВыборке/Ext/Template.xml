@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ОсновнойНабор</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Грузоперевозка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаЗакрытияМониторинга</dataPath>
+			<field>ДатаЗакрытияМониторинга</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата блокировки мониторинга</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаЗакрытияФинансов</dataPath>
+			<field>ДатаЗакрытияФинансов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата блокировки финансов</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛогистическийСтатус</dataPath>
+			<field>ЛогистическийСтатус</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Логистический статус</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	CW_ВыборкиГрузоперевозок.Грузоперевозка КАК Ссылка,
+	ЕСТЬNULL(CW_ЗначенияЛогистическихСтатусовОбъектов.ЛогистическийСтатус, НЕОПРЕДЕЛЕНО) КАК ЛогистическийСтатус,
+	ВЫБОР
+		КОГДА CW_ВыборкиГрузоперевозок.Грузоперевозка.Заказ = ЗНАЧЕНИЕ(Справочник.CW_Заказы.ПустаяСсылка)
+			ТОГДА ЕСТЬNULL(CW_ЗакрытиеФинансов.ДатаЗакрытия, ДАТАВРЕМЯ(1, 1, 1))
+		ИНАЧЕ ЕСТЬNULL(CW_ЗакрытиеФинансовЗаказ.ДатаЗакрытия, ДАТАВРЕМЯ(1, 1, 1))
+	КОНЕЦ КАК ДатаЗакрытияФинансов,
+	ВЫБОР
+		КОГДА CW_ВыборкиГрузоперевозок.Грузоперевозка.Заказ = ЗНАЧЕНИЕ(Справочник.CW_Заказы.ПустаяСсылка)
+			ТОГДА ЕСТЬNULL(CW_ЗакрытиеМониторинга.ДатаЗакрытия, ДАТАВРЕМЯ(1, 1, 1))
+		ИНАЧЕ ЕСТЬNULL(CW_ЗакрытиеМониторингаЗаказ.ДатаЗакрытия, ДАТАВРЕМЯ(1, 1, 1))
+	КОНЕЦ КАК ДатаЗакрытияМониторинга
+ИЗ
+	РегистрСведений.CW_ВыборкиГрузоперевозок КАК CW_ВыборкиГрузоперевозок
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.CW_ЗакрытиеМониторинга КАК CW_ЗакрытиеМониторинга
+		ПО CW_ВыборкиГрузоперевозок.Грузоперевозка = CW_ЗакрытиеМониторинга.Аналитика
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.CW_ЗакрытиеФинансов КАК CW_ЗакрытиеФинансов
+		ПО CW_ВыборкиГрузоперевозок.Грузоперевозка = CW_ЗакрытиеФинансов.Аналитика
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.CW_ЗакрытиеМониторинга КАК CW_ЗакрытиеМониторингаЗаказ
+		ПО CW_ВыборкиГрузоперевозок.Грузоперевозка.Заказ = CW_ЗакрытиеМониторингаЗаказ.Аналитика
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.CW_ЗакрытиеФинансов КАК CW_ЗакрытиеФинансовЗаказ
+		ПО CW_ВыборкиГрузоперевозок.Грузоперевозка.Заказ = CW_ЗакрытиеФинансовЗаказ.Аналитика
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.CW_ЗначенияЛогистическихСтатусовОбъектов КАК CW_ЗначенияЛогистическихСтатусовОбъектов
+		ПО CW_ВыборкиГрузоперевозок.Грузоперевозка = CW_ЗначенияЛогистическихСтатусовОбъектов.ОбъектСтатуса
+ГДЕ
+	CW_ВыборкиГрузоперевозок.Пользователь = &amp;Пользователь
+	И CW_ВыборкиГрузоперевозок.Метаданное = &amp;Метаданное
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.CW_Грузоперевозки)
+	ВИДЫХАРАКТЕРИСТИК ПланВидовХарактеристик.CW_ПараметрыГрузоперевозок
+	ПОЛЕКЛЮЧА Ссылка
+	ПОЛЕИМЕНИ Идентификатор
+	ПОЛЕТИПАЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯХАРАКТЕРИСТИК РегистрСведений.CW_ХарактеристикиГрузоперевозок
+	ПОЛЕОБЪЕКТА Грузоперевозка
+	ПОЛЕВИДА Параметр
+	ПОЛЕЗНАЧЕНИЯ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.CW_Грузоперевозки)
+	ВИДЫХАРАКТЕРИСТИК ПланВидовХарактеристик.CW_ПараметрыГрузоперевозок
+	ПОЛЕКЛЮЧА Ссылка
+	ПОЛЕИМЕНИ ИдентификаторФакт
+	ПОЛЕТИПАЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯХАРАКТЕРИСТИК РегистрСведений.CW_ХарактеристикиГрузоперевозок
+	ПОЛЕОБЪЕКТА Грузоперевозка
+	ПОЛЕВИДА Параметр
+	ПОЛЕЗНАЧЕНИЯ ЗначениеФакт }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.CW_Грузоперевозки)
+	ВИДЫХАРАКТЕРИСТИК ПланВидовХарактеристик.CW_ПараметрыГрузоперевозок
+	ПОЛЕКЛЮЧА Ссылка
+	ПОЛЕИМЕНИ ИдентификаторПлан
+	ПОЛЕТИПАЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯХАРАКТЕРИСТИК РегистрСведений.CW_ХарактеристикиГрузоперевозок
+	ПОЛЕОБЪЕКТА Грузоперевозка
+	ПОЛЕВИДА Параметр
+	ПОЛЕЗНАЧЕНИЯ ЗначениеПлан }</query>
+	</dataSet>
+	<parameter>
+		<name>Метаданное</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Метаданное</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.CW_МетаданныеКонфигурации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Пользователь</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Пользователь</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Пользователи</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЛогистическийСтатус</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ДатаЗакрытияМониторинга</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ДатаЗакрытияФинансов</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">БезОформления</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеПолейГруппировки</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionGroupFieldsPlacement">Together</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРесурсов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionResourcesPlacement">Horizontally</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ОСВ по ветеринарным сертификатам</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Ссылка</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЛогистическийСтатус</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

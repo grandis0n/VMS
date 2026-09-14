@@ -1,0 +1,78 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.coralway.ru">
+	<property xmlns:d2p1="http://www.coralway.ru" name="root" type="d2p1:root"/>
+	<objectType name="root">
+		<property xmlns:d3p1="http://www.coralway.ru" name="finances" type="d3p1:finances" nillable="true"/>
+		<property xmlns:d3p1="http://www.coralway.ru" name="units" type="d3p1:units" nillable="true"/>
+	</objectType>
+	<objectType name="finances">
+		<property name="id" form="Attribute"/>
+		<property xmlns:d3p1="http://www.coralway.ru" name="contract" type="d3p1:contract" form="Element"/>
+		<property name="bill" form="Attribute"/>
+		<property name="bill_number" form="Attribute"/>
+		<property name="bill_date" form="Attribute"/>
+		<property name="bill_id" form="Attribute"/>
+		<property name="bill_rep" form="Attribute"/>
+		<property name="bill_list" form="Attribute"/>
+		<property name="act" form="Attribute"/>
+		<property name="act_number" form="Attribute"/>
+		<property name="act_date" form="Attribute"/>
+		<property name="invoice" form="Attribute"/>
+		<property name="invoice_number" form="Attribute"/>
+		<property name="invoice_date" form="Attribute"/>
+		<property name="invoice_seller_id" form="Attribute"/>
+		<property name="invoice_seller_rep" form="Attribute"/>
+		<property name="currency" form="Attribute"/>
+		<property name="sum" form="Attribute">
+			<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="19" fractionDigits="2"/>
+		</property>
+		<property name="comment" form="Attribute">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" minLength="0" maxLength="200"/>
+		</property>
+		<property name="correction" type="xs:boolean" form="Attribute"/>
+		<property xmlns:d3p1="http://www.coralway.ru" name="services" type="d3p1:services"/>
+	</objectType>
+	<objectType name="services">
+		<property xmlns:d3p1="http://www.coralway.ru" name="service" type="d3p1:service" upperBound="-1"/>
+	</objectType>
+	<objectType name="service">
+		<property name="id" form="Attribute"/>
+		<property name="rep" form="Attribute"/>
+		<property name="unit_id" form="Attribute"/>
+		<property name="quantity" form="Attribute"/>
+		<property name="price" form="Attribute">
+			<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="19" fractionDigits="2"/>
+		</property>
+		<property name="sum" form="Attribute">
+			<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="19" fractionDigits="2"/>
+		</property>
+		<property name="vat_rate" form="Attribute"/>
+		<property name="vat_amt" form="Attribute">
+			<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="19" fractionDigits="2"/>
+		</property>
+		<property name="total" form="Attribute">
+			<typeDef xsi:type="ValueType" base="xs:decimal" variety="Atomic" totalDigits="19" fractionDigits="2"/>
+		</property>
+		<property name="bill_id" form="Attribute"/>
+		<property name="bill_rep" form="Attribute"/>
+	</objectType>
+	<objectType name="units">
+		<property xmlns:d3p1="http://www.coralway.ru" name="unit" type="d3p1:unit" upperBound="-1"/>
+	</objectType>
+	<objectType name="unit">
+		<property name="id" form="Attribute"/>
+		<property name="rep" form="Attribute"/>
+		<property name="properties" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="property" form="Attribute"/>
+				<property name="value" form="Attribute"/>
+			</typeDef>
+		</property>
+		<property name="parental_id" type="xs:string" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="contract">
+		<property name="id" form="Attribute"/>
+		<property name="number" form="Attribute"/>
+		<property name="date" form="Attribute"/>
+		<property name="currency" form="Attribute"/>
+	</objectType>
+</package>

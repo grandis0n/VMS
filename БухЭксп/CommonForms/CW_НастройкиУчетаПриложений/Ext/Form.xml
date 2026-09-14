@@ -1,0 +1,684 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Учет приложений к договорам</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>ChangeHistory</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>OpenFromMainServer</ExcludedCommand>
+		<ExcludedCommand>OpenFromStandaloneServer</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПриложенияПоДоговорам" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учет приложений к договорам</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа приложения по договорам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>60</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<BackColor>#F0F0F0</BackColor>
+			<ExtendedTooltip name="ГруппаПриложенияПоДоговорамРасширеннаяПодсказка" id="37"/>
+			<ChildItems>
+				<InputField name="CW_ПараметрГрузоперевозкиДляПриложений" id="38">
+					<DataPath>НаборКонстант.CW_ПараметрПриложенияДоговора</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение указанного параметра грузоперевозки будет автоматически подставлятсья в табличную часть финансовых документов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<Width>50</Width>
+					<ContextMenu name="CW_ПараметрГрузоперевозкиДляПриложенийКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="CW_ПараметрГрузоперевозкиДляПриложенийРасширеннаяПодсказка" id="40"/>
+					<Events>
+						<Event name="OnChange">ПриИзмененииРеквизитаФормы</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНумерацияДоговоров" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нумерация договоров</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа нумерация договоров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>60</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<BackColor>#F0F0F0</BackColor>
+			<ExtendedTooltip name="ГруппаНумерацияДоговоровРасширеннаяПодсказка" id="21"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаРежимНумерацииДоговоров" id="69">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа режим нумерации договоров</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа режим нумерации договоров</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРежимНумерацииДоговоровРасширеннаяПодсказка" id="70"/>
+					<ChildItems>
+						<RadioButtonField name="CW_АвтоматическаяНумерацияДоговоровСПокупателями" id="22">
+							<DataPath>CW_АвтоматическаяНумерацияДоговоровСПокупателями</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<ColumnsCount>2</ColumnsCount>
+							<EqualColumnsWidth>true</EqualColumnsWidth>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Ручная (по умолчанию)</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Автоматически</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="CW_АвтоматическаяНумерацияДоговоровСПокупателямиКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="CW_АвтоматическаяНумерацияДоговоровСПокупателямиРасширеннаяПодсказка" id="24"/>
+							<Events>
+								<Event name="OnChange">CW_АвтоматическаяНумерацияДоговоровСПокупателямиПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<RadioButtonField name="CW_ИспользуетсяВнешнийНумераторДоговоров" id="66">
+							<DataPath>CW_ИспользуетсяВнешнийНумераторДоговоров</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<ColumnsCount>2</ColumnsCount>
+							<EqualColumnsWidth>true</EqualColumnsWidth>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Встроенный</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Внешний</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="CW_ИспользуетсяВнешнийНумераторДоговоровКонтекстноеМеню" id="67"/>
+							<ExtendedTooltip name="CW_ИспользуетсяВнешнийНумераторДоговоровРасширеннаяПодсказка" id="68"/>
+							<Events>
+								<Event name="OnChange">CW_ИспользуетсяВнешнийНумераторДоговоровПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа3" id="73">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="74"/>
+					<ChildItems>
+						<UsualGroup name="Группа2" id="71">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="72"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаВстроенныйНумераторДоговоров" id="28">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа встроенный нумератор договоров</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа встроенный нумератор договоров</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВстроенныйНумераторДоговоровРасширеннаяПодсказка" id="29"/>
+									<ChildItems>
+										<InputField name="CW_ШаблонНомераДоговораСПокупателем" id="30">
+											<DataPath>НаборКонстант.CW_ШаблонНомераДоговораСПокупателем</DataPath>
+											<TitleLocation>Top</TitleLocation>
+											<Width>41</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ChoiceButton>true</ChoiceButton>
+											<ContextMenu name="CW_ШаблонНомераДоговораСПокупателемКонтекстноеМеню" id="31"/>
+											<ExtendedTooltip name="CW_ШаблонНомераДоговораСПокупателемРасширеннаяПодсказка" id="32"/>
+											<Events>
+												<Event name="OnChange">ПриИзмененииРеквизитаФормы</Event>
+												<Event name="StartChoice">CW_ШаблонНомераДоговораСПокупателемНачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="CW_ДлинаЧисловойЧастиНомераДоговора" id="33">
+											<DataPath>НаборКонстант.CW_ДлинаЧисловойЧастиНомераДоговора</DataPath>
+											<TitleLocation>Top</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Длина числовой части</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<Width>7</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<SpinButton>true</SpinButton>
+											<ContextMenu name="CW_ДлинаЧисловойЧастиНомераДоговораКонтекстноеМеню" id="34"/>
+											<ExtendedTooltip name="CW_ДлинаЧисловойЧастиНомераДоговораРасширеннаяПодсказка" id="35"/>
+											<Events>
+												<Event name="OnChange">ПриИзмененииРеквизитаФормы</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<Button name="УстановитьНачальныйНомер" id="89">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.УстановитьНачальныйНомер</CommandName>
+									<ExtendedTooltip name="УстановитьНачальныйНомерРасширеннаяПодсказка" id="90"/>
+								</Button>
+								<UsualGroup name="ГруппаВнешнийНумераторДоговоров" id="75">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа внешний нумератор договоров</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа внешний нумератор договоров</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВнешнийНумераторДоговоровРасширеннаяПодсказка" id="76"/>
+									<ChildItems>
+										<InputField name="CW_НумераторДоговоров" id="25">
+											<DataPath>НаборКонстант.CW_НумераторДоговоров</DataPath>
+											<TitleLocation>Top</TitleLocation>
+											<Width>50</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;Автоматически&gt;</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="CW_НумераторДоговоровКонтекстноеМеню" id="26"/>
+											<ExtendedTooltip name="CW_НумераторДоговоровРасширеннаяПодсказка" id="27"/>
+											<Events>
+												<Event name="OnChange">ПриИзмененииРеквизитаФормы</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНумерацияПриложений" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нумерация приложений</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа нумерация приложений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>60</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<BackColor>#F0F0F0</BackColor>
+			<ExtendedTooltip name="ГруппаНумерацияПриложенийРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаРежимНумерацииПриложений" id="80">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа режим нумерации приложений</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа режим нумерации приложений</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРежимНумерацииПриложенийРасширеннаяПодсказка" id="81"/>
+					<ChildItems>
+						<RadioButtonField name="CW_АвтоматическаяНумерацияПриложенийКДоговорамСПокупателями" id="3">
+							<DataPath>CW_АвтоматическаяНумерацияПриложенийКДоговорамСПокупателями</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<EqualColumnsWidth>true</EqualColumnsWidth>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Ручная (по умолчанию)</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Автоматически</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="CW_АвтоматическаяНумерацияПриложенийКДоговорамСПокупателямиКонтекстноеМеню" id="4"/>
+							<ExtendedTooltip name="CW_АвтоматическаяНумерацияПриложенийКДоговорамСПокупателямиРасширеннаяПодсказка" id="5"/>
+							<Events>
+								<Event name="OnChange">CW_АвтоматическаяНумерацияПриложенийКДоговорамСПокупателямиПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<RadioButtonField name="CW_ИспользуетсяВнешнийНумераторПриложений" id="77">
+							<DataPath>CW_ИспользуетсяВнешнийНумераторПриложений</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<EqualColumnsWidth>true</EqualColumnsWidth>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Встроенный</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Внешний</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="CW_ИспользуетсяВнешнийНумераторПриложенийКонтекстноеМеню" id="78"/>
+							<ExtendedTooltip name="CW_ИспользуетсяВнешнийНумераторПриложенийРасширеннаяПодсказка" id="79"/>
+							<Events>
+								<Event name="OnChange">CW_ИспользуетсяВнешнийНумераторПриложенийПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВстроенныйНумераторПриложений" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа встроенный нумератор приложений</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа встроенный нумератор приложений</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВстроенныйНумераторПриложенийРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<InputField name="CW_ШаблонНомераПриложенияКДоговоруСПокупателем" id="11">
+							<DataPath>НаборКонстант.CW_ШаблонНомераПриложенияКДоговоруСПокупателем</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<Width>41</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="CW_ШаблонНомераПриложенияКДоговоруСПокупателемКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="CW_ШаблонНомераПриложенияКДоговоруСПокупателемРасширеннаяПодсказка" id="13"/>
+							<Events>
+								<Event name="OnChange">ПриИзмененииРеквизитаФормы</Event>
+								<Event name="StartChoice">CW_ШаблонНомераПриложенияКДоговоруСПокупателемНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="CW_ДлинаЧисловойЧастиНомераПриложения" id="14">
+							<DataPath>НаборКонстант.CW_ДлинаЧисловойЧастиНомераПриложения</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Длина числовой части</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<Width>7</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<SpinButton>true</SpinButton>
+							<ContextMenu name="CW_ДлинаЧисловойЧастиНомераПриложенияКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="CW_ДлинаЧисловойЧастиНомераПриложенияРасширеннаяПодсказка" id="16"/>
+							<Events>
+								<Event name="OnChange">ПриИзмененииРеквизитаФормы</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВнешнийНумераторПриложений" id="82">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа внешний нумератор приложений</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа внешний нумератор приложений</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВнешнийНумераторПриложенийРасширеннаяПодсказка" id="83"/>
+					<ChildItems>
+						<InputField name="CW_НумераторПриложений" id="6">
+							<DataPath>НаборКонстант.CW_НумераторПриложений</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<Width>50</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;Автоматически&gt;</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="CW_НумераторПриложенийКонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="CW_НумераторПриложенийРасширеннаяПодсказка" id="8"/>
+							<Events>
+								<Event name="OnChange">ПриИзмененииРеквизитаФормы</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПредупреждениеНумерацииприложений" id="84">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа предупреждение нумерацииприложений</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа предупреждение нумерацииприложений</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>web:LavenderBlush</BackColor>
+					<ExtendedTooltip name="ГруппаПредупреждениеНумерацииприложенийРасширеннаяПодсказка" id="85"/>
+					<ChildItems>
+						<PictureDecoration name="КартинкаПредупрежденияНумерацииПриложений" id="86">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинка предупреждения нумерации приложений</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.CW_Настройки_Информация</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="КартинкаПредупрежденияНумерацииПриложенийКонтекстноеМеню" id="87"/>
+							<ExtendedTooltip name="КартинкаПредупрежденияНумерацииПриложенийРасширеннаяПодсказка" id="88"/>
+						</PictureDecoration>
+						<LabelDecoration name="НадписьПредупреждениеНомерацииПриложений" id="17">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>2</Height>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Нумерация приложений всегда выполняется в пределах договора-владельца</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="НадписьПредупреждениеНомерацииПриложенийКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="НадписьПредупреждениеНомерацииПриложенийРасширеннаяПодсказка" id="19"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>НаборКонстант.CW_АвтоматическаяНумерацияДоговоровСПокупателями</Field>
+				<Field>НаборКонстант.CW_АвтоматическаяНумерацияПриложенийКДоговорамСПокупателями</Field>
+				<Field>НаборКонстант.CW_ИспользуетсяВнешнийНумераторДоговоров</Field>
+				<Field>НаборКонстант.CW_ИспользуетсяВнешнийНумераторПриложений</Field>
+				<Field>НаборКонстант.ВалютаРегламентированногоУчета</Field>
+				<Field>НаборКонстант.ОтключитьКонтрольОтрицательныхОстатков</Field>
+				<Field>НаборКонстант.СрокОплатыПокупателей</Field>
+				<Field>НаборКонстант.СрокОплатыПоставщикам</Field>
+				<Field>НаборКонстант.ТипЦенПлановойСебестоимостиНоменклатуры</Field>
+				<Field>НаборКонстант.УчетЗарплатыИКадровВоВнешнейПрограмме</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="CW_АвтоматическаяНумерацияДоговоровСПокупателями" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>автоматическая нумерация договоров с покупателями</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="CW_ИспользуетсяВнешнийНумераторДоговоров" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>C w используется внешний нумератор договоров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="CW_ИспользуетсяВнешнийНумераторПриложений" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>C w используется внешний нумератор приложений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="CW_АвтоматическаяНумерацияПриложенийКДоговорамСПокупателями" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>C w автоматическая нумерация приложений к договорам с покупателями</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="УстановитьНачальныйНомер" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить начальный номер договоров</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить начальный номер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьНачальныйНомер</Action>
+		</Command>
+	</Commands>
+</Form>

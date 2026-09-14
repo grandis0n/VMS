@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Width>50</Width>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаКомандаОК" id="2">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.КомандаОК</CommandName>
+				<ExtendedTooltip name="ФормаКомандаОКExtendedTooltip" id="35"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="1">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отмена</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗакрытьExtendedTooltip" id="36"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаРамка" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа рамка</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа рамка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРамкаExtendedTooltip" id="37"/>
+			<ChildItems>
+				<Pages name="Страницы" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страницы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страницы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<PagesRepresentation>TabsOnTop</PagesRepresentation>
+					<ExtendedTooltip name="СтраницыExtendedTooltip" id="38"/>
+					<ChildItems>
+						<Page name="СтраницаВходящихСчетов" id="19">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Входящие счета</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница входящих счетов</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаВходящихСчетовExtendedTooltip" id="39"/>
+							<ChildItems>
+								<Table name="ТаблицаВходящихСчетов" id="3">
+									<TitleLocation>Top</TitleLocation>
+									<ReadOnly>true</ReadOnly>
+									<HorizontalLines>false</HorizontalLines>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<EnableStartDrag>true</EnableStartDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ТаблицаВходящихСчетов</DataPath>
+									<RowPictureDataPath>ТаблицаВходящихСчетов.DefaultPicture</RowPictureDataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Неактированные счета</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>#9F6500</TitleTextColor>
+									<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+									<ContextMenu name="ТаблицаВходящихСчетовКонтекстноеМеню" id="4"/>
+									<AutoCommandBar name="ТаблицаВходящихСчетовКоманднаяПанель" id="5">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ТаблицаВходящихСчетовExtendedTooltip" id="40"/>
+									<SearchStringAddition name="ТаблицаВходящихСчетовSearchString" id="58">
+										<AdditionSource>
+											<Item>ТаблицаВходящихСчетов</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаВходящихСчетовSearchStringContextMenu" id="59"/>
+										<ExtendedTooltip name="ТаблицаВходящихСчетовSearchStringExtendedTooltip" id="60"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТаблицаВходящихСчетовViewStatus" id="61">
+										<AdditionSource>
+											<Item>ТаблицаВходящихСчетов</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаВходящихСчетовViewStatusContextMenu" id="62"/>
+										<ExtendedTooltip name="ТаблицаВходящихСчетовViewStatusExtendedTooltip" id="63"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТаблицаВходящихСчетовSearchControl" id="64">
+										<AdditionSource>
+											<Item>ТаблицаВходящихСчетов</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаВходящихСчетовSearchControlContextMenu" id="65"/>
+										<ExtendedTooltip name="ТаблицаВходящихСчетовSearchControlExtendedTooltip" id="66"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">ТаблицаВходящихСчетовВыбор</Event>
+									</Events>
+									<ChildItems>
+										<ColumnGroup name="ТаблицаВходящихСчетовГруппа1" id="56">
+											<ExtendedTooltip name="ТаблицаВходящихСчетовГруппа1РасширеннаяПодсказка" id="57"/>
+											<ChildItems>
+												<ColumnGroup name="ТаблицаСчетовГруппа1" id="17">
+													<Width>40</Width>
+													<Group>Horizontal</Group>
+													<ExtendedTooltip name="ТаблицаСчетовГруппа1ExtendedTooltip" id="41"/>
+													<ChildItems>
+														<LabelField name="ТаблицаСчетовСчетНомерСчета" id="10">
+															<DataPath>ТаблицаВходящихСчетов.Счет.НомерСчета</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Номер</v8:content>
+																</v8:item>
+															</Title>
+															<Width>6</Width>
+															<ContextMenu name="ТаблицаСчетовСчетНомерСчетаКонтекстноеМеню" id="11"/>
+															<ExtendedTooltip name="ТаблицаСчетовСчетНомерСчетаExtendedTooltip" id="42"/>
+														</LabelField>
+														<InputField name="ТаблицаСчетовСчетДатаСчета" id="12">
+															<DataPath>ТаблицаВходящихСчетов.Счет.ДатаСчета</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Дата</v8:content>
+																</v8:item>
+															</Title>
+															<Width>11</Width>
+															<ContextMenu name="ТаблицаСчетовСчетДатаСчетаКонтекстноеМеню" id="13"/>
+															<ExtendedTooltip name="ТаблицаСчетовСчетДатаСчетаExtendedTooltip" id="43"/>
+														</InputField>
+													</ChildItems>
+												</ColumnGroup>
+												<LabelField name="ТаблицаСчетовСчет" id="6">
+													<DataPath>ТаблицаВходящихСчетов.Счет</DataPath>
+													<ContextMenu name="ТаблицаСчетовСчетКонтекстноеМеню" id="7"/>
+													<ExtendedTooltip name="ТаблицаСчетовСчетExtendedTooltip" id="45"/>
+												</LabelField>
+											</ChildItems>
+										</ColumnGroup>
+										<LabelField name="ТаблицаВходящихСчетовСальдо" id="8">
+											<DataPath>ТаблицаВходящихСчетов.Всего</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сальдо, Вал.</v8:content>
+												</v8:item>
+											</Title>
+											<Width>6</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="ТаблицаВходящихСчетовСальдоКонтекстноеМеню" id="9"/>
+											<ExtendedTooltip name="ТаблицаВходящихСчетовСальдоExtendedTooltip" id="44"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаИсходящихСчетов" id="20">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Исходящие счета</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница исходящих счетов</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаИсходящихСчетовExtendedTooltip" id="46"/>
+							<ChildItems>
+								<Table name="ТаблицаИсходящихСчетов" id="21">
+									<TitleLocation>Top</TitleLocation>
+									<ReadOnly>true</ReadOnly>
+									<HorizontalLines>false</HorizontalLines>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<EnableStartDrag>true</EnableStartDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ТаблицаИсходящихСчетов</DataPath>
+									<RowPictureDataPath>ТаблицаИсходящихСчетов.DefaultPicture</RowPictureDataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Неактированные счета</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>#9F6500</TitleTextColor>
+									<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+									<ContextMenu name="ТаблицаИсходящихСчетовКонтекстноеМеню" id="22"/>
+									<AutoCommandBar name="ТаблицаИсходящихСчетовКоманднаяПанель" id="23">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ТаблицаИсходящихСчетовExtendedTooltip" id="47"/>
+									<SearchStringAddition name="ТаблицаИсходящихСчетовSearchString" id="67">
+										<AdditionSource>
+											<Item>ТаблицаИсходящихСчетов</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаИсходящихСчетовSearchStringContextMenu" id="68"/>
+										<ExtendedTooltip name="ТаблицаИсходящихСчетовSearchStringExtendedTooltip" id="69"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТаблицаИсходящихСчетовViewStatus" id="70">
+										<AdditionSource>
+											<Item>ТаблицаИсходящихСчетов</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаИсходящихСчетовViewStatusContextMenu" id="71"/>
+										<ExtendedTooltip name="ТаблицаИсходящихСчетовViewStatusExtendedTooltip" id="72"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТаблицаИсходящихСчетовSearchControl" id="73">
+										<AdditionSource>
+											<Item>ТаблицаИсходящихСчетов</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаИсходящихСчетовSearchControlContextMenu" id="74"/>
+										<ExtendedTooltip name="ТаблицаИсходящихСчетовSearchControlExtendedTooltip" id="75"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">ТаблицаИсходящихСчетовВыбор</Event>
+									</Events>
+									<ChildItems>
+										<ColumnGroup name="ТаблицаИсходящихСчетовГруппа1" id="54">
+											<ExtendedTooltip name="ТаблицаИсходящихСчетовГруппа1РасширеннаяПодсказка" id="55"/>
+											<ChildItems>
+												<ColumnGroup name="ТаблицаСчетовГруппа2" id="24">
+													<Width>40</Width>
+													<Group>Horizontal</Group>
+													<ExtendedTooltip name="ТаблицаСчетовГруппа2ExtendedTooltip" id="48"/>
+													<ChildItems>
+														<InputField name="ТаблицаИсходящихСчетовНомерСчета" id="31">
+															<DataPath>ТаблицаИсходящихСчетов.Счет.НомерСчета</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Номер</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ТаблицаИсходящихСчетовНомерСчетаКонтекстноеМеню" id="32"/>
+															<ExtendedTooltip name="ТаблицаИсходящихСчетовНомерСчетаExtendedTooltip" id="49"/>
+														</InputField>
+														<InputField name="ТаблицаИсходящихСчетовДатаСчета" id="33">
+															<DataPath>ТаблицаИсходящихСчетов.Счет.ДатаСчета</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Дата</v8:content>
+																</v8:item>
+															</Title>
+															<Width>11</Width>
+															<ContextMenu name="ТаблицаИсходящихСчетовДатаСчетаКонтекстноеМеню" id="34"/>
+															<ExtendedTooltip name="ТаблицаИсходящихСчетовДатаСчетаExtendedTooltip" id="50"/>
+														</InputField>
+													</ChildItems>
+												</ColumnGroup>
+												<LabelField name="ТаблицаИсходящихСчетовСчет" id="27">
+													<DataPath>ТаблицаИсходящихСчетов.Счет</DataPath>
+													<ContextMenu name="ТаблицаИсходящихСчетовСчетКонтекстноеМеню" id="28"/>
+													<ExtendedTooltip name="ТаблицаИсходящихСчетовСчетExtendedTooltip" id="51"/>
+												</LabelField>
+											</ChildItems>
+										</ColumnGroup>
+										<LabelField name="ТаблицаИсходящихСчетовСальдо" id="29">
+											<DataPath>ТаблицаИсходящихСчетов.Всего</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сальдо,Вал</v8:content>
+												</v8:item>
+											</Title>
+											<Width>6</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ТаблицаИсходящихСчетовСальдоКонтекстноеМеню" id="30"/>
+											<ExtendedTooltip name="ТаблицаИсходящихСчетовСальдоExtendedTooltip" id="52"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+				<InputField name="ПредставлениеОтбора" id="15">
+					<DataPath>ПредставлениеОтбора</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>#9F6500</TitleTextColor>
+					<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<TitleLocation>Top</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>8</Height>
+					<MultiLine>true</MultiLine>
+					<ContextMenu name="ПредставлениеОтбораКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ПредставлениеОтбораExtendedTooltip" id="53"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТаблицаВходящихСчетов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица входящих счетов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РегистрНакопленияCW_АктированиеВходящихСчетовОстатки.Счет КАК Счет,
+	РегистрНакопленияCW_АктированиеВходящихСчетовОстатки.ВсегоОстаток КАК Всего
+ИЗ
+	РегистрНакопления.CW_АктированиеВходящихСчетов.Остатки(
+			&amp;Период,
+			Организация = &amp;Организация
+				И Контрагент = &amp;Контрагент
+				И Договор = &amp;Договор
+				И ПриложениеКДоговору = &amp;ПриложениеКДоговору
+				И Валюта = &amp;Валюта
+				И ВЫБОР
+					КОГДА &amp;Грузоперевозка = НЕОПРЕДЕЛЕНО
+						ТОГДА ИСТИНА
+					ИНАЧЕ Грузоперевозка = &amp;Грузоперевозка
+				КОНЕЦ
+				И ВЫБОР
+					КОГДА &amp;ПорядокОтражения = НЕОПРЕДЕЛЕНО
+						ТОГДА ИСТИНА
+					ИНАЧЕ ПорядокОтражения = &amp;ПорядокОтражения
+				КОНЕЦ
+				И ВЫБОР
+					КОГДА &amp;Номенклатура = НЕОПРЕДЕЛЕНО
+						ТОГДА ИСТИНА
+					ИНАЧЕ Номенклатура = &amp;Номенклатура
+				КОНЕЦ
+				И ВЫБОР
+					КОГДА &amp;СтавкаНДС = НЕОПРЕДЕЛЕНО
+						ТОГДА ИСТИНА
+					ИНАЧЕ СтавкаНДС = &amp;СтавкаНДС
+				КОНЕЦ) КАК РегистрНакопленияCW_АктированиеВходящихСчетовОстатки</QueryText>
+				<MainTable>AccumulationRegister.CW_АктированиеВходящихСчетов.Balance</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПредставлениеОтбора" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление отбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаИсходящихСчетов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица исходящих счетов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РегистрНакопленияCW_АктированиеИсходящихСчетовОстатки.Счет КАК Счет,
+	РегистрНакопленияCW_АктированиеИсходящихСчетовОстатки.ВсегоОстаток КАК Всего
+ИЗ
+	РегистрНакопления.CW_АктированиеИсходящихСчетов.Остатки(
+			&amp;Период,
+			Организация = &amp;Организация
+				И Контрагент = &amp;Контрагент
+				И Договор = &amp;Договор
+				И ПриложениеКДоговору = &amp;ПриложениеКДоговору
+				И Валюта = &amp;Валюта
+				И ВЫБОР
+					КОГДА &amp;Грузоперевозка = НЕОПРЕДЕЛЕНО
+						ТОГДА ИСТИНА
+					ИНАЧЕ Грузоперевозка = &amp;Грузоперевозка
+				КОНЕЦ
+				И ВЫБОР
+					КОГДА &amp;ПорядокОтражения = НЕОПРЕДЕЛЕНО
+						ТОГДА ИСТИНА
+					ИНАЧЕ ПорядокОтражения = &amp;ПорядокОтражения
+				КОНЕЦ
+				И ВЫБОР
+					КОГДА &amp;Номенклатура = НЕОПРЕДЕЛЕНО
+						ТОГДА ИСТИНА
+					ИНАЧЕ Номенклатура = &amp;Номенклатура
+				КОНЕЦ
+				И ВЫБОР
+					КОГДА &amp;СтавкаНДС = НЕОПРЕДЕЛЕНО
+						ТОГДА ИСТИНА
+					ИНАЧЕ СтавкаНДС = &amp;СтавкаНДС
+				КОНЕЦ) КАК РегистрНакопленияCW_АктированиеИсходящихСчетовОстатки</QueryText>
+				<MainTable>AccumulationRegister.CW_АктированиеИсходящихСчетов.Balance</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ЭтоРасходы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это расходы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоДоходы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это доходы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

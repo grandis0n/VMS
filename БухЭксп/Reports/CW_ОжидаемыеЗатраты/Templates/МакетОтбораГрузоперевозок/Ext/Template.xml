@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказ</dataPath>
+			<field>Заказ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Грузоперевозка</dataPath>
+			<field>Грузоперевозка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Грузоперевозка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	CW_Грузоперевозки.Ссылка КАК Грузоперевозка,
+	CW_Грузоперевозки.Заказ КАК Заказ
+ИЗ
+	Справочник.CW_Грузоперевозки КАК CW_Грузоперевозки
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.CW_Грузоперевозки)
+	ВИДЫХАРАКТЕРИСТИК ПланВидовХарактеристик.CW_ПараметрыГрузоперевозок
+	ПОЛЕКЛЮЧА Ссылка
+	ПОЛЕИМЕНИ Идентификатор
+	ПОЛЕТИПАЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯХАРАКТЕРИСТИК РегистрСведений.CW_ХарактеристикиГрузоперевозок
+	ПОЛЕОБЪЕКТА Грузоперевозка
+	ПОЛЕВИДА Параметр
+	ПОЛЕЗНАЧЕНИЯ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.CW_Грузоперевозки)
+	ВИДЫХАРАКТЕРИСТИК ПланВидовХарактеристик.CW_ПараметрыГрузоперевозок
+	ПОЛЕКЛЮЧА Ссылка
+	ПОЛЕИМЕНИ ИдентификаторПлан
+	ПОЛЕТИПАЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯХАРАКТЕРИСТИК РегистрСведений.CW_ХарактеристикиГрузоперевозок
+	ПОЛЕОБЪЕКТА Грузоперевозка
+	ПОЛЕВИДА Параметр
+	ПОЛЕЗНАЧЕНИЯ ЗначениеПлан }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.CW_Грузоперевозки)
+	ВИДЫХАРАКТЕРИСТИК ПланВидовХарактеристик.CW_ПараметрыГрузоперевозок
+	ПОЛЕКЛЮЧА Ссылка
+	ПОЛЕИМЕНИ ИдентификаторФакт
+	ПОЛЕТИПАЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯХАРАКТЕРИСТИК РегистрСведений.CW_ХарактеристикиГрузоперевозок
+	ПОЛЕОБЪЕКТА Грузоперевозка
+	ПОЛЕВИДА Параметр
+	ПОЛЕЗНАЧЕНИЯ ЗначениеФакт }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.CW_Заказы)
+	ВИДЫХАРАКТЕРИСТИК ПланВидовХарактеристик.CW_ПараметрыГрузоперевозок
+	ПОЛЕКЛЮЧА Ссылка
+	ПОЛЕИМЕНИ Идентификатор
+	ПОЛЕТИПАЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯХАРАКТЕРИСТИК РегистрСведений.CW_ХарактеристикиЗаказов
+	ПОЛЕОБЪЕКТА Заказ
+	ПОЛЕВИДА Параметр
+	ПОЛЕЗНАЧЕНИЯ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.CW_Заказы)
+	ВИДЫХАРАКТЕРИСТИК ПланВидовХарактеристик.CW_ПараметрыГрузоперевозок
+	ПОЛЕКЛЮЧА Ссылка
+	ПОЛЕИМЕНИ ИдентификаторПлан
+	ПОЛЕТИПАЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯХАРАКТЕРИСТИК РегистрСведений.CW_ХарактеристикиЗаказов
+	ПОЛЕОБЪЕКТА Заказ
+	ПОЛЕВИДА Параметр
+	ПОЛЕЗНАЧЕНИЯ ЗначениеПлан }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.CW_Заказы)
+	ВИДЫХАРАКТЕРИСТИК ПланВидовХарактеристик.CW_ПараметрыГрузоперевозок
+	ПОЛЕКЛЮЧА Ссылка
+	ПОЛЕИМЕНИ ИдентификаторФакт
+	ПОЛЕТИПАЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯХАРАКТЕРИСТИК РегистрСведений.CW_ХарактеристикиЗаказов
+	ПОЛЕОБЪЕКТА Заказ
+	ПОЛЕВИДА Параметр
+	ПОЛЕЗНАЧЕНИЯ ЗначениеФакт }</query>
+	</dataSet>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Грузоперевозка</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

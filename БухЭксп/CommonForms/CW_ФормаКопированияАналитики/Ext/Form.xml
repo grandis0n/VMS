@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Копирование заказа</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаКомандаОК" id="2">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.КомандаОК</CommandName>
+				<ExtendedTooltip name="ФормаКомандаОКExtendedTooltip" id="28"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="1">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отмена</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗакрытьExtendedTooltip" id="29"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаРамка" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры копирования</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа рамка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаРамкаExtendedTooltip" id="30"/>
+			<ChildItems>
+				<CheckBoxField name="ОчищатьСсылкуНаЗаказ" id="66">
+					<DataPath>ОчищатьСсылкуНаЗаказ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>очищать ссылку на заказ</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОчищатьСсылкуНаЗаказКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="ОчищатьСсылкуНаЗаказРасширеннаяПодсказка" id="68"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаГрузоперевозки" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копирование грузоперевозок</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа грузоперевозки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаГрузоперевозкиExtendedTooltip" id="31"/>
+			<ChildItems>
+				<CheckBoxField name="КопироватьГрузоперевозки" id="4">
+					<DataPath>КопироватьГрузоперевозки</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КопироватьГрузоперевозкиКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="КопироватьГрузоперевозкиExtendedTooltip" id="32"/>
+					<Events>
+						<Event name="OnChange">КопироватьГрузоперевозкиПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<Table name="Грузоперевозки" id="9">
+					<Representation>List</Representation>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Грузоперевозки</DataPath>
+					<RowPictureDataPath>Грузоперевозки.Picture</RowPictureDataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>Pickup</ExcludedCommand>
+						<ExcludedCommand>SelectAll</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<ContextMenu name="ГрузоперевозкиКонтекстноеМеню" id="10"/>
+					<AutoCommandBar name="ГрузоперевозкиКоманднаяПанель" id="11">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="ГрузоперевозкиУстановитьФлажки" id="14">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Грузоперевозки.StandardCommand.CheckAll</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ГрузоперевозкиУстановитьФлажкиExtendedTooltip" id="33"/>
+							</Button>
+							<Button name="ГрузоперевозкиСнятьФлажки" id="15">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Грузоперевозки.StandardCommand.UncheckAll</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ГрузоперевозкиСнятьФлажкиExtendedTooltip" id="34"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ГрузоперевозкиExtendedTooltip" id="35"/>
+					<SearchStringAddition name="ГрузоперевозкиСтрокаПоиска" id="45">
+						<AdditionSource>
+							<Item>Грузоперевозки</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ГрузоперевозкиСтрокаПоискаКонтекстноеМеню" id="46"/>
+						<ExtendedTooltip name="ГрузоперевозкиСтрокаПоискаРасширеннаяПодсказка" id="47"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ГрузоперевозкиСостояниеПросмотра" id="48">
+						<AdditionSource>
+							<Item>Грузоперевозки</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ГрузоперевозкиСостояниеПросмотраКонтекстноеМеню" id="49"/>
+						<ExtendedTooltip name="ГрузоперевозкиСостояниеПросмотраРасширеннаяПодсказка" id="50"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ГрузоперевозкиУправлениеПоиском" id="51">
+						<AdditionSource>
+							<Item>Грузоперевозки</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ГрузоперевозкиУправлениеПоискомКонтекстноеМеню" id="52"/>
+						<ExtendedTooltip name="ГрузоперевозкиУправлениеПоискомРасширеннаяПодсказка" id="53"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<CheckBoxField name="ГрузоперевозкиПометка" id="16">
+							<DataPath>Грузоперевозки.Check</DataPath>
+							<EditMode>Directly</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ГрузоперевозкиПометкаКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ГрузоперевозкиПометкаExtendedTooltip" id="36"/>
+						</CheckBoxField>
+						<InputField name="ГрузоперевозкиЗначение" id="12">
+							<DataPath>Грузоперевозки.Value</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ГрузоперевозкиЗначениеКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="ГрузоперевозкиЗначениеExtendedTooltip" id="37"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЗаполнениеПараметров" id="69">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнение параметров грузоперевозок</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа заполнение параметров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаЗаполнениеПараметровРасширеннаяПодсказка" id="70"/>
+			<ChildItems>
+				<RadioButtonField name="СпособЗаполненияПараметровГрузоперевозкиПриКопировании" id="71">
+					<DataPath>СпособЗаполненияПараметровГрузоперевозкиПриКопировании</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ColumnsCount>1</ColumnsCount>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>заполнять в соответствии с параметрами типа перевозки</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>точное соответствие копируемой грузоперевозки</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="СпособЗаполненияПараметровГрузоперевозкиПриКопированииКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="СпособЗаполненияПараметровГрузоперевозкиПриКопированииРасширеннаяПодсказка" id="73"/>
+				</RadioButtonField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаБюджеты" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копирование бюджетов</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа бюджеты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаБюджетыExtendedTooltip" id="38"/>
+			<ChildItems>
+				<CheckBoxField name="КопироватьБюджет" id="7">
+					<DataPath>КопироватьБюджет</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КопироватьБюджетКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="КопироватьБюджетExtendedTooltip" id="39"/>
+					<Events>
+						<Event name="OnChange">КопироватьБюджетПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="ОчищатьПоказателиБюджета" id="63">
+					<DataPath>ОчищатьПоказателиБюджетов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>очищать суммовые показатели</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОчищатьПоказателиБюджетаКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="ОчищатьПоказателиБюджетаРасширеннаяПодсказка" id="65"/>
+				</CheckBoxField>
+				<Table name="ВерсииБюджетов" id="18">
+					<Representation>List</Representation>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>ВерсииБюджетов</DataPath>
+					<RowPictureDataPath>ВерсииБюджетов.Picture</RowPictureDataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>Pickup</ExcludedCommand>
+						<ExcludedCommand>SelectAll</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<ContextMenu name="ВерсииБюджетовКонтекстноеМеню" id="19"/>
+					<AutoCommandBar name="ВерсииБюджетовКоманднаяПанель" id="20">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="ВерсииБюджетовУстановитьФлажки" id="23">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ВерсииБюджетов.StandardCommand.CheckAll</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ВерсииБюджетовУстановитьФлажкиExtendedTooltip" id="40"/>
+							</Button>
+							<Button name="ВерсииБюджетовСнятьФлажки" id="24">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ВерсииБюджетов.StandardCommand.UncheckAll</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ВерсииБюджетовСнятьФлажкиExtendedTooltip" id="41"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ВерсииБюджетовExtendedTooltip" id="42"/>
+					<SearchStringAddition name="ВерсииБюджетовСтрокаПоиска" id="54">
+						<AdditionSource>
+							<Item>ВерсииБюджетов</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ВерсииБюджетовСтрокаПоискаКонтекстноеМеню" id="55"/>
+						<ExtendedTooltip name="ВерсииБюджетовСтрокаПоискаРасширеннаяПодсказка" id="56"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ВерсииБюджетовСостояниеПросмотра" id="57">
+						<AdditionSource>
+							<Item>ВерсииБюджетов</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ВерсииБюджетовСостояниеПросмотраКонтекстноеМеню" id="58"/>
+						<ExtendedTooltip name="ВерсииБюджетовСостояниеПросмотраРасширеннаяПодсказка" id="59"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ВерсииБюджетовУправлениеПоиском" id="60">
+						<AdditionSource>
+							<Item>ВерсииБюджетов</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ВерсииБюджетовУправлениеПоискомКонтекстноеМеню" id="61"/>
+						<ExtendedTooltip name="ВерсииБюджетовУправлениеПоискомРасширеннаяПодсказка" id="62"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<CheckBoxField name="ВерсииБюджетовПометка" id="25">
+							<DataPath>ВерсииБюджетов.Check</DataPath>
+							<EditMode>Directly</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВерсииБюджетовПометкаКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ВерсииБюджетовПометкаExtendedTooltip" id="43"/>
+						</CheckBoxField>
+						<InputField name="ВерсииБюджетовЗначение" id="21">
+							<DataPath>ВерсииБюджетов.Value</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВерсииБюджетовЗначениеКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="ВерсииБюджетовЗначениеExtendedTooltip" id="44"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="КопироватьГрузоперевозки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>копировать грузоперевозки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КопироватьБюджет" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>копировать бюджеты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Грузоперевозки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Грузоперевозки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.CW_Грузоперевозки</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ВерсииБюджетов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версии бюджетов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.CW_ВерсииБюджетов</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОбъектКопирования" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект копирования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.CW_Заказы</v8:Type>
+				<v8:Type>cfg:CatalogRef.CW_Грузоперевозки</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УИД" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>УИД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОчищатьПоказателиБюджетов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очищать показатели бюджетов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОчищатьСсылкуНаЗаказ" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>очищать заказ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СпособЗаполненияПараметровГрузоперевозкиПриКопировании" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ заполнения параметров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

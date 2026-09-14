@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Ввод на основании</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>OpenFromMainServer</ExcludedCommand>
+		<ExcludedCommand>OpenFromStandaloneServer</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаПродолжитьВводНаОсновании" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ПродолжитьВводНаОсновании</CommandName>
+				<ExtendedTooltip name="ФормаПродолжитьВводНаОснованииРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаОтмена" id="36">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="37"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="41">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:NavigationColor</BackColor>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="42"/>
+			<ChildItems>
+				<LabelField name="ДокументОснование" id="38">
+					<DataPath>ДокументОснование</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Font bold="true" kind="AutoFont"/>
+					<ContextMenu name="ДокументОснованиеКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ДокументОснованиеРасширеннаяПодсказка" id="40"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ДатаДокумента" id="3">
+			<DataPath>ДатаДокумента</DataPath>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата документа "Отчет экспедира"</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<ContextMenu name="ДатаДокументаКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ДатаДокументаРасширеннаяПодсказка" id="5"/>
+		</InputField>
+		<Table name="ДанныеДокумента" id="6">
+			<Representation>List</Representation>
+			<SelectionMode>SingleRow</SelectionMode>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ДанныеДокумента</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>CancelSearch</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>Find</ExcludedCommand>
+				<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>OutputList</ExcludedCommand>
+				<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДанныеДокументаКонтекстноеМеню" id="7"/>
+			<AutoCommandBar name="ДанныеДокументаКоманднаяПанель" id="8"/>
+			<ExtendedTooltip name="ДанныеДокументаРасширеннаяПодсказка" id="9"/>
+			<SearchStringAddition name="ДанныеДокументаСтрокаПоиска" id="10">
+				<AdditionSource>
+					<Item>ДанныеДокумента</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеДокументаСтрокаПоискаКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="ДанныеДокументаСтрокаПоискаРасширеннаяПодсказка" id="12"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДанныеДокументаСостояниеПросмотра" id="13">
+				<AdditionSource>
+					<Item>ДанныеДокумента</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеДокументаСостояниеПросмотраКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="ДанныеДокументаСостояниеПросмотраРасширеннаяПодсказка" id="15"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДанныеДокументаУправлениеПоиском" id="16">
+				<AdditionSource>
+					<Item>ДанныеДокумента</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеДокументаУправлениеПоискомКонтекстноеМеню" id="17"/>
+				<ExtendedTooltip name="ДанныеДокументаУправлениеПоискомРасширеннаяПодсказка" id="18"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ДанныеДокументаВыбор</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ДанныеДокументаКонтрагент" id="19">
+					<DataPath>ДанныеДокумента.Контрагент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ДанныеДокументаКонтрагентКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ДанныеДокументаКонтрагентРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<ColumnGroup name="ДанныеДокументаГруппа1" id="34">
+					<ExtendedTooltip name="ДанныеДокументаГруппа1РасширеннаяПодсказка" id="35"/>
+					<ChildItems>
+						<InputField name="ДанныеДокументаДоговор" id="22">
+							<DataPath>ДанныеДокумента.Договор</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ДанныеДокументаДоговорКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ДанныеДокументаДоговорРасширеннаяПодсказка" id="24"/>
+						</InputField>
+						<InputField name="ДанныеДокументаПриложениеКДоговору" id="31">
+							<DataPath>ДанныеДокумента.ПриложениеКДоговору</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ДанныеДокументаПриложениеКДоговоруКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ДанныеДокументаПриложениеКДоговоруРасширеннаяПодсказка" id="33"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="ДанныеДокументаСумма" id="28">
+					<DataPath>ДанныеДокумента.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>20</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ДанныеДокументаСуммаКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ДанныеДокументаСуммаРасширеннаяПодсказка" id="30"/>
+				</InputField>
+				<InputField name="ДанныеДокументаВалюта" id="25">
+					<DataPath>ДанныеДокумента.Валюта</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>10</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ДанныеДокументаВалютаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ДанныеДокументаВалютаРасширеннаяПодсказка" id="27"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ДокументОснование" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.CW_РасходыПоГрузоперевозке</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеДокумента" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Контрагент" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Договор" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.CW_ДоговорыПоГрузоперевозкам</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Валюта" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюта</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПриложениеКДоговору" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приложение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.CW_ПриложенияКДоговорам</v8:Type>
+					</Type>
+					<FunctionalOptions>
+						<Item>FunctionalOption.CW_ВедетсяУчетПриложенийПоДоговорам</Item>
+					</FunctionalOptions>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДатаДокумента" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПродолжитьВводНаОсновании" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить ввод на основании</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПродолжитьВводНаОсновании</Action>
+		</Command>
+	</Commands>
+</Form>

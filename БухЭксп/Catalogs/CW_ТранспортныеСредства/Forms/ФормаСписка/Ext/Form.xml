@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="10"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="40">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="41"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="42"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="43">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="44"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="45"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="46">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="47"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="48"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Наименование" id="4">
+					<DataPath>Список.Наименование</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="11"/>
+				</LabelField>
+				<LabelField name="Код" id="6">
+					<DataPath>Список.Код</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КодКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="12"/>
+				</LabelField>
+				<LabelField name="ВидТС" id="49">
+					<DataPath>Список.ВидТС</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид ТС</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ВидТСКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ВидТСРасширеннаяПодсказка" id="51"/>
+				</LabelField>
+				<LabelField name="ТипТранспортногоСредства" id="84">
+					<DataPath>Список.ТипТранспортногоСредства</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип ТС</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТипТранспортногоСредстваКонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="ТипТранспортногоСредстваРасширеннаяПодсказка" id="86"/>
+				</LabelField>
+				<LabelField name="РегистрационныйЗнак" id="87">
+					<DataPath>Список.РегистрационныйЗнак</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гос. номер</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="РегистрационныйЗнакКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="РегистрационныйЗнакРасширеннаяПодсказка" id="89"/>
+				</LabelField>
+				<LabelField name="Водитель" id="52">
+					<DataPath>Список.ОсновнойВодитель</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Водитель</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ВодительКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ВодительРасширеннаяПодсказка" id="54"/>
+				</LabelField>
+				<LabelField name="Модель" id="58">
+					<DataPath>Список.Модель</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Модель</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="МодельКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="МодельРасширеннаяПодсказка" id="60"/>
+				</LabelField>
+				<LabelField name="Прицеп" id="61">
+					<DataPath>Список.ОсновнойПрицеп</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прицеп</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПрицепКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="ПрицепРасширеннаяПодсказка" id="63"/>
+				</LabelField>
+				<LabelField name="VIN" id="67">
+					<DataPath>Список.VIN</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>VIN</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="VINКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="VINРасширеннаяПодсказка" id="69"/>
+				</LabelField>
+				<LabelField name="Топливо" id="73">
+					<DataPath>Список.ОсновноеТопливо</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Топливо</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТопливоКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="ТопливоРасширеннаяПодсказка" id="75"/>
+				</LabelField>
+				<LabelField name="Контрагент" id="78">
+					<DataPath>Список.Контрагент</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Владелец ТС</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="80"/>
+				</LabelField>
+				<LabelField name="Принадлежность" id="81">
+					<DataPath>Список.Принадлежность</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Принадлежность</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПринадлежностьКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="ПринадлежностьРасширеннаяПодсказка" id="83"/>
+				</LabelField>
+				<LabelField name="Ссылка" id="90">
+					<DataPath>Список.Ссылка</DataPath>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="92"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникCW_ТранспортныеСредства.Ссылка КАК Ссылка,
+	СправочникCW_ТранспортныеСредства.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникCW_ТранспортныеСредства.Родитель КАК Родитель,
+	СправочникCW_ТранспортныеСредства.ЭтоГруппа КАК ЭтоГруппа,
+	СправочникCW_ТранспортныеСредства.Код КАК Код,
+	СправочникCW_ТранспортныеСредства.Наименование КАК Наименование,
+	СправочникCW_ТранспортныеСредства.VIN КАК VIN,
+	СправочникCW_ТранспортныеСредства.Вес КАК Вес,
+	СправочникCW_ТранспортныеСредства.ВидТС КАК ВидТС,
+	СправочникCW_ТранспортныеСредства.ГодВыпуска КАК ГодВыпуска,
+	СправочникCW_ТранспортныеСредства.Комментарий КАК Комментарий,
+	СправочникCW_ТранспортныеСредства.Модель КАК Модель,
+	СправочникCW_ТранспортныеСредства.НомерКПП КАК НомерКПП,
+	СправочникCW_ТранспортныеСредства.НомерКузова КАК НомерКузова,
+	СправочникCW_ТранспортныеСредства.НомерШасси КАК НомерШасси,
+	СправочникCW_ТранспортныеСредства.ОсновноеТопливо КАК ОсновноеТопливо,
+	СправочникCW_ТранспортныеСредства.ОсновнойВодитель КАК ОсновнойВодитель,
+	СправочникCW_ТранспортныеСредства.ОсновнойПрицеп КАК ОсновнойПрицеп,
+	СправочникCW_ТранспортныеСредства.ТипТранспортногоСредства КАК ТипТранспортногоСредства,
+	СправочникCW_ТранспортныеСредства.ЦветКузова КАК ЦветКузова,
+	СправочникCW_ТранспортныеСредства.Принадлежность КАК Принадлежность,
+	СправочникCW_ТранспортныеСредства.Контрагент КАК Контрагент,
+	СправочникCW_ТранспортныеСредства.Предопределенный КАК Предопределенный,
+	СправочникCW_ТранспортныеСредства.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных,
+	РегистрацонныеЗнаки.РегистрационныйЗнак КАК РегистрационныйЗнак
+ИЗ
+	Справочник.CW_ТранспортныеСредства КАК СправочникCW_ТранспортныеСредства
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.CW_РегистрацонныеЗнакиАвтомобилей.СрезПоследних(, ) КАК РегистрацонныеЗнаки
+		ПО СправочникCW_ТранспортныеСредства.Ссылка = РегистрацонныеЗнаки.ТранспортноеСредство</QueryText>
+				<MainTable>Catalog.CW_ТранспортныеСредства</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Принадлежность</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Принадлежность</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Привелеченное</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Принадлежность</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Принадлежность</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Арендованное</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Принадлежность</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Принадлежность</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">2</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Собственное</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+</Form>

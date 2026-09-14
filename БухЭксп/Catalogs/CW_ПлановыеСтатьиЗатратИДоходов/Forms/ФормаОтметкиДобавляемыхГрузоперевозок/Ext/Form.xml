@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выбор грузоперевозок</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаКомандаОК" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.КомандаОК</CommandName>
+				<ExtendedTooltip name="ФормаКомандаОКExtendedTooltip" id="14"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="11">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьExtendedTooltip" id="15"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="сзГрузоперевозки" id="2">
+			<Representation>List</Representation>
+			<Visible>false</Visible>
+			<Header>false</Header>
+			<HorizontalLines>false</HorizontalLines>
+			<VerticalLines>false</VerticalLines>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>сзГрузоперевозки</DataPath>
+			<RowPictureDataPath>сзГрузоперевозки.Picture</RowPictureDataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>Pickup</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<ContextMenu name="сзГрузоперевозкиКонтекстноеМеню" id="3"/>
+			<AutoCommandBar name="сзГрузоперевозкиКоманднаяПанель" id="4">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="сзГрузоперевозкиУстановитьФлажки" id="29">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.сзГрузоперевозки.StandardCommand.CheckAll</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="сзГрузоперевозкиУстановитьФлажкиРасширеннаяПодсказка" id="30"/>
+					</Button>
+					<Button name="сзГрузоперевозкиСнятьФлажки" id="31">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.сзГрузоперевозки.StandardCommand.UncheckAll</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="сзГрузоперевозкиСнятьФлажкиРасширеннаяПодсказка" id="32"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="сзГрузоперевозкиExtendedTooltip" id="16"/>
+			<SearchStringAddition name="сзГрузоперевозкиСтрокаПоиска" id="20">
+				<AdditionSource>
+					<Item>сзГрузоперевозки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="сзГрузоперевозкиСтрокаПоискаКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="сзГрузоперевозкиСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="сзГрузоперевозкиСостояниеПросмотра" id="23">
+				<AdditionSource>
+					<Item>сзГрузоперевозки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="сзГрузоперевозкиСостояниеПросмотраКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="сзГрузоперевозкиСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="сзГрузоперевозкиУправлениеПоиском" id="26">
+				<AdditionSource>
+					<Item>сзГрузоперевозки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="сзГрузоперевозкиУправлениеПоискомКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="сзГрузоперевозкиУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="сзГрузоперевозкиПометка" id="9">
+					<DataPath>сзГрузоперевозки.Check</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="сзГрузоперевозкиПометкаКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="сзГрузоперевозкиПометкаExtendedTooltip" id="17"/>
+				</CheckBoxField>
+				<InputField name="сзГрузоперевозкиЗначение" id="12">
+					<DataPath>сзГрузоперевозки.Value</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="сзГрузоперевозкиЗначениеКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="сзГрузоперевозкиЗначениеExtendedTooltip" id="18"/>
+				</InputField>
+				<InputField name="сзГрузоперевозкиПредставление" id="7">
+					<DataPath>сзГрузоперевозки.Presentation</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="сзГрузоперевозкиПредставлениеКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="сзГрузоперевозкиПредставлениеExtendedTooltip" id="19"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Table name="Грузоперевозки" id="33">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Грузоперевозки</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>OutputList</ExcludedCommand>
+				<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ГрузоперевозкиКонтекстноеМеню" id="34"/>
+			<AutoCommandBar name="ГрузоперевозкиКоманднаяПанель" id="35">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<ButtonGroup name="ГрузоперевозкиГруппа2" id="65">
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ГрузоперевозкиГруппа2РасширеннаяПодсказка" id="66"/>
+						<ChildItems>
+							<Button name="ГрузоперевозкиНайти" id="59">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Item.Грузоперевозки.StandardCommand.Find</CommandName>
+								<ExtendedTooltip name="ГрузоперевозкиНайтиРасширеннаяПодсказка" id="60"/>
+							</Button>
+							<Button name="ГрузоперевозкиОтменитьПоиск" id="61">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Item.Грузоперевозки.StandardCommand.CancelSearch</CommandName>
+								<ExtendedTooltip name="ГрузоперевозкиОтменитьПоискРасширеннаяПодсказка" id="62"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ГрузоперевозкиГруппа3" id="71">
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ГрузоперевозкиГруппа3РасширеннаяПодсказка" id="72"/>
+						<ChildItems>
+							<Button name="ГрузоперевозкиСортироватьСписокПоВозрастанию" id="67">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Item.Грузоперевозки.StandardCommand.SortListAsc</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ГрузоперевозкиСортироватьСписокПоВозрастаниюРасширеннаяПодсказка" id="68"/>
+							</Button>
+							<Button name="ГрузоперевозкиСортироватьСписокПоУбыванию" id="69">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Item.Грузоперевозки.StandardCommand.SortListDesc</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ГрузоперевозкиСортироватьСписокПоУбываниюРасширеннаяПодсказка" id="70"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ГрузоперевозкиГруппа1" id="63">
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ГрузоперевозкиГруппа1РасширеннаяПодсказка" id="64"/>
+						<ChildItems>
+							<Button name="ГрузоперевозкиКомандаУстановитьПометки" id="52">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.КомандаУстановитьПометки</CommandName>
+								<ExtendedTooltip name="ГрузоперевозкиКомандаУстановитьПометкиРасширеннаяПодсказка" id="53"/>
+							</Button>
+							<Button name="ГрузоперевозкиКомандаСнятьПометки" id="54">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.КомандаСнятьПометки</CommandName>
+								<ExtendedTooltip name="ГрузоперевозкиКомандаСнятьПометкиРасширеннаяПодсказка" id="55"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<Button name="ГрузоперевозкиВыделитьВсе" id="73">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Грузоперевозки.StandardCommand.SelectAll</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ГрузоперевозкиВыделитьВсеРасширеннаяПодсказка" id="74"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ГрузоперевозкиРасширеннаяПодсказка" id="36"/>
+			<SearchStringAddition name="ГрузоперевозкиСтрокаПоиска" id="37">
+				<AdditionSource>
+					<Item>Грузоперевозки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ГрузоперевозкиСтрокаПоискаКонтекстноеМеню" id="38"/>
+				<ExtendedTooltip name="ГрузоперевозкиСтрокаПоискаРасширеннаяПодсказка" id="39"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ГрузоперевозкиСостояниеПросмотра" id="40">
+				<AdditionSource>
+					<Item>Грузоперевозки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ГрузоперевозкиСостояниеПросмотраКонтекстноеМеню" id="41"/>
+				<ExtendedTooltip name="ГрузоперевозкиСостояниеПросмотраРасширеннаяПодсказка" id="42"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ГрузоперевозкиУправлениеПоиском" id="43">
+				<AdditionSource>
+					<Item>Грузоперевозки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ГрузоперевозкиУправлениеПоискомКонтекстноеМеню" id="44"/>
+				<ExtendedTooltip name="ГрузоперевозкиУправлениеПоискомРасширеннаяПодсказка" id="45"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="ГрузоперевозкиПометка" id="49">
+					<DataPath>Грузоперевозки.Пометка</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>Directly</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ГрузоперевозкиПометкаКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ГрузоперевозкиПометкаРасширеннаяПодсказка" id="51"/>
+					<Events>
+						<Event name="OnChange">ГрузоперевозкиПометкаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="ГрузоперевозкиГрузоперевозка" id="46">
+					<DataPath>Грузоперевозки.Грузоперевозка</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ГрузоперевозкиГрузоперевозкаКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ГрузоперевозкиГрузоперевозкаРасширеннаяПодсказка" id="48"/>
+				</InputField>
+				<InputField name="ГрузоперевозкиТипПеревозки" id="75">
+					<DataPath>Грузоперевозки.ТипПеревозки</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ГрузоперевозкиТипПеревозкиКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="ГрузоперевозкиТипПеревозкиРасширеннаяПодсказка" id="77"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<LabelDecoration name="Статистика" id="56">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<TextColor>style:CW_ЦветФакт</TextColor>
+			<Font ref="style:CW_ЖирныйШрифт" kind="StyleItem"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статистика</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="СтатистикаКонтекстноеМеню" id="57"/>
+			<ExtendedTooltip name="СтатистикаРасширеннаяПодсказка" id="58"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="сзГрузоперевозки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сз грузоперевозки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.CW_Грузоперевозки</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="Грузоперевозки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Грузоперевозки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Грузоперевозка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Грузоперевозка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.CW_Грузоперевозки</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПометкаУдаления" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка удаления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Пометка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипПеревозки" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип перевозки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.CW_ТипыПеревозок</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="КоличествоГП" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество ГП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоОтмеченныхГП" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество отмеченных ГП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоДоступныхГП" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество ГП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Грузоперевозки</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Грузоперевозки.ПометкаУдаления</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="false" italic="false" underline="false" strikeout="true" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаУстановитьПометки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаУстановитьПометки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаСнятьПометки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСнятьПометки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

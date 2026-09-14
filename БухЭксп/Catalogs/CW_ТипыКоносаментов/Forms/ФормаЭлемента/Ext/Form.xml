@@ -1,0 +1,854 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="7">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="65">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnLeftHorizontal</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="66"/>
+			<ChildItems>
+				<Page name="СтраницаНастройки" id="69">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница настройки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.CW_Шестеренка</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СтраницаНастройкиРасширеннаяПодсказка" id="70"/>
+					<ChildItems>
+						<UsualGroup name="Группа4" id="138">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="139"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОпции" id="129">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Опции</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа опции</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<ExtendedTooltip name="ГруппаОпцииРасширеннаяПодсказка" id="130"/>
+									<ChildItems>
+										<UsualGroup name="Группа3" id="131">
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="132"/>
+											<ChildItems>
+												<CheckBoxField name="УчетЗаявок" id="115">
+													<DataPath>Объект.УчетЗаявок</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="УчетЗаявокКонтекстноеМеню" id="116"/>
+													<ExtendedTooltip name="УчетЗаявокРасширеннаяПодсказка" id="117"/>
+												</CheckBoxField>
+												<CheckBoxField name="УчетЗаказов" id="71">
+													<DataPath>Объект.УчетЗаказов</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="УчетЗаказовКонтекстноеМеню" id="72"/>
+													<ExtendedTooltip name="УчетЗаказовРасширеннаяПодсказка" id="73"/>
+													<Events>
+														<Event name="OnChange">УчетЗаказовПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="УчетКонтейнеров" id="124">
+													<DataPath>Объект.УчетКонтейнеров</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="УчетКонтейнеровКонтекстноеМеню" id="125"/>
+													<ExtendedTooltip name="УчетКонтейнеровРасширеннаяПодсказка" id="126"/>
+												</CheckBoxField>
+												<CheckBoxField name="УчетГруза" id="157">
+													<DataPath>Объект.УчетГруза</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="УчетГрузаКонтекстноеМеню" id="158"/>
+													<ExtendedTooltip name="УчетГрузаРасширеннаяПодсказка" id="159"/>
+												</CheckBoxField>
+												<CheckBoxField name="УчетПортаПерегрузки" id="140">
+													<DataPath>Объект.УчетПортаПерегрузки</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="УчетПортаПерегрузкиКонтекстноеМеню" id="141"/>
+													<ExtendedTooltip name="УчетПортаПерегрузкиРасширеннаяПодсказка" id="142"/>
+												</CheckBoxField>
+												<CheckBoxField name="УчетДоговораСКлиентом" id="145">
+													<DataPath>Объект.УчетДоговораСКлиентом</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="УчетДоговораСКлиентомКонтекстноеМеню" id="146"/>
+													<ExtendedTooltip name="УчетДоговораСКлиентомРасширеннаяПодсказка" id="147"/>
+													<Events>
+														<Event name="OnChange">УчетДоговораСКлиентомПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="УчетГармонизированногоКода" id="148">
+													<DataPath>Объект.УчетГармонизированногоКода</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Учет кода (гармонизированного кода) разработанного
+Всемирной таможенной организацией (ВТО) </v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="УчетГармонизированногоКодаКонтекстноеМеню" id="149"/>
+													<ExtendedTooltip name="УчетГармонизированногоКодаРасширеннаяПодсказка" id="150"/>
+													<Events>
+														<Event name="OnChange">УчетДоговораСКлиентомПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="УчетКлассаОпасности" id="151">
+													<DataPath>Объект.УчетКлассаОпасности</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Учет классификации опасного груза по классификации
+IMO (International Maritime Organization, Международная 
+морская организация) и UN (Организации Объединенных
+Наций)</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="УчетКлассаОпасностиКонтекстноеМеню" id="152"/>
+													<ExtendedTooltip name="УчетКлассаОпасностиРасширеннаяПодсказка" id="153"/>
+													<Events>
+														<Event name="OnChange">УчетДоговораСКлиентомПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа2" id="127">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Соответствия реквизитов мониторинговым параметрам</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="128"/>
+							<ChildItems>
+								<Table name="СоответствиеРеквизитовМониторинговымПараметрам" id="85">
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.СоответствиеРеквизитовМониторинговымПараметрам</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="СоответствиеРеквизитовМониторинговымПараметрамКонтекстноеМеню" id="86"/>
+									<AutoCommandBar name="СоответствиеРеквизитовМониторинговымПараметрамКоманднаяПанель" id="87">
+										<ChildItems>
+											<Button name="СоответствиеРеквизитовМониторинговымПараметрамЗаполнитьРеквизиты" id="113">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьРеквизиты</CommandName>
+												<ExtendedTooltip name="СоответствиеРеквизитовМониторинговымПараметрамЗаполнитьРеквизитыРасширеннаяПодсказка" id="114"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="СоответствиеРеквизитовМониторинговымПараметрамРасширеннаяПодсказка" id="88"/>
+									<SearchStringAddition name="СоответствиеРеквизитовМониторинговымПараметрамСтрокаПоиска" id="89">
+										<AdditionSource>
+											<Item>СоответствиеРеквизитовМониторинговымПараметрам</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СоответствиеРеквизитовМониторинговымПараметрамСтрокаПоискаКонтекстноеМеню" id="90"/>
+										<ExtendedTooltip name="СоответствиеРеквизитовМониторинговымПараметрамСтрокаПоискаРасширеннаяПодсказка" id="91"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СоответствиеРеквизитовМониторинговымПараметрамСостояниеПросмотра" id="92">
+										<AdditionSource>
+											<Item>СоответствиеРеквизитовМониторинговымПараметрам</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СоответствиеРеквизитовМониторинговымПараметрамСостояниеПросмотраКонтекстноеМеню" id="93"/>
+										<ExtendedTooltip name="СоответствиеРеквизитовМониторинговымПараметрамСостояниеПросмотраРасширеннаяПодсказка" id="94"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СоответствиеРеквизитовМониторинговымПараметрамУправлениеПоиском" id="95">
+										<AdditionSource>
+											<Item>СоответствиеРеквизитовМониторинговымПараметрам</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СоответствиеРеквизитовМониторинговымПараметрамУправлениеПоискомКонтекстноеМеню" id="96"/>
+										<ExtendedTooltip name="СоответствиеРеквизитовМониторинговымПараметрамУправлениеПоискомРасширеннаяПодсказка" id="97"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="СоответствиеРеквизитовМониторинговымПараметрамНомерСтроки" id="98">
+											<DataPath>Объект.СоответствиеРеквизитовМониторинговымПараметрам.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СоответствиеРеквизитовМониторинговымПараметрамНомерСтрокиКонтекстноеМеню" id="99"/>
+											<ExtendedTooltip name="СоответствиеРеквизитовМониторинговымПараметрамНомерСтрокиРасширеннаяПодсказка" id="100"/>
+										</LabelField>
+										<InputField name="СоответствиеРеквизитовМониторинговымПараметрамРеквизитКоносамента" id="101">
+											<DataPath>Объект.СоответствиеРеквизитовМониторинговымПараметрам.РеквизитКоносамента</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="СоответствиеРеквизитовМониторинговымПараметрамРеквизитКоносаментаКонтекстноеМеню" id="102"/>
+											<ExtendedTooltip name="СоответствиеРеквизитовМониторинговымПараметрамРеквизитКоносаментаРасширеннаяПодсказка" id="103"/>
+											<Events>
+												<Event name="OnChange">СоответствиеРеквизитовМониторинговымПараметрамРеквизитКоносаментаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="СоответствиеРеквизитовМониторинговымПараметрамИмяРеквизита" id="154">
+											<DataPath>Объект.СоответствиеРеквизитовМониторинговымПараметрам.ИмяРеквизита</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ChoiceButton>true</ChoiceButton>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="СоответствиеРеквизитовМониторинговымПараметрамИмяРеквизитаКонтекстноеМеню" id="155"/>
+											<ExtendedTooltip name="СоответствиеРеквизитовМониторинговымПараметрамИмяРеквизитаРасширеннаяПодсказка" id="156"/>
+											<Events>
+												<Event name="StartChoice">СоответствиеРеквизитовМониторинговымПараметрамИмяРеквизитаНачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="СоответствиеРеквизитовМониторинговымПараметрамПараметрОбъекта" id="104">
+											<DataPath>Объект.СоответствиеРеквизитовМониторинговымПараметрам.ПараметрОбъекта</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="СоответствиеРеквизитовМониторинговымПараметрамПараметрОбъектаКонтекстноеМеню" id="105"/>
+											<ExtendedTooltip name="СоответствиеРеквизитовМониторинговымПараметрамПараметрОбъектаРасширеннаяПодсказка" id="106"/>
+										</InputField>
+										<CheckBoxField name="СоответствиеРеквизитовМониторинговымПараметрамКопироватьВГрузоперевозку" id="107">
+											<DataPath>Объект.СоответствиеРеквизитовМониторинговымПараметрам.КопироватьВГрузоперевозки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="СоответствиеРеквизитовМониторинговымПараметрамКопироватьВГрузоперевозкуКонтекстноеМеню" id="108"/>
+											<ExtendedTooltip name="СоответствиеРеквизитовМониторинговымПараметрамКопироватьВГрузоперевозкуРасширеннаяПодсказка" id="109"/>
+										</CheckBoxField>
+										<CheckBoxField name="СоответствиеРеквизитовМониторинговымПараметрамКопироватьВЗаказ" id="110">
+											<DataPath>Объект.СоответствиеРеквизитовМониторинговымПараметрам.КопироватьВЗаказы</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="СоответствиеРеквизитовМониторинговымПараметрамКопироватьВЗаказКонтекстноеМеню" id="111"/>
+											<ExtendedTooltip name="СоответствиеРеквизитовМониторинговымПараметрамКопироватьВЗаказРасширеннаяПодсказка" id="112"/>
+										</CheckBoxField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПараметры" id="67">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница параметры</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.CW_Меню</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СтраницаПараметрыРасширеннаяПодсказка" id="68"/>
+					<ChildItems>
+						<Table name="МониторинговыеПараметры" id="9">
+							<Representation>Tree</Representation>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialTreeView>ExpandAllLevels</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>МониторинговыеПараметры</DataPath>
+							<RowPictureDataPath>МониторинговыеПараметры.ИндексКартинки</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.CW_ПиктограммыМониторинговыхПараметров</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</RowsPicture>
+							<CommandSet>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>HierarchicalList</ExcludedCommand>
+								<ExcludedCommand>List</ExcludedCommand>
+								<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+								<ExcludedCommand>Tree</ExcludedCommand>
+							</CommandSet>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>false</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="МониторинговыеПараметрыКонтекстноеМеню" id="10"/>
+							<AutoCommandBar name="МониторинговыеПараметрыКоманднаяПанель" id="11">
+								<ChildItems>
+									<Button name="МониторинговыеПараметрыСоздать" id="59">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Item.МониторинговыеПараметры.StandardCommand.Create</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="МониторинговыеПараметрыСоздатьРасширеннаяПодсказка" id="60"/>
+									</Button>
+									<Button name="МониторинговыеПараметрыСоздатьГруппу" id="61">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.МониторинговыеПараметры.StandardCommand.CreateFolder</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="МониторинговыеПараметрыСоздатьГруппуРасширеннаяПодсказка" id="62"/>
+									</Button>
+									<Button name="МониторинговыеПараметрыУдалить" id="63">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.МониторинговыеПараметры.StandardCommand.Delete</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="МониторинговыеПараметрыУдалитьРасширеннаяПодсказка" id="64"/>
+									</Button>
+									<ButtonGroup name="СтруктураПараметровГруппаПереместить" id="46">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Структура параметров группа переместить</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Структура параметров группа переместить</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="СтруктураПараметровГруппаПереместитьРасширеннаяПодсказка" id="47"/>
+										<ChildItems>
+											<Button name="СтруктураПараметровПереместитьВверх" id="42">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПереместитьВверх</CommandName>
+												<ExtendedTooltip name="СтруктураПараметровПереместитьВверхРасширеннаяПодсказка" id="43"/>
+											</Button>
+											<Button name="СтруктураПараметровПереместитьВниз" id="44">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПереместитьВниз</CommandName>
+												<ExtendedTooltip name="СтруктураПараметровПереместитьВнизРасширеннаяПодсказка" id="45"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="СтруктураПараметровГруппаСвернуть" id="51">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Структура параметров группа свернуть</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Структура параметров группа свернуть</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="СтруктураПараметровГруппаСвернутьРасширеннаяПодсказка" id="52"/>
+										<ChildItems>
+											<Button name="СтруктураПараметровСвернутьВсе" id="55">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СвернутьВсе</CommandName>
+												<ExtendedTooltip name="СтруктураПараметровСвернутьВсеРасширеннаяПодсказка" id="56"/>
+											</Button>
+											<Button name="СтруктураПараметровРазвернутьВсе" id="53">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.РазвернутьВсе</CommandName>
+												<ExtendedTooltip name="СтруктураПараметровРазвернутьВсеРасширеннаяПодсказка" id="54"/>
+											</Button>
+											<Button name="СтруктураПараметровВосстановитьСостояниеГрупп" id="57">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ВосстановитьСостояниеГрупп</CommandName>
+												<ExtendedTooltip name="СтруктураПараметровВосстановитьСостояниеГруппРасширеннаяПодсказка" id="58"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="МониторинговыеПараметрыРасширеннаяПодсказка" id="12"/>
+							<SearchStringAddition name="МониторинговыеПараметрыСтрокаПоиска" id="13">
+								<AdditionSource>
+									<Item>МониторинговыеПараметры</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МониторинговыеПараметрыСтрокаПоискаКонтекстноеМеню" id="14"/>
+								<ExtendedTooltip name="МониторинговыеПараметрыСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="МониторинговыеПараметрыСостояниеПросмотра" id="16">
+								<AdditionSource>
+									<Item>МониторинговыеПараметры</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МониторинговыеПараметрыСостояниеПросмотраКонтекстноеМеню" id="17"/>
+								<ExtendedTooltip name="МониторинговыеПараметрыСостояниеПросмотраРасширеннаяПодсказка" id="18"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="МониторинговыеПараметрыУправлениеПоиском" id="19">
+								<AdditionSource>
+									<Item>МониторинговыеПараметры</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="МониторинговыеПараметрыУправлениеПоискомКонтекстноеМеню" id="20"/>
+								<ExtendedTooltip name="МониторинговыеПараметрыУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">МониторинговыеПараметрыВыбор</Event>
+								<Event name="BeforeAddRow">МониторинговыеПараметрыПередНачаломДобавления</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="МониторинговыеПараметрыСсылка" id="39">
+									<DataPath>МониторинговыеПараметры.Ссылка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Параметр</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="МониторинговыеПараметрыСсылкаКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="МониторинговыеПараметрыСсылкаРасширеннаяПодсказка" id="41"/>
+								</LabelField>
+								<CheckBoxField name="КопироватьВГрузоперевозки" id="118">
+									<DataPath>МониторинговыеПараметры.КопироватьВГрузоперевозки</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="КопироватьВГрузоперевозкиКонтекстноеМеню" id="119"/>
+									<ExtendedTooltip name="КопироватьВГрузоперевозкиРасширеннаяПодсказка" id="120"/>
+								</CheckBoxField>
+								<CheckBoxField name="КопироватьВЗаказы" id="121">
+									<DataPath>МониторинговыеПараметры.КопироватьВЗаказы</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="КопироватьВЗаказыКонтекстноеМеню" id="122"/>
+									<ExtendedTooltip name="КопироватьВЗаказыРасширеннаяПодсказка" id="123"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаКомментрарий" id="74">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментрарий</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница комментрарий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.CW_Комментарий</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СтраницаКомментрарийРасширеннаяПодсказка" id="75"/>
+					<ChildItems>
+						<InputField name="Комментарий" id="76">
+							<DataPath>Объект.Комментарий</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MultiLine>true</MultiLine>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="77"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="78"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.CW_ТипыКоносаментов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="МониторинговыеПараметры" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мониторинговые параметры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>МониторинговыеПараметры.ИндексКартинки</Field>
+				<Field>МониторинговыеПараметры.ИндексЭлемента</Field>
+				<Field>МониторинговыеПараметры.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	CW_МониторинговыеПараметрыТиповОбъектов.Ссылка КАК Ссылка,
+	CW_МониторинговыеПараметрыТиповОбъектов.ПометкаУдаления КАК ПометкаУдаления,
+	CW_МониторинговыеПараметрыТиповОбъектов.Владелец КАК Владелец,
+	CW_МониторинговыеПараметрыТиповОбъектов.Родитель КАК Родитель,
+	CW_МониторинговыеПараметрыТиповОбъектов.ЭтоГруппа КАК ЭтоГруппа,
+	CW_МониторинговыеПараметрыТиповОбъектов.Код КАК Код,
+	CW_МониторинговыеПараметрыТиповОбъектов.Наименование КАК Наименование,
+	CW_МониторинговыеПараметрыТиповОбъектов.Параметр КАК Параметр,
+	CW_МониторинговыеПараметрыТиповОбъектов.ИндексЭлемента КАК ИндексЭлемента,
+	CW_МониторинговыеПараметрыТиповОбъектов.Сворачивать КАК Сворачивать,
+	CW_МониторинговыеПараметрыТиповОбъектов.КопироватьВГрузоперевозки КАК КопироватьВГрузоперевозки,
+	CW_МониторинговыеПараметрыТиповОбъектов.КопироватьВЗаказы КАК КопироватьВЗаказы
+ИЗ
+	Справочник.CW_МониторинговыеПараметрыТиповОбъектов КАК CW_МониторинговыеПараметрыТиповОбъектов</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Наименование</dcssch:dataPath>
+					<dcssch:field>Наименование</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЭтоГруппа</dcssch:dataPath>
+					<dcssch:field>ЭтоГруппа</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
+					<dcssch:field>Предопределенный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИндексЭлемента</dcssch:dataPath>
+					<dcssch:field>ИндексЭлемента</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
+					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Код</dcssch:dataPath>
+					<dcssch:field>Код</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Родитель</dcssch:dataPath>
+					<dcssch:field>Родитель</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Владелец</dcssch:dataPath>
+					<dcssch:field>Владелец</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Параметр</dcssch:dataPath>
+					<dcssch:field>Параметр</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КопироватьВГрузоперевозки</dcssch:dataPath>
+					<dcssch:field>КопироватьВГрузоперевозки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Сворачивать</dcssch:dataPath>
+					<dcssch:field>Сворачивать</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КопироватьВЗаказы</dcssch:dataPath>
+					<dcssch:field>КопироватьВЗаказы</dcssch:field>
+				</Field>
+				<CalculatedField>
+					<dcssch:dataPath>ИндексКартинки</dcssch:dataPath>
+					<dcssch:expression>CW_МониторинговыеПараметрыСервер.ПолучитьИндексПиктограммыПараметраОбъекта(Ссылка)</dcssch:expression>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+						<dcssch:group>true</dcssch:group>
+						<dcssch:order>true</dcssch:order>
+					</dcssch:useRestriction>
+				</CalculatedField>
+				<MainTable>Catalog.CW_МониторинговыеПараметрыТиповОбъектов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ИндексЭлемента</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ЗначениеКопирования" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение копирования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.CW_ТипыКоносаментов</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СоответствиеРеквизитовМониторинговымПараметрамКопироватьВЗаказ</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.СоответствиеРеквизитовМониторинговымПараметрам.РеквизитКоносамента</dcsset:left>
+						<dcsset:comparisonType>InList</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.CW_РеквизитыКоносамента.Упаковка</dcsset:right>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.CW_РеквизитыКоносамента.КоличествоУпаковок</dcsset:right>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.CW_РеквизитыКоносамента.Пломба</dcsset:right>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.CW_РеквизитыКоносамента.ОписаниеГруза</dcsset:right>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.CW_РеквизитыКоносамента.ВесТары</dcsset:right>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.CW_РеквизитыКоносамента.ВесНетто</dcsset:right>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.CW_РеквизитыКоносамента.Объем</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ПереместитьВверх" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveUp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПереместитьВверх</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ПереместитьВниз" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вних</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveDown</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПереместитьВниз</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="СвернутьВсе" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CollapseAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СвернутьВсе</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="РазвернутьВсе" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ExpandAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>РазвернутьВсе</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ВосстановитьСостояниеГрупп" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Восстановить состояние групп</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Восстановить состояние дерева</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ListViewModeTree</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВосстановитьСостояниеГрупп</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ЗаполнитьРеквизиты" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить реквизиты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьРеквизиты</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>4:7416c653-6226-4c7e-82f0-b1af8bd8ba1c</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.CW_МониторинговыеПараметрыОбъектов.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>1</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.CW_МониторинговыеПараметрыТиповОбъектов.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>2</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

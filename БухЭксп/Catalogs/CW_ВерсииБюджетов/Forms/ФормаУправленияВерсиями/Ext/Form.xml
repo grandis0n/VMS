@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Версии бюджета</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаОК" id="22">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ОК</CommandName>
+				<ExtendedTooltip name="ФормаОКExtendedTooltip" id="26"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="1">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьExtendedTooltip" id="27"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="СписокВерсийБюджета" id="43">
+			<Representation>List</Representation>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>СписокВерсийБюджета</DataPath>
+			<RowPictureDataPath>СписокВерсийБюджета.ИндексКартинки</RowPictureDataPath>
+			<RowsPicture>
+				<xr:Ref>0:c73da062-baf2-46e1-9575-5936b9af3796</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</RowsPicture>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокВерсийБюджетаКонтекстноеМеню" id="44"/>
+			<AutoCommandBar name="СписокВерсийБюджетаКоманднаяПанель" id="45">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="СправочникВерсииБюджетовБюджетКопировать" id="23">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.БюджетКопировать</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Копировать</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СправочникВерсииБюджетовБюджетКопироватьExtendedTooltip" id="28"/>
+					</Button>
+					<Button name="СправочникВерсииБюджетовБюджетОчистить" id="25">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.БюджетОчистить</CommandName>
+						<ExtendedTooltip name="СправочникВерсииБюджетовБюджетОчиститьExtendedTooltip" id="29"/>
+					</Button>
+					<Button name="СправочникВерсииБюджетовБюджетУтвердить" id="24">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.БюджетУтвердить</CommandName>
+						<ExtendedTooltip name="СправочникВерсииБюджетовБюджетУтвердитьExtendedTooltip" id="30"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокВерсийБюджетаРасширеннаяПодсказка" id="46"/>
+			<SearchStringAddition name="СписокВерсийБюджетаСтрокаПоиска" id="47">
+				<AdditionSource>
+					<Item>СписокВерсийБюджета</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокВерсийБюджетаСтрокаПоискаКонтекстноеМеню" id="48"/>
+				<ExtendedTooltip name="СписокВерсийБюджетаСтрокаПоискаРасширеннаяПодсказка" id="49"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокВерсийБюджетаСостояниеПросмотра" id="50">
+				<Enabled>false</Enabled>
+				<AdditionSource>
+					<Item>СписокВерсийБюджета</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокВерсийБюджетаСостояниеПросмотраКонтекстноеМеню" id="51"/>
+				<ExtendedTooltip name="СписокВерсийБюджетаСостояниеПросмотраРасширеннаяПодсказка" id="52"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокВерсийБюджетаУправлениеПоиском" id="53">
+				<Enabled>false</Enabled>
+				<AdditionSource>
+					<Item>СписокВерсийБюджета</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокВерсийБюджетаУправлениеПоискомКонтекстноеМеню" id="54"/>
+				<ExtendedTooltip name="СписокВерсийБюджетаУправлениеПоискомРасширеннаяПодсказка" id="55"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СписокВерсийБюджетаВыбор</Event>
+				<Event name="OnActivateRow">СписокВерсийБюджетаПриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="Ссылка" id="56">
+					<DataPath>СписокВерсийБюджета.Ссылка</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Версия</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="58"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Грузоперевозка" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Грузоперевозка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.CW_Грузоперевозки</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Заказ" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.CW_Заказы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="хзКартинкаУтвержденнаяВерсия" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хранилище значения картинка утвержденная версия</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="флИзменилсяСоставИспользуемыхВерсий" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фл изменился состав используемых версий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбъектВКоторомУтверждаетсяБюджет" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект в котором утверждается бюджет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.CW_Заказы</v8:Type>
+				<v8:Type>cfg:CatalogRef.CW_Грузоперевозки</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВерсияЗапрещененаяКВыбору" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия запрещененая к выбору</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.CW_ВерсииБюджетов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="флРежимВыбораДляКопирования" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фл режим выбора для копирования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокВерсийБюджета" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список версий бюджета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>~СписокВерсийБюджета.ВерсияБюджета</Field>
+				<Field>СписокВерсийБюджета.ДатаРедактирования</Field>
+				<Field>СписокВерсийБюджета.КоличествоСтатей</Field>
+				<Field>СписокВерсийБюджета.ПометкаУдаления</Field>
+				<Field>СписокВерсийБюджета.Ссылка</Field>
+				<Field>СписокВерсийБюджета.ЭтоБазоваяВерсияИзКонстанты</Field>
+				<Field>СписокВерсийБюджета.ЭтоИспользуемаяВерсия</Field>
+				<Field>СписокВерсийБюджета.ЭтоОсновнаяВерсияДляПользователя</Field>
+				<Field>СписокВерсийБюджета.ЭтоУтвержденнаяВерсия</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	CW_ПлановыеСтатьиЗатратИДоходов.ВерсияБюджета КАК ВерсияБюджета,
+	МАКСИМУМ(CW_ПлановыеСтатьиЗатратИДоходов.CW_ДатаРедактирования) КАК ДатаРедактирования,
+	КОЛИЧЕСТВО(CW_ПлановыеСтатьиЗатратИДоходов.Ссылка) КАК КоличествоСтатей
+ПОМЕСТИТЬ ВТ_ПлановыеСтатьи
+ИЗ
+	Справочник.CW_ПлановыеСтатьиЗатратИДоходов КАК CW_ПлановыеСтатьиЗатратИДоходов
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;ЭтоГрузоперевозка
+				ТОГДА CW_ПлановыеСтатьиЗатратИДоходов.Владелец В (&amp;ОбъектСсылка)
+			ИНАЧЕ CW_ПлановыеСтатьиЗатратИДоходов.Владелец В
+					(ВЫБРАТЬ
+						CW_Грузоперевозки.Ссылка КАК Ссылка
+					ИЗ
+						Справочник.CW_Грузоперевозки КАК CW_Грузоперевозки
+					ГДЕ
+						CW_Грузоперевозки.Заказ = &amp;ОбъектСсылка)
+		КОНЕЦ
+
+СГРУППИРОВАТЬ ПО
+	CW_ПлановыеСтатьиЗатратИДоходов.ВерсияБюджета
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	CW_УтверждениеБюджетов.ВерсияБюджета КАК ВерсияБюджета
+ПОМЕСТИТЬ ВТ_УтверждениеБюджетов
+ИЗ
+	РегистрСведений.CW_УтверждениеБюджетов КАК CW_УтверждениеБюджетов
+ГДЕ
+	CW_УтверждениеБюджетов.Объект = &amp;ОбъектСсылка
+
+СГРУППИРОВАТЬ ПО
+	CW_УтверждениеБюджетов.ВерсияБюджета
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	CW_НастройкиПользователей.ОсновнаяВерсияБюджета КАК ОсновнаяВерсияБюджета
+ПОМЕСТИТЬ ВТ_БюджетыПользователя
+ИЗ
+	РегистрСведений.CW_НастройкиПользователей КАК CW_НастройкиПользователей
+ГДЕ
+	CW_НастройкиПользователей.Пользователь = &amp;Пользователь
+
+СГРУППИРОВАТЬ ПО
+	CW_НастройкиПользователей.ОсновнаяВерсияБюджета
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	CW_БазоваяВерсияБюджета.Значение КАК Значение
+ПОМЕСТИТЬ ВТ_БазоваяВерсияБюджет
+ИЗ
+	Константа.CW_БазоваяВерсияБюджета КАК CW_БазоваяВерсияБюджета
+
+СГРУППИРОВАТЬ ПО
+	CW_БазоваяВерсияБюджета.Значение
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	CW_ВерсииБюджетов.Ссылка КАК Ссылка,
+	CW_ВерсииБюджетов.ПометкаУдаления КАК ПометкаУдаления,
+	ЕСТЬNULL(ВТ_ПлановыеСтатьи.ДатаРедактирования, ДАТАВРЕМЯ(1, 1, 1)) КАК ДатаРедактирования,
+	ВЫБОР
+		КОГДА ВТ_ПлановыеСтатьи.ВерсияБюджета ЕСТЬ NULL
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК ЭтоИспользуемаяВерсия,
+	ВЫБОР
+		КОГДА ВТ_УтверждениеБюджетов.ВерсияБюджета ЕСТЬ NULL
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК ЭтоУтвержденнаяВерсия,
+	ВЫБОР
+		КОГДА ВТ_БазоваяВерсияБюджет.Значение ЕСТЬ NULL
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК ЭтоБазоваяВерсияИзКонстанты,
+	ВЫБОР
+		КОГДА ВТ_БюджетыПользователя.ОсновнаяВерсияБюджета ЕСТЬ NULL
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК ЭтоОсновнаяВерсияДляПользователя,
+	ЕСТЬNULL(ВТ_ПлановыеСтатьи.КоличествоСтатей, 0) КАК КоличествоСтатей,
+	ВЫБОР
+		КОГДА ВТ_УтверждениеБюджетов.ВерсияБюджета ЕСТЬ NULL
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ИндексКартинки
+ИЗ
+	Справочник.CW_ВерсииБюджетов КАК CW_ВерсииБюджетов
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ПлановыеСтатьи КАК ВТ_ПлановыеСтатьи
+		ПО CW_ВерсииБюджетов.Ссылка = ВТ_ПлановыеСтатьи.ВерсияБюджета
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_УтверждениеБюджетов КАК ВТ_УтверждениеБюджетов
+		ПО CW_ВерсииБюджетов.Ссылка = ВТ_УтверждениеБюджетов.ВерсияБюджета
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_БюджетыПользователя КАК ВТ_БюджетыПользователя
+		ПО CW_ВерсииБюджетов.Ссылка = ВТ_БюджетыПользователя.ОсновнаяВерсияБюджета
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_БазоваяВерсияБюджет КАК ВТ_БазоваяВерсияБюджет
+		ПО CW_ВерсииБюджетов.Ссылка = ВТ_БазоваяВерсияБюджет.Значение</QueryText>
+				<MainTable>Catalog.CW_ВерсииБюджетов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ЭтоГрузоперевозка" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это грузоперевозка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокВерсийБюджета</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СписокВерсийБюджета.ПометкаУдаления</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="style:TextFont" bold="false" italic="false" underline="false" strikeout="true" kind="StyleItem"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокВерсийБюджета</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СписокВерсийБюджета.ЭтоБазоваяВерсияИзКонстанты</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокВерсийБюджета</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СписокВерсийБюджета.КоличествоСтатей</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#C0C0C0</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокВерсийБюджета</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СписокВерсийБюджета.ВерсияБюджета</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">ВерсияЗапрещененаяКВыбору</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="БюджетУтвердить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Утвердить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Утвердить выбранную версию бюджета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_Замок</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>БюджетУтвердить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="БюджетКопировать" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Бюджет копировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копировать данные по выбранной версии бюджета в другую версию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CloneObject</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>БюджетКопировать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="БюджетОчистить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить данные по выбранной версии бюджета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_Очистить</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="11" y="13"/>
+			</Picture>
+			<Action>БюджетОчистить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

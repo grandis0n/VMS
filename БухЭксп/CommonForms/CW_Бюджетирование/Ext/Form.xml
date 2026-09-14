@@ -1,0 +1,658 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Бюджетирование</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>ChangeHistory</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>OpenFromMainServer</ExcludedCommand>
+		<ExcludedCommand>OpenFromStandaloneServer</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СтраницаПараметрыБюджетирования" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры бюджетирования</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница параметры бюджетирования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="СтраницаПараметрыБюджетированияРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="Группа11" id="3">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>#F0F0F0</BackColor>
+					<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<CheckBoxField name="CW_ОграничиватьВыборКонтрагентовПоБюджету" id="5">
+							<DataPath>НаборКонстант.CW_ОграничиватьВыборКонтрагентовПоБюджету</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ограничивать выбор контрагентов по бюджету</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Установка данной опции обеспечивает возможность разграничить между пользователями 
+функцию номинирования контрагентов и функцию формирования бюджета из ограниченного 
+списка контрагентов.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="CW_ОграничиватьВыборКонтрагентовПоБюджетуКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="CW_ОграничиватьВыборКонтрагентовПоБюджетуExtendedTooltip" id="7">
+								<AutoMaxWidth>false</AutoMaxWidth>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ПриИзмененииРеквизитаФормы</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа37" id="8">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>#F0F0F0</BackColor>
+					<ExtendedTooltip name="Группа37РасширеннаяПодсказка" id="9"/>
+					<ChildItems>
+						<CheckBoxField name="CW_УказыватьДоговорДляПлановыхСтатейБюджета" id="10">
+							<DataPath>НаборКонстант.CW_УказыватьДоговорДляПлановыхСтатейБюджета</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>использовать договор и приложение для плановых статей бюджета</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Установка данной опции позволяет указывать договор и приложение 
+к договору (в зависимости от настроек учета приложений) в плановых статья бюджета.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="CW_УказыватьДоговорДляПлановыхСтатейБюджетаКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="CW_УказыватьДоговорДляПлановыхСтатейБюджетаРасширеннаяПодсказка" id="12">
+								<AutoMaxWidth>false</AutoMaxWidth>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ПриИзмененииРеквизитаФормы</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа1" id="30">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>#F0F0F0</BackColor>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<CheckBoxField name="CW_ИспользованиеКоличестваДляПлановыхСтатей" id="32">
+							<DataPath>НаборКонстант.CW_ИспользованиеКоличестваДляПлановыхСтатей</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>использовать количество для плановых статей бюджета</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Установка данной опции позволяет указывать в плановых статьях бюджета 
+количество услуг по статье и цену одной услуги.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="CW_ИспользованиеКоличестваДляПлановыхСтатейКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="CW_ИспользованиеКоличестваДляПлановыхСтатейРасширеннаяПодсказка" id="34">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ПриИзмененииРеквизитаФормы</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа2" id="35">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>#F0F0F0</BackColor>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="36"/>
+					<ChildItems>
+						<CheckBoxField name="CW_ИспользуетсяПрогнозированиеДДСПоБюджету" id="40">
+							<DataPath>НаборКонстант.CW_ИспользоватьПрогнозированиеДДСПоБюджету</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>использовать прогнозирование движения денежных средств по бюджету</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Установка опции обеспечивает возможность прогнозирования движения денежных 
+средств на основании бюджета грузоперевозок.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="CW_ИспользуетсяПрогнозированиеДДСПоБюджетуКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="CW_ИспользуетсяПрогнозированиеДДСПоБюджетуРасширеннаяПодсказка" id="42">
+								<AutoMaxWidth>false</AutoMaxWidth>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ПриИзмененииРеквизитаФормы</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа39" id="28">
+					<Width>50</Width>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>#F0F0F0</BackColor>
+					<ExtendedTooltip name="Группа39РасширеннаяПодсказка" id="29"/>
+					<ChildItems>
+						<InputField name="CW_ВариантРасчетаРублевойСуммыНДССтатейБюджета" id="25">
+							<DataPath>НаборКонстант.CW_ВариантРасчетаРублевойСуммыНДССтатейБюджета</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вариант расчета сумм документа при вводе на основании бюджета</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="CW_ВариантРасчетаРублевойСуммыНДССтатейБюджетаКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="CW_ВариантРасчетаРублевойСуммыНДССтатейБюджетаРасширеннаяПодсказка" id="27"/>
+							<Events>
+								<Event name="OnChange">ПриИзмененииРеквизитаФормы</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="СтраницаБюджетированиеЗначенияПоУмолчанию" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учет статей бюджета в документах</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница бюджетирование значения по умолчанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="СтраницаБюджетированиеЗначенияПоУмолчаниюРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<UsualGroup name="Группа17" id="15">
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>#F0F0F0</BackColor>
+					<ExtendedTooltip name="Группа17РасширеннаяПодсказка" id="16"/>
+					<ChildItems>
+						<InputField name="CW_БазоваяВерсияБюджета" id="17">
+							<DataPath>НаборКонстант.CW_БазоваяВерсияБюджета</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Основная версия бюджета</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Top</TitleLocation>
+							<Width>50</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="CW_БазоваяВерсияБюджетаКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="CW_БазоваяВерсияБюджетаExtendedTooltip" id="19"/>
+							<Events>
+								<Event name="OnChange">ПриИзмененииРеквизитаФормы</Event>
+							</Events>
+						</InputField>
+						<CheckBoxField name="CW_УчетСтатейБюджетаВДокументах" id="43">
+							<DataPath>НаборКонстант.CW_УчетСтатейБюджетаВДокументах</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="CW_УчетСтатейБюджетаВДокументахКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="CW_УчетСтатейБюджетаВДокументахРасширеннаяПодсказка" id="45"/>
+							<Events>
+								<Event name="OnChange">ПриИзмененииРеквизитаФормы</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="Группа3" id="46">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="47"/>
+							<ChildItems>
+								<InputField name="CW_ВерсияСтатьиБюджетаДляОтбора" id="96">
+									<DataPath>НаборКонстант.CW_ВерсияСтатьиБюджетаДляОтбора</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="CW_ВерсияСтатьиБюджетаДляОтбораКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="CW_ВерсияСтатьиБюджетаДляОтбораРасширеннаяПодсказка" id="98"/>
+									<Events>
+										<Event name="OnChange">ПриИзмененииРеквизитаФормы</Event>
+									</Events>
+								</InputField>
+								<UsualGroup name="Группа6" id="99">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="100"/>
+									<ChildItems>
+										<UsualGroup name="Группа4" id="92">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Опции подбора статей для доходов</v8:content>
+												</v8:item>
+											</Title>
+											<Behavior>PopUp</Behavior>
+											<Collapsed>true</Collapsed>
+											<Representation>None</Representation>
+											<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="93"/>
+											<ChildItems>
+												<Table name="ПараметрыОтбораДоходов" id="48">
+													<Representation>List</Representation>
+													<HeightInTableRows>10</HeightInTableRows>
+													<Header>false</Header>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<VerticalStretch>false</VerticalStretch>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<DataPath>ПараметрыОтбораДоходов</DataPath>
+													<CommandSet>
+														<ExcludedCommand>Add</ExcludedCommand>
+														<ExcludedCommand>CancelSearch</ExcludedCommand>
+														<ExcludedCommand>Change</ExcludedCommand>
+														<ExcludedCommand>Copy</ExcludedCommand>
+														<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+														<ExcludedCommand>Delete</ExcludedCommand>
+														<ExcludedCommand>EndEdit</ExcludedCommand>
+														<ExcludedCommand>Find</ExcludedCommand>
+														<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+														<ExcludedCommand>MoveDown</ExcludedCommand>
+														<ExcludedCommand>MoveUp</ExcludedCommand>
+														<ExcludedCommand>OutputList</ExcludedCommand>
+														<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+														<ExcludedCommand>SelectAll</ExcludedCommand>
+														<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+														<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+														<ExcludedCommand>SortListAsc</ExcludedCommand>
+														<ExcludedCommand>SortListDesc</ExcludedCommand>
+													</CommandSet>
+													<SearchStringLocation>None</SearchStringLocation>
+													<ViewStatusLocation>None</ViewStatusLocation>
+													<SearchControlLocation>None</SearchControlLocation>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="ПараметрыОтбораДоходовКонтекстноеМеню" id="49"/>
+													<AutoCommandBar name="ПараметрыОтбораДоходовКоманднаяПанель" id="50"/>
+													<ExtendedTooltip name="ПараметрыОтбораДоходовРасширеннаяПодсказка" id="51"/>
+													<SearchStringAddition name="ПараметрыОтбораДоходовСтрокаПоиска" id="52">
+														<AdditionSource>
+															<Item>ПараметрыОтбораДоходов</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ПараметрыОтбораДоходовСтрокаПоискаКонтекстноеМеню" id="53"/>
+														<ExtendedTooltip name="ПараметрыОтбораДоходовСтрокаПоискаРасширеннаяПодсказка" id="54"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ПараметрыОтбораДоходовСостояниеПросмотра" id="55">
+														<AdditionSource>
+															<Item>ПараметрыОтбораДоходов</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ПараметрыОтбораДоходовСостояниеПросмотраКонтекстноеМеню" id="56"/>
+														<ExtendedTooltip name="ПараметрыОтбораДоходовСостояниеПросмотраРасширеннаяПодсказка" id="57"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ПараметрыОтбораДоходовУправлениеПоиском" id="58">
+														<AdditionSource>
+															<Item>ПараметрыОтбораДоходов</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ПараметрыОтбораДоходовУправлениеПоискомКонтекстноеМеню" id="59"/>
+														<ExtendedTooltip name="ПараметрыОтбораДоходовУправлениеПоискомРасширеннаяПодсказка" id="60"/>
+													</SearchControlAddition>
+													<ChildItems>
+														<CheckBoxField name="ПараметрыОтбораДоходовФлаг" id="61">
+															<DataPath>ПараметрыОтбораДоходов.Флаг</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПараметрыОтбораДоходовФлагКонтекстноеМеню" id="62"/>
+															<ExtendedTooltip name="ПараметрыОтбораДоходовФлагРасширеннаяПодсказка" id="63"/>
+															<Events>
+																<Event name="OnChange">ПараметрыОтбораДоходовФлагПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<InputField name="ПараметрыОтбораДоходовПредставлениеПараметра" id="67">
+															<DataPath>ПараметрыОтбораДоходов.ПредставлениеПараметра</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<EditMode>EnterOnInput</EditMode>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="ПараметрыОтбораДоходовПредставлениеПараметраКонтекстноеМеню" id="68"/>
+															<ExtendedTooltip name="ПараметрыОтбораДоходовПредставлениеПараметраРасширеннаяПодсказка" id="69"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="Группа5" id="94">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Опции подбора статей для расходов</v8:content>
+												</v8:item>
+											</Title>
+											<Behavior>PopUp</Behavior>
+											<Collapsed>true</Collapsed>
+											<Representation>None</Representation>
+											<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="95"/>
+											<ChildItems>
+												<Table name="ПараметрыОтбораРасходов" id="70">
+													<Representation>List</Representation>
+													<HeightInTableRows>10</HeightInTableRows>
+													<Header>false</Header>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<VerticalStretch>false</VerticalStretch>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<DataPath>ПараметрыОтбораРасходов</DataPath>
+													<CommandSet>
+														<ExcludedCommand>Add</ExcludedCommand>
+														<ExcludedCommand>CancelSearch</ExcludedCommand>
+														<ExcludedCommand>Change</ExcludedCommand>
+														<ExcludedCommand>Copy</ExcludedCommand>
+														<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+														<ExcludedCommand>Delete</ExcludedCommand>
+														<ExcludedCommand>EndEdit</ExcludedCommand>
+														<ExcludedCommand>Find</ExcludedCommand>
+														<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+														<ExcludedCommand>MoveDown</ExcludedCommand>
+														<ExcludedCommand>MoveUp</ExcludedCommand>
+														<ExcludedCommand>OutputList</ExcludedCommand>
+														<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+														<ExcludedCommand>SelectAll</ExcludedCommand>
+														<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+														<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+														<ExcludedCommand>SortListAsc</ExcludedCommand>
+														<ExcludedCommand>SortListDesc</ExcludedCommand>
+													</CommandSet>
+													<SearchStringLocation>None</SearchStringLocation>
+													<ViewStatusLocation>None</ViewStatusLocation>
+													<SearchControlLocation>None</SearchControlLocation>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="ПараметрыОтбораРасходовКонтекстноеМеню" id="71"/>
+													<AutoCommandBar name="ПараметрыОтбораРасходовКоманднаяПанель" id="72"/>
+													<ExtendedTooltip name="ПараметрыОтбораРасходовРасширеннаяПодсказка" id="73"/>
+													<SearchStringAddition name="ПараметрыОтбораРасходовСтрокаПоиска" id="74">
+														<AdditionSource>
+															<Item>ПараметрыОтбораРасходов</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ПараметрыОтбораРасходовСтрокаПоискаКонтекстноеМеню" id="75"/>
+														<ExtendedTooltip name="ПараметрыОтбораРасходовСтрокаПоискаРасширеннаяПодсказка" id="76"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ПараметрыОтбораРасходовСостояниеПросмотра" id="77">
+														<AdditionSource>
+															<Item>ПараметрыОтбораРасходов</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ПараметрыОтбораРасходовСостояниеПросмотраКонтекстноеМеню" id="78"/>
+														<ExtendedTooltip name="ПараметрыОтбораРасходовСостояниеПросмотраРасширеннаяПодсказка" id="79"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ПараметрыОтбораРасходовУправлениеПоиском" id="80">
+														<AdditionSource>
+															<Item>ПараметрыОтбораРасходов</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ПараметрыОтбораРасходовУправлениеПоискомКонтекстноеМеню" id="81"/>
+														<ExtendedTooltip name="ПараметрыОтбораРасходовУправлениеПоискомРасширеннаяПодсказка" id="82"/>
+													</SearchControlAddition>
+													<ChildItems>
+														<CheckBoxField name="ПараметрыОтбораРасходовФлаг" id="83">
+															<DataPath>ПараметрыОтбораРасходов.Флаг</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПараметрыОтбораРасходовФлагКонтекстноеМеню" id="84"/>
+															<ExtendedTooltip name="ПараметрыОтбораРасходовФлагРасширеннаяПодсказка" id="85"/>
+															<Events>
+																<Event name="OnChange">ПараметрыОтбораРасходовФлагПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<InputField name="ПараметрыОтбораРасходовПредставлениеПараметра" id="89">
+															<DataPath>ПараметрыОтбораРасходов.ПредставлениеПараметра</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<EditMode>EnterOnInput</EditMode>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="ПараметрыОтбораРасходовПредставлениеПараметраКонтекстноеМеню" id="90"/>
+															<ExtendedTooltip name="ПараметрыОтбораРасходовПредставлениеПараметраРасширеннаяПодсказка" id="91"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПараметрыОтбораДоходов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры отбора доходов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.CW_УчетСтатейБюджетаВДокументах</Item>
+			</FunctionalOptions>
+			<Columns>
+				<Column name="Флаг" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Флаг</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИмяПараметра" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя параметра</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеПараметра" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Порядок" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Порядок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПараметрыОтбораРасходов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры отбора расходов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.CW_УчетСтатейБюджетаВДокументах</Item>
+			</FunctionalOptions>
+			<Columns>
+				<Column name="Флаг" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Флаг</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИмяПараметра" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя параметра</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеПараметра" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Порядок" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Порядок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+</Form>

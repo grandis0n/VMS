@@ -1,0 +1,993 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<CommandBar name="КоманднаяПанельСписок" id="241">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель список</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель список</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CommandSource>Item.СписокФайлы</CommandSource>
+			<ExtendedTooltip name="КоманднаяПанельСписокРасширеннаяПодсказка" id="242"/>
+			<ChildItems>
+				<ButtonGroup name="ФормаГруппа1" id="26">
+					<ExtendedTooltip name="ФормаГруппа1ExtendedTooltip" id="27"/>
+					<ChildItems>
+						<ButtonGroup name="ФормаГруппа3" id="191">
+							<Representation>Compact</Representation>
+							<ExtendedTooltip name="ФормаГруппа3РасширеннаяПодсказка" id="192"/>
+							<ChildItems>
+								<ButtonGroup name="ФормаГруппа4" id="239">
+									<ExtendedTooltip name="ФормаГруппа4РасширеннаяПодсказка" id="240"/>
+									<ChildItems>
+										<Popup name="ФормаГруппа2" id="153">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Добавить</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="ФормаГруппа2РасширеннаяПодсказка" id="154"/>
+											<ChildItems>
+												<Button name="ФормаСоздать" id="30">
+													<Type>CommandBarButton</Type>
+													<Representation>Picture</Representation>
+													<CommandName>Form.Item.СписокФайлы.StandardCommand.Create</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Добавить файл</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ФормаСоздатьExtendedTooltip" id="31"/>
+												</Button>
+												<Button name="ФормаДобавитьСсылкуНаФайл" id="155">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ДобавитьСсылкуНаФайл</CommandName>
+													<ExtendedTooltip name="ФормаДобавитьСсылкуНаФайлРасширеннаяПодсказка" id="156"/>
+												</Button>
+												<Button name="ФормаДобавитьСсылкуНаРанееПрикрепленныйФайл" id="189">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ДобавитьСсылкуНаРанееПрикрепленныйФайл</CommandName>
+													<ExtendedTooltip name="ФормаДобавитьСсылкуНаРанееПрикрепленныйФайлРасширеннаяПодсказка" id="190"/>
+												</Button>
+											</ChildItems>
+										</Popup>
+										<Button name="ФормаДобаитьИзДругихОбъектов" id="193">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ДобавитьФайлыСвязанныхОбъектов</CommandName>
+											<ExtendedTooltip name="ФормаДобаитьИзДругихОбъектовРасширеннаяПодсказка" id="194"/>
+										</Button>
+										<Button name="ФормаДобавитьФайлВГрузоперевозки" id="157">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ДобавитьФайлВГрузоперевозки</CommandName>
+											<ExtendedTooltip name="ФормаДобавитьФайлВГрузоперевозкиРасширеннаяПодсказка" id="158"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+								<Button name="ФормаСоздатьГруппу" id="52">
+									<Type>CommandBarButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Item.СписокФайлы.StandardCommand.CreateFolder</CommandName>
+									<ExtendedTooltip name="ФормаСоздатьГруппуРасширеннаяПодсказка" id="53"/>
+								</Button>
+								<Button name="ФормаИзменить" id="34">
+									<Type>CommandBarButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Item.СписокФайлы.StandardCommand.Change</CommandName>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ФормаИзменитьExtendedTooltip" id="35"/>
+								</Button>
+								<Button name="ФормаУстановитьПометкуУдаления" id="36">
+									<Type>CommandBarButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Item.СписокФайлы.StandardCommand.SetDeletionMark</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ФормаУстановитьПометкуУдаленияExtendedTooltip" id="37"/>
+								</Button>
+								<Button name="ФормаУдалить" id="237">
+									<Type>CommandBarButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Command.УдалитьЭлемент</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ФормаУдалитьРасширеннаяПодсказка" id="238"/>
+								</Button>
+							</ChildItems>
+						</ButtonGroup>
+					</ChildItems>
+				</ButtonGroup>
+				<Button name="ФормаОткрытьФайлДляПросмотра" id="185">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ОткрытьФайлДляПросмотра</CommandName>
+					<ExtendedTooltip name="ФормаОткрытьФайлДляПросмотраРасширеннаяПодсказка" id="186"/>
+				</Button>
+				<Button name="ФормаСохранитьКак" id="187">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.СохранитьКак</CommandName>
+					<ExtendedTooltip name="ФормаСохранитьКакРасширеннаяПодсказка" id="188"/>
+				</Button>
+				<Button name="ФормаСохранитьВКаталог" id="183">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.СохранитьВКаталог</CommandName>
+					<ExtendedTooltip name="ФормаСохранитьВКаталогРасширеннаяПодсказка" id="184"/>
+				</Button>
+				<Button name="ФормаОбщаяКомандаCW_ИсторияОбъекта" id="235">
+					<Type>CommandBarButton</Type>
+					<CommandName>CommonCommand.CW_ИсторияОбъекта</CommandName>
+					<DataPath>Items.СписокФайлы.CurrentData.Ссылка</DataPath>
+					<ExtendedTooltip name="ФормаОбщаяКомандаCW_ИсторияОбъектаРасширеннаяПодсказка" id="236"/>
+				</Button>
+				<Button name="ФормаКомандаПредпросмотр" id="126">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.КомандаПредпросмотр</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.CW_Глаз</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> Предпросмотр</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ФормаКомандаПредпросмотрРасширеннаяПодсказка" id="127"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<UsualGroup name="ДеревоИСписок" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево и список</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ДеревоИСписокExtendedTooltip" id="20"/>
+			<ChildItems>
+				<UsualGroup name="СтраницаДеревоФайлов" id="87">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница дерево файлов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница дерево файлов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СтраницаДеревоФайловРасширеннаяПодсказка" id="88"/>
+					<ChildItems>
+						<Table name="СписокФайлы" id="198">
+							<Representation>Tree</Representation>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialTreeView>ExpandAllLevels</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СписокФайлы</DataPath>
+							<RowPictureDataPath>СписокФайлы.ИндексКартинки</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.КоллекцияПиктограммФайлов</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</RowsPicture>
+							<CommandSet>
+								<ExcludedCommand>Copy</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>CommandBar</SearchStringLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокФайлыКонтекстноеМеню" id="199"/>
+							<AutoCommandBar name="СписокФайлыКоманднаяПанель" id="200">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокФайлыРасширеннаяПодсказка" id="201"/>
+							<SearchStringAddition name="СписокФайлыСтрокаПоиска" id="202">
+								<AdditionSource>
+									<Item>СписокФайлы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокФайлыСтрокаПоискаКонтекстноеМеню" id="203"/>
+								<ExtendedTooltip name="СписокФайлыСтрокаПоискаРасширеннаяПодсказка" id="204"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокФайлыСостояниеПросмотра" id="205">
+								<AdditionSource>
+									<Item>СписокФайлы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокФайлыСостояниеПросмотраКонтекстноеМеню" id="206"/>
+								<ExtendedTooltip name="СписокФайлыСостояниеПросмотраРасширеннаяПодсказка" id="207"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокФайлыУправлениеПоиском" id="208">
+								<AdditionSource>
+									<Item>СписокФайлы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокФайлыУправлениеПоискомКонтекстноеМеню" id="209"/>
+								<ExtendedTooltip name="СписокФайлыУправлениеПоискомРасширеннаяПодсказка" id="210"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="DragCheck">СписокФайлыПроверкаПеретаскивания</Event>
+								<Event name="BeforeAddRow">СписокФайлыПередНачаломДобавления</Event>
+								<Event name="OnActivateRow">СписокФайлыПриАктивизацииСтроки</Event>
+								<Event name="DragStart">СписокФайлыНачалоПеретаскивания</Event>
+								<Event name="Drag">СписокФайлыПеретаскивание</Event>
+								<Event name="DragEnd">СписокФайлыОкончаниеПеретаскивания</Event>
+							</Events>
+							<ChildItems>
+								<PictureField name="СписокФайлыСпособХраненияАрхива" id="214">
+									<DataPath>СписокФайлы.СпособХраненияАрхиваФайла</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вид</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<HeaderPicture>
+										<xr:Ref>CommonPicture.CW_Каталоги</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.CW_КоллекцияСпособыХраненияАрхива</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<ContextMenu name="СписокФайлыСпособХраненияАрхиваКонтекстноеМеню" id="215"/>
+									<ExtendedTooltip name="СписокФайлыСпособХраненияАрхиваРасширеннаяПодсказка" id="216"/>
+								</PictureField>
+								<LabelField name="СписокФайлыСсылка" id="211">
+									<DataPath>СписокФайлы.Ссылка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Файл</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СписокФайлыСсылкаКонтекстноеМеню" id="212"/>
+									<ExtendedTooltip name="СписокФайлыСсылкаРасширеннаяПодсказка" id="213"/>
+								</LabelField>
+								<LabelField name="СписокФайлыТипДокумента" id="217">
+									<DataPath>СписокФайлы.ТипДокумента</DataPath>
+									<ContextMenu name="СписокФайлыТипДокументаКонтекстноеМеню" id="218"/>
+									<ExtendedTooltip name="СписокФайлыТипДокументаРасширеннаяПодсказка" id="219"/>
+								</LabelField>
+								<LabelField name="СписокФайлыРазмерФайла" id="220">
+									<DataPath>СписокФайлы.РазмерФайла</DataPath>
+									<ContextMenu name="СписокФайлыРазмерФайлаКонтекстноеМеню" id="221"/>
+									<ExtendedTooltip name="СписокФайлыРазмерФайлаРасширеннаяПодсказка" id="222"/>
+								</LabelField>
+								<LabelField name="СписокФайлыАвтор" id="223">
+									<DataPath>СписокФайлы.Автор</DataPath>
+									<ContextMenu name="СписокФайлыАвторКонтекстноеМеню" id="224"/>
+									<ExtendedTooltip name="СписокФайлыАвторРасширеннаяПодсказка" id="225"/>
+								</LabelField>
+								<LabelField name="СписокФайлыДатаРегистрации" id="232">
+									<DataPath>СписокФайлы.ДатаРегистрации</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Создан</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СписокФайлыДатаРегистрацииКонтекстноеМеню" id="233"/>
+									<ExtendedTooltip name="СписокФайлыДатаРегистрацииРасширеннаяПодсказка" id="234"/>
+								</LabelField>
+								<LabelField name="СписокФайлыРедактор" id="226">
+									<DataPath>СписокФайлы.Редактор</DataPath>
+									<ContextMenu name="СписокФайлыРедакторКонтекстноеМеню" id="227"/>
+									<ExtendedTooltip name="СписокФайлыРедакторРасширеннаяПодсказка" id="228"/>
+								</LabelField>
+								<LabelField name="СписокФайлыДатаИзменения" id="229">
+									<DataPath>СписокФайлы.ДатаИзменения</DataPath>
+									<ContextMenu name="СписокФайлыДатаИзмененияКонтекстноеМеню" id="230"/>
+									<ExtendedTooltip name="СписокФайлыДатаИзмененияРасширеннаяПодсказка" id="231"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<Pages name="СтраницыПредпросмотра" id="171">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страницы предпросмотра</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страницы предпросмотра</v8:content>
+						</v8:item>
+					</ToolTip>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="СтраницыПредпросмотраРасширеннаяПодсказка" id="172"/>
+					<ChildItems>
+						<Page name="СтраницаВсеФайлы" id="173">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница все файлы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница все файлы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаВсеФайлыРасширеннаяПодсказка" id="174"/>
+							<ChildItems>
+								<PictureField name="АдресМиниатюры" id="128">
+									<DataPath>АдресМиниатюры</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Hyperlink>true</Hyperlink>
+									<NonselectedPictureText>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;Предпросмотр недоступен&gt;</v8:content>
+										</v8:item>
+									</NonselectedPictureText>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="АдресМиниатюрыКонтекстноеМеню" id="129"/>
+									<ExtendedTooltip name="АдресМиниатюрыРасширеннаяПодсказка" id="130"/>
+									<Events>
+										<Event name="Click">АдресМиниатюрыНажатие</Event>
+									</Events>
+								</PictureField>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаФайлыPDF" id="175">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница файлы PDF</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница файлы PDF</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаФайлыPDFРасширеннаяПодсказка" id="176"/>
+							<ChildItems>
+								<PDFDocumentField name="ДокументPDF" id="177">
+									<DataPath>ДокументPDF</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="ДокументPDFКонтекстноеМеню" id="178"/>
+									<ExtendedTooltip name="ДокументPDFРасширеннаяПодсказка" id="179"/>
+									<ViewStatusAddition name="ДокументPDFСостояниеПросмотра" id="180">
+										<AdditionSource>
+											<Item>ДокументPDF</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДокументPDFСостояниеПросмотраКонтекстноеМеню" id="181"/>
+										<ExtendedTooltip name="ДокументPDFСостояниеПросмотраРасширеннаяПодсказка" id="182"/>
+									</ViewStatusAddition>
+								</PDFDocumentField>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТекущийПользователь" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбъектАрхива" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект архива</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:AnyIBRef</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ПеретаскиваемыеФайлы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перетаскиваемые файлы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресМиниатюры" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес миниатюры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НепосредственноеУдаление" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Непосредственное удаление</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимВыбора" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим выбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗапрашиватьТипФайлаПриДобавленииВАрхив" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрашивать тип файла при добавлении в архив</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредварительныйПросмотр" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предварительный просмотр</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПредварительныйПросмотр</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ДокументPDF" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ PDF</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:pdfdoc="http://v8.1c.ru/8.3/data/pdf">pdfdoc:PDFDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокФайлы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список файлы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>~СписокФайлы.Объект</Field>
+				<Field>СписокФайлы.Владелец</Field>
+				<Field>СписокФайлы.ИмяФайла</Field>
+				<Field>СписокФайлы.ПометкаУдаления</Field>
+				<Field>СписокФайлы.СпособХраненияАрхиваФайла</Field>
+				<Field>СписокФайлы.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникCW_ОбъектыАрхива.Ссылка КАК Ссылка,
+	СправочникCW_ОбъектыАрхива.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникCW_ОбъектыАрхива.Родитель КАК Родитель,
+	СправочникCW_ОбъектыАрхива.ЭтоГруппа КАК ЭтоГруппа,
+	СправочникCW_ОбъектыАрхива.Код КАК Код,
+	СправочникCW_ОбъектыАрхива.Наименование КАК Наименование,
+	СправочникCW_ОбъектыАрхива.ИмяФайла КАК ИмяФайла,
+	СправочникCW_ОбъектыАрхива.Том КАК Том,
+	СправочникCW_ОбъектыАрхива.ФайлЗахвачен КАК ФайлЗахвачен,
+	СправочникCW_ОбъектыАрхива.ТекущийРедактор КАК ТекущийРедактор,
+	СправочникCW_ОбъектыАрхива.Размер КАК Размер,
+	СправочникCW_ОбъектыАрхива.ФайлЗагружен КАК ФайлЗагружен,
+	СправочникCW_ОбъектыАрхива.Комментарий КАК Комментарий,
+	СправочникCW_ОбъектыАрхива.РазмерСтрокой КАК РазмерСтрокой,
+	СправочникCW_ОбъектыАрхива.Расширение КАК Расширение,
+	СправочникCW_ОбъектыАрхива.ТипДокумента КАК ТипДокумента,
+	СправочникCW_ОбъектыАрхива.ХранилищеПараметров КАК ХранилищеПараметров,
+	СправочникCW_ОбъектыАрхива.ВОблаке КАК ВОблаке,
+	СправочникCW_ОбъектыАрхива.ОбъектАрхиваВладелец КАК ОбъектАрхиваВладелец,
+	СправочникCW_ОбъектыАрхива.ДатаРегистрации КАК ДатаРегистрации,
+	СправочникCW_ОбъектыАрхива.ДатаИзменения КАК ДатаИзменения,
+	СправочникCW_ОбъектыАрхива.Автор КАК Автор,
+	СправочникCW_ОбъектыАрхива.Редактор КАК Редактор,
+	СправочникCW_ОбъектыАрхива.СпособХраненияАрхива КАК СпособХраненияАрхива,
+	СправочникCW_ОбъектыАрхива.Владелец КАК Владелец
+ИЗ
+	Справочник.CW_ОбъектыАрхива КАК СправочникCW_ОбъектыАрхива</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Код</dcssch:dataPath>
+					<dcssch:field>Код</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Объект</dcssch:dataPath>
+					<dcssch:field>Объект</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Родитель</dcssch:dataPath>
+					<dcssch:field>Родитель</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаИзменения</dcssch:dataPath>
+					<dcssch:field>ДатаИзменения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЭтоГруппа</dcssch:dataPath>
+					<dcssch:field>ЭтоГруппа</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Том</dcssch:dataPath>
+					<dcssch:field>Том</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Наименование</dcssch:dataPath>
+					<dcssch:field>Наименование</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяФайла</dcssch:dataPath>
+					<dcssch:field>ИмяФайла</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФайлЗахвачен</dcssch:dataPath>
+					<dcssch:field>ФайлЗахвачен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТекущийРедактор</dcssch:dataPath>
+					<dcssch:field>ТекущийРедактор</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СпособХраненияАрхива</dcssch:dataPath>
+					<dcssch:field>СпособХраненияАрхива</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Размер</dcssch:dataPath>
+					<dcssch:field>Размер</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФайлЗагружен</dcssch:dataPath>
+					<dcssch:field>ФайлЗагружен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Комментарий</dcssch:dataPath>
+					<dcssch:field>Комментарий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Автор</dcssch:dataPath>
+					<dcssch:field>Автор</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РазмерСтрокой</dcssch:dataPath>
+					<dcssch:field>РазмерСтрокой</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Расширение</dcssch:dataPath>
+					<dcssch:field>Расширение</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТипДокумента</dcssch:dataPath>
+					<dcssch:field>ТипДокумента</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ХранилищеПараметров</dcssch:dataPath>
+					<dcssch:field>ХранилищеПараметров</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВОблаке</dcssch:dataPath>
+					<dcssch:field>ВОблаке</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОбъектАрхиваВладелец</dcssch:dataPath>
+					<dcssch:field>ОбъектАрхиваВладелец</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаРегистрации</dcssch:dataPath>
+					<dcssch:field>ДатаРегистрации</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Редактор</dcssch:dataPath>
+					<dcssch:field>Редактор</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
+					<dcssch:field>Предопределенный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
+					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Владелец</dcssch:dataPath>
+					<dcssch:field>Владелец</dcssch:field>
+				</Field>
+				<CalculatedField>
+					<dcssch:dataPath>ИндексКартинки</dcssch:dataPath>
+					<dcssch:expression>ВЫБОР КОГДА ЭтоГруппа ТОГДА 2 ИНАЧЕ CW_БухгалтерияЭкспедитораСерверПереопределяемый.ПолучитьИндексПиктограммыФайла(Расширение) КОНЕЦ + ВЫБОР КОГДА ПометкаУдаления ТОГДА 1 ИНАЧЕ 0 КОНЕЦ</dcssch:expression>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:useRestriction>
+						<dcssch:condition>true</dcssch:condition>
+						<dcssch:group>true</dcssch:group>
+						<dcssch:order>true</dcssch:order>
+					</dcssch:useRestriction>
+					<dcssch:valueType>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>0</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</dcssch:valueType>
+				</CalculatedField>
+				<CalculatedField>
+					<dcssch:dataPath>РазмерФайла</dcssch:dataPath>
+					<dcssch:expression>Размер / 1024</dcssch:expression>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Размер, Кб</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="xs:string">ЧДЦ=1</dcscor:value>
+						</dcscor:item>
+					</dcssch:appearance>
+					<dcssch:valueType>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>0</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</dcssch:valueType>
+				</CalculatedField>
+				<CalculatedField>
+					<dcssch:dataPath>СпособХраненияАрхиваФайла</dcssch:dataPath>
+					<dcssch:expression>ВЫБОР КОГДА ЭтоГруппа ТОГДА -1 Иначе СпособХраненияАрхива КОНЕЦ</dcssch:expression>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Способ хранения архива файла</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>0</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</dcssch:valueType>
+				</CalculatedField>
+				<MainTable>Catalog.CW_ОбъектыАрхива</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОсновнойТомХранения" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основной том хранения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.CW_ТомаАрхива</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОсновнойТомДоступен" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основной том доступен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВладелецАрхива" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Владелец архива</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.CW_ВладельцыАрхива</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаПредпросмотр" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда предпросмотр</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда предпросмотр</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПредпросмотр</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДобавитьСсылкуНаФайл" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить ссылку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить ссылку на файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_ОблакоНовое</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьСсылкуНаФайл</Action>
+			<AssociatedTableElementId xsi:type="xs:string">СписокФайлы</AssociatedTableElementId>
+		</Command>
+		<Command name="ДобавитьФайлВГрузоперевозки" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В грузоперевозки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить файл в грузоперевозки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_ГрузоперевозкиСписок</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьФайлВГрузоперевозки</Action>
+			<AssociatedTableElementId xsi:type="xs:string">СписокФайлы</AssociatedTableElementId>
+		</Command>
+		<Command name="СохранитьВКаталог" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить в каталог</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить в каталог</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_СохранитьВКаталог</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СохранитьВКаталог</Action>
+			<Representation>TextPicture</Representation>
+			<AssociatedTableElementId xsi:type="xs:string">СписокФайлы</AssociatedTableElementId>
+		</Command>
+		<Command name="ОткрытьФайлДляПросмотра" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть файл для просмотра</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ОткрытьВыбранныйФайл</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьФайлДляПросмотра</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СохранитьКак" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить как...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить файл на компьютер или другое устройство</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_СохранитьФайлКак</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>СохранитьКак</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">СписокФайлы</AssociatedTableElementId>
+		</Command>
+		<Command name="ДобавитьСсылкуНаРанееПрикрепленныйФайл" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить прикрепленный файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить файл, прикрепленный к другому объекту</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_Цепь</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьСсылкуНаРанееПрикрепленныйФайл</Action>
+			<AssociatedTableElementId xsi:type="xs:string">СписокФайлы</AssociatedTableElementId>
+		</Command>
+		<Command name="ДобавитьФайлыСвязанныхОбъектов" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить прикрепленные файлы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить файлы связанных объектов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_Цепь</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьФайлыСвязанныхОбъектов</Action>
+			<Representation>TextPicture</Representation>
+			<AssociatedTableElementId xsi:type="xs:string">СписокФайлы</AssociatedTableElementId>
+		</Command>
+		<Command name="УдалитьЭлемент" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DeleteDirectly</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьЭлемент</Action>
+		</Command>
+	</Commands>
+</Form>

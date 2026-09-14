@@ -1,0 +1,991 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Запрос</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Грузоперевозка</dataPath>
+			<field>Грузоперевозка</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldFolder">
+			<dataPath>Статистика</dataPath>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статистика</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldFolder">
+			<dataPath>Финансы</dataPath>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Финансы</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Финансы.Доходы.ФинансыДоходыВсего</dataPath>
+			<field>ФактДоходыВсего</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2; ЧН=-</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Финансы.Доходы.ФинансыДоходыНДС</dataPath>
+			<field>ФактДоходыНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДС</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2; ЧН=-</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Финансы.Доходы.ФинансыДоходыСумма</dataPath>
+			<field>ФактДоходыСумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2; ЧН=-</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Финансы.Расходы.ФинансыРасходыВсего</dataPath>
+			<field>ФактРасходыВсего</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2; ЧН=-</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Финансы.Расходы.ФинансыРасходыНДС</dataPath>
+			<field>ФактРасходыНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДС</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2; ЧН=-</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Финансы.Расходы.ФинансыРасходыСумма</dataPath>
+			<field>ФактРасходыСумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2; ЧН=-</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Финансы.Прибыль.ФинансыПрибыльВсего</dataPath>
+			<field>ФактПрибыльВсего</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2; ЧН=-</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Финансы.Прибыль.ФинансыПрибыльНДС</dataPath>
+			<field>ФактПрибыльНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДС</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2; ЧН=-</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Финансы.Прибыль.ФинансыПрибыльСумма</dataPath>
+			<field>ФактПрибыльСумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2; ЧН=-</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldFolder">
+			<dataPath>Расходы</dataPath>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расходы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldFolder">
+			<dataPath>Доходы</dataPath>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доходы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldFolder">
+			<dataPath>Прибыль</dataPath>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прибыль</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказ</dataPath>
+			<field>Заказ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Клиент</dataPath>
+			<field>Клиент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Месяц</dataPath>
+			<field>Месяц</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>Формат(Месяц,"ДФ=yyyy.MM")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Статистика.КоличествоНегабариты</dataPath>
+			<field>КоличествоНегабариты</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Статистика.Количество20</dataPath>
+			<field>Количество20</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>20'</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Статистика.Количество40</dataPath>
+			<field>Количество40</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>40'</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МенеджерПродаж</dataPath>
+			<field>МенеджерПродаж</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Менеджер продаж</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОперативныйМенеджер</dataPath>
+			<field>ОперативныйМенеджер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оперативный менеджер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	CW_Грузоперевозки.Ссылка КАК Ссылка
+ПОМЕСТИТЬ Грузоперевозки
+ИЗ
+	Справочник.CW_Грузоперевозки КАК CW_Грузоперевозки
+ГДЕ
+	CW_Грузоперевозки.ДатаСделкиФ МЕЖДУ &amp;Дата1 И &amp;Дата2
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	CW_ДоходыПоГрузоперевозкам.Грузоперевозка КАК Грузоперевозка,
+	CW_ДоходыПоГрузоперевозкам.Номенклатура КАК Номенклатура,
+	CW_ДоходыПоГрузоперевозкам.СтатьяЗатрат КАК СтатьяЗатрат,
+	CW_ДоходыПоГрузоперевозкам.Всего КАК ФактДоходыВсего,
+	CW_ДоходыПоГрузоперевозкам.Сумма КАК ФактДоходыСумма,
+	CW_ДоходыПоГрузоперевозкам.НДС КАК ФактДоходыНДС,
+	0 КАК ПланДоходыВсего,
+	0 КАК ПланДоходыСумма,
+	0 КАК ПланДоходыНДС,
+	CW_ДоходыПоГрузоперевозкам.Договор.Организация КАК Организация,
+	CW_ДоходыПоГрузоперевозкеУслуги.ПорядокОтражения КАК ПорядокОтражения
+ПОМЕСТИТЬ ПредварительныйФактДоходы
+ИЗ
+	РегистрНакопления.CW_ДоходыПоГрузоперевозкам КАК CW_ДоходыПоГрузоперевозкам
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.CW_ДоходыПоГрузоперевозке.Услуги КАК CW_ДоходыПоГрузоперевозкеУслуги
+		ПО CW_ДоходыПоГрузоперевозкам.ДокументДоходов = CW_ДоходыПоГрузоперевозкеУслуги.Ссылка
+			И CW_ДоходыПоГрузоперевозкам.НомерСтроки = CW_ДоходыПоГрузоперевозкеУслуги.НомерСтроки
+ГДЕ
+	CW_ДоходыПоГрузоперевозкам.Грузоперевозка В
+			(ВЫБРАТЬ
+				Грузоперевозки.Ссылка
+			ИЗ
+				Грузоперевозки КАК Грузоперевозки)
+	И ВЫБОР
+			КОГДА &amp;ПоАктам
+				ТОГДА CW_ДоходыПоГрузоперевозкам.ЭтоАкт
+			ИНАЧЕ CW_ДоходыПоГрузоперевозкам.ЭтоСчет
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА &amp;Организация = НЕОПРЕДЕЛЕНО
+				ТОГДА ИСТИНА
+			ИНАЧЕ CW_ДоходыПоГрузоперевозкам.ДокументДоходов.Организация = &amp;Организация
+		КОНЕЦ
+	И НЕ CW_ДоходыПоГрузоперевозкам.Контрагент В (&amp;КонтрагентыХолдинга)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПредварительныйФактДоходы.Грузоперевозка КАК Грузоперевозка,
+	ПредварительныйФактДоходы.Номенклатура КАК Номенклатура,
+	ПредварительныйФактДоходы.СтатьяЗатрат КАК СтатьяЗатрат,
+	ПредварительныйФактДоходы.ФактДоходыВсего КАК ФактДоходыВсего,
+	ПредварительныйФактДоходы.ФактДоходыСумма КАК ФактДоходыСумма,
+	ПредварительныйФактДоходы.ФактДоходыНДС КАК ФактДоходыНДС,
+	ПредварительныйФактДоходы.ПланДоходыВсего КАК ПланДоходыВсего,
+	ПредварительныйФактДоходы.ПланДоходыСумма КАК ПланДоходыСумма,
+	ПредварительныйФактДоходы.ПланДоходыНДС КАК ПланДоходыНДС,
+	ПредварительныйФактДоходы.Организация КАК Организация
+ПОМЕСТИТЬ ФактДоходы
+ИЗ
+	ПредварительныйФактДоходы КАК ПредварительныйФактДоходы
+ГДЕ
+	ПредварительныйФактДоходы.ПорядокОтражения В (&amp;ПорядокОтраженияДоходов)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	CW_ЗатратыПоГрузоперевозкам.Грузоперевозка КАК Грузоперевозка,
+	CW_ЗатратыПоГрузоперевозкам.Номенклатура КАК Номенклатура,
+	CW_ЗатратыПоГрузоперевозкам.СтатьяЗатрат КАК СтатьяЗатрат,
+	CW_ЗатратыПоГрузоперевозкам.Всего КАК ФактРасходыВсего,
+	CW_ЗатратыПоГрузоперевозкам.Сумма КАК ФактРасходыСумма,
+	CW_ЗатратыПоГрузоперевозкам.НДС КАК ФактРасходыНДС,
+	0 КАК ПланРасходыВсего,
+	0 КАК ПланРасходыСумма,
+	0 КАК ПланРасходыНДС,
+	CW_ЗатратыПоГрузоперевозкам.Договор.Организация КАК Организация,
+	CW_РасходыПоГрузоперевозкеУслуги.ПорядокОтражения КАК ПорядокОтражения
+ПОМЕСТИТЬ ПредварительныйФактРасходы
+ИЗ
+	РегистрНакопления.CW_РасходыПоГрузоперевозкам КАК CW_ЗатратыПоГрузоперевозкам
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.CW_РасходыПоГрузоперевозке.Услуги КАК CW_РасходыПоГрузоперевозкеУслуги
+		ПО CW_ЗатратыПоГрузоперевозкам.ДокументРасходов = CW_РасходыПоГрузоперевозкеУслуги.Ссылка
+			И CW_ЗатратыПоГрузоперевозкам.НомерСтроки = CW_РасходыПоГрузоперевозкеУслуги.НомерСтроки
+ГДЕ
+	CW_ЗатратыПоГрузоперевозкам.Грузоперевозка В
+			(ВЫБРАТЬ
+				Грузоперевозки.Ссылка
+			ИЗ
+				Грузоперевозки КАК Грузоперевозки)
+	И ВЫБОР
+			КОГДА &amp;ПоАктам
+				ТОГДА CW_ЗатратыПоГрузоперевозкам.ЭтоАкт
+			ИНАЧЕ CW_ЗатратыПоГрузоперевозкам.ЭтоСчет
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА &amp;Организация = НЕОПРЕДЕЛЕНО
+				ТОГДА ИСТИНА
+			ИНАЧЕ CW_ЗатратыПоГрузоперевозкам.ДокументРасходов.Организация = &amp;Организация
+		КОНЕЦ
+	И НЕ CW_ЗатратыПоГрузоперевозкам.Контрагент В (&amp;КонтрагентыХолдинга)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПредварительныйФактРасходы.Грузоперевозка КАК Грузоперевозка,
+	ПредварительныйФактРасходы.Номенклатура КАК Номенклатура,
+	ПредварительныйФактРасходы.СтатьяЗатрат КАК СтатьяЗатрат,
+	ПредварительныйФактРасходы.ФактРасходыВсего КАК ФактРасходыВсего,
+	ПредварительныйФактРасходы.ФактРасходыСумма КАК ФактРасходыСумма,
+	ПредварительныйФактРасходы.ФактРасходыНДС КАК ФактРасходыНДС,
+	ПредварительныйФактРасходы.ПланРасходыВсего КАК ПланРасходыВсего,
+	ПредварительныйФактРасходы.ПланРасходыСумма КАК ПланРасходыСумма,
+	ПредварительныйФактРасходы.ПланРасходыНДС КАК ПланРасходыНДС,
+	ПредварительныйФактРасходы.Организация КАК Организация
+ПОМЕСТИТЬ ФактРасходы
+ИЗ
+	ПредварительныйФактРасходы КАК ПредварительныйФактРасходы
+ГДЕ
+	ПредварительныйФактРасходы.ПорядокОтражения В (&amp;ПорядокОтраженияРасходов)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ФактДоходы.Грузоперевозка КАК Грузоперевозка,
+	ФактДоходы.Номенклатура КАК Номенклатура,
+	ФактДоходы.СтатьяЗатрат КАК СтатьяЗатрат,
+	ФактДоходы.ФактДоходыВсего КАК ФактДоходыВсего,
+	ФактДоходы.ФактДоходыСумма КАК ФактДоходыСумма,
+	ФактДоходы.ФактДоходыНДС КАК ФактДоходыНДС,
+	ФактДоходы.ПланДоходыВсего КАК ПланДоходыВсего,
+	ФактДоходы.ПланДоходыСумма КАК ПланДоходыСумма,
+	ФактДоходы.ПланДоходыНДС КАК ПланДоходыНДС,
+	ФактДоходы.Организация КАК Организация
+ПОМЕСТИТЬ Доходы
+ИЗ
+	ФактДоходы КАК ФактДоходы
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ФактРасходы.Грузоперевозка КАК Грузоперевозка,
+	ФактРасходы.Номенклатура КАК Номенклатура,
+	ФактРасходы.СтатьяЗатрат КАК СтатьяЗатрат,
+	ФактРасходы.ФактРасходыВсего КАК ФактРасходыВсего,
+	ФактРасходы.ФактРасходыСумма КАК ФактРасходыСумма,
+	ФактРасходы.ФактРасходыНДС КАК ФактРасходыНДС,
+	ФактРасходы.ПланРасходыВсего КАК ПланРасходыВсего,
+	ФактРасходы.ПланРасходыСумма КАК ПланРасходыСумма,
+	ФактРасходы.ПланРасходыНДС КАК ПланРасходыНДС,
+	ФактРасходы.Организация КАК Организация
+ПОМЕСТИТЬ Расходы
+ИЗ
+	ФактРасходы КАК ФактРасходы
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Доходы.Грузоперевозка КАК Грузоперевозка,
+	Доходы.Номенклатура КАК Номенклатура,
+	Доходы.СтатьяЗатрат КАК СтатьяЗатрат,
+	Доходы.ФактДоходыВсего КАК ФактДоходыВсего,
+	Доходы.ФактДоходыСумма КАК ФактДоходыСумма,
+	Доходы.ФактДоходыНДС КАК ФактДоходыНДС,
+	0 КАК ФактРасходыВсего,
+	0 КАК ФактРасходыСумма,
+	0 КАК ФактРасходыНДС,
+	Доходы.Организация КАК Организация
+ПОМЕСТИТЬ ДоходыРасходы
+ИЗ
+	Доходы КАК Доходы
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Расходы.Грузоперевозка,
+	Расходы.Номенклатура,
+	Расходы.СтатьяЗатрат,
+	0,
+	0,
+	0,
+	Расходы.ФактРасходыВсего,
+	Расходы.ФактРасходыСумма,
+	Расходы.ФактРасходыНДС,
+	Расходы.Организация
+ИЗ
+	Расходы КАК Расходы
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДоходыРасходы.Организация КАК Организация,
+	ДоходыРасходы.Грузоперевозка КАК Грузоперевозка,
+	ДоходыРасходы.Номенклатура КАК Номенклатура,
+	СУММА(ДоходыРасходы.ФактДоходыВсего) КАК ФактДоходыВсего,
+	СУММА(ДоходыРасходы.ФактДоходыСумма) КАК ФактДоходыСумма,
+	СУММА(ДоходыРасходы.ФактДоходыНДС) КАК ФактДоходыНДС,
+	СУММА(ДоходыРасходы.ФактРасходыВсего) КАК ФактРасходыВсего,
+	СУММА(ДоходыРасходы.ФактРасходыСумма) КАК ФактРасходыСумма,
+	СУММА(ДоходыРасходы.ФактРасходыНДС) КАК ФактРасходыНДС
+ПОМЕСТИТЬ ДоходыРасходыСвернутые
+ИЗ
+	ДоходыРасходы КАК ДоходыРасходы
+
+СГРУППИРОВАТЬ ПО
+	ДоходыРасходы.Грузоперевозка,
+	ДоходыРасходы.Организация,
+	ДоходыРасходы.Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДоходыРасходыСвернутые.Организация КАК Организация,
+	ДоходыРасходыСвернутые.Номенклатура КАК Номенклатура,
+	ДоходыРасходыСвернутые.Грузоперевозка КАК Грузоперевозка,
+	ДоходыРасходыСвернутые.ФактДоходыВсего КАК ФактДоходыВсего,
+	ДоходыРасходыСвернутые.ФактДоходыСумма КАК ФактДоходыСумма,
+	ДоходыРасходыСвернутые.ФактДоходыНДС КАК ФактДоходыНДС,
+	ДоходыРасходыСвернутые.ФактРасходыВсего КАК ФактРасходыВсего,
+	ДоходыРасходыСвернутые.ФактРасходыСумма КАК ФактРасходыСумма,
+	ДоходыРасходыСвернутые.ФактРасходыНДС КАК ФактРасходыНДС,
+	ДоходыРасходыСвернутые.ФактДоходыВсего - ДоходыРасходыСвернутые.ФактРасходыВсего КАК ФактПрибыльВсего,
+	ДоходыРасходыСвернутые.ФактДоходыСумма - ДоходыРасходыСвернутые.ФактРасходыСумма КАК ФактПрибыльСумма,
+	ДоходыРасходыСвернутые.ФактДоходыНДС - ДоходыРасходыСвернутые.ФактРасходыНДС КАК ФактПрибыльНДС
+ПОМЕСТИТЬ ДоходыРасходыПрибыль
+ИЗ
+	ДоходыРасходыСвернутые КАК ДоходыРасходыСвернутые
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДоходыРасходыПрибыль.Грузоперевозка.Клиент КАК Клиент,
+	ДоходыРасходыПрибыль.Грузоперевозка.Заказ КАК Заказ,
+	ДоходыРасходыПрибыль.Грузоперевозка КАК Грузоперевозка,
+	ДоходыРасходыПрибыль.Номенклатура КАК Номенклатура,
+	ДоходыРасходыПрибыль.Грузоперевозка.ОперативныйМенеджер КАК ОперативныйМенеджер,
+	ДоходыРасходыПрибыль.Грузоперевозка.МенеджерПродаж КАК МенеджерПродаж,
+	ДоходыРасходыПрибыль.ФактДоходыВсего КАК ФактДоходыВсего,
+	ДоходыРасходыПрибыль.ФактДоходыСумма КАК ФактДоходыСумма,
+	ДоходыРасходыПрибыль.ФактДоходыНДС КАК ФактДоходыНДС,
+	ДоходыРасходыПрибыль.ФактРасходыВсего КАК ФактРасходыВсего,
+	ДоходыРасходыПрибыль.ФактРасходыСумма КАК ФактРасходыСумма,
+	ДоходыРасходыПрибыль.ФактРасходыНДС КАК ФактРасходыНДС,
+	ДоходыРасходыПрибыль.ФактПрибыльВсего КАК ФактПрибыльВсего,
+	ДоходыРасходыПрибыль.ФактПрибыльСумма КАК ФактПрибыльСумма,
+	ДоходыРасходыПрибыль.ФактПрибыльНДС КАК ФактПрибыльНДС,
+	ДоходыРасходыПрибыль.Грузоперевозка.ДатаСделкиФ КАК Дата,
+	НАЧАЛОПЕРИОДА(ДоходыРасходыПрибыль.Грузоперевозка.ДатаСделкиФ, МЕСЯЦ) КАК Месяц,
+	ВЫБОР
+		КОГДА ДоходыРасходыПрибыль.Грузоперевозка.ТипПеревозки.ВидПеревозки &lt;&gt; &amp;КонтейнернаяПеревозка
+			ТОГДА 1
+		ИНАЧЕ ВЫБОР
+				КОГДА ДоходыРасходыПрибыль.Грузоперевозка.Типоразмер.Размер &lt;&gt; &amp;Размер20
+						И ДоходыРасходыПрибыль.Грузоперевозка.Типоразмер.Размер &lt;&gt; &amp;Размер40
+					ТОГДА 1
+				ИНАЧЕ 0
+			КОНЕЦ
+	КОНЕЦ КАК КоличествоНегабариты,
+	ВЫБОР
+		КОГДА ДоходыРасходыПрибыль.Грузоперевозка.Типоразмер.Размер = &amp;Размер20
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК Количество20,
+	ВЫБОР
+		КОГДА ДоходыРасходыПрибыль.Грузоперевозка.Типоразмер.Размер = &amp;Размер40
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК Количество40
+ИЗ
+	ДоходыРасходыПрибыль КАК ДоходыРасходыПрибыль
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.CW_Грузоперевозки)
+	ВИДЫХАРАКТЕРИСТИК ПланВидовХарактеристик.CW_ПараметрыГрузоперевозок
+	ПОЛЕКЛЮЧА Ссылка
+	ПОЛЕИМЕНИ Идентификатор
+	ПОЛЕТИПАЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯХАРАКТЕРИСТИК РегистрСведений.CW_ХарактеристикиГрузоперевозок
+	ПОЛЕОБЪЕКТА Грузоперевозка
+	ПОЛЕВИДА Параметр
+	ПОЛЕЗНАЧЕНИЯ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.CW_Грузоперевозки)
+	ВИДЫХАРАКТЕРИСТИК ПланВидовХарактеристик.CW_ПараметрыГрузоперевозок
+	ПОЛЕКЛЮЧА Ссылка
+	ПОЛЕИМЕНИ ИдентификаторФакт
+	ПОЛЕТИПАЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯХАРАКТЕРИСТИК РегистрСведений.CW_ХарактеристикиГрузоперевозок
+	ПОЛЕОБЪЕКТА Грузоперевозка
+	ПОЛЕВИДА Параметр
+	ПОЛЕЗНАЧЕНИЯ ЗначениеФакт }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.CW_Грузоперевозки)
+	ВИДЫХАРАКТЕРИСТИК ПланВидовХарактеристик.CW_ПараметрыГрузоперевозок
+	ПОЛЕКЛЮЧА Ссылка
+	ПОЛЕИМЕНИ ИдентификаторПлан
+	ПОЛЕТИПАЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯХАРАКТЕРИСТИК РегистрСведений.CW_ХарактеристикиГрузоперевозок
+	ПОЛЕОБЪЕКТА Грузоперевозка
+	ПОЛЕВИДА Параметр
+	ПОЛЕЗНАЧЕНИЯ ЗначениеПлан }</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Финансы.Доходы.ФинансыДоходыВсего</dataPath>
+		<expression>Сумма(Финансы.Доходы.ФинансыДоходыВсего)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Финансы.Доходы.ФинансыДоходыНДС</dataPath>
+		<expression>Сумма(Финансы.Доходы.ФинансыДоходыНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Финансы.Доходы.ФинансыДоходыСумма</dataPath>
+		<expression>Сумма(Финансы.Доходы.ФинансыДоходыСумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Финансы.Прибыль.ФинансыПрибыльВсего</dataPath>
+		<expression>Сумма(Финансы.Прибыль.ФинансыПрибыльВсего)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Финансы.Прибыль.ФинансыПрибыльНДС</dataPath>
+		<expression>Сумма(Финансы.Прибыль.ФинансыПрибыльНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Финансы.Прибыль.ФинансыПрибыльСумма</dataPath>
+		<expression>Сумма(Финансы.Прибыль.ФинансыПрибыльСумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Финансы.Расходы.ФинансыРасходыВсего</dataPath>
+		<expression>Сумма(Финансы.Расходы.ФинансыРасходыВсего)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Финансы.Расходы.ФинансыРасходыНДС</dataPath>
+		<expression>Сумма(Финансы.Расходы.ФинансыРасходыНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Финансы.Расходы.ФинансыРасходыСумма</dataPath>
+		<expression>Сумма(Финансы.Расходы.ФинансыРасходыСумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Статистика.Количество20</dataPath>
+		<expression>Сумма(Статистика.Количество20)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Статистика.Количество40</dataPath>
+		<expression>Сумма(Статистика.Количество40)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Статистика.КоличествоНегабариты</dataPath>
+		<expression>Сумма(Статистика.КоличествоНегабариты)</expression>
+	</totalField>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ПоАктам</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По актам</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>КонтрагентыХолдинга</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Контрагенты холдинга</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Контрагенты</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ПорядокОтраженияДоходов</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Порядок отражения доходов</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.CW_ПорядокОтраженияДоходов</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>ПорядокОтраженияРасходов</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Порядок отражения расходов</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.CW_ПорядокОтраженияЗатрат</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>Дата1</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата1</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Дата2</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата2</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонтейнернаяПеревозка</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Контейнерная перевозка</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.CW_ВидыПеревозок</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Размер20</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Размер20</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.CW_РазмерыКонтейнеров</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Размер40</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Размер40</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.CW_РазмерыКонтейнеров</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Грузоперевозка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:field>Статистика</dcsset:field>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Статистика.Количество20</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Статистика.Количество40</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Статистика.КоличествоНегабариты</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Финансы</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Расходы</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Финансы.Расходы.ФинансыРасходыСумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Финансы.Расходы.ФинансыРасходыНДС</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Финансы.Расходы.ФинансыРасходыВсего</dcsset:field>
+						</dcsset:item>
+						<dcsset:placement>Horizontally</dcsset:placement>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Доходы</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Финансы.Доходы.ФинансыДоходыСумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Финансы.Доходы.ФинансыДоходыНДС</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Финансы.Доходы.ФинансыДоходыВсего</dcsset:field>
+						</dcsset:item>
+						<dcsset:placement>Horizontally</dcsset:placement>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Прибыль</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Финансы.Прибыль.ФинансыПрибыльСумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Финансы.Прибыль.ФинансыПрибыльНДС</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Финансы.Прибыль.ФинансыПрибыльВсего</dcsset:field>
+						</dcsset:item>
+						<dcsset:placement>Horizontally</dcsset:placement>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Дата2</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.CW_ВерсииБюджетов.Основная</dcscor:value>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Версия бюджета</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">CW_ОсновнойМакетСКД</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Месяц</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Клиент</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Грузоперевозка</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:row>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

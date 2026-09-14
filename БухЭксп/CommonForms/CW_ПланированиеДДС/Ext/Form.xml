@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Планирование ДДС</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>ChangeHistory</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>OpenFromMainServer</ExcludedCommand>
+		<ExcludedCommand>OpenFromStandaloneServer</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаАналитикаПланирования" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика планирования</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа аналитика планирования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<BackColor>#F0F0F0</BackColor>
+			<ExtendedTooltip name="ГруппаАналитикаПланированияРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<CheckBoxField name="CW_ИспользованиеОфисовКомпании" id="3">
+					<DataPath>НаборКонстант.CW_ИспользованиеОфисовКомпании</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="CW_ИспользованиеОфисовКомпанииКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="CW_ИспользованиеОфисовКомпанииРасширеннаяПодсказка" id="5"/>
+					<Events>
+						<Event name="OnChange">ПриИзмененииРеквизитаФормы</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="CW_ИспользованиеПодразделенийКомпании" id="6">
+					<DataPath>CW_ИспользованиеПодразделенийКомпании</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="CW_ИспользованиеПодразделенийКомпанииКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="CW_ИспользованиеПодразделенийКомпанииРасширеннаяПодсказка" id="8"/>
+					<Events>
+						<Event name="OnChange">CW_ИспользованиеПодразделенийКомпанииПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="ГруппаПараметрПодразделениеКомпании" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметр подразделение компании</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметр подразделение компании</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПараметрПодразделениеКомпанииРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация8" id="11">
+							<Width>1</Width>
+							<ContextMenu name="Декорация8КонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="Декорация8РасширеннаяПодсказка" id="13"/>
+						</LabelDecoration>
+						<InputField name="CW_ПараметрПодразделениеКомпании" id="14">
+							<DataPath>НаборКонстант.CW_ПараметрПодразделениеКомпании</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Определять подразделение компании по параметру грузоперевозки</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="CW_ПараметрПодразделениеКомпанииКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="CW_ПараметрПодразделениеКомпанииРасширеннаяПодсказка" id="16"/>
+							<Events>
+								<Event name="OnChange">ПриИзмененииРеквизитаФормы</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОсновнаяСтатьяДДС" id="54">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основная статья ДДС</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа основная статья ДДС</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаОсновнаяСтатьяДДСРасширеннаяПодсказка" id="55"/>
+					<ChildItems>
+						<InputField name="CW_ОсновнаяСтатьяДДСДляСписания" id="56">
+							<DataPath>НаборКонстант.CW_ОсновнаяСтатьяДДСДляСписания</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Для заявки на списание денежных средств</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="CW_ОсновнаяСтатьяДДСДляСписанияКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="CW_ОсновнаяСтатьяДДСДляСписанияРасширеннаяПодсказка" id="58"/>
+							<Events>
+								<Event name="OnChange">ПриИзмененииРеквизитаФормы</Event>
+							</Events>
+						</InputField>
+						<InputField name="CW_ОсновнаяСтатьяДДСДляПоступления" id="59">
+							<DataPath>НаборКонстант.CW_ОсновнаяСтатьяДДСДляПоступления</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Для заявки на поступление денежных средств</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="CW_ОсновнаяСтатьяДДСДляПоступленияКонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="CW_ОсновнаяСтатьяДДСДляПоступленияРасширеннаяПодсказка" id="61"/>
+							<Events>
+								<Event name="OnChange">ПриИзмененииРеквизитаФормы</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПараметрыПланированияДДС" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры планирования ДДС</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа параметры планирования ДДС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаПараметрыПланированияДДСРасширеннаяПодсказка" id="18"/>
+			<ChildItems>
+				<Table name="ПараметрыПланированияДДС" id="19">
+					<Height>4</Height>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<EnableStartDrag>true</EnableStartDrag>
+					<DataPath>ПараметрыПланированияДДС</DataPath>
+					<RowPictureDataPath>ПараметрыПланированияДДС.DefaultPicture</RowPictureDataPath>
+					<CommandSet>
+						<ExcludedCommand>CancelSearch</ExcludedCommand>
+						<ExcludedCommand>ChangeHistory</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>DynamicListStandardSettings</ExcludedCommand>
+						<ExcludedCommand>Find</ExcludedCommand>
+						<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+						<ExcludedCommand>ListSettings</ExcludedCommand>
+						<ExcludedCommand>LoadDynamicListSettings</ExcludedCommand>
+						<ExcludedCommand>OutputList</ExcludedCommand>
+						<ExcludedCommand>Refresh</ExcludedCommand>
+						<ExcludedCommand>SaveDynamicListSettings</ExcludedCommand>
+						<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+						<ExcludedCommand>SearchHistory</ExcludedCommand>
+						<ExcludedCommand>SetDateInterval</ExcludedCommand>
+						<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+					</CommandSet>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+					<ContextMenu name="ПараметрыПланированияДДСКонтекстноеМеню" id="20"/>
+					<AutoCommandBar name="ПараметрыПланированияДДСКоманднаяПанель" id="21">
+						<ChildItems>
+							<ButtonGroup name="ПараметрыПланированияДДСГруппа1" id="38">
+								<Representation>Compact</Representation>
+								<ExtendedTooltip name="ПараметрыПланированияДДСГруппа1РасширеннаяПодсказка" id="39"/>
+								<ChildItems>
+									<Button name="ПараметрыПланированияДДССоздать" id="40">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.ПараметрыПланированияДДС.StandardCommand.Create</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="ПараметрыПланированияДДССоздатьРасширеннаяПодсказка" id="41"/>
+									</Button>
+									<Button name="ПараметрыПланированияДДССкопировать" id="42">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ПараметрыПланированияДДС.StandardCommand.Copy</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="ПараметрыПланированияДДССкопироватьРасширеннаяПодсказка" id="43"/>
+									</Button>
+									<Button name="ПараметрыПланированияДДСИзменить" id="44">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.ПараметрыПланированияДДС.StandardCommand.Change</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="ПараметрыПланированияДДСИзменитьРасширеннаяПодсказка" id="45"/>
+									</Button>
+									<Button name="ПараметрыПланированияДДСУдалить" id="46">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.ПараметрыПланированияДДС.StandardCommand.Delete</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="ПараметрыПланированияДДСУдалитьРасширеннаяПодсказка" id="47"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ПараметрыПланированияДДСРасширеннаяПодсказка" id="22"/>
+					<SearchStringAddition name="ПараметрыПланированияДДССтрокаПоиска" id="23">
+						<AdditionSource>
+							<Item>ПараметрыПланированияДДС</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПараметрыПланированияДДССтрокаПоискаКонтекстноеМеню" id="24"/>
+						<ExtendedTooltip name="ПараметрыПланированияДДССтрокаПоискаРасширеннаяПодсказка" id="25"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПараметрыПланированияДДССостояниеПросмотра" id="26">
+						<AdditionSource>
+							<Item>ПараметрыПланированияДДС</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПараметрыПланированияДДССостояниеПросмотраКонтекстноеМеню" id="27"/>
+						<ExtendedTooltip name="ПараметрыПланированияДДССостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПараметрыПланированияДДСУправлениеПоиском" id="29">
+						<AdditionSource>
+							<Item>ПараметрыПланированияДДС</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПараметрыПланированияДДСУправлениеПоискомКонтекстноеМеню" id="30"/>
+						<ExtendedTooltip name="ПараметрыПланированияДДСУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ПараметрыПланированияДДСПериод" id="48">
+							<DataPath>ПараметрыПланированияДДС.Period</DataPath>
+							<ContextMenu name="ПараметрыПланированияДДСПериодКонтекстноеМеню" id="49"/>
+							<ExtendedTooltip name="ПараметрыПланированияДДСПериодРасширеннаяПодсказка" id="50"/>
+						</LabelField>
+						<LabelField name="ПараметрыПланированияДДСОрганизация" id="51">
+							<DataPath>ПараметрыПланированияДДС.Организация</DataPath>
+							<ContextMenu name="ПараметрыПланированияДДСОрганизацияКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="ПараметрыПланированияДДСОрганизацияРасширеннаяПодсказка" id="53"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>НаборКонстант.CW_ИспользованиеПодразделенийКомпании</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="CW_ИспользованиеПодразделенийКомпании" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>использование подразделений компании</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.CW_ИспользуетсяБлокПланированиеДДС</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ПараметрыПланированияДДС" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры планирования ДДС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.CW_ИспользуетсяБлокПланированиеДДС</Item>
+			</FunctionalOptions>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.CW_ПараметрыПланированияДДС</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,1346 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЗаголовок" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа заголовок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа заголовок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаголовокExtendedTooltip" id="164"/>
+			<ChildItems>
+				<PictureField name="СостояниеДокумента" id="266">
+					<DataPath>СостояниеДокумента</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+					<Width>2</Width>
+					<Height>1</Height>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</ValuesPicture>
+					<Border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</Border>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="267">
+						<Autofill>false</Autofill>
+					</ContextMenu>
+					<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="268"/>
+				</PictureField>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<WarningOnEditRepresentation>DontShow</WarningOnEditRepresentation>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерExtendedTooltip" id="166"/>
+					<Events>
+						<Event name="OnChange">НомерПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Дата" id="3">
+					<DataPath>Объект.Date</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<TitleLocation>Top</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДатаExtendedTooltip" id="167"/>
+					<Events>
+						<Event name="OnChange">ДатаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Организация" id="309">
+					<DataPath>Объект.Организация</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="310"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="311"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаШапка" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаExtendedTooltip" id="168"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКонтрагенты" id="91">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа контрагенты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа контрагенты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКонтрагентыExtendedTooltip" id="173"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКонтрагентКредитор" id="84">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кредитор</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа контрагент кредитор</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаКонтрагентКредиторExtendedTooltip" id="178"/>
+							<ChildItems>
+								<InputField name="КонтрагентКредитор" id="87">
+									<DataPath>Объект.КонтрагентКредитор</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ChoiceButton>true</ChoiceButton>
+									<ContextMenu name="КонтрагентКредиторКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="КонтрагентКредиторExtendedTooltip" id="180"/>
+									<Events>
+										<Event name="OnChange">КонтрагентКредиторПриИзменении</Event>
+									</Events>
+								</InputField>
+								<UsualGroup name="ГруппаДоговорКредитор" id="303">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа договор кредитор</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа договор кредитор</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаДоговорКредиторРасширеннаяПодсказка" id="304"/>
+									<ChildItems>
+										<InputField name="ДоговорКредитор" id="89">
+											<DataPath>Объект.ДоговорКредитор</DataPath>
+											<TitleLocation>Top</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.Владелец</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.КонтрагентКредитор</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+												<xr:Link>
+													<xr:Name>Отбор.Организация</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.Организация</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="ДоговорКредиторКонтекстноеМеню" id="90"/>
+											<ExtendedTooltip name="ДоговорКредиторExtendedTooltip" id="181"/>
+											<Events>
+												<Event name="OnChange">ДоговорКредиторПриИзменении</Event>
+												<Event name="StartChoice">ДоговорКредиторНачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="ПриложениеКДоговоруКредитор" id="300">
+											<DataPath>Объект.ПриложениеКДоговоруКредитор</DataPath>
+											<TitleLocation>Top</TitleLocation>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.Договор</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.ДоговорКредитор</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="ПриложениеКДоговоруКредиторКонтекстноеМеню" id="301"/>
+											<ExtendedTooltip name="ПриложениеКДоговоруКредиторРасширеннаяПодсказка" id="302"/>
+										</InputField>
+										<InputField name="ДоговорКредиторВалютаДоговора" id="312">
+											<DataPath>Объект.ДоговорКредитор.ВалютаДоговора</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Валюта</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Top</TitleLocation>
+											<Width>4</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<OpenButton>false</OpenButton>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ДоговорКредиторВалютаДоговораКонтекстноеМеню" id="313"/>
+											<ExtendedTooltip name="ДоговорКредиторВалютаДоговораРасширеннаяПодсказка" id="314"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКонтрагентДебитор" id="43">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дебитор</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа контрагент дебитор</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаКонтрагентДебиторExtendedTooltip" id="174"/>
+							<ChildItems>
+								<InputField name="Контрагент" id="7">
+									<DataPath>Объект.Контрагент</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ChoiceButton>true</ChoiceButton>
+									<ContextMenu name="КонтрагентКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="КонтрагентExtendedTooltip" id="176"/>
+									<Events>
+										<Event name="OnChange">КонтрагентПриИзменении</Event>
+									</Events>
+								</InputField>
+								<UsualGroup name="ГруппаДоговор" id="305">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа договор</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа договор</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаДоговорРасширеннаяПодсказка" id="306"/>
+									<ChildItems>
+										<InputField name="Договор" id="9">
+											<DataPath>Объект.Договор</DataPath>
+											<TitleLocation>Top</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.Владелец</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.Контрагент</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+												<xr:Link>
+													<xr:Name>Отбор.Организация</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.Организация</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="ДоговорКонтекстноеМеню" id="10"/>
+											<ExtendedTooltip name="ДоговорExtendedTooltip" id="177"/>
+											<Events>
+												<Event name="OnChange">ДоговорПриИзменении</Event>
+												<Event name="StartChoice">ДоговорНачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="ПриложениеКДоговору" id="297">
+											<DataPath>Объект.ПриложениеКДоговору</DataPath>
+											<TitleLocation>Top</TitleLocation>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.Договор</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.Договор</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="ПриложениеКДоговоруКонтекстноеМеню" id="298"/>
+											<ExtendedTooltip name="ПриложениеКДоговоруРасширеннаяПодсказка" id="299"/>
+										</InputField>
+										<InputField name="ДоговорВалютаДоговора" id="315">
+											<DataPath>Объект.Договор.ВалютаДоговора</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Валюта</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Top</TitleLocation>
+											<Width>4</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<OpenButton>false</OpenButton>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ДоговорВалютаДоговораКонтекстноеМеню" id="316"/>
+											<ExtendedTooltip name="ДоговорВалютаДоговораРасширеннаяПодсказка" id="317"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа1" id="307">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основание</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<VerticalStretch>true</VerticalStretch>
+					<Group>Vertical</Group>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="308"/>
+					<ChildItems>
+						<InputField name="ПредставлениеДокумента" id="13">
+							<DataPath>Объект.ПредставлениеДокумента</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ПредставлениеДокументаКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ПредставлениеДокументаExtendedTooltip" id="172"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыExtendedTooltip" id="182"/>
+			<ChildItems>
+				<Page name="СтраницаЗачетКЗ" id="95">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кредиторская задолженность</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница зачет ДЗ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.CW_РасходыПоГрузоперевозке</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<TitleDataPath>Объект.КредиторскаяЗадолженность.RowsCount</TitleDataPath>
+					<ExtendedTooltip name="СтраницаЗачетКЗExtendedTooltip" id="217"/>
+					<ChildItems>
+						<Table name="КредиторскаяЗадолженность" id="118">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.КредиторскаяЗадолженность</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КредиторскаяЗадолженностьКонтекстноеМеню" id="119"/>
+							<AutoCommandBar name="КредиторскаяЗадолженностьКоманднаяПанель" id="120">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ВО_Зачет_КЗДобавить" id="129">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.КредиторскаяЗадолженность.StandardCommand.Add</CommandName>
+										<ExtendedTooltip name="ВО_Зачет_КЗДобавитьExtendedTooltip" id="218"/>
+									</Button>
+									<Button name="ВО_Зачет_КЗСкопировать" id="130">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.КредиторскаяЗадолженность.StandardCommand.Copy</CommandName>
+										<ExtendedTooltip name="ВО_Зачет_КЗСкопироватьExtendedTooltip" id="219"/>
+									</Button>
+									<Button name="ВО_Зачет_КЗУдалить" id="131">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.КредиторскаяЗадолженность.StandardCommand.Delete</CommandName>
+										<ExtendedTooltip name="ВО_Зачет_КЗУдалитьExtendedTooltip" id="220"/>
+									</Button>
+									<Button name="ВО_Зачет_КЗПереместитьВверх" id="132">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.КредиторскаяЗадолженность.StandardCommand.MoveUp</CommandName>
+										<ExtendedTooltip name="ВО_Зачет_КЗПереместитьВверхExtendedTooltip" id="221"/>
+									</Button>
+									<Button name="ВО_Зачет_КЗПереместитьВниз" id="133">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.КредиторскаяЗадолженность.StandardCommand.MoveDown</CommandName>
+										<ExtendedTooltip name="ВО_Зачет_КЗПереместитьВнизExtendedTooltip" id="222"/>
+									</Button>
+									<Button name="ВО_Зачет_КЗЗаполнитьКЗ" id="135">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ЗаполнитьКредиторскуюЗадолженность</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ВО_Зачет_КЗЗаполнитьКЗExtendedTooltip" id="224"/>
+									</Button>
+									<Button name="ВО_Зачет_КЗОчиститьКЗ" id="134">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ОчиститьКредиторскуюЗадолженность</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Очистить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ВО_Зачет_КЗОчиститьКЗExtendedTooltip" id="223"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="КредиторскаяЗадолженностьРасширеннаяПодсказка" id="225"/>
+							<SearchStringAddition name="КредиторскаяЗадолженностьСтрокаПоиска" id="252">
+								<AdditionSource>
+									<Item>КредиторскаяЗадолженность</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КредиторскаяЗадолженностьСтрокаПоискаКонтекстноеМеню" id="253"/>
+								<ExtendedTooltip name="КредиторскаяЗадолженностьСтрокаПоискаРасширеннаяПодсказка" id="254"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КредиторскаяЗадолженностьСостояниеПросмотра" id="255">
+								<AdditionSource>
+									<Item>КредиторскаяЗадолженность</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КредиторскаяЗадолженностьСостояниеПросмотраКонтекстноеМеню" id="256"/>
+								<ExtendedTooltip name="КредиторскаяЗадолженностьСостояниеПросмотраРасширеннаяПодсказка" id="257"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КредиторскаяЗадолженностьУправлениеПоиском" id="258">
+								<AdditionSource>
+									<Item>КредиторскаяЗадолженность</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КредиторскаяЗадолженностьУправлениеПоискомКонтекстноеМеню" id="259"/>
+								<ExtendedTooltip name="КредиторскаяЗадолженностьУправлениеПоискомРасширеннаяПодсказка" id="260"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnStartEdit">КредиторскаяЗадолженностьПриНачалеРедактирования</Event>
+								<Event name="OnChange">КредиторскаяЗадолженностьПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ВО_Зачет_КЗНомерСтроки" id="121">
+									<DataPath>Объект.КредиторскаяЗадолженность.LineNumber</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>№</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВО_Зачет_КЗНомерСтрокиКонтекстноеМеню" id="122"/>
+									<ExtendedTooltip name="ВО_Зачет_КЗНомерСтрокиExtendedTooltip" id="226"/>
+								</LabelField>
+								<ColumnGroup name="КредиторскаяЗадолженностьГруппа1" id="330">
+									<ExtendedTooltip name="КредиторскаяЗадолженностьГруппа1РасширеннаяПодсказка" id="331"/>
+									<ChildItems>
+										<InputField name="КредиторскаяЗадолженностьДокументСчет" id="350">
+											<DataPath>Объект.КредиторскаяЗадолженность.ДокументСчет</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.Договор</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.ДоговорКредитор</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+												<xr:Link>
+													<xr:Name>Отбор.Контрагент</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.КонтрагентКредитор</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+												<xr:Link>
+													<xr:Name>Отбор.Организация</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.Организация</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+												<xr:Link>
+													<xr:Name>Отбор.ПриложениеКДоговору</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.ПриложениеКДоговоруКредитор</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="КредиторскаяЗадолженностьДокументСчетКонтекстноеМеню" id="351"/>
+											<ExtendedTooltip name="КредиторскаяЗадолженностьДокументСчетРасширеннаяПодсказка" id="352"/>
+											<Events>
+												<Event name="OnChange">КредиторскаяЗадолженностьДокументСчетПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="КредиторскаяЗадолженностьПредставление" id="353">
+											<DataPath>Объект.КредиторскаяЗадолженность.Представление</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="КредиторскаяЗадолженностьПредставлениеКонтекстноеМеню" id="354"/>
+											<ExtendedTooltip name="КредиторскаяЗадолженностьПредставлениеРасширеннаяПодсказка" id="355"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="КредиторскаяЗадолженностьСчетЗадолженности" id="359">
+									<DataPath>Объект.КредиторскаяЗадолженность.СчетЗадолженности</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="КредиторскаяЗадолженностьСчетЗадолженностиКонтекстноеМеню" id="360"/>
+									<ExtendedTooltip name="КредиторскаяЗадолженностьСчетЗадолженностиРасширеннаяПодсказка" id="361"/>
+								</InputField>
+								<ColumnGroup name="КредиторскаяЗадолженностьГруппаВалюта" id="376">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кредиторская задолженность группа валюта</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кредиторская задолженность группа валюта</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="КредиторскаяЗадолженностьГруппаВалютаРасширеннаяПодсказка" id="377"/>
+									<ChildItems>
+										<InputField name="КредиторскаяЗадолженностьВалюта" id="318">
+											<DataPath>Объект.КредиторскаяЗадолженность.Валюта</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="КредиторскаяЗадолженностьВалютаКонтекстноеМеню" id="319"/>
+											<ExtendedTooltip name="КредиторскаяЗадолженностьВалютаРасширеннаяПодсказка" id="320"/>
+											<Events>
+												<Event name="OnChange">КредиторскаяЗадолженностьВалютаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<ColumnGroup name="КредиторскаяЗадолженностьГруппа2" id="332">
+											<ExtendedTooltip name="КредиторскаяЗадолженностьГруппа2РасширеннаяПодсказка" id="333"/>
+											<ChildItems>
+												<InputField name="КредиторскаяЗадолженностьКурс" id="321">
+													<DataPath>Объект.КредиторскаяЗадолженность.Курс</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="КредиторскаяЗадолженностьКурсКонтекстноеМеню" id="322"/>
+													<ExtendedTooltip name="КредиторскаяЗадолженностьКурсРасширеннаяПодсказка" id="323"/>
+													<Events>
+														<Event name="OnChange">КредиторскаяЗадолженностьКурсПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="КредиторскаяЗадолженностьКратность" id="324">
+													<DataPath>Объект.КредиторскаяЗадолженность.Кратность</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="КредиторскаяЗадолженностьКратностьКонтекстноеМеню" id="325"/>
+													<ExtendedTooltip name="КредиторскаяЗадолженностьКратностьРасширеннаяПодсказка" id="326"/>
+													<Events>
+														<Event name="OnChange">КредиторскаяЗадолженностьКратностьПриИзменении</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="КредиторскаяЗадолженностьСуммаВал" id="356">
+									<DataPath>Объект.КредиторскаяЗадолженность.СуммаВал</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="КредиторскаяЗадолженностьСуммаВалКонтекстноеМеню" id="357"/>
+									<ExtendedTooltip name="КредиторскаяЗадолженностьСуммаВалРасширеннаяПодсказка" id="358"/>
+									<Events>
+										<Event name="OnChange">КредиторскаяЗадолженностьСуммаВалПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="КредиторскаяЗадолженностьСумма" id="327">
+									<DataPath>Объект.КредиторскаяЗадолженность.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="КредиторскаяЗадолженностьСуммаКонтекстноеМеню" id="328"/>
+									<ExtendedTooltip name="КредиторскаяЗадолженностьСуммаРасширеннаяПодсказка" id="329"/>
+									<Events>
+										<Event name="OnChange">КредиторскаяЗадолженностьСуммаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<LabelField name="ИтогоКЗ" id="138">
+							<DataPath>ИтогоКЗ</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="ИтогоКЗКонтекстноеМеню" id="139"/>
+							<ExtendedTooltip name="ИтогоКЗExtendedTooltip" id="231"/>
+						</LabelField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаЗачетДЗ" id="94">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дебиторская задолженность</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница зачет ДЗ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.CW_ДоходыПоГрузоперевозке</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<TitleDataPath>Объект.ДебиторскаяЗадолженность.RowsCount</TitleDataPath>
+					<ExtendedTooltip name="СтраницаЗачетДЗExtendedTooltip" id="202"/>
+					<ChildItems>
+						<Table name="ДебиторскаяЗадолженность" id="100">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ДебиторскаяЗадолженность</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДебиторскаяЗадолженностьКонтекстноеМеню" id="101"/>
+							<AutoCommandBar name="ДебиторскаяЗадолженностьКоманднаяПанель" id="102">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ВО_Зачет_ДЗДобавить" id="111">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.ДебиторскаяЗадолженность.StandardCommand.Add</CommandName>
+										<ExtendedTooltip name="ВО_Зачет_ДЗДобавитьExtendedTooltip" id="203"/>
+									</Button>
+									<Button name="ВО_Зачет_ДЗСкопировать" id="112">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ДебиторскаяЗадолженность.StandardCommand.Copy</CommandName>
+										<ExtendedTooltip name="ВО_Зачет_ДЗСкопироватьExtendedTooltip" id="204"/>
+									</Button>
+									<Button name="ВО_Зачет_ДЗУдалить" id="113">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ДебиторскаяЗадолженность.StandardCommand.Delete</CommandName>
+										<ExtendedTooltip name="ВО_Зачет_ДЗУдалитьExtendedTooltip" id="205"/>
+									</Button>
+									<Button name="ВО_Зачет_ДЗПереместитьВверх" id="114">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ДебиторскаяЗадолженность.StandardCommand.MoveUp</CommandName>
+										<ExtendedTooltip name="ВО_Зачет_ДЗПереместитьВверхExtendedTooltip" id="206"/>
+									</Button>
+									<Button name="ВО_Зачет_ДЗПереместитьВниз" id="115">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ДебиторскаяЗадолженность.StandardCommand.MoveDown</CommandName>
+										<ExtendedTooltip name="ВО_Зачет_ДЗПереместитьВнизExtendedTooltip" id="207"/>
+									</Button>
+									<Button name="ВО_Зачет_ДЗЗаполнитьДЗ" id="117">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ЗаполнитьДебиторскуюЗадолженность</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.CW_Звезда</xr:Ref>
+											<xr:LoadTransparent>false</xr:LoadTransparent>
+										</Picture>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ВО_Зачет_ДЗЗаполнитьДЗExtendedTooltip" id="209"/>
+									</Button>
+									<Button name="ВО_Зачет_ДЗОчиститьДЗ" id="116">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ОчиститьДебиторскуюЗадолженность</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.CW_Очистить</xr:Ref>
+											<xr:LoadTransparent>false</xr:LoadTransparent>
+										</Picture>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Очистить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ВО_Зачет_ДЗОчиститьДЗExtendedTooltip" id="208"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДебиторскаяЗадолженностьРасширеннаяПодсказка" id="210"/>
+							<SearchStringAddition name="ДебиторскаяЗадолженностьСтрокаПоиска" id="243">
+								<AdditionSource>
+									<Item>ДебиторскаяЗадолженность</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДебиторскаяЗадолженностьСтрокаПоискаКонтекстноеМеню" id="244"/>
+								<ExtendedTooltip name="ДебиторскаяЗадолженностьСтрокаПоискаРасширеннаяПодсказка" id="245"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДебиторскаяЗадолженностьСостояниеПросмотра" id="246">
+								<AdditionSource>
+									<Item>ДебиторскаяЗадолженность</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДебиторскаяЗадолженностьСостояниеПросмотраКонтекстноеМеню" id="247"/>
+								<ExtendedTooltip name="ДебиторскаяЗадолженностьСостояниеПросмотраРасширеннаяПодсказка" id="248"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДебиторскаяЗадолженностьУправлениеПоиском" id="249">
+								<AdditionSource>
+									<Item>ДебиторскаяЗадолженность</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДебиторскаяЗадолженностьУправлениеПоискомКонтекстноеМеню" id="250"/>
+								<ExtendedTooltip name="ДебиторскаяЗадолженностьУправлениеПоискомРасширеннаяПодсказка" id="251"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnStartEdit">ДебиторскаяЗадолженностьПриНачалеРедактирования</Event>
+								<Event name="OnChange">ДебиторскаяЗадолженностьПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ВО_Зачет_ДЗНомерСтроки" id="103">
+									<DataPath>Объект.ДебиторскаяЗадолженность.LineNumber</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>№</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВО_Зачет_ДЗНомерСтрокиКонтекстноеМеню" id="104"/>
+									<ExtendedTooltip name="ВО_Зачет_ДЗНомерСтрокиExtendedTooltip" id="211"/>
+								</LabelField>
+								<ColumnGroup name="ДебиторскаяЗадолженностьГруппа1" id="334">
+									<ExtendedTooltip name="ДебиторскаяЗадолженностьГруппа1РасширеннаяПодсказка" id="335"/>
+									<ChildItems>
+										<InputField name="ДебиторскаяЗадолженностьДокументСчет" id="362">
+											<DataPath>Объект.ДебиторскаяЗадолженность.ДокументСчет</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.Договор</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.Договор</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+												<xr:Link>
+													<xr:Name>Отбор.Контрагент</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.Контрагент</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+												<xr:Link>
+													<xr:Name>Отбор.Организация</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.Организация</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+												<xr:Link>
+													<xr:Name>Отбор.ПриложениеКДоговору</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.ПриложениеКДоговору</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="ДебиторскаяЗадолженностьДокументСчетКонтекстноеМеню" id="363"/>
+											<ExtendedTooltip name="ДебиторскаяЗадолженностьДокументСчетРасширеннаяПодсказка" id="364"/>
+											<Events>
+												<Event name="OnChange">ДебиторскаяЗадолженностьДокументСчетПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ДебиторскаяЗадолженностьПредставление" id="365">
+											<DataPath>Объект.ДебиторскаяЗадолженность.Представление</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ДебиторскаяЗадолженностьПредставлениеКонтекстноеМеню" id="366"/>
+											<ExtendedTooltip name="ДебиторскаяЗадолженностьПредставлениеРасширеннаяПодсказка" id="367"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ДебиторскаяЗадолженностьСчетЗадолженности" id="368">
+									<DataPath>Объект.ДебиторскаяЗадолженность.СчетЗадолженности</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ДебиторскаяЗадолженностьСчетЗадолженностиКонтекстноеМеню" id="369"/>
+									<ExtendedTooltip name="ДебиторскаяЗадолженностьСчетЗадолженностиРасширеннаяПодсказка" id="370"/>
+								</InputField>
+								<ColumnGroup name="ДебиторскаяЗадолженностьГруппаВалюта" id="374">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дебиторская задолженность группа валюта</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дебиторская задолженность группа валюта</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="ДебиторскаяЗадолженностьГруппаВалютаРасширеннаяПодсказка" id="375"/>
+									<ChildItems>
+										<InputField name="ДебиторскаяЗадолженностьВалюта" id="336">
+											<DataPath>Объект.ДебиторскаяЗадолженность.Валюта</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ДебиторскаяЗадолженностьВалютаКонтекстноеМеню" id="337"/>
+											<ExtendedTooltip name="ДебиторскаяЗадолженностьВалютаРасширеннаяПодсказка" id="338"/>
+											<Events>
+												<Event name="OnChange">ДебиторскаяЗадолженностьВалютаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<ColumnGroup name="ДебиторскаяЗадолженностьГруппа2" id="348">
+											<ExtendedTooltip name="ДебиторскаяЗадолженностьГруппа2РасширеннаяПодсказка" id="349"/>
+											<ChildItems>
+												<InputField name="ДебиторскаяЗадолженностьКурс" id="339">
+													<DataPath>Объект.ДебиторскаяЗадолженность.Курс</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ДебиторскаяЗадолженностьКурсКонтекстноеМеню" id="340"/>
+													<ExtendedTooltip name="ДебиторскаяЗадолженностьКурсРасширеннаяПодсказка" id="341"/>
+													<Events>
+														<Event name="OnChange">ДебиторскаяЗадолженностьКурсПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="ДебиторскаяЗадолженностьКратность" id="342">
+													<DataPath>Объект.ДебиторскаяЗадолженность.Кратность</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ДебиторскаяЗадолженностьКратностьКонтекстноеМеню" id="343"/>
+													<ExtendedTooltip name="ДебиторскаяЗадолженностьКратностьРасширеннаяПодсказка" id="344"/>
+													<Events>
+														<Event name="OnChange">ДебиторскаяЗадолженностьКратностьПриИзменении</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ДебиторскаяЗадолженностьСуммаВал" id="371">
+									<DataPath>Объект.ДебиторскаяЗадолженность.СуммаВал</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ДебиторскаяЗадолженностьСуммаВалКонтекстноеМеню" id="372"/>
+									<ExtendedTooltip name="ДебиторскаяЗадолженностьСуммаВалРасширеннаяПодсказка" id="373"/>
+									<Events>
+										<Event name="OnChange">ДебиторскаяЗадолженностьСуммаВалПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДебиторскаяЗадолженностьСумма" id="345">
+									<DataPath>Объект.ДебиторскаяЗадолженность.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ДебиторскаяЗадолженностьСуммаКонтекстноеМеню" id="346"/>
+									<ExtendedTooltip name="ДебиторскаяЗадолженностьСуммаРасширеннаяПодсказка" id="347"/>
+									<Events>
+										<Event name="OnChange">ДебиторскаяЗадолженностьСуммаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<LabelField name="ИтогоДЗ" id="136">
+							<DataPath>ИтогоДЗ</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="ИтогоДЗКонтекстноеМеню" id="137"/>
+							<ExtendedTooltip name="ИтогоДЗExtendedTooltip" id="216"/>
+						</LabelField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаКомментарий" id="46">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница комментарий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.CW_Комментарий</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СтраницаКомментарийExtendedTooltip" id="232"/>
+					<ChildItems>
+						<InputField name="Комментарий" id="17">
+							<DataPath>Объект.Комментарий</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MultiLine>true</MultiLine>
+							<BackColor>style:ToolTipBackColor</BackColor>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="КомментарийExtendedTooltip" id="233"/>
+							<Events>
+								<Event name="OnChange">КомментарийПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.CW_КорректировкаОперативнойЗадолженности</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Объект.ДебиторскаяЗадолженность">
+					<Column name="Представление" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Представление</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="Объект.КредиторскаяЗадолженность">
+					<Column name="Представление" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Представление</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="Объект.СписаниеОперативнойЗадолженности">
+					<Column name="Представление" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Представление</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="КредиторскаяЗадолженность" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кредиторская задолженность</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДебиторскаяЗадолженность" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дебиторская задолженность</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВалютаРегламентированногоУчета" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта регламентированного учета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВалютныеРасчеты" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валютные расчеты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогоПоКорректировке" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итого по корректировке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеВалюты" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление валюты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогоДЗ" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итого ДЗ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогоКЗ" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итого КЗ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗачтеноКЗ" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зачтено КЗ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗачтеноДЗ" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зачтено ДЗ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Разница" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разница</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеДокумента" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ИтогоДЗ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ИтогоКЗ</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Разница</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьДебиторскуюЗадолженность" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить дебиторскую задолженность</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить дебиторскую задолженность</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьДебиторскуюЗадолженность</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОчиститьДебиторскуюЗадолженность" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить дебиторскую задолженность</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить дебиторскую задолженность</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьДебиторскуюЗадолженность</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьКредиторскуюЗадолженность" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить кредиторскую задолженность</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить ДЗ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_Звезда</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьКредиторскуюЗадолженность</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОчиститьКредиторскуюЗадолженность" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить кредиторскую задолженность</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить ДЗ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_Очистить</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ОчиститьКредиторскуюЗадолженность</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>3:230cfd96-3fc6-4079-9925-d38308c0dd70</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>3:87a92af2-4ed1-453c-9d56-786d15b421da</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+		<CommandBar>
+			<Item>
+				<Command>InformationRegister.CW_ДоходыНерезидентовДокументыИсключения.Command.УдалитьИзИсключений</Command>
+				<Type>Auto</Type>
+				<CommandGroup>CommandGroup.CW_ДоходыНерезидентов</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.CW_ДоходыНерезидентовДокументыИсключения.Command.ДобавитьВИсключения</Command>
+				<Type>Auto</Type>
+				<CommandGroup>CommandGroup.CW_ДоходыНерезидентов</CommandGroup>
+				<Index>1</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

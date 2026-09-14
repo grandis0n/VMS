@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Параметры копирования бюджетов</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаКомандаОК" id="37">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.КомандаОК</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Продолжить</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаОКРасширеннаяПодсказка" id="38"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="39">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отмена</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="40"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаСтатьи" id="55">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копируемые статьи планирования</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа статьи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаСтатьиРасширеннаяПодсказка" id="56"/>
+			<ChildItems>
+				<CheckBoxField name="КопироватьСтатьиРасходов" id="29">
+					<DataPath>КопироватьСтатьиРасходов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>статьи расходов</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КопироватьСтатьиРасходовКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="КопироватьСтатьиРасходовРасширеннаяПодсказка" id="31"/>
+					<Events>
+						<Event name="OnChange">КопироватьСтатьиРасходовПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="КопироватьСтатьиДоходов" id="32">
+					<DataPath>КопироватьСтатьиДоходов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>статьи доходов</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КопироватьСтатьиДоходовКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="КопироватьСтатьиДоходовРасширеннаяПодсказка" id="34"/>
+					<Events>
+						<Event name="OnChange">КопироватьСтатьиДоходовПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="Группа1" id="44">
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="45"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация1" id="46">
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="48"/>
+						</LabelDecoration>
+						<CheckBoxField name="ЗаполнятьПлательщика" id="41">
+							<DataPath>ЗаполнятьПлательщика</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>заполнять  плательщика из грузоперевозки</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЗаполнятьПлательщикаКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="ЗаполнятьПлательщикаРасширеннаяПодсказка" id="43"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПорядокЗаполнения" id="59">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порядок заполнения бюджета</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа порядок заполнения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаПорядокЗаполненияРасширеннаяПодсказка" id="60"/>
+			<ChildItems>
+				<RadioButtonField name="ПорядокЗаполненияБюджета" id="72">
+					<DataPath>ПорядокЗаполненияБюджета</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ColumnsCount>1</ColumnsCount>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>перезаполнить</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>дополнить</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ПорядокЗаполненияБюджетаКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="ПорядокЗаполненияБюджетаРасширеннаяПодсказка" id="74"/>
+					<Events>
+						<Event name="OnChange">ПорядокЗаполненияБюджетаПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<UsualGroup name="Группа2" id="61">
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация2" id="63">
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="64"/>
+							<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="65"/>
+						</LabelDecoration>
+						<CheckBoxField name="ПерезаполнятьСуществующиеСтатьи" id="23">
+							<DataPath>ПерезаполнятьСуществующиеСтатьи</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>перезаполнять существующие</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПерезаполнятьСуществующиеСтатьиКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="ПерезаполнятьСуществующиеСтатьиРасширеннаяПодсказка" id="25"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВерсииБюджетов" id="57">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копировать версии бюджетов</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа версии бюджетов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаВерсииБюджетовРасширеннаяПодсказка" id="58"/>
+			<ChildItems>
+				<Table name="СписокВерсий" id="75">
+					<Representation>List</Representation>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<DataPath>СписокВерсий</DataPath>
+					<RowPictureDataPath>СписокВерсий.Picture</RowPictureDataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>CancelSearch</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>Find</ExcludedCommand>
+						<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>Pickup</ExcludedCommand>
+						<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+						<ExcludedCommand>SearchHistory</ExcludedCommand>
+						<ExcludedCommand>SelectAll</ExcludedCommand>
+						<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+						<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+					</CommandSet>
+					<ContextMenu name="СписокВерсийКонтекстноеМеню" id="76"/>
+					<AutoCommandBar name="СписокВерсийКоманднаяПанель" id="77">
+						<ChildItems>
+							<ButtonGroup name="СписокВерсийГруппа1" id="98">
+								<Representation>Compact</Representation>
+								<ExtendedTooltip name="СписокВерсийГруппа1РасширеннаяПодсказка" id="99"/>
+								<ChildItems>
+									<Button name="СписокВерсийУстановитьФлажки" id="94">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.СписокВерсий.StandardCommand.CheckAll</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="СписокВерсийУстановитьФлажкиРасширеннаяПодсказка" id="95"/>
+									</Button>
+									<Button name="СписокВерсийСнятьФлажки" id="96">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.СписокВерсий.StandardCommand.UncheckAll</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="СписокВерсийСнятьФлажкиРасширеннаяПодсказка" id="97"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СписокВерсийРасширеннаяПодсказка" id="78"/>
+					<SearchStringAddition name="СписокВерсийСтрокаПоиска" id="79">
+						<AdditionSource>
+							<Item>СписокВерсий</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокВерсийСтрокаПоискаКонтекстноеМеню" id="80"/>
+						<ExtendedTooltip name="СписокВерсийСтрокаПоискаРасширеннаяПодсказка" id="81"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокВерсийСостояниеПросмотра" id="82">
+						<AdditionSource>
+							<Item>СписокВерсий</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокВерсийСостояниеПросмотраКонтекстноеМеню" id="83"/>
+						<ExtendedTooltip name="СписокВерсийСостояниеПросмотраРасширеннаяПодсказка" id="84"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокВерсийУправлениеПоиском" id="85">
+						<AdditionSource>
+							<Item>СписокВерсий</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокВерсийУправлениеПоискомКонтекстноеМеню" id="86"/>
+						<ExtendedTooltip name="СписокВерсийУправлениеПоискомРасширеннаяПодсказка" id="87"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<CheckBoxField name="СписокВерсийПометка" id="91">
+							<DataPath>СписокВерсий.Check</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СписокВерсийПометкаКонтекстноеМеню" id="92"/>
+							<ExtendedTooltip name="СписокВерсийПометкаРасширеннаяПодсказка" id="93"/>
+						</CheckBoxField>
+						<InputField name="СписокВерсийЗначение" id="88">
+							<DataPath>СписокВерсий.Value</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокВерсийЗначениеКонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="СписокВерсийЗначениеРасширеннаяПодсказка" id="90"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПерезаполнятьСуществующиеСтатьи" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перезаполнять существующие статьи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КопироватьСтатьиРасходов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копировать статьи расходов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КопироватьСтатьиДоходов" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копировать статьи доходов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Грузоперевозка" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Грузоперевозка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.CW_Грузоперевозки</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаполнятьПлательщика" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнять плательщика</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПорядокЗаполненияБюджета" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порядок заполнения бюджета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокВерсий" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список версий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.CW_ВерсииБюджетов</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ВерсияБюджета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия бюджета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.CW_ВерсииБюджетов</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<CommandBarLocation>Top</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа3" id="66">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:NavigationColor</BackColor>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="67"/>
+			<ChildItems>
+				<InputField name="ДатаПроверки" id="77">
+					<DataPath>ДатаПроверки</DataPath>
+					<ContextMenu name="ДатаПроверкиКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ДатаПроверкиРасширеннаяПодсказка" id="79"/>
+					<Events>
+						<Event name="OnChange">ДатаПроверкиПриИзменении</Event>
+					</Events>
+				</InputField>
+				<RadioButtonField name="ВариантОтбора" id="68">
+					<DataPath>ВариантОтбора</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Tumbler</RadioButtonType>
+					<EqualColumnsWidth>true</EqualColumnsWidth>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Актуальные</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Не актуальные</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Все</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВариантОтбораКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="ВариантОтбораРасширеннаяПодсказка" id="70"/>
+					<Events>
+						<Event name="OnChange">ВариантОтбораПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="38"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="43">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="44"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="45"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="46">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="47"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="48"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="49">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="50"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="51"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="NewWriteProcessing">СписокОбработкаЗаписиНового</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="Наименование" id="90">
+					<DataPath>Список.Наименование</DataPath>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="92"/>
+				</LabelField>
+				<LabelField name="Код" id="6">
+					<DataPath>Список.Код</DataPath>
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КодКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="40"/>
+				</LabelField>
+				<LabelField name="Оборудование" id="57">
+					<DataPath>Список.Оборудование</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оборудование</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОборудованиеКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="ОборудованиеРасширеннаяПодсказка" id="59"/>
+				</LabelField>
+				<LabelField name="ВариантСлежения" id="54">
+					<DataPath>Список.ВариантСлежения</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вариант слежения</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ВариантСлеженияКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="ВариантСлеженияРасширеннаяПодсказка" id="56"/>
+				</LabelField>
+				<LabelField name="НачалоСлежения" id="60">
+					<DataPath>Список.НачалоСлежения</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начало слежения</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НачалоСлеженияКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="НачалоСлеженияРасширеннаяПодсказка" id="62"/>
+				</LabelField>
+				<LabelField name="ОкончаниеСлежения" id="63">
+					<DataPath>Список.ОкончаниеСлежения</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Окончание слежения</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОкончаниеСлеженияКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="ОкончаниеСлеженияРасширеннаяПодсказка" id="65"/>
+				</LabelField>
+				<LabelField name="Статус" id="82">
+					<DataPath>Список.Статус</DataPath>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="84"/>
+				</LabelField>
+				<LabelField name="Ссылка" id="87">
+					<DataPath>Список.Ссылка</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="89"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникCW_ОтслеживаемоеОборудование.Ссылка КАК Ссылка,
+	СправочникCW_ОтслеживаемоеОборудование.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникCW_ОтслеживаемоеОборудование.Код КАК Код,
+	СправочникCW_ОтслеживаемоеОборудование.Наименование КАК Наименование,
+	СправочникCW_ОтслеживаемоеОборудование.Оборудование КАК Оборудование,
+	СправочникCW_ОтслеживаемоеОборудование.ВариантСлежения КАК ВариантСлежения,
+	СправочникCW_ОтслеживаемоеОборудование.НачалоСлежения КАК НачалоСлежения,
+	СправочникCW_ОтслеживаемоеОборудование.ОкончаниеСлежения КАК ОкончаниеСлежения,
+	СправочникCW_ОтслеживаемоеОборудование.Комментарий КАК Комментарий,
+	ЕСТЬNULL(CW_СтатусыОборудованияНаСлеженииСрезПоследних.Статус, НЕОПРЕДЕЛЕНО) КАК Статус
+ИЗ
+	Справочник.CW_ОтслеживаемоеОборудование КАК СправочникCW_ОтслеживаемоеОборудование
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.CW_СтатусыОборудованияНаСлежении.СрезПоследних(&amp;ДатаСреза, ) КАК CW_СтатусыОборудованияНаСлеженииСрезПоследних
+		ПО СправочникCW_ОтслеживаемоеОборудование.Ссылка = CW_СтатусыОборудованияНаСлеженииСрезПоследних.ОбъектСлежения
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.CW_ОтслеживаемоеОборудование)
+	ВИДЫХАРАКТЕРИСТИК ПланВидовХарактеристик.CW_ПараметрыГрузоперевозок
+	ПОЛЕКЛЮЧА Ссылка
+	ПОЛЕИМЕНИ Идентификатор
+	ПОЛЕТИПАЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯХАРАКТЕРИСТИК (ВЫБРАТЬ
+			CW_ОтслеживаемоеОборудованиеПараметрыГрузоперевозки.Ссылка КАК Объект,
+			CW_ОтслеживаемоеОборудованиеПараметрыГрузоперевозки.Параметр КАК Параметр,
+			CW_ОтслеживаемоеОборудованиеПараметрыГрузоперевозки.Значение КАК Значение
+		ИЗ
+			Справочник.CW_ОтслеживаемоеОборудование.ПараметрыГрузоперевозки КАК CW_ОтслеживаемоеОборудованиеПараметрыГрузоперевозки)
+	ПОЛЕОБЪЕКТА Объект
+	ПОЛЕВИДА Параметр
+	ПОЛЕЗНАЧЕНИЯ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.CW_Оборудование)
+	ВИДЫХАРАКТЕРИСТИК ПланВидовХарактеристик.CW_ПараметрыГрузоперевозок
+	ПОЛЕКЛЮЧА Ссылка
+	ПОЛЕИМЕНИ Идентификатор
+	ПОЛЕТИПАЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯХАРАКТЕРИСТИК (ВЫБРАТЬ
+			CW_ОборудованиеПараметрыГрузоперевозки.Ссылка КАК Объект,
+			CW_ОборудованиеПараметрыГрузоперевозки.Параметр КАК Параметр,
+			CW_ОборудованиеПараметрыГрузоперевозки.Значение КАК Значение
+		ИЗ
+			Справочник.CW_Оборудование.ПараметрыГрузоперевозки КАК CW_ОборудованиеПараметрыГрузоперевозки)
+	ПОЛЕОБЪЕКТА Объект
+	ПОЛЕВИДА Параметр
+	ПОЛЕЗНАЧЕНИЯ Значение }</QueryText>
+				<MainTable>Catalog.CW_ОтслеживаемоеОборудование</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ВариантОтбора" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант отбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаПроверки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На дату</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

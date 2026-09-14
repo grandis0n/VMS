@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Вариант слежения</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="46">
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="ТипСлежения" id="7">
+					<DataPath>Объект.ТипСлежения</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+					<ContextMenu name="ТипСлеженияКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ТипСлеженияРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="49"/>
+			<ChildItems>
+				<Page name="СтраницаПараметры" id="50">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница параметры</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.CW_Меню</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СтраницаПараметрыРасширеннаяПодсказка" id="51"/>
+					<ChildItems>
+						<Table name="ПараметрыГрузоперевозки" id="13">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ПараметрыГрузоперевозки</DataPath>
+							<RowPictureDataPath>Объект.ПараметрыГрузоперевозки.Параметр.ИндексПиктограммы</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.CW_ДеревоПараметров</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</RowsPicture>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПараметрыГрузоперевозкиКонтекстноеМеню" id="14"/>
+							<AutoCommandBar name="ПараметрыГрузоперевозкиКоманднаяПанель" id="15">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ПараметрыГрузоперевозкиДобавить" id="54">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.ПараметрыГрузоперевозки.StandardCommand.Add</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ПараметрыГрузоперевозкиДобавитьРасширеннаяПодсказка" id="55"/>
+									</Button>
+									<Button name="ПараметрыГрузоперевозкиИзменить" id="56">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.ПараметрыГрузоперевозки.StandardCommand.Change</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ПараметрыГрузоперевозкиИзменитьРасширеннаяПодсказка" id="57"/>
+									</Button>
+									<Button name="ПараметрыГрузоперевозкиУдалить" id="58">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.ПараметрыГрузоперевозки.StandardCommand.Delete</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ПараметрыГрузоперевозкиУдалитьРасширеннаяПодсказка" id="59"/>
+									</Button>
+									<Button name="ПараметрыГрузоперевозкиПереместитьВверх" id="60">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.ПараметрыГрузоперевозки.StandardCommand.MoveUp</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ПараметрыГрузоперевозкиПереместитьВверхРасширеннаяПодсказка" id="61"/>
+									</Button>
+									<Button name="ПараметрыГрузоперевозкиПереместитьВниз" id="62">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.ПараметрыГрузоперевозки.StandardCommand.MoveDown</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ПараметрыГрузоперевозкиПереместитьВнизРасширеннаяПодсказка" id="63"/>
+									</Button>
+									<Button name="ПараметрыГрузоперевозкиКомандаПерезаполнитьПараметрыВедомых" id="64">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаПерезаполнитьПараметрыВедомых</CommandName>
+										<ExtendedTooltip name="ПараметрыГрузоперевозкиКомандаПерезаполнитьПараметрыВедомыхРасширеннаяПодсказка" id="65"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПараметрыГрузоперевозкиРасширеннаяПодсказка" id="16"/>
+							<SearchStringAddition name="ПараметрыГрузоперевозкиСтрокаПоиска" id="17">
+								<AdditionSource>
+									<Item>ПараметрыГрузоперевозки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПараметрыГрузоперевозкиСтрокаПоискаКонтекстноеМеню" id="18"/>
+								<ExtendedTooltip name="ПараметрыГрузоперевозкиСтрокаПоискаРасширеннаяПодсказка" id="19"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПараметрыГрузоперевозкиСостояниеПросмотра" id="20">
+								<AdditionSource>
+									<Item>ПараметрыГрузоперевозки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПараметрыГрузоперевозкиСостояниеПросмотраКонтекстноеМеню" id="21"/>
+								<ExtendedTooltip name="ПараметрыГрузоперевозкиСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПараметрыГрузоперевозкиУправлениеПоиском" id="23">
+								<AdditionSource>
+									<Item>ПараметрыГрузоперевозки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПараметрыГрузоперевозкиУправлениеПоискомКонтекстноеМеню" id="24"/>
+								<ExtendedTooltip name="ПараметрыГрузоперевозкиУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">ПараметрыГрузоперевозкиПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ПараметрыГрузоперевозкиПередУдалением</Event>
+								<Event name="BeforeRowChange">ПараметрыГрузоперевозкиПередНачаломИзменения</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ПараметрыГрузоперевозкиНомерСтроки" id="26">
+									<DataPath>Объект.ПараметрыГрузоперевозки.LineNumber</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПараметрыГрузоперевозкиНомерСтрокиКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ПараметрыГрузоперевозкиНомерСтрокиРасширеннаяПодсказка" id="28"/>
+								</LabelField>
+								<InputField name="ПараметрыГрузоперевозкиПараметр" id="29">
+									<DataPath>Объект.ПараметрыГрузоперевозки.Параметр</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПараметрыГрузоперевозкиПараметрКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="ПараметрыГрузоперевозкиПараметрРасширеннаяПодсказка" id="31"/>
+								</InputField>
+								<InputField name="ПараметрыГрузоперевозкиЗначение" id="32">
+									<DataPath>Объект.ПараметрыГрузоперевозки.Значение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПараметрыГрузоперевозкиЗначениеКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ПараметрыГрузоперевозкиЗначениеРасширеннаяПодсказка" id="34"/>
+								</InputField>
+								<InputField name="ПараметрыГрузоперевозкиПримечание" id="35">
+									<DataPath>Объект.ПараметрыГрузоперевозки.Примечание</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПараметрыГрузоперевозкиПримечаниеКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ПараметрыГрузоперевозкиПримечаниеРасширеннаяПодсказка" id="37"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаКомментарий" id="52">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница комментарий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаКомментарийРасширеннаяПодсказка" id="53"/>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="Комментарий" id="10">
+			<DataPath>Объект.Комментарий</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MultiLine>true</MultiLine>
+			<BackColor>style:ToolTipBackColor</BackColor>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="12"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.CW_ВариантыСлежения</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="АдресКартыПравПараметров" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес карты прав параметров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресКартыСвойствПараметров" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес карты свойств параметров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокАдресовЗначенийПараметров" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список адресов значений параметров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СохраняемоеПолноеЗначение" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохраняемое полное значение</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаПерезаполнитьПараметрыВедомых" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перезаполнить параметры ведомых</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перезаполнить параметры ведомых</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_Звезда</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаПерезаполнитьПараметрыВедомых</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

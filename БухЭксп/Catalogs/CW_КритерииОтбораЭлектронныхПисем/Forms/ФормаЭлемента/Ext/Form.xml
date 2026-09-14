@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+	</CommandSet>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="23">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ОК</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьExtendedTooltip" id="27"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="24">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьExtendedTooltip" id="28"/>
+			</Button>
+			<ButtonGroup name="ФормаГруппаГлобальныеКоманды" id="26">
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа глобальные команды</v8:content>
+					</v8:item>
+				</ToolTip>
+				<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+				<ExtendedTooltip name="ФормаГруппаГлобальныеКомандыРасширеннаяПодсказка" id="29"/>
+			</ButtonGroup>
+			<Button name="ФормаЗакрыть" id="25">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьExtendedTooltip" id="30"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="ГруппаРамка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа рамка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа рамка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРамкаExtendedTooltip" id="31"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНаименованиеКод" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа наименование код</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа наименование код</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНаименованиеКодExtendedTooltip" id="32"/>
+					<ChildItems>
+						<InputField name="Наименование" id="3">
+							<DataPath>Объект.Description</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+							<ExtendedTooltip name="НаименованиеExtendedTooltip" id="33"/>
+						</InputField>
+						<InputField name="Код" id="5">
+							<DataPath>Объект.Code</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<ContextMenu name="КодКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="КодExtendedTooltip" id="34"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="Обработка" id="7">
+					<DataPath>Объект.Обработка</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<ChoiceButton>true</ChoiceButton>
+					<ChoiceParameters>
+						<app:item name="Отбор.Тип">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:string">Обработка</Value>
+							</app:value>
+						</app:item>
+						<app:item name="Отбор.Вид">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:string">ОбработкаПочтовыхСообщений</Value>
+							</app:value>
+						</app:item>
+					</ChoiceParameters>
+					<ChoiceListButton>false</ChoiceListButton>
+					<ContextMenu name="ОбработкаКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ОбработкаExtendedTooltip" id="35"/>
+				</InputField>
+				<Table name="Условия" id="9">
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Объект.Условия</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="УсловияКонтекстноеМеню" id="10"/>
+					<AutoCommandBar name="УсловияКоманднаяПанель" id="11"/>
+					<ExtendedTooltip name="УсловияExtendedTooltip" id="36"/>
+					<SearchStringAddition name="УсловияSearchString" id="42">
+						<AdditionSource>
+							<Item>Условия</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="УсловияSearchStringContextMenu" id="43"/>
+						<ExtendedTooltip name="УсловияSearchStringExtendedTooltip" id="44"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="УсловияViewStatus" id="45">
+						<AdditionSource>
+							<Item>Условия</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="УсловияViewStatusContextMenu" id="46"/>
+						<ExtendedTooltip name="УсловияViewStatusExtendedTooltip" id="47"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="УсловияSearchControl" id="48">
+						<AdditionSource>
+							<Item>Условия</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="УсловияSearchControlContextMenu" id="49"/>
+						<ExtendedTooltip name="УсловияSearchControlExtendedTooltip" id="50"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="УсловияНомерСтроки" id="12">
+							<DataPath>Объект.Условия.LineNumber</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>№</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="УсловияНомерСтрокиКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="УсловияНомерСтрокиExtendedTooltip" id="37"/>
+						</LabelField>
+						<InputField name="УсловияРеквизит" id="14">
+							<DataPath>Объект.Условия.Реквизит</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceButton>false</ChoiceButton>
+							<ChooseType>false</ChooseType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xs:string">Отправитель</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xs:string">Тема</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ChoiceListButton>true</ChoiceListButton>
+							<ContextMenu name="УсловияРеквизитКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="УсловияРеквизитExtendedTooltip" id="38"/>
+						</InputField>
+						<InputField name="УсловияТипСравнения" id="16">
+							<DataPath>Объект.Условия.ТипСравнения</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="УсловияТипСравненияКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="УсловияТипСравненияExtendedTooltip" id="39"/>
+						</InputField>
+						<InputField name="УсловияЗначение" id="18">
+							<DataPath>Объект.Условия.Значение</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="УсловияЗначениеКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="УсловияЗначениеExtendedTooltip" id="40"/>
+						</InputField>
+						<InputField name="УсловияОбъединение" id="20">
+							<DataPath>Объект.Условия.Объединение</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="УсловияОбъединениеКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="УсловияОбъединениеExtendedTooltip" id="41"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.CW_КритерииОтбораЭлектронныхПисем</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>3</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>3:87a92af2-4ed1-453c-9d56-786d15b421da</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>3:230cfd96-3fc6-4079-9925-d38308c0dd70</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>3:6cf5aa3e-7196-4ae7-9fb2-ea8dceb96002</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

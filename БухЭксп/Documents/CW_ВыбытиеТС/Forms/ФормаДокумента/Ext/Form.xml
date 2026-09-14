@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<TitleLocation>Top</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="ТранспортноеСредство" id="7">
+					<DataPath>Объект.ТранспортноеСредство</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТранспортноеСредствоКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ТранспортноеСредствоРасширеннаяПодсказка" id="9"/>
+					<Events>
+						<Event name="OnChange">ТранспортноеСредствоПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelField name="РегистрационныйЗнак" id="102">
+					<DataPath>РегистрационныйЗнак</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<BackColor>style:ToolTipBackColor</BackColor>
+					<Font bold="true" kind="AutoFont"/>
+					<ContextMenu name="РегистрационныйЗнакКонтекстноеМеню" id="103"/>
+					<ExtendedTooltip name="РегистрационныйЗнакРасширеннаяПодсказка" id="104"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИнформацияОТранспортномСредстве" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация о транспортном средстве (справочно)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа информация о транспортном средстве</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаИнформацияОТранспортномСредствеРасширеннаяПодсказка" id="43"/>
+			<ChildItems>
+				<UsualGroup name="Группа5" id="61">
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<InputField name="ТекущееСостояние" id="50">
+							<DataPath>ТекущееСостояние</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ТекущееСостояниеКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="ТекущееСостояниеРасширеннаяПодсказка" id="52"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа4" id="56">
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="57"/>
+					<ChildItems>
+						<InputField name="Пробег" id="47">
+							<DataPath>Пробег</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>Top</TitleLocation>
+							<ContextMenu name="ПробегКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="ПробегРасширеннаяПодсказка" id="49"/>
+						</InputField>
+						<InputField name="ПробегСГрузом" id="58">
+							<DataPath>ПробегСГрузом</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>с грузом</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Top</TitleLocation>
+							<ContextMenu name="ПробегСГрузомКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="ПробегСГрузомРасширеннаяПодсказка" id="60"/>
+						</InputField>
+						<InputField name="ПробегПорожний" id="99">
+							<DataPath>ПробегПорожний</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>Top</TitleLocation>
+							<ContextMenu name="ПробегПорожнийКонтекстноеМеню" id="100"/>
+							<ExtendedTooltip name="ПробегПорожнийРасширеннаяПодсказка" id="101"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОстаткиТоплива" id="91">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остатки топлива транспортного средства (справочно)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа остатки топлива</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаОстаткиТопливаРасширеннаяПодсказка" id="92"/>
+			<ChildItems>
+				<Button name="ОбновитьОстаткиТоплива" id="95">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОбновитьОстаткиТоплива</CommandName>
+					<ExtendedTooltip name="ОбновитьОстаткиТопливаРасширеннаяПодсказка" id="96"/>
+				</Button>
+				<Table name="ТопливоТранспортногоСредства" id="63">
+					<ReadOnly>true</ReadOnly>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Объект.ТопливоТранспортногоСредства</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТопливоТранспортногоСредстваКонтекстноеМеню" id="64"/>
+					<AutoCommandBar name="ТопливоТранспортногоСредстваКоманднаяПанель" id="65">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ТопливоТранспортногоСредстваРасширеннаяПодсказка" id="66"/>
+					<SearchStringAddition name="ТопливоТранспортногоСредстваСтрокаПоиска" id="67">
+						<AdditionSource>
+							<Item>ТопливоТранспортногоСредства</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТопливоТранспортногоСредстваСтрокаПоискаКонтекстноеМеню" id="68"/>
+						<ExtendedTooltip name="ТопливоТранспортногоСредстваСтрокаПоискаРасширеннаяПодсказка" id="69"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТопливоТранспортногоСредстваСостояниеПросмотра" id="70">
+						<AdditionSource>
+							<Item>ТопливоТранспортногоСредства</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТопливоТранспортногоСредстваСостояниеПросмотраКонтекстноеМеню" id="71"/>
+						<ExtendedTooltip name="ТопливоТранспортногоСредстваСостояниеПросмотраРасширеннаяПодсказка" id="72"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТопливоТранспортногоСредстваУправлениеПоиском" id="73">
+						<AdditionSource>
+							<Item>ТопливоТранспортногоСредства</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТопливоТранспортногоСредстваУправлениеПоискомКонтекстноеМеню" id="74"/>
+						<ExtendedTooltip name="ТопливоТранспортногоСредстваУправлениеПоискомРасширеннаяПодсказка" id="75"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ТопливоТранспортногоСредстваНомерСтроки" id="76">
+							<DataPath>Объект.ТопливоТранспортногоСредства.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТопливоТранспортногоСредстваНомерСтрокиКонтекстноеМеню" id="77"/>
+							<ExtendedTooltip name="ТопливоТранспортногоСредстваНомерСтрокиРасширеннаяПодсказка" id="78"/>
+						</LabelField>
+						<InputField name="ТопливоТранспортногоСредстваТопливо" id="79">
+							<DataPath>Объект.ТопливоТранспортногоСредства.Топливо</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТопливоТранспортногоСредстваТопливоКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="ТопливоТранспортногоСредстваТопливоРасширеннаяПодсказка" id="81"/>
+						</InputField>
+						<InputField name="ТопливоТранспортногоСредстваКоличество" id="82">
+							<DataPath>Объект.ТопливоТранспортногоСредства.Количество</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТопливоТранспортногоСредстваКоличествоКонтекстноеМеню" id="83"/>
+							<ExtendedTooltip name="ТопливоТранспортногоСредстваКоличествоРасширеннаяПодсказка" id="84"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаШиныТС" id="93">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шины транспортного средства (справочно)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шины ТС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаШиныТСРасширеннаяПодсказка" id="94"/>
+			<ChildItems>
+				<Button name="ОбновитьШинытранспортногоСредства" id="97">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОбновитьШинытранспортногоСредства</CommandName>
+					<ExtendedTooltip name="ОбновитьШинытранспортногоСредстваРасширеннаяПодсказка" id="98"/>
+				</Button>
+				<Table name="ШиныТранспортногоСредства" id="10">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Объект.ШиныТранспортногоСредства</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ШиныТранспортногоСредстваКонтекстноеМеню" id="11"/>
+					<AutoCommandBar name="ШиныТранспортногоСредстваКоманднаяПанель" id="12">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ШиныТранспортногоСредстваРасширеннаяПодсказка" id="13"/>
+					<SearchStringAddition name="ШиныТранспортногоСредстваСтрокаПоиска" id="14">
+						<AdditionSource>
+							<Item>ШиныТранспортногоСредства</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ШиныТранспортногоСредстваСтрокаПоискаКонтекстноеМеню" id="15"/>
+						<ExtendedTooltip name="ШиныТранспортногоСредстваСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ШиныТранспортногоСредстваСостояниеПросмотра" id="17">
+						<AdditionSource>
+							<Item>ШиныТранспортногоСредства</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ШиныТранспортногоСредстваСостояниеПросмотраКонтекстноеМеню" id="18"/>
+						<ExtendedTooltip name="ШиныТранспортногоСредстваСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ШиныТранспортногоСредстваУправлениеПоиском" id="20">
+						<AdditionSource>
+							<Item>ШиныТранспортногоСредства</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ШиныТранспортногоСредстваУправлениеПоискомКонтекстноеМеню" id="21"/>
+						<ExtendedTooltip name="ШиныТранспортногоСредстваУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ШиныТранспортногоСредстваНомерСтроки" id="23">
+							<DataPath>Объект.ШиныТранспортногоСредства.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ШиныТранспортногоСредстваНомерСтрокиКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="ШиныТранспортногоСредстваНомерСтрокиРасширеннаяПодсказка" id="25"/>
+						</LabelField>
+						<InputField name="ШиныТранспортногоСредстваШина" id="29">
+							<DataPath>Объект.ШиныТранспортногоСредства.Шина</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ШиныТранспортногоСредстваШинаКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="ШиныТранспортногоСредстваШинаРасширеннаяПодсказка" id="31"/>
+						</InputField>
+						<InputField name="ШиныТранспортногоСредстваМестоУстановкиШины" id="32">
+							<DataPath>Объект.ШиныТранспортногоСредства.МестоУстановкиШины</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ШиныТранспортногоСредстваМестоУстановкиШиныКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ШиныТранспортногоСредстваМестоУстановкиШиныРасширеннаяПодсказка" id="34"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.CW_ВыбытиеТС</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ТекущееСостояние" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущее состояние</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.CW_СостоянияТС</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Пробег" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пробег общий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПробегСГрузом" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пробег</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.CW_УчитыватьПробегТранспортногоСредстваСГрузом</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ПробегПорожний" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>порожний</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.CW_УчитыватьПробегТранспортногоСредстваСГрузом</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="РегистрационныйЗнак" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрационный знак</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОбновитьОстаткиТоплива" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить остатки топлива</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьОстаткиТоплива</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбновитьШинытранспортногоСредства" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить шины транспортного средства</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьШинытранспортногоСредства</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

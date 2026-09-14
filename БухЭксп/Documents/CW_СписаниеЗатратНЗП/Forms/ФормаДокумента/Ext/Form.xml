@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="95">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="96"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Организация" id="7">
+					<DataPath>Объект.Организация</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="9"/>
+					<Events>
+						<Event name="OnChange">ОрганизацияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПодразделениеОрганизации" id="184">
+					<DataPath>Объект.ПодразделениеОрганизации</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПодразделениеОрганизацииКонтекстноеМеню" id="185"/>
+					<ExtendedTooltip name="ПодразделениеОрганизацииРасширеннаяПодсказка" id="186"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПредупреждение" id="215">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа предупреждение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа предупреждение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<HorizontalSpacing>Half</HorizontalSpacing>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:ЦветФонаНедоступногоСервиса</BackColor>
+			<ExtendedTooltip name="ГруппаПредупреждениеРасширеннаяПодсказка" id="216"/>
+			<ChildItems>
+				<LabelDecoration name="ОтключеноУчетнойПолитикой" id="217">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ОтключеноУчетнойПолитикойКонтекстноеМеню" id="218"/>
+					<ExtendedTooltip name="ОтключеноУчетнойПолитикойРасширеннаяПодсказка" id="219"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Состав" id="97">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Состав</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СоставКонтекстноеМеню" id="98"/>
+			<AutoCommandBar name="СоставКоманднаяПанель" id="99">
+				<ChildItems>
+					<ButtonGroup name="СоставГруппа8" id="231">
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="СоставГруппа8РасширеннаяПодсказка" id="232"/>
+						<ChildItems>
+							<Button name="СоставДобавить" id="223">
+								<Type>CommandBarButton</Type>
+								<Representation>PictureAndText</Representation>
+								<CommandName>Form.Item.Состав.StandardCommand.Add</CommandName>
+								<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+								<ExtendedTooltip name="СоставДобавитьРасширеннаяПодсказка" id="224"/>
+							</Button>
+							<Button name="СоставСкопировать" id="225">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Item.Состав.StandardCommand.Copy</CommandName>
+								<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+								<ExtendedTooltip name="СоставСкопироватьРасширеннаяПодсказка" id="226"/>
+							</Button>
+							<Button name="СоставИзменить" id="227">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Item.Состав.StandardCommand.Change</CommandName>
+								<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+								<ExtendedTooltip name="СоставИзменитьРасширеннаяПодсказка" id="228"/>
+							</Button>
+							<Button name="СоставУдалить" id="229">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Item.Состав.StandardCommand.Delete</CommandName>
+								<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+								<ExtendedTooltip name="СоставУдалитьРасширеннаяПодсказка" id="230"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="СоставГруппа9" id="233">
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="СоставГруппа9РасширеннаяПодсказка" id="234"/>
+						<ChildItems>
+							<Button name="СоставПереместитьВверх" id="235">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Состав.StandardCommand.MoveUp</CommandName>
+								<ExtendedTooltip name="СоставПереместитьВверхРасширеннаяПодсказка" id="236"/>
+							</Button>
+							<Button name="СоставПереместитьВниз" id="237">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Состав.StandardCommand.MoveDown</CommandName>
+								<ExtendedTooltip name="СоставПереместитьВнизРасширеннаяПодсказка" id="238"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="СоставГруппа10" id="239">
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="СоставГруппа10РасширеннаяПодсказка" id="240"/>
+						<ChildItems>
+							<Button name="СоставСортироватьСписокПоВозрастанию" id="241">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Состав.StandardCommand.SortListAsc</CommandName>
+								<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+								<ExtendedTooltip name="СоставСортироватьСписокПоВозрастаниюРасширеннаяПодсказка" id="242"/>
+							</Button>
+							<Button name="СоставСортироватьСписокПоУбыванию" id="243">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Состав.StandardCommand.SortListDesc</CommandName>
+								<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+								<ExtendedTooltip name="СоставСортироватьСписокПоУбываниюРасширеннаяПодсказка" id="244"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<Button name="Заполнить" id="179">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Заполнить</CommandName>
+						<ExtendedTooltip name="ЗаполнитьРасширеннаяПодсказка" id="180"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СоставРасширеннаяПодсказка" id="100"/>
+			<SearchStringAddition name="СоставСтрокаПоиска" id="101">
+				<AdditionSource>
+					<Item>Состав</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СоставСтрокаПоискаКонтекстноеМеню" id="102"/>
+				<ExtendedTooltip name="СоставСтрокаПоискаРасширеннаяПодсказка" id="103"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СоставСостояниеПросмотра" id="104">
+				<AdditionSource>
+					<Item>Состав</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СоставСостояниеПросмотраКонтекстноеМеню" id="105"/>
+				<ExtendedTooltip name="СоставСостояниеПросмотраРасширеннаяПодсказка" id="106"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СоставУправлениеПоиском" id="107">
+				<AdditionSource>
+					<Item>Состав</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СоставУправлениеПоискомКонтекстноеМеню" id="108"/>
+				<ExtendedTooltip name="СоставУправлениеПоискомРасширеннаяПодсказка" id="109"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СоставНомерСтроки" id="110">
+					<DataPath>Объект.Состав.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СоставНомерСтрокиКонтекстноеМеню" id="111"/>
+					<ExtendedTooltip name="СоставНомерСтрокиРасширеннаяПодсказка" id="112"/>
+				</LabelField>
+				<ColumnGroup name="СоставГруппа1" id="190">
+					<ExtendedTooltip name="СоставГруппа1РасширеннаяПодсказка" id="191"/>
+					<ChildItems>
+						<InputField name="СоставГрузоперевозка" id="116">
+							<DataPath>Объект.Состав.Грузоперевозка</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СоставГрузоперевозкаКонтекстноеМеню" id="117"/>
+							<ExtendedTooltip name="СоставГрузоперевозкаРасширеннаяПодсказка" id="118"/>
+						</InputField>
+						<InputField name="СоставНоменклатура" id="140">
+							<DataPath>Объект.Состав.Номенклатура</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СоставНоменклатураКонтекстноеМеню" id="141"/>
+							<ExtendedTooltip name="СоставНоменклатураРасширеннаяПодсказка" id="142"/>
+						</InputField>
+						<InputField name="СоставДокументРасходов" id="128">
+							<DataPath>Объект.Состав.ДокументРасходов</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СоставДокументРасходовКонтекстноеМеню" id="129"/>
+							<ExtendedTooltip name="СоставДокументРасходовРасширеннаяПодсказка" id="130"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="СоставГруппа2" id="192">
+					<ExtendedTooltip name="СоставГруппа2РасширеннаяПодсказка" id="193"/>
+					<ChildItems>
+						<InputField name="СоставКонтрагент" id="119">
+							<DataPath>Объект.Состав.Контрагент</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СоставКонтрагентКонтекстноеМеню" id="120"/>
+							<ExtendedTooltip name="СоставКонтрагентРасширеннаяПодсказка" id="121"/>
+						</InputField>
+						<InputField name="СоставДоговор" id="122">
+							<DataPath>Объект.Состав.Договор</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СоставДоговорКонтекстноеМеню" id="123"/>
+							<ExtendedTooltip name="СоставДоговорРасширеннаяПодсказка" id="124"/>
+						</InputField>
+						<InputField name="СоставПриложениеКДоговору" id="125">
+							<DataPath>Объект.Состав.ПриложениеКДоговору</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СоставПриложениеКДоговоруКонтекстноеМеню" id="126"/>
+							<ExtendedTooltip name="СоставПриложениеКДоговоруРасширеннаяПодсказка" id="127"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="СоставГруппа3" id="194">
+					<ExtendedTooltip name="СоставГруппа3РасширеннаяПодсказка" id="195"/>
+					<ChildItems>
+						<InputField name="СоставПорядокОтражения" id="131">
+							<DataPath>Объект.Состав.ПорядокОтражения</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СоставПорядокОтраженияКонтекстноеМеню" id="132"/>
+							<ExtendedTooltip name="СоставПорядокОтраженияРасширеннаяПодсказка" id="133"/>
+						</InputField>
+						<InputField name="СоставПодразделение" id="187">
+							<DataPath>Объект.Состав.Подразделение</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СоставПодразделениеКонтекстноеМеню" id="188"/>
+							<ExtendedTooltip name="СоставПодразделениеРасширеннаяПодсказка" id="189"/>
+						</InputField>
+						<InputField name="СоставСтатьяЗатрат" id="143">
+							<DataPath>Объект.Состав.СтатьяЗатрат</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СоставСтатьяЗатратКонтекстноеМеню" id="144"/>
+							<ExtendedTooltip name="СоставСтатьяЗатратРасширеннаяПодсказка" id="145"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="СоставГруппа4" id="196">
+					<ExtendedTooltip name="СоставГруппа4РасширеннаяПодсказка" id="197"/>
+					<ChildItems>
+						<InputField name="СоставСтавкаНДС" id="134">
+							<DataPath>Объект.Состав.СтавкаНДС</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СоставСтавкаНДСКонтекстноеМеню" id="135"/>
+							<ExtendedTooltip name="СоставСтавкаНДСРасширеннаяПодсказка" id="136"/>
+						</InputField>
+						<InputField name="СоставСпособУчетаНДС" id="137">
+							<DataPath>Объект.Состав.СпособУчетаНДС</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СоставСпособУчетаНДСКонтекстноеМеню" id="138"/>
+							<ExtendedTooltip name="СоставСпособУчетаНДСРасширеннаяПодсказка" id="139"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="СоставГруппа5" id="198">
+					<ExtendedTooltip name="СоставГруппа5РасширеннаяПодсказка" id="199"/>
+					<ChildItems>
+						<InputField name="СоставПокупатель" id="149">
+							<DataPath>Объект.Состав.Покупатель</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СоставПокупательКонтекстноеМеню" id="150"/>
+							<ExtendedTooltip name="СоставПокупательРасширеннаяПодсказка" id="151"/>
+						</InputField>
+						<InputField name="СоставДоговорПокупателя" id="152">
+							<DataPath>Объект.Состав.ДоговорПокупателя</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СоставДоговорПокупателяКонтекстноеМеню" id="153"/>
+							<ExtendedTooltip name="СоставДоговорПокупателяРасширеннаяПодсказка" id="154"/>
+						</InputField>
+						<InputField name="СоставПриложениеКДоговоруПокупателя" id="155">
+							<DataPath>Объект.Состав.ПриложениеКДоговоруПокупателя</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СоставПриложениеКДоговоруПокупателяКонтекстноеМеню" id="156"/>
+							<ExtendedTooltip name="СоставПриложениеКДоговоруПокупателяРасширеннаяПодсказка" id="157"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="СоставКоличество" id="158">
+					<DataPath>Объект.Состав.Количество</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СоставКоличествоКонтекстноеМеню" id="159"/>
+					<ExtendedTooltip name="СоставКоличествоРасширеннаяПодсказка" id="160"/>
+				</InputField>
+				<ColumnGroup name="СоставГруппа6" id="200">
+					<ExtendedTooltip name="СоставГруппа6РасширеннаяПодсказка" id="201"/>
+					<ChildItems>
+						<InputField name="СоставСумма" id="161">
+							<DataPath>Объект.Состав.Сумма</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СоставСуммаКонтекстноеМеню" id="162"/>
+							<ExtendedTooltip name="СоставСуммаРасширеннаяПодсказка" id="163"/>
+						</InputField>
+						<InputField name="СоставНДС" id="164">
+							<DataPath>Объект.Состав.НДС</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СоставНДСКонтекстноеМеню" id="165"/>
+							<ExtendedTooltip name="СоставНДСРасширеннаяПодсказка" id="166"/>
+						</InputField>
+						<InputField name="СоставВсего" id="167">
+							<DataPath>Объект.Состав.Всего</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СоставВсегоКонтекстноеМеню" id="168"/>
+							<ExtendedTooltip name="СоставВсегоРасширеннаяПодсказка" id="169"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="СоставГруппа7" id="202">
+					<ExtendedTooltip name="СоставГруппа7РасширеннаяПодсказка" id="203"/>
+					<ChildItems>
+						<InputField name="СоставСумма_Валюта" id="170">
+							<DataPath>Объект.Состав.Сумма_Валюта</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СоставСумма_ВалютаКонтекстноеМеню" id="171"/>
+							<ExtendedTooltip name="СоставСумма_ВалютаРасширеннаяПодсказка" id="172"/>
+						</InputField>
+						<InputField name="СоставНДС_Валюта" id="173">
+							<DataPath>Объект.Состав.НДС_Валюта</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СоставНДС_ВалютаКонтекстноеМеню" id="174"/>
+							<ExtendedTooltip name="СоставНДС_ВалютаРасширеннаяПодсказка" id="175"/>
+						</InputField>
+						<InputField name="СоставВсего_Валюта" id="176">
+							<DataPath>Объект.Состав.Всего_Валюта</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СоставВсего_ВалютаКонтекстноеМеню" id="177"/>
+							<ExtendedTooltip name="СоставВсего_ВалютаРасширеннаяПодсказка" id="178"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="СоставВалюта" id="146">
+					<DataPath>Объект.Состав.Валюта</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СоставВалютаКонтекстноеМеню" id="147"/>
+					<ExtendedTooltip name="СоставВалютаРасширеннаяПодсказка" id="148"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ГруппаИтоги" id="213">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа итоги</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа итоги</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИтогиРасширеннаяПодсказка" id="214"/>
+			<ChildItems>
+				<LabelField name="СоставИтогСумма" id="204">
+					<DataPath>Объект.Состав.TotalСумма</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма, руб.</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<Font bold="true" kind="AutoFont"/>
+					<ContextMenu name="СоставИтогСуммаКонтекстноеМеню" id="205"/>
+					<ExtendedTooltip name="СоставИтогСуммаРасширеннаяПодсказка" id="206"/>
+				</LabelField>
+				<LabelField name="СоставИтогНДС" id="207">
+					<DataPath>Объект.Состав.TotalНДС</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НДС, руб.</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<Font bold="true" kind="AutoFont"/>
+					<ContextMenu name="СоставИтогНДСКонтекстноеМеню" id="208"/>
+					<ExtendedTooltip name="СоставИтогНДСРасширеннаяПодсказка" id="209"/>
+				</LabelField>
+				<LabelField name="СоставИтогВсего" id="210">
+					<DataPath>Объект.Состав.TotalВсего</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Всего, руб.</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<Font bold="true" kind="AutoFont"/>
+					<ContextMenu name="СоставИтогВсегоКонтекстноеМеню" id="211"/>
+					<ExtendedTooltip name="СоставИтогВсегоРасширеннаяПодсказка" id="212"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.CW_СписаниеЗатратНЗП</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Заполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_Звезда</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Заполнить</Action>
+			<Representation>TextPicture</Representation>
+			<AssociatedTableElementId xsi:type="xs:string">Состав</AssociatedTableElementId>
+		</Command>
+	</Commands>
+</Form>

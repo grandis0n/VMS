@@ -1,0 +1,529 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Согласование объектов</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>ChangeHistory</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>OpenFromMainServer</ExcludedCommand>
+		<ExcludedCommand>OpenFromStandaloneServer</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа2" id="56">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступные объекты согласования</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<Width>58</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="57"/>
+			<ChildItems>
+				<Table name="ДоступныеОбъектыСогласования" id="40">
+					<Representation>List</Representation>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<MaxHeight>5</MaxHeight>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<VerticalStretch>false</VerticalStretch>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>ДоступныеОбъектыСогласования</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>CancelSearch</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>Find</ExcludedCommand>
+						<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>OutputList</ExcludedCommand>
+						<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+						<ExcludedCommand>SearchHistory</ExcludedCommand>
+						<ExcludedCommand>SelectAll</ExcludedCommand>
+						<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+						<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+					</CommandSet>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выберите объекты, для которых планируете использовать процедуру согласования</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ДоступныеОбъектыСогласованияКонтекстноеМеню" id="41"/>
+					<AutoCommandBar name="ДоступныеОбъектыСогласованияКоманднаяПанель" id="42">
+						<ChildItems>
+							<ButtonGroup name="ДоступныеОбъектыСогласованияГруппа1" id="67">
+								<Representation>Compact</Representation>
+								<ExtendedTooltip name="ДоступныеОбъектыСогласованияГруппа1РасширеннаяПодсказка" id="68"/>
+								<ChildItems>
+									<Button name="ДоступныеОбъектыСогласованияУстановитьВсеПометки" id="63">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьВсеПометки</CommandName>
+										<ExtendedTooltip name="ДоступныеОбъектыСогласованияУстановитьВсеПометкиРасширеннаяПодсказка" id="64"/>
+									</Button>
+									<Button name="ДоступныеОбъектыСогласованияСнятьВсеПометки" id="65">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СнятьВсеПометки</CommandName>
+										<ExtendedTooltip name="ДоступныеОбъектыСогласованияСнятьВсеПометкиРасширеннаяПодсказка" id="66"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ДоступныеОбъектыСогласованияРасширеннаяПодсказка" id="43">
+						<AutoMaxWidth>false</AutoMaxWidth>
+					</ExtendedTooltip>
+					<SearchStringAddition name="ДоступныеОбъектыСогласованияСтрокаПоиска" id="44">
+						<AdditionSource>
+							<Item>ДоступныеОбъектыСогласования</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДоступныеОбъектыСогласованияСтрокаПоискаКонтекстноеМеню" id="45"/>
+						<ExtendedTooltip name="ДоступныеОбъектыСогласованияСтрокаПоискаРасширеннаяПодсказка" id="46"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ДоступныеОбъектыСогласованияСостояниеПросмотра" id="47">
+						<AdditionSource>
+							<Item>ДоступныеОбъектыСогласования</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДоступныеОбъектыСогласованияСостояниеПросмотраКонтекстноеМеню" id="48"/>
+						<ExtendedTooltip name="ДоступныеОбъектыСогласованияСостояниеПросмотраРасширеннаяПодсказка" id="49"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ДоступныеОбъектыСогласованияУправлениеПоиском" id="50">
+						<AdditionSource>
+							<Item>ДоступныеОбъектыСогласования</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ДоступныеОбъектыСогласованияУправлениеПоискомКонтекстноеМеню" id="51"/>
+						<ExtendedTooltip name="ДоступныеОбъектыСогласованияУправлениеПоискомРасширеннаяПодсказка" id="52"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<CheckBoxField name="ДоступныеОбъектыСогласованияИспользуется" id="60">
+							<DataPath>ДоступныеОбъектыСогласования.Используется</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДоступныеОбъектыСогласованияИспользуетсяКонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="ДоступныеОбъектыСогласованияИспользуетсяРасширеннаяПодсказка" id="62"/>
+							<Events>
+								<Event name="OnChange">ДоступныеОбъектыСогласованияИспользуетсяПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="ДоступныеОбъектыСогласованияОбъектМетаданных" id="53">
+							<DataPath>ДоступныеОбъектыСогласования.ОбъектМетаданных</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДоступныеОбъектыСогласованияОбъектМетаданныхКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ДоступныеОбъектыСогласованияОбъектМетаданныхРасширеннаяПодсказка" id="55"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастрйокаОпвещений" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка оповещений</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настрйока опвещений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаНастрйокаОпвещенийРасширеннаяПодсказка" id="59"/>
+			<ChildItems>
+				<CheckBoxField name="ОповещатьПользователейОСобытияхСогласования" id="29">
+					<DataPath>ОповещатьПользователейОСобытияхСогласования</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОповещатьПользователейОСобытияхСогласованияКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ОповещатьПользователейОСобытияхСогласованияРасширеннаяПодсказка" id="31"/>
+					<Events>
+						<Event name="OnChange">ОповещатьПользователейОСобытияхСогласованияПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="ГруппаОповещения" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа оповещения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа оповещения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>StrongSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОповещенияРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<CheckBoxField name="CW_ОповещатьЧерезЦентрОповещений" id="5">
+							<DataPath>CW_ОповещатьЧерезЦентрОповещений</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="CW_ОповещатьЧерезЦентрОповещенийКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="CW_ОповещатьЧерезЦентрОповещенийРасширеннаяПодсказка" id="7"/>
+							<Events>
+								<Event name="OnChange">CW_ОповещатьЧерезЦентрОповещенийПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="CW_ОповещатьЧерезСистемуВзаимодействия" id="8">
+							<DataPath>CW_ОповещатьЧерезСистемуВзаимодействия</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="CW_ОповещатьЧерезСистемуВзаимодействияКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="CW_ОповещатьЧерезСистемуВзаимодействияРасширеннаяПодсказка" id="10"/>
+							<Events>
+								<Event name="OnChange">CW_ОповещатьЧерезСистемуВзаимодействияПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаОповещенияПоЭлектроннойПочте" id="11">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Оповещения по электронной почте</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа оповещения по электронной почте</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОповещенияПоЭлектроннойПочтеРасширеннаяПодсказка" id="12"/>
+							<ChildItems>
+								<CheckBoxField name="CW_ОповещатьПоЭлектроннойПочте" id="13">
+									<DataPath>CW_ОповещатьПоЭлектроннойПочте</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>по электронной почте</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="CW_ОповещатьПоЭлектроннойПочтеКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="CW_ОповещатьПоЭлектроннойПочтеРасширеннаяПодсказка" id="15"/>
+									<Events>
+										<Event name="OnChange">CW_ОповещатьПоЭлектроннойПочтеПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаПараметрыОтправкиПоЭлектроннойПочте" id="16">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа параметры отправки по электронной почте</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа параметры отправки по электронной почте</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>PopUp</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПараметрыОтправкиПоЭлектроннойПочтеРасширеннаяПодсказка" id="17"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация1" id="18">
+											<Width>1</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Height>1</Height>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<ContextMenu name="Декорация1КонтекстноеМеню" id="19"/>
+											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="20"/>
+										</PictureDecoration>
+										<UsualGroup name="Группа1" id="21">
+											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="22"/>
+											<ChildItems>
+												<InputField name="CW_УчетнаяЗаписьДляОтправкиПисемПоСогласованию" id="23">
+													<DataPath>НаборКонстант.CW_УчетнаяЗаписьДляОтправкиПисемПоСогласованию</DataPath>
+													<TitleLocation>Top</TitleLocation>
+													<Width>49</Width>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<HorizontalStretch>false</HorizontalStretch>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>&lt;Выберите учетную запись для отправки писем&gt;</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="CW_УчетнаяЗаписьДляОтправкиПисемПоСогласованиюКонтекстноеМеню" id="24"/>
+													<ExtendedTooltip name="CW_УчетнаяЗаписьДляОтправкиПисемПоСогласованиюРасширеннаяПодсказка" id="25"/>
+													<Events>
+														<Event name="OnChange">CW_УчетнаяЗаписьДляОтправкиПисемПоСогласованиюПриИзменении</Event>
+													</Events>
+												</InputField>
+												<UsualGroup name="ГруппаПредупреждениеУчетнаяЗапись" id="38">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа предупреждение учетная запись</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа предупреждение учетная запись</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Width>54</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<Group>AlwaysHorizontal</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<BackColor>style:ToolTipBackColor</BackColor>
+													<ExtendedTooltip name="ГруппаПредупреждениеУчетнаяЗаписьРасширеннаяПодсказка" id="39"/>
+													<ChildItems>
+														<PictureDecoration name="Декорация2" id="35">
+															<Picture>
+																<xr:Ref>CommonPicture.CW_Внимание</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<ContextMenu name="Декорация2КонтекстноеМеню" id="36"/>
+															<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="37"/>
+														</PictureDecoration>
+														<LabelDecoration name="НадписьПредупреждениенетПочты" id="32">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<TextColor>style:TableHeaderTextColor</TextColor>
+															<Font bold="true" kind="AutoFont"/>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Для отправки писем требуется выбрать учетную запись электронной почты!</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="НадписьПредупреждениенетПочтыКонтекстноеМеню" id="33"/>
+															<ExtendedTooltip name="НадписьПредупреждениенетПочтыРасширеннаяПодсказка" id="34"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<CheckBoxField name="CW_УведомлятьИнициатораОСобытияхСогласования" id="26">
+							<DataPath>НаборКонстант.CW_УведомлятьИнициатораОСобытияхСогласования</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="CW_УведомлятьИнициатораОСобытияхСогласованияКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="CW_УведомлятьИнициатораОСобытияхСогласованияРасширеннаяПодсказка" id="28"/>
+							<Events>
+								<Event name="OnChange">ПриИзмененииРеквизитаФормы</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>НаборКонстант.CW_ОповещатьПоЭлектроннойПочте</Field>
+				<Field>НаборКонстант.CW_ОповещатьЧерезСистемуВзаимодействия</Field>
+				<Field>НаборКонстант.CW_ОповещатьЧерезЦентрОповещений</Field>
+				<Field>НаборКонстант.CW_УчетнаяЗаписьДляОтправкиПисемПоСогласованию</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ОповещатьПользователейОСобытияхСогласования" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>оповещать пользователей о событиях согласования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.CW_ИспользуетсяСогласованиеОбъектов</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="CW_ОповещатьЧерезЦентрОповещений" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>через центр оповещений (рекомендуется)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CW_ОповещатьЧерезСистемуВзаимодействия" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>через систему взаимодействия (обсуждения)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="CW_ОповещатьПоЭлектроннойПочте" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>оповещать по электронной почте</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.CW_ИспользуетсяСогласованиеОбъектов</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ДоступныеОбъектыСогласования" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступные объекты согласования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ОбъектМетаданных" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование объекта</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовМетаданных</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Используется" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Используется</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЗакрытьФорму" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СнятьВсеПометки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все пометки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все пометки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьВсеПометки</Action>
+		</Command>
+		<Command name="УстановитьВсеПометки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить все пометки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить все пометки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьВсеПометки</Action>
+		</Command>
+	</Commands>
+</Form>

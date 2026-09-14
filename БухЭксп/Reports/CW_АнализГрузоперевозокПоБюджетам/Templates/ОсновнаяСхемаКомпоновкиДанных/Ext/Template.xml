@@ -1,0 +1,1264 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Запрос</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Грузоперевозка</dataPath>
+			<field>Грузоперевозка</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldFolder">
+			<dataPath>План</dataPath>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldFolder">
+			<dataPath>Факт</dataPath>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Факт</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldFolder">
+			<dataPath>Финансы</dataPath>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Финансы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФинансыДоход</dataPath>
+			<field>ФинансыДоход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Финансы доход</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФинансыРасход</dataPath>
+			<field>ФинансыРасход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Финансы расход</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактДельта</dataPath>
+			<field>ФактДельта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Факт дельта</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланДоход</dataPath>
+			<field>ПланДоход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План доход</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланРасход</dataPath>
+			<field>ПланРасход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План расход</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактДоход</dataPath>
+			<field>ФактДоход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Факт доход</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланДельта</dataPath>
+			<field>ПланДельта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План дельта</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактРасход</dataPath>
+			<field>ФактРасход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Факт расход</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Номенклатура</v8:Type>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланФактРасход</dataPath>
+			<field>ПланФактРасход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План факт расход</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланФактДоход</dataPath>
+			<field>ПланФактДоход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План факт доход</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланФинансыДельта</dataPath>
+			<field>ПланФинансыДельта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План финансы дельта</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланФинансыДоход</dataPath>
+			<field>ПланФинансыДоход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План финансы доход</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланФактДельта</dataPath>
+			<field>ПланФактДельта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План факт дельта</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланФинансыРасход</dataPath>
+			<field>ПланФинансыРасход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План финансы расход</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФинансыДельта</dataPath>
+			<field>ФинансыДельта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Финансы дельта</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактФинансыДельта</dataPath>
+			<field>ФактФинансыДельта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Факт финансы дельта</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактФинансыРасход</dataPath>
+			<field>ФактФинансыРасход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Факт финансы расход</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактФинансыДоход</dataPath>
+			<field>ФактФинансыДоход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Факт финансы доход</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldFolder">
+			<dataPath>ПланФакт</dataPath>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонение план-факт</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldFolder">
+			<dataPath>ПланФинансы</dataPath>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонение план-финансы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldFolder">
+			<dataPath>ФактФинансы</dataPath>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонение факт-финансы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказ</dataPath>
+			<field>Заказ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	КурсыВалют.Период,
+	КурсыВалют.Курс КАК Курс,
+	КурсыВалют.Валюта КАК Валюта
+ПОМЕСТИТЬ втКурсыВалютыОтчета
+ИЗ
+	РегистрСведений.КурсыВалют КАК КурсыВалют
+ГДЕ
+	КурсыВалют.Валюта = &amp;Валюта
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	CW_ДоходыПоГрузоперевозкам.Грузоперевозка,
+	CW_ДоходыПоГрузоперевозкам.Номенклатура,
+	ВЫБОР
+		КОГДА CW_ДоходыПоГрузоперевозкам.Валюта = &amp;Валюта
+			ТОГДА CW_ДоходыПоГрузоперевозкам.Всего_Валюта
+		КОГДА &amp;Валюта = ВалютаРегламентированногоУчета.Значение
+			ТОГДА CW_ДоходыПоГрузоперевозкам.Всего
+		ИНАЧЕ CW_ДоходыПоГрузоперевозкам.Всего_Валюта / ЕСТЬNULL(втКурсыВалютыОтчета.Курс, 1) * ЕСТЬNULL(КурсыВалютРегистра.Курс, 1)
+	КОНЕЦ КАК ФинансыВсегоДоход,
+	CW_ДоходыПоГрузоперевозкам.Сумма КАК ФинансыСуммаДоход,
+	CW_ДоходыПоГрузоперевозкам.НДС КАК ФинансыНДСДоход
+ПОМЕСТИТЬ ФактДоходы
+ИЗ
+	РегистрНакопления.CW_ДоходыПоГрузоперевозкам КАК CW_ДоходыПоГрузоперевозкам
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КурсыВалют КАК КурсыВалютРегистра
+		ПО CW_ДоходыПоГрузоперевозкам.Валюта = КурсыВалютРегистра.Валюта
+			И (НАЧАЛОПЕРИОДА(CW_ДоходыПоГрузоперевозкам.Период, ДЕНЬ) = КурсыВалютРегистра.Период)
+		ЛЕВОЕ СОЕДИНЕНИЕ втКурсыВалютыОтчета КАК втКурсыВалютыОтчета
+		ПО (НАЧАЛОПЕРИОДА(CW_ДоходыПоГрузоперевозкам.Период, ДЕНЬ) = втКурсыВалютыОтчета.Период),
+	Константа.ВалютаРегламентированногоУчета КАК ВалютаРегламентированногоУчета
+ГДЕ
+	CW_ДоходыПоГрузоперевозкам.Грузоперевозка В(&amp;Грузоперевозки)
+	И ВЫБОР
+			КОГДА &amp;Организация = НЕОПРЕДЕЛЕНО
+				ТОГДА ИСТИНА
+			ИНАЧЕ CW_ДоходыПоГрузоперевозкам.ДокументДоходов.Организация = &amp;Организация
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА &amp;ФормированиеОтчета = 1
+				ТОГДА CW_ДоходыПоГрузоперевозкам.Регистратор.ФормируетсяАкт
+			ИНАЧЕ CW_ДоходыПоГрузоперевозкам.Регистратор.ФормируетсяСчет = ИСТИНА
+		КОНЕЦ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	CW_ЗатратыПоГрузоперевозкам.Грузоперевозка,
+	CW_ЗатратыПоГрузоперевозкам.Номенклатура,
+	ВЫБОР
+		КОГДА CW_ЗатратыПоГрузоперевозкам.Валюта = &amp;Валюта
+			ТОГДА CW_ЗатратыПоГрузоперевозкам.Всего_Валюта
+		КОГДА &amp;Валюта = ВалютаРегламентированногоУчета.Значение
+			ТОГДА CW_ЗатратыПоГрузоперевозкам.Всего
+		ИНАЧЕ CW_ЗатратыПоГрузоперевозкам.Всего_Валюта / ЕСТЬNULL(втКурсыВалютыОтчета.Курс, 1) * ЕСТЬNULL(КурсыВалютРегистра.Курс, 1)
+	КОНЕЦ КАК ФинансыВсегоРасход,
+	CW_ЗатратыПоГрузоперевозкам.Сумма КАК ФинансыСуммаРасход,
+	CW_ЗатратыПоГрузоперевозкам.НДС КАК ФинансыНДСРасход
+ПОМЕСТИТЬ ФактРасходы
+ИЗ
+	РегистрНакопления.CW_РасходыПоГрузоперевозкам КАК CW_ЗатратыПоГрузоперевозкам
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КурсыВалют КАК КурсыВалютРегистра
+		ПО CW_ЗатратыПоГрузоперевозкам.Валюта = КурсыВалютРегистра.Валюта
+			И (НАЧАЛОПЕРИОДА(CW_ЗатратыПоГрузоперевозкам.Период, ДЕНЬ) = КурсыВалютРегистра.Период)
+		ЛЕВОЕ СОЕДИНЕНИЕ втКурсыВалютыОтчета КАК втКурсыВалютыОтчета
+		ПО (НАЧАЛОПЕРИОДА(CW_ЗатратыПоГрузоперевозкам.Период, ДЕНЬ) = втКурсыВалютыОтчета.Период),
+	Константа.ВалютаРегламентированногоУчета КАК ВалютаРегламентированногоУчета
+ГДЕ
+	CW_ЗатратыПоГрузоперевозкам.Грузоперевозка В(&amp;Грузоперевозки)
+	И ВЫБОР
+			КОГДА &amp;Организация = НЕОПРЕДЕЛЕНО
+				ТОГДА ИСТИНА
+			ИНАЧЕ CW_ЗатратыПоГрузоперевозкам.ДокументРасходов.Организация = &amp;Организация
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА &amp;ФормированиеОтчета = 1
+				ТОГДА CW_ЗатратыПоГрузоперевозкам.Регистратор.ПредъявленАкт = ИСТИНА
+			ИНАЧЕ CW_ЗатратыПоГрузоперевозкам.Регистратор.ПредъявленСчет = ИСТИНА
+		КОНЕЦ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	БюждетПланДоходы.СтатьяБюджета.Владелец КАК Грузоперевозка,
+	БюждетПланДоходы.СтатьяБюджета.Номенклатура КАК Номенклатура,
+	ВЫБОР
+		КОГДА БюждетПланДоходы.СтатьяБюджета.Валюта = &amp;Валюта
+			ТОГДА БюждетПланДоходы.СтатьяБюджета.СуммаВсего
+		КОГДА &amp;Валюта = ВалютаРегламентированногоУчета.Значение
+			ТОГДА БюждетПланДоходы.СуммаВсегоРуб
+		ИНАЧЕ БюждетПланДоходы.СтатьяБюджета.СуммаВсего / ЕСТЬNULL(втКурсыВалютыОтчета.Курс, 1) * ЕСТЬNULL(КурсыВалютБюджета.Курс, 1)
+	КОНЕЦ КАК ПланВсегоДоход,
+	БюждетПланДоходы.СтатьяБюджета.СуммаРуб КАК ПланСуммаДоход,
+	БюждетПланДоходы.СтатьяБюджета.СуммаНДСРуб КАК ПланНДСДоход
+ПОМЕСТИТЬ втБюджетПланДоходы
+ИЗ
+	(ВЫБРАТЬ
+		CW_ПлановыеСтатьиЗатратИДоходов.Ссылка КАК СтатьяБюджета,
+		МАКСИМУМ(ЕСТЬNULL(CW_ИсторияУтверждениеБюджетов.Период, &amp;ТекущаяДата)) КАК ДатаУтверждения,
+		CW_ПлановыеСтатьиЗатратИДоходов.Валюта КАК Валюта,
+		CW_ПлановыеСтатьиЗатратИДоходов.Курс КАК Курс,
+		CW_ПлановыеСтатьиЗатратИДоходов.СуммаВсегоРуб КАК СуммаВсегоРуб
+	ИЗ
+		Справочник.CW_ПлановыеСтатьиЗатратИДоходов КАК CW_ПлановыеСтатьиЗатратИДоходов
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.CW_ИсторияУтверждениеБюджетов КАК CW_ИсторияУтверждениеБюджетов
+			ПО CW_ПлановыеСтатьиЗатратИДоходов.ВерсияБюджета = CW_ИсторияУтверждениеБюджетов.ВерсияБюджета
+				И CW_ПлановыеСтатьиЗатратИДоходов.Владелец.Заказ = CW_ИсторияУтверждениеБюджетов.Объект
+	ГДЕ
+		CW_ПлановыеСтатьиЗатратИДоходов.ВерсияБюджета = &amp;ВерсияБюджетаПлан
+		И CW_ПлановыеСтатьиЗатратИДоходов.ВидСтатьиПланирования = &amp;ВидСтатьиПланированияДоход
+		И CW_ПлановыеСтатьиЗатратИДоходов.Владелец В(&amp;Грузоперевозки)
+		И ВЫБОР
+				КОГДА &amp;Организация = НЕОПРЕДЕЛЕНО
+					ТОГДА ИСТИНА
+				ИНАЧЕ CW_ПлановыеСтатьиЗатратИДоходов.Организация = &amp;Организация
+			КОНЕЦ
+	
+	СГРУППИРОВАТЬ ПО
+		CW_ПлановыеСтатьиЗатратИДоходов.Ссылка,
+		CW_ПлановыеСтатьиЗатратИДоходов.Валюта,
+		CW_ПлановыеСтатьиЗатратИДоходов.Курс,
+		CW_ПлановыеСтатьиЗатратИДоходов.СуммаВсегоРуб) КАК БюждетПланДоходы
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КурсыВалют КАК КурсыВалютБюджета
+		ПО БюждетПланДоходы.СтатьяБюджета.Валюта = КурсыВалютБюджета.Валюта
+			И (НАЧАЛОПЕРИОДА(БюждетПланДоходы.ДатаУтверждения, ДЕНЬ) = КурсыВалютБюджета.Период)
+		ЛЕВОЕ СОЕДИНЕНИЕ втКурсыВалютыОтчета КАК втКурсыВалютыОтчета
+		ПО (НАЧАЛОПЕРИОДА(БюждетПланДоходы.ДатаУтверждения, ДЕНЬ) = втКурсыВалютыОтчета.Период),
+	Константа.ВалютаРегламентированногоУчета КАК ВалютаРегламентированногоУчета
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	БюждетПланРасходы.СтатьяБюджета.Владелец КАК Грузоперевозка,
+	БюждетПланРасходы.СтатьяБюджета.Номенклатура КАК Номенклатура,
+	ВЫБОР
+		КОГДА БюждетПланРасходы.СтатьяБюджета.Валюта = &amp;Валюта
+			ТОГДА БюждетПланРасходы.СтатьяБюджета.СуммаВсего
+		КОГДА &amp;Валюта = ВалютаРегламентированногоУчета.Значение
+			ТОГДА БюждетПланРасходы.СуммаВсегоРуб
+		ИНАЧЕ БюждетПланРасходы.СтатьяБюджета.СуммаВсего / ЕСТЬNULL(втКурсыВалютыОтчета.Курс, 1) * ЕСТЬNULL(КурсыВалютБюджета.Курс, 1)
+	КОНЕЦ КАК ПланВсегоРасход,
+	БюждетПланРасходы.СтатьяБюджета.СуммаРуб КАК ПланСуммаРасход,
+	БюждетПланРасходы.СтатьяБюджета.СуммаНДСРуб КАК ПланНДСРасход
+ПОМЕСТИТЬ втБюджетПланРасходы
+ИЗ
+	(ВЫБРАТЬ
+		CW_ПлановыеСтатьиЗатратИДоходов.Ссылка КАК СтатьяБюджета,
+		МАКСИМУМ(ЕСТЬNULL(CW_ИсторияУтверждениеБюджетов.Период, &amp;ТекущаяДата)) КАК ДатаУтверждения,
+		CW_ПлановыеСтатьиЗатратИДоходов.Валюта КАК Валюта,
+		CW_ПлановыеСтатьиЗатратИДоходов.Курс КАК Курс,
+		CW_ПлановыеСтатьиЗатратИДоходов.СуммаВсегоРуб КАК СуммаВсегоРуб
+	ИЗ
+		Справочник.CW_ПлановыеСтатьиЗатратИДоходов КАК CW_ПлановыеСтатьиЗатратИДоходов
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.CW_ИсторияУтверждениеБюджетов КАК CW_ИсторияУтверждениеБюджетов
+			ПО CW_ПлановыеСтатьиЗатратИДоходов.Владелец.Заказ = CW_ИсторияУтверждениеБюджетов.Объект
+				И CW_ПлановыеСтатьиЗатратИДоходов.ВерсияБюджета = CW_ИсторияУтверждениеБюджетов.ВерсияБюджета
+	ГДЕ
+		CW_ПлановыеСтатьиЗатратИДоходов.ВерсияБюджета = &amp;ВерсияБюджетаПлан
+		И CW_ПлановыеСтатьиЗатратИДоходов.ВидСтатьиПланирования = &amp;ВидСтатьиПланированияРасход
+		И CW_ПлановыеСтатьиЗатратИДоходов.Владелец В(&amp;Грузоперевозки)
+		И ВЫБОР
+				КОГДА &amp;Организация = НЕОПРЕДЕЛЕНО
+					ТОГДА ИСТИНА
+				ИНАЧЕ CW_ПлановыеСтатьиЗатратИДоходов.Организация = &amp;Организация
+			КОНЕЦ
+	
+	СГРУППИРОВАТЬ ПО
+		CW_ПлановыеСтатьиЗатратИДоходов.Ссылка,
+		CW_ПлановыеСтатьиЗатратИДоходов.Валюта,
+		CW_ПлановыеСтатьиЗатратИДоходов.Курс,
+		CW_ПлановыеСтатьиЗатратИДоходов.СуммаВсегоРуб) КАК БюждетПланРасходы
+		ЛЕВОЕ СОЕДИНЕНИЕ втКурсыВалютыОтчета КАК втКурсыВалютыОтчета
+		ПО (НАЧАЛОПЕРИОДА(БюждетПланРасходы.ДатаУтверждения, ДЕНЬ) = втКурсыВалютыОтчета.Период)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КурсыВалют КАК КурсыВалютБюджета
+		ПО (НАЧАЛОПЕРИОДА(БюждетПланРасходы.ДатаУтверждения, ДЕНЬ) = КурсыВалютБюджета.Период)
+			И БюждетПланРасходы.СтатьяБюджета.Валюта = КурсыВалютБюджета.Валюта,
+	Константа.ВалютаРегламентированногоУчета КАК ВалютаРегламентированногоУчета
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	БюждетФактДоходы.СтатьяБюджета.Владелец КАК Грузоперевозка,
+	БюждетФактДоходы.СтатьяБюджета.Номенклатура КАК Номенклатура,
+	ВЫБОР
+		КОГДА БюждетФактДоходы.СтатьяБюджета.Валюта = &amp;Валюта
+			ТОГДА БюждетФактДоходы.СтатьяБюджета.СуммаВсего
+		КОГДА &amp;Валюта = ВалютаРегламентированногоУчета.Значение
+			ТОГДА БюждетФактДоходы.СтатьяБюджета.СуммаВсегоРуб
+		ИНАЧЕ БюждетФактДоходы.СтатьяБюджета.СуммаВсего / ЕСТЬNULL(втКурсыВалютыОтчета.Курс, 1) * ЕСТЬNULL(КурсыВалютБюджета.Курс, 1)
+	КОНЕЦ КАК ФактВсегоДоход,
+	БюждетФактДоходы.СтатьяБюджета.СуммаРуб КАК ФактСуммаДоход,
+	БюждетФактДоходы.СтатьяБюджета.СуммаНДСРуб КАК ФактНДСДоход
+ПОМЕСТИТЬ втБюджетФактДоходы
+ИЗ
+	(ВЫБРАТЬ
+		CW_ПлановыеСтатьиЗатратИДоходов.Ссылка КАК СтатьяБюджета,
+		МАКСИМУМ(ЕСТЬNULL(CW_ИсторияУтверждениеБюджетов.Период, &amp;ТекущаяДата)) КАК ДатаУтверждения
+	ИЗ
+		Справочник.CW_ПлановыеСтатьиЗатратИДоходов КАК CW_ПлановыеСтатьиЗатратИДоходов
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.CW_ИсторияУтверждениеБюджетов КАК CW_ИсторияУтверждениеБюджетов
+			ПО CW_ПлановыеСтатьиЗатратИДоходов.Владелец.Заказ = CW_ИсторияУтверждениеБюджетов.Объект
+				И CW_ПлановыеСтатьиЗатратИДоходов.ВерсияБюджета = CW_ИсторияУтверждениеБюджетов.ВерсияБюджета
+	ГДЕ
+		CW_ПлановыеСтатьиЗатратИДоходов.ВерсияБюджета = &amp;ВерсияБюджетаФакт
+		И CW_ПлановыеСтатьиЗатратИДоходов.ВидСтатьиПланирования = &amp;ВидСтатьиПланированияДоход
+		И CW_ПлановыеСтатьиЗатратИДоходов.Владелец В(&amp;Грузоперевозки)
+		И ВЫБОР
+				КОГДА &amp;Организация = НЕОПРЕДЕЛЕНО
+					ТОГДА ИСТИНА
+				ИНАЧЕ CW_ПлановыеСтатьиЗатратИДоходов.Организация = &amp;Организация
+			КОНЕЦ
+	
+	СГРУППИРОВАТЬ ПО
+		CW_ПлановыеСтатьиЗатратИДоходов.Ссылка) КАК БюждетФактДоходы
+		ЛЕВОЕ СОЕДИНЕНИЕ втКурсыВалютыОтчета КАК втКурсыВалютыОтчета
+		ПО (НАЧАЛОПЕРИОДА(БюждетФактДоходы.ДатаУтверждения, ДЕНЬ) = втКурсыВалютыОтчета.Период)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КурсыВалют КАК КурсыВалютБюджета
+		ПО (НАЧАЛОПЕРИОДА(БюждетФактДоходы.ДатаУтверждения, ДЕНЬ) = КурсыВалютБюджета.Период)
+			И БюждетФактДоходы.СтатьяБюджета.Валюта = КурсыВалютБюджета.Валюта,
+	Константа.ВалютаРегламентированногоУчета КАК ВалютаРегламентированногоУчета
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	БюждетФактРасходы.СтатьяБюджета.Владелец КАК Грузоперевозка,
+	БюждетФактРасходы.СтатьяБюджета.Номенклатура КАК Номенклатура,
+	ВЫБОР
+		КОГДА БюждетФактРасходы.СтатьяБюджета.Валюта = &amp;Валюта
+			ТОГДА БюждетФактРасходы.СтатьяБюджета.СуммаВсего
+		КОГДА &amp;Валюта = ВалютаРегламентированногоУчета.Значение
+			ТОГДА БюждетФактРасходы.СтатьяБюджета.СуммаВсегоРуб
+		ИНАЧЕ БюждетФактРасходы.СтатьяБюджета.СуммаВсего / ЕСТЬNULL(втКурсыВалютыОтчета.Курс, 1) * ЕСТЬNULL(КурсыВалютБюджета.Курс, 1)
+	КОНЕЦ КАК ФактВсегоРасход,
+	БюждетФактРасходы.СтатьяБюджета.СуммаРуб КАК ФактСуммаРасход,
+	БюждетФактРасходы.СтатьяБюджета.СуммаНДСРуб КАК ФактНДСРасход
+ПОМЕСТИТЬ втБюджетФактРасходы
+ИЗ
+	(ВЫБРАТЬ
+		CW_ПлановыеСтатьиЗатратИДоходов.Ссылка КАК СтатьяБюджета,
+		МАКСИМУМ(ЕСТЬNULL(CW_ИсторияУтверждениеБюджетов.Период, &amp;ТекущаяДата)) КАК ДатаУтверждения
+	ИЗ
+		Справочник.CW_ПлановыеСтатьиЗатратИДоходов КАК CW_ПлановыеСтатьиЗатратИДоходов
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.CW_ИсторияУтверждениеБюджетов КАК CW_ИсторияУтверждениеБюджетов
+			ПО CW_ПлановыеСтатьиЗатратИДоходов.Владелец.Заказ = CW_ИсторияУтверждениеБюджетов.Объект
+				И CW_ПлановыеСтатьиЗатратИДоходов.ВерсияБюджета = CW_ИсторияУтверждениеБюджетов.ВерсияБюджета
+	ГДЕ
+		CW_ПлановыеСтатьиЗатратИДоходов.ВерсияБюджета = &amp;ВерсияБюджетаФакт
+		И CW_ПлановыеСтатьиЗатратИДоходов.ВидСтатьиПланирования = &amp;ВидСтатьиПланированияРасход
+		И CW_ПлановыеСтатьиЗатратИДоходов.Владелец В(&amp;Грузоперевозки)
+		И ВЫБОР
+				КОГДА &amp;Организация = НЕОПРЕДЕЛЕНО
+					ТОГДА ИСТИНА
+				ИНАЧЕ CW_ПлановыеСтатьиЗатратИДоходов.Организация = &amp;Организация
+			КОНЕЦ
+	
+	СГРУППИРОВАТЬ ПО
+		CW_ПлановыеСтатьиЗатратИДоходов.Ссылка) КАК БюждетФактРасходы
+		ЛЕВОЕ СОЕДИНЕНИЕ втКурсыВалютыОтчета КАК втКурсыВалютыОтчета
+		ПО (НАЧАЛОПЕРИОДА(БюждетФактРасходы.ДатаУтверждения, ДЕНЬ) = втКурсыВалютыОтчета.Период)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КурсыВалют КАК КурсыВалютБюджета
+		ПО (НАЧАЛОПЕРИОДА(БюждетФактРасходы.ДатаУтверждения, ДЕНЬ) = КурсыВалютБюджета.Период)
+			И БюждетФактРасходы.СтатьяБюджета.Валюта = КурсыВалютБюджета.Валюта,
+	Константа.ВалютаРегламентированногоУчета КАК ВалютаРегламентированногоУчета
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ФактДоходы.Грузоперевозка,
+	ФактДоходы.Номенклатура,
+	ФактДоходы.ФинансыВсегоДоход КАК ФинансыДоход,
+	0 КАК ФинансыРасход
+ПОМЕСТИТЬ втФинансы
+ИЗ
+	ФактДоходы КАК ФактДоходы
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ФактРасходы.Грузоперевозка,
+	ФактРасходы.Номенклатура,
+	0,
+	ФактРасходы.ФинансыВсегоРасход
+ИЗ
+	ФактРасходы КАК ФактРасходы
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втБюджетПланДоходы.Грузоперевозка,
+	втБюджетПланДоходы.Номенклатура,
+	втБюджетПланДоходы.ПланВсегоДоход КАК ПланДоход,
+	0 КАК ПланРасход
+ПОМЕСТИТЬ втПлан
+ИЗ
+	втБюджетПланДоходы КАК втБюджетПланДоходы
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	БюджетПланРасходы.Грузоперевозка,
+	БюджетПланРасходы.Номенклатура,
+	0,
+	БюджетПланРасходы.ПланВсегоРасход
+ИЗ
+	втБюджетПланРасходы КАК БюджетПланРасходы
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втБюджетФактДоходы.Грузоперевозка,
+	втБюджетФактДоходы.Номенклатура,
+	втБюджетФактДоходы.ФактВсегоДоход КАК ФактДоход,
+	0 КАК ФактРасход
+ПОМЕСТИТЬ втФакт
+ИЗ
+	втБюджетФактДоходы КАК втБюджетФактДоходы
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	БюджетФактРасходы.Грузоперевозка,
+	БюджетФактРасходы.Номенклатура,
+	0,
+	БюджетФактРасходы.ФактВсегоРасход
+ИЗ
+	втБюджетФактРасходы КАК БюджетФактРасходы
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втФинансы.Грузоперевозка,
+	втФинансы.Номенклатура,
+	СУММА(втФинансы.ФинансыДоход) КАК ФинансыДоход,
+	СУММА(втФинансы.ФинансыРасход) КАК ФинансыРасход,
+	СУММА(втФинансы.ФинансыДоход - втФинансы.ФинансыРасход) КАК ФинансыДельта
+ПОМЕСТИТЬ втФинансыСвернутая
+ИЗ
+	втФинансы КАК втФинансы
+
+СГРУППИРОВАТЬ ПО
+	втФинансы.Грузоперевозка,
+	втФинансы.Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втПлан.Грузоперевозка,
+	втПлан.Номенклатура,
+	СУММА(втПлан.ПланДоход) КАК ПланДоход,
+	СУММА(втПлан.ПланРасход) КАК ПланРасход,
+	СУММА(втПлан.ПланДоход - втПлан.ПланРасход) КАК ПланДельта
+ПОМЕСТИТЬ втПланСвернутая
+ИЗ
+	втПлан КАК втПлан
+
+СГРУППИРОВАТЬ ПО
+	втПлан.Грузоперевозка,
+	втПлан.Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втФакт.Грузоперевозка,
+	втФакт.Номенклатура,
+	СУММА(втФакт.ФактДоход) КАК ФактДоход,
+	СУММА(втФакт.ФактРасход) КАК ФактРасход,
+	СУММА(втФакт.ФактДоход - втФакт.ФактРасход) КАК ФактДельта
+ПОМЕСТИТЬ втФактСвернутая
+ИЗ
+	втФакт КАК втФакт
+
+СГРУППИРОВАТЬ ПО
+	втФакт.Номенклатура,
+	втФакт.Грузоперевозка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втПланСвернутая.Грузоперевозка,
+	втПланСвернутая.Номенклатура,
+	втПланСвернутая.ПланДоход,
+	втПланСвернутая.ПланРасход,
+	втПланСвернутая.ПланДельта,
+	0 КАК ФактДоход,
+	0 КАК ФактРасход,
+	0 КАК ФактДельта,
+	0 КАК ФинансыРасход,
+	0 КАК ФинансыДоход,
+	0 КАК ФинансыДельта
+ПОМЕСТИТЬ втИтоговая
+ИЗ
+	втПланСвернутая КАК втПланСвернутая
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	втФактСвернутая.Грузоперевозка,
+	втФактСвернутая.Номенклатура,
+	0,
+	0,
+	0,
+	втФактСвернутая.ФактДоход,
+	втФактСвернутая.ФактРасход,
+	втФактСвернутая.ФактДельта,
+	0,
+	0,
+	0
+ИЗ
+	втФактСвернутая КАК втФактСвернутая
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	втФинансыСвернутая.Грузоперевозка,
+	втФинансыСвернутая.Номенклатура,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	втФинансыСвернутая.ФинансыРасход,
+	втФинансыСвернутая.ФинансыДоход,
+	втФинансыСвернутая.ФинансыДельта
+ИЗ
+	втФинансыСвернутая КАК втФинансыСвернутая
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втИтоговая.Грузоперевозка,
+	втИтоговая.Номенклатура КАК Номенклатура,
+	СУММА(втИтоговая.ПланДоход) КАК ПланДоход,
+	СУММА(втИтоговая.ПланРасход) КАК ПланРасход,
+	СУММА(втИтоговая.ПланДельта) КАК ПланДельта,
+	СУММА(втИтоговая.ФактДоход) КАК ФактДоход,
+	СУММА(втИтоговая.ФактРасход) КАК ФактРасход,
+	СУММА(втИтоговая.ФактДельта) КАК ФактДельта,
+	СУММА(втИтоговая.ФинансыРасход) КАК ФинансыРасход,
+	СУММА(втИтоговая.ФинансыДоход) КАК ФинансыДоход,
+	СУММА(втИтоговая.ФинансыДельта) КАК ФинансыДельта,
+	СУММА(втИтоговая.ПланДоход - втИтоговая.ФактДоход) КАК ПланФактДоход,
+	СУММА(втИтоговая.ПланРасход - втИтоговая.ФактРасход) КАК ПланФактРасход,
+	СУММА(втИтоговая.ПланДельта - втИтоговая.ФактДельта) КАК ПланФактДельта,
+	СУММА(втИтоговая.ПланДоход - втИтоговая.ФинансыДоход) КАК ПланФинансыДоход,
+	СУММА(втИтоговая.ПланРасход - втИтоговая.ФинансыРасход) КАК ПланФинансыРасход,
+	СУММА(втИтоговая.ПланДельта - втИтоговая.ФинансыДельта) КАК ПланФинансыДельта,
+	СУММА(втИтоговая.ФактДоход - втИтоговая.ФинансыДоход) КАК ФактФинансыДоход,
+	СУММА(втИтоговая.ФактРасход - втИтоговая.ФинансыРасход) КАК ФактФинансыРасход,
+	СУММА(втИтоговая.ФактДельта - втИтоговая.ФинансыДельта) КАК ФактФинансыДельта,
+	втИтоговая.Грузоперевозка.Заказ КАК Заказ
+ИЗ
+	втИтоговая КАК втИтоговая
+
+СГРУППИРОВАТЬ ПО
+	втИтоговая.Грузоперевозка,
+	втИтоговая.Грузоперевозка.Заказ,
+	втИтоговая.Номенклатура</query>
+	</dataSet>
+	<totalField>
+		<dataPath>ПланДельта</dataPath>
+		<expression>Сумма(ПланДельта)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПланДоход</dataPath>
+		<expression>Сумма(ПланДоход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПланРасход</dataPath>
+		<expression>Сумма(ПланРасход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФактДельта</dataPath>
+		<expression>Сумма(ФактДельта)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФактДоход</dataPath>
+		<expression>Сумма(ФактДоход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФактРасход</dataPath>
+		<expression>Сумма(ФактРасход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФинансыДоход</dataPath>
+		<expression>Сумма(ФинансыДоход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФинансыРасход</dataPath>
+		<expression>Сумма(ФинансыРасход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПланФактДельта</dataPath>
+		<expression>Сумма(ПланФактДельта)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПланФактДоход</dataPath>
+		<expression>Сумма(ПланФактДоход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПланФактРасход</dataPath>
+		<expression>Сумма(ПланФактРасход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПланФинансыДельта</dataPath>
+		<expression>Сумма(ПланФинансыДельта)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПланФинансыДоход</dataPath>
+		<expression>Сумма(ПланФинансыДоход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПланФинансыРасход</dataPath>
+		<expression>Сумма(ПланФинансыРасход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФактФинансыДельта</dataPath>
+		<expression>Сумма(ФактФинансыДельта)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФактФинансыДоход</dataPath>
+		<expression>Сумма(ФактФинансыДоход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФактФинансыРасход</dataPath>
+		<expression>Сумма(ФактФинансыРасход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФинансыДельта</dataPath>
+		<expression>Сумма(ФинансыДельта)</expression>
+	</totalField>
+	<parameter>
+		<name>ВидСтатьиПланированияДоход</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид статьи планирования доход</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.CW_ВидыСтатейПланирования</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.CW_ВидыСтатейПланирования.Доходы</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВидСтатьиПланированияРасход</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид статьи планирования расход</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.CW_ВидыСтатейПланирования</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.CW_ВидыСтатейПланирования.Расходы</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Грузоперевозки</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Грузоперевозки</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.CW_Грузоперевозки</v8:Type>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>ВерсияБюджетаПлан</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Версия бюджета план</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.CW_ВерсииБюджетов</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВерсияБюджетаФакт</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Версия бюджета факт</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.CW_ВерсииБюджетов</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ФормированиеОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Формирование отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Валюта</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Валюта</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ТекущаяДата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущая дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<template>
+		<name>Макет1</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>По заказу: </v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Заказ</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="8" bold="false" italic="true" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Заказ</dcsat:name>
+			<dcsat:expression>Представление(Заказ)</dcsat:expression>
+		</parameter>
+	</template>
+	<groupTemplate>
+		<groupName>Заказ</groupName>
+		<templateType>Header</templateType>
+		<template>Макет1</template>
+	</groupTemplate>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расходы</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ФактРасход</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Факт</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ФинансыРасход</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Финансы</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ФактФинансыРасход</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отклонение</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>SpecialColumn</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доходы</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ФактДоход</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Факт</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ФинансыДоход</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Финансы</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ФактФинансыДоход</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отклонение</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>SpecialColumn</dcsset:placement>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Грузоперевозки</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingPresentation xsi:type="xs:string">Заказ</dcsset:userSettingPresentation>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВерсияБюджетаПлан</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.CW_ВерсииБюджетов.Основная</dcscor:value>
+					<dcsset:userSettingPresentation xsi:type="xs:string">Версия бюджета</dcsset:userSettingPresentation>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">CW_ОсновнойМакетСКД</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:name>Заказ</dcsset:name>
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Заказ</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Номенклатура</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

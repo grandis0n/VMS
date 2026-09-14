@@ -1,0 +1,722 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetUnion">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Счет</dataPath>
+			<field>Счет</field>
+			<role>
+				<dcscom:periodNumber>3</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидОперации</dataPath>
+			<field>ВидОперации</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>4</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Первичный документ</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>2</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+			<presentationExpression>Регистратор.ПредставлениеДокумента</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидДвижения</dataPath>
+			<field>ВидДвижения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид операции</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерСтроки</dataPath>
+			<field>НомерСтроки</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Приход</dataPath>
+			<field>Приход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начислено</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расход</dataPath>
+			<field>Расход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплачено</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<item xsi:type="DataSetQuery">
+			<name>ДебиторскаяЗадолженность</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Счет</dataPath>
+				<field>Счет</field>
+				<role>
+					<dcscom:periodNumber>3</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВидОперации</dataPath>
+				<field>ВидОперации</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Период</dataPath>
+				<field>Период</field>
+				<role>
+					<dcscom:periodNumber>4</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+				<appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Формат</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ДФ=dd.MM.yyyy</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<dcscom:periodNumber>2</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+				<presentationExpression>Регистратор.ПредставлениеДокумента</presentationExpression>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВидДвижения</dataPath>
+				<field>ВидДвижения</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НомерСтроки</dataPath>
+				<field>НомерСтроки</field>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Приход</dataPath>
+				<field>Приход</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приход</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Расход</dataPath>
+				<field>Расход</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Расход</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	CW_ОперативнаяДебиторскаяЗадолженность.Период КАК Период,
+	CW_ОперативнаяДебиторскаяЗадолженность.НомерСтроки КАК НомерСтроки,
+	CW_ОперативнаяДебиторскаяЗадолженность.ВидДвижения КАК ВидДвижения,
+	CW_ОперативнаяДебиторскаяЗадолженность.Регистратор КАК Регистратор,
+	CW_ОперативнаяДебиторскаяЗадолженность.Счет КАК Счет,
+	CW_ОперативнаяДебиторскаяЗадолженность.ВидОперации КАК ВидОперации,
+	ВЫБОР
+		КОГДА CW_ОперативнаяДебиторскаяЗадолженность.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+			ТОГДА CW_ОперативнаяДебиторскаяЗадолженность.Всего_Валюта
+		ИНАЧЕ 0
+	КОНЕЦ КАК Приход,
+	ВЫБОР
+		КОГДА CW_ОперативнаяДебиторскаяЗадолженность.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+			ТОГДА CW_ОперативнаяДебиторскаяЗадолженность.Всего_Валюта
+		ИНАЧЕ 0
+	КОНЕЦ КАК Расход
+ИЗ
+	РегистрНакопления.CW_ОперативнаяДебиторскаяЗадолженность КАК CW_ОперативнаяДебиторскаяЗадолженность
+ГДЕ
+	CW_ОперативнаяДебиторскаяЗадолженность.Счет = &amp;ТекущийДокумент
+	И CW_ОперативнаяДебиторскаяЗадолженность.ВидОперации &lt;&gt; ЗНАЧЕНИЕ(Перечисление.CW_ВидыДвиженийПоОперативнойЗадолженности.ЗачетАванса)
+	И CW_ОперативнаяДебиторскаяЗадолженность.Всего_Валюта &lt;&gt; 0
+	И &amp;ДебиторскаяЗадолженность
+ 	И Не &amp;ЭтоДокументОплата
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	CW_ОперативнаяДебиторскаяЗадолженность.Период,
+	CW_ОперативнаяДебиторскаяЗадолженность.НомерСтроки,
+	CW_ОперативнаяДебиторскаяЗадолженность.ВидДвижения,
+	CW_ОперативнаяДебиторскаяЗадолженность.Счет,
+	CW_ОперативнаяДебиторскаяЗадолженность.Регистратор,
+	CW_ОперативнаяДебиторскаяЗадолженность.ВидОперации,
+	ВЫБОР
+		КОГДА CW_ОперативнаяДебиторскаяЗадолженность.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+			ТОГДА CW_ОперативнаяДебиторскаяЗадолженность.Всего_Валюта
+		ИНАЧЕ 0
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА CW_ОперативнаяДебиторскаяЗадолженность.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+			ТОГДА ВЫБОР
+					КОГДА CW_ОперативнаяДебиторскаяЗадолженность.ВидОперации = ЗНАЧЕНИЕ(Перечисление.CW_ВидыДвиженийПоОперативнойЗадолженности.ЗачетАванса)
+						ТОГДА -CW_ОперативнаяДебиторскаяЗадолженность.Всего_Валюта
+					ИНАЧЕ CW_ОперативнаяДебиторскаяЗадолженность.Всего_Валюта
+				КОНЕЦ
+		ИНАЧЕ 0
+	КОНЕЦ
+ИЗ
+	РегистрНакопления.CW_ОперативнаяДебиторскаяЗадолженность КАК CW_ОперативнаяДебиторскаяЗадолженность
+ГДЕ
+	CW_ОперативнаяДебиторскаяЗадолженность.Регистратор = &amp;ТекущийДокумент
+	И CW_ОперативнаяДебиторскаяЗадолженность.Регистратор &lt;&gt; CW_ОперативнаяДебиторскаяЗадолженность.Счет
+	И CW_ОперативнаяДебиторскаяЗадолженность.Всего_Валюта &lt;&gt; 0
+	И &amp;ДебиторскаяЗадолженность
+	И Не &amp;ЭтоДокументОплата
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	CW_ОперативнаяДебиторскаяЗадолженность.Период,
+	CW_ОперативнаяДебиторскаяЗадолженность.НомерСтроки,
+	CW_ОперативнаяДебиторскаяЗадолженность.ВидДвижения,
+	CW_ОперативнаяДебиторскаяЗадолженность.Регистратор,
+	CW_ОперативнаяДебиторскаяЗадолженность.Счет,
+	CW_ОперативнаяДебиторскаяЗадолженность.ВидОперации,
+	ВЫБОР
+		КОГДА CW_ОперативнаяДебиторскаяЗадолженность.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+			ТОГДА CW_ОперативнаяДебиторскаяЗадолженность.Всего_Валюта
+		ИНАЧЕ 0
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА CW_ОперативнаяДебиторскаяЗадолженность.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+			ТОГДА CW_ОперативнаяДебиторскаяЗадолженность.Всего_Валюта
+		ИНАЧЕ 0
+	КОНЕЦ
+ИЗ
+	РегистрНакопления.CW_ОперативнаяДебиторскаяЗадолженность КАК CW_ОперативнаяДебиторскаяЗадолженность
+ГДЕ
+	CW_ОперативнаяДебиторскаяЗадолженность.Счет = &amp;ТекущийДокумент
+	И CW_ОперативнаяДебиторскаяЗадолженность.Всего_Валюта &lt;&gt; 0
+	И &amp;ДебиторскаяЗадолженность
+ 	И &amp;ЭтоДокументОплата
+</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>КредиторскаЗадолженность</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Счет</dataPath>
+				<field>Счет</field>
+				<role>
+					<dcscom:periodNumber>3</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВидОперации</dataPath>
+				<field>ВидОперации</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Период</dataPath>
+				<field>Период</field>
+				<role>
+					<dcscom:periodNumber>4</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+				<appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Формат</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ДФ=dd.MM.yyyy</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<dcscom:periodNumber>2</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+				<presentationExpression>Регистратор.ПредставлениеДокумента</presentationExpression>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВидДвижения</dataPath>
+				<field>ВидДвижения</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НомерСтроки</dataPath>
+				<field>НомерСтроки</field>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Приход</dataPath>
+				<field>Приход</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Приход</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Расход</dataPath>
+				<field>Расход</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Расход</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	CW_ОперативнаяКредиторскаяЗадолженность.Период КАК Период,
+	CW_ОперативнаяКредиторскаяЗадолженность.НомерСтроки КАК НомерСтроки,
+	CW_ОперативнаяКредиторскаяЗадолженность.ВидДвижения КАК ВидДвижения,
+	CW_ОперативнаяКредиторскаяЗадолженность.Регистратор КАК Регистратор,
+	CW_ОперативнаяКредиторскаяЗадолженность.Счет КАК Счет,
+	CW_ОперативнаяКредиторскаяЗадолженность.ВидОперации КАК ВидОперации,
+	ВЫБОР
+		КОГДА CW_ОперативнаяКредиторскаяЗадолженность.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+			ТОГДА CW_ОперативнаяКредиторскаяЗадолженность.Всего_Валюта
+		ИНАЧЕ 0
+	КОНЕЦ КАК Приход,
+	ВЫБОР
+		КОГДА CW_ОперативнаяКредиторскаяЗадолженность.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+			ТОГДА CW_ОперативнаяКредиторскаяЗадолженность.Всего_Валюта
+		ИНАЧЕ 0
+	КОНЕЦ КАК Расход
+ИЗ
+	РегистрНакопления.CW_ОперативнаяКредиторскаяЗадолженность КАК CW_ОперативнаяКредиторскаяЗадолженность
+ГДЕ
+	CW_ОперативнаяКредиторскаяЗадолженность.Счет = &amp;ТекущийДокумент
+	И CW_ОперативнаяКредиторскаяЗадолженность.ВидОперации &lt;&gt; ЗНАЧЕНИЕ(Перечисление.CW_ВидыДвиженийПоОперативнойЗадолженности.ЗачетАванса)
+	И CW_ОперативнаяКредиторскаяЗадолженность.Всего_Валюта &lt;&gt; 0
+	И &amp;КредиторскаяЗадолженность
+ 	И Не &amp;ЭтоДокументОплата
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	CW_ОперативнаяКредиторскаяЗадолженность.Период,
+	CW_ОперативнаяКредиторскаяЗадолженность.НомерСтроки,
+	CW_ОперативнаяКредиторскаяЗадолженность.ВидДвижения,
+	CW_ОперативнаяКредиторскаяЗадолженность.Счет,
+	CW_ОперативнаяКредиторскаяЗадолженность.Регистратор,
+	CW_ОперативнаяКредиторскаяЗадолженность.ВидОперации,
+	ВЫБОР
+		КОГДА CW_ОперативнаяКредиторскаяЗадолженность.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+			ТОГДА CW_ОперативнаяКредиторскаяЗадолженность.Всего_Валюта
+		ИНАЧЕ 0
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА CW_ОперативнаяКредиторскаяЗадолженность.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+			ТОГДА ВЫБОР
+					КОГДА CW_ОперативнаяКредиторскаяЗадолженность.ВидОперации = ЗНАЧЕНИЕ(Перечисление.CW_ВидыДвиженийПоОперативнойЗадолженности.ЗачетАванса)
+						ТОГДА -CW_ОперативнаяКредиторскаяЗадолженность.Всего_Валюта
+					ИНАЧЕ CW_ОперативнаяКредиторскаяЗадолженность.Всего_Валюта
+				КОНЕЦ
+		ИНАЧЕ 0
+	КОНЕЦ
+ИЗ
+	РегистрНакопления.CW_ОперативнаяКредиторскаяЗадолженность КАК CW_ОперативнаяКредиторскаяЗадолженность
+ГДЕ
+	CW_ОперативнаяКредиторскаяЗадолженность.Регистратор = &amp;ТекущийДокумент
+	И CW_ОперативнаяКредиторскаяЗадолженность.Регистратор &lt;&gt; CW_ОперативнаяКредиторскаяЗадолженность.Счет
+	И CW_ОперативнаяКредиторскаяЗадолженность.Всего_Валюта &lt;&gt; 0
+	И &amp;КредиторскаяЗадолженность
+ 	И Не &amp;ЭтоДокументОплата
+	
+ОБЪЕДИНИТЬ ВСЕ  
+
+ВЫБРАТЬ
+	CW_ОперативнаяКредиторскаяЗадолженность.Период КАК Период,
+	CW_ОперативнаяКредиторскаяЗадолженность.НомерСтроки КАК НомерСтроки,
+	CW_ОперативнаяКредиторскаяЗадолженность.ВидДвижения КАК ВидДвижения,
+	CW_ОперативнаяКредиторскаяЗадолженность.Регистратор КАК Регистратор,
+	CW_ОперативнаяКредиторскаяЗадолженность.Счет КАК Счет,
+	CW_ОперативнаяКредиторскаяЗадолженность.ВидОперации КАК ВидОперации,
+	ВЫБОР
+		КОГДА CW_ОперативнаяКредиторскаяЗадолженность.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+			ТОГДА CW_ОперативнаяКредиторскаяЗадолженность.Всего_Валюта
+		ИНАЧЕ 0
+	КОНЕЦ КАК Приход,
+	ВЫБОР
+		КОГДА CW_ОперативнаяКредиторскаяЗадолженность.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+			ТОГДА CW_ОперативнаяКредиторскаяЗадолженность.Всего_Валюта
+		ИНАЧЕ 0
+	КОНЕЦ КАК Расход
+ИЗ
+	РегистрНакопления.CW_ОперативнаяКредиторскаяЗадолженность КАК CW_ОперативнаяКредиторскаяЗадолженность
+ГДЕ
+	CW_ОперативнаяКредиторскаяЗадолженность.Счет = &amp;ТекущийДокумент
+	И CW_ОперативнаяКредиторскаяЗадолженность.Всего_Валюта &lt;&gt; 0
+	И &amp;КредиторскаяЗадолженность
+ 	И &amp;ЭтоДокументОплата
+
+	</query>
+		</item>
+	</dataSet>
+	<calculatedField>
+		<dataPath>Сальдо</dataPath>
+		<expression>ВычислитьВыражение("Сумма(Приход)",,,"Первая","Текущая") - ВычислитьВыражение("Сумма(Расход)",,,"Первая","Текущая")</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сальдо</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<totalField>
+		<dataPath>Приход</dataPath>
+		<expression>Сумма(Приход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Расход</dataPath>
+		<expression>Сумма(Расход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Сальдо</dataPath>
+		<expression>ВычислитьВыражение("Сумма(Приход)",,,"Первая","Текущая") - ВычислитьВыражение("Сумма(Расход)",,,"Первая","Текущая")</expression>
+	</totalField>
+	<parameter>
+		<name>ТекущийДокумент</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.CW_КорректировкаОперативнойЗадолженности</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.CW_РасходыПоПриобретениям</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.CW_ДвижениеДенежныхСредств</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.CW_ДоходыПоГрузоперевозке</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.CW_РасходыПоГрузоперевозке</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.CW_КорректировкаРегистров</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.CW_Оплата</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПредставлениеДокумента</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Представление документа</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДебиторскаяЗадолженность</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дебиторская задолженность</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КредиторскаяЗадолженность</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Кредиторская задолженность</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ЭтоДокументОплата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Это документ оплата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<template>
+		<name>Макет1</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ВЗАИМОРАСЧЕТЫ ПО ОПЕРАТИВНОМУ ДОКУМЕНТУ</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell/>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Документ взаиморасчетов: </v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ТекущийДокумент</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#000000</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Calibri" height="10" bold="false" italic="true" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Left</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ТекущийДокумент</dcsat:name>
+			<dcsat:expression>ПараметрыДанных.ПредставлениеДокумента</dcsat:expression>
+		</parameter>
+	</template>
+	<groupTemplate>
+		<groupName>Заголовок</groupName>
+		<templateType>Header</templateType>
+		<template>Макет1</template>
+	</groupTemplate>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Взаиморасчты по документу</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Период</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Регистратор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидОперации</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Приход</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Расход</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сальдо</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">CW_ОсновнойМакетСКД</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ВЗАИМОРАСЧЕТЫ ПО ОПЕРАТИВНОМУ ДОКУМЕНТУ</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:name>Заголовок</dcsset:name>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>МакетОформления</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">БезОформления</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВариантИспользованияГруппировки</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionGroupUseVariant">AdditionalInformation</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemField">
+						<dcsset:field>Период</dcsset:field>
+						<dcsset:orderType>Asc</dcsset:orderType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:OrderItemField">
+						<dcsset:field>НомерСтроки</dcsset:field>
+						<dcsset:orderType>Asc</dcsset:orderType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:OrderItemField">
+						<dcsset:field>Регистратор</dcsset:field>
+						<dcsset:orderType>Asc</dcsset:orderType>
+					</dcsset:item>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

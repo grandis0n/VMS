@@ -1,0 +1,4557 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>Reread</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="25">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ОК</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьExtendedTooltip" id="36"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="26">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Записать</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗаписатьExtendedTooltip" id="37"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="27">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Закрыть</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗакрытьExtendedTooltip" id="38"/>
+			</Button>
+			<ButtonGroup name="ГруппаСервис" id="651">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа сервис</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа сервис</v8:content>
+					</v8:item>
+				</ToolTip>
+				<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+				<ExtendedTooltip name="ГруппаСервисРасширеннаяПодсказка" id="652"/>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаРамка" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа рамка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа рамка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРамкаExtendedTooltip" id="39"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНаименование" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа наименование</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа наименование</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНаименованиеExtendedTooltip" id="40"/>
+					<ChildItems>
+						<InputField name="Наименование" id="3">
+							<DataPath>Объект.Description</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+							<ExtendedTooltip name="НаименованиеExtendedTooltip" id="41"/>
+						</InputField>
+						<InputField name="ВидПеревозки" id="5">
+							<DataPath>Объект.ВидПеревозки</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="ВидПеревозкиКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="ВидПеревозкиExtendedTooltip" id="43"/>
+							<Events>
+								<Event name="OnChange">ВидПеревозкиПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Код" id="1">
+							<DataPath>Объект.Code</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="КодExtendedTooltip" id="42"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<Pages name="ГруппаСтраницы" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страницы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страницы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<PagesRepresentation>TabsOnLeftHorizontal</PagesRepresentation>
+					<ExtendedTooltip name="ГруппаСтраницыExtendedTooltip" id="44"/>
+					<ChildItems>
+						<Page name="СтраницаПараметры" id="448">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметры</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница параметры</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Picture>
+								<xr:Ref>CommonPicture.CW_Меню</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="СтраницаПараметрыРасширеннаяПодсказка" id="449"/>
+							<ChildItems>
+								<RadioButtonField name="ИндексСтраницыПараметров" id="454">
+									<DataPath>ИндексСтраницыПараметров</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Tumbler</RadioButtonType>
+									<ContextMenu name="ИндексСтраницыПараметровКонтекстноеМеню" id="455"/>
+									<ExtendedTooltip name="ИндексСтраницыПараметровРасширеннаяПодсказка" id="456"/>
+									<Events>
+										<Event name="OnChange">ИндексСтраницыПараметровПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+								<Pages name="СтраницыПараметров" id="450">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страницы параметров</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страницы параметров</v8:content>
+										</v8:item>
+									</ToolTip>
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="СтраницыПараметровРасширеннаяПодсказка" id="451"/>
+									<ChildItems>
+										<Page name="СтраницаПараметровГрузоперевозок" id="143">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Параметры грузоперевозок</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница параметров грузоперевозок</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Picture>
+												<xr:Ref>CommonPicture.CW_Меню</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="СтраницаПараметровГрузоперевозокРасширеннаяПодсказка" id="144"/>
+											<ChildItems>
+												<Table name="ДПГ" id="145">
+													<Representation>Tree</Representation>
+													<Height>2</Height>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>ДПГ</DataPath>
+													<RowPictureDataPath>ДПГ.ИндексКартинки</RowPictureDataPath>
+													<RowsPicture>
+														<xr:Ref>CommonPicture.CW_ДеревоПараметров</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</RowsPicture>
+													<ContextMenu name="ДПГКонтекстноеМеню" id="146">
+														<ChildItems>
+															<ButtonGroup name="ДПГКонтекстноеМенюГруппа1" id="481">
+																<ExtendedTooltip name="ДПГКонтекстноеМенюГруппа1РасширеннаяПодсказка" id="482"/>
+																<ChildItems>
+																	<Button name="ДПГКонтекстноеМенюДобавить" id="477">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Item.ДПГ.StandardCommand.Add</CommandName>
+																		<ExtendedTooltip name="ДПГКонтекстноеМенюДобавитьРасширеннаяПодсказка" id="478"/>
+																	</Button>
+																	<Button name="ДПГКонтекстноеМенюДПГ_ДобавитьГруппу" id="475">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ДПГ_ДобавитьГруппу</CommandName>
+																		<ExtendedTooltip name="ДПГКонтекстноеМенюДПГ_ДобавитьГруппуРасширеннаяПодсказка" id="476"/>
+																	</Button>
+																	<Button name="ДПГКонтекстноеМенюИзменить" id="479">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Item.ДПГ.StandardCommand.Change</CommandName>
+																		<ExtendedTooltip name="ДПГКонтекстноеМенюИзменитьРасширеннаяПодсказка" id="480"/>
+																	</Button>
+																</ChildItems>
+															</ButtonGroup>
+															<Button name="ДПГ_КонтекстноеМеню_Вырезать" id="206">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ДПГ_Строка_Вырезать</CommandName>
+																<ExtendedTooltip name="ДПГ_КонтекстноеМеню_ВырезатьРасширеннаяПодсказка" id="207"/>
+															</Button>
+															<Button name="ДПГ_КонтекстноеМеню_Вставить" id="208">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ДПГ_Строка_Вставить</CommandName>
+																<ExtendedTooltip name="ДПГ_КонтекстноеМеню_ВставитьРасширеннаяПодсказка" id="209"/>
+															</Button>
+															<Button name="ДПГ_КонтекстноеМеню_ПереместитьНаУровеньВверх" id="212">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ДПГ_ПереместитьНаУровеньВверх</CommandName>
+																<Picture>
+																	<xr:Ref>StdPicture.OpenFile</xr:Ref>
+																	<xr:LoadTransparent>true</xr:LoadTransparent>
+																</Picture>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>На уровень вверх</v8:content>
+																	</v8:item>
+																</Title>
+																<ExtendedTooltip name="ДПГ_КонтекстноеМеню_ПереместитьНаУровеньВверхРасширеннаяПодсказка" id="213"/>
+															</Button>
+														</ChildItems>
+													</ContextMenu>
+													<AutoCommandBar name="ДПГКоманднаяПанель" id="147">
+														<Autofill>false</Autofill>
+														<ChildItems>
+															<ButtonGroup name="ДПГГруппа2" id="655">
+																<Representation>Compact</Representation>
+																<ExtendedTooltip name="ДПГГруппа2РасширеннаяПодсказка" id="656"/>
+																<ChildItems>
+																	<Button name="ДПГ_Добавить" id="182">
+																		<Type>CommandBarButton</Type>
+																		<Representation>Picture</Representation>
+																		<CommandName>Form.Item.ДПГ.StandardCommand.Add</CommandName>
+																		<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																		<ExtendedTooltip name="ДПГ_ДобавитьРасширеннаяПодсказка" id="183"/>
+																	</Button>
+																	<Button name="ДПГ_ДобавитьГруппу" id="190">
+																		<Type>CommandBarButton</Type>
+																		<Representation>Picture</Representation>
+																		<CommandName>Form.Command.ДПГ_ДобавитьГруппу</CommandName>
+																		<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																		<ExtendedTooltip name="ДПГ_ДобавитьГруппуРасширеннаяПодсказка" id="191">
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Добавить группу</v8:content>
+																				</v8:item>
+																			</Title>
+																		</ExtendedTooltip>
+																	</Button>
+																	<Button name="ДПГИзменить" id="409">
+																		<Type>CommandBarButton</Type>
+																		<Representation>Picture</Representation>
+																		<CommandName>Form.Item.ДПГ.StandardCommand.Change</CommandName>
+																		<Picture>
+																			<xr:Ref>StdPicture.Change</xr:Ref>
+																			<xr:LoadTransparent>true</xr:LoadTransparent>
+																		</Picture>
+																		<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																		<ExtendedTooltip name="ДПГИзменитьРасширеннаяПодсказка" id="410"/>
+																	</Button>
+																</ChildItems>
+															</ButtonGroup>
+															<Button name="ДПГ_ПодборПараметров" id="196">
+																<Type>CommandBarButton</Type>
+																<Visible>false</Visible>
+																<Representation>PictureAndText</Representation>
+																<CommandName>Form.Command.ПодборПараметров</CommandName>
+																<Picture>
+																	<xr:Ref>CommonPicture.CW_Курсор</xr:Ref>
+																	<xr:LoadTransparent>true</xr:LoadTransparent>
+																</Picture>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Подбор</v8:content>
+																	</v8:item>
+																</Title>
+																<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																<ExtendedTooltip name="ДПГ_ПодборПараметровРасширеннаяПодсказка" id="197"/>
+															</Button>
+															<ButtonGroup name="ДеревоПараметровГПГруппа2" id="200">
+																<ExtendedTooltip name="ДеревоПараметровГПГруппа2РасширеннаяПодсказка" id="201"/>
+																<ChildItems>
+																	<Button name="ДПГ_Удалить" id="184">
+																		<Type>CommandBarButton</Type>
+																		<Representation>Picture</Representation>
+																		<CommandName>Form.Item.ДПГ.StandardCommand.Delete</CommandName>
+																		<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																		<ExtendedTooltip name="ДПГ_УдалитьРасширеннаяПодсказка" id="185"/>
+																	</Button>
+																</ChildItems>
+															</ButtonGroup>
+															<ButtonGroup name="ДПГГруппа1" id="467">
+																<Representation>Compact</Representation>
+																<ExtendedTooltip name="ДПГГруппа1РасширеннаяПодсказка" id="468"/>
+																<ChildItems>
+																	<Button name="ДПГ_РазвернутьВсе" id="202">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ДПГ_РазвернутьВсе</CommandName>
+																		<ExtendedTooltip name="ДПГ_РазвернутьВсеРасширеннаяПодсказка" id="203">
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Развернуть все</v8:content>
+																				</v8:item>
+																			</Title>
+																		</ExtendedTooltip>
+																	</Button>
+																	<Button name="ДПГ_СвернутьВсе" id="204">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ДПГ_СвернутьВсе</CommandName>
+																		<ExtendedTooltip name="ДПГ_СвернутьВсеРасширеннаяПодсказка" id="205">
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Свернуть все</v8:content>
+																				</v8:item>
+																			</Title>
+																		</ExtendedTooltip>
+																	</Button>
+																	<Button name="ДПГДПГ_ВосстановитьСверткуДерево" id="469">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ДПГ_ВосстановитьСверткуДерево</CommandName>
+																		<Picture>
+																			<xr:Ref>CommonPicture.CW_ДеревоДокументов</xr:Ref>
+																			<xr:LoadTransparent>true</xr:LoadTransparent>
+																		</Picture>
+																		<ExtendedTooltip name="ДПГДПГ_ВосстановитьСверткуДеревоРасширеннаяПодсказка" id="470"/>
+																	</Button>
+																	<Popup name="МенюГрузоперевозкаПеренестиПараметры" id="633">
+																		<ToolTip>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Перенести параметры</v8:content>
+																			</v8:item>
+																		</ToolTip>
+																		<Picture>
+																			<xr:Ref>CommonPicture.CW_АвтосинхронизацияМножественная</xr:Ref>
+																			<xr:LoadTransparent>true</xr:LoadTransparent>
+																		</Picture>
+																		<ExtendedTooltip name="МенюГрузоперевозкаПеренестиПараметрыРасширеннаяПодсказка" id="634"/>
+																		<ChildItems>
+																			<Button name="ГрузоперевозкаПеренестиВСоставПараметровЗаявки" id="457">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>Form.Command.ПеренестиВСоставПараметровЗаявки</CommandName>
+																				<ExtendedTooltip name="ГрузоперевозкаПеренестиВСоставПараметровЗаявкиРасширеннаяПодсказка" id="458"/>
+																			</Button>
+																			<Button name="ГрузоперевозкиПеренестиВСоставПараметровЗаказа" id="635">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>Form.Command.ПеренестиВСоставПараметровЗаказа</CommandName>
+																				<ExtendedTooltip name="ГрузоперевозкиПеренестиВСоставПараметровЗаказаРасширеннаяПодсказка" id="636"/>
+																			</Button>
+																		</ChildItems>
+																	</Popup>
+																</ChildItems>
+															</ButtonGroup>
+															<Button name="ДПГ_ПереместитьНаУровеньВверх" id="210">
+																<Type>CommandBarButton</Type>
+																<Representation>Picture</Representation>
+																<CommandName>Form.Command.ДПГ_ПереместитьНаУровеньВверх</CommandName>
+																<Picture>
+																	<xr:Ref>StdPicture.OpenFile</xr:Ref>
+																	<xr:LoadTransparent>true</xr:LoadTransparent>
+																</Picture>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>На уровень вверх</v8:content>
+																	</v8:item>
+																</Title>
+																<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																<ExtendedTooltip name="ДПГ_ПереместитьНаУровеньВверхРасширеннаяПодсказка" id="211"/>
+															</Button>
+															<ButtonGroup name="ДПГГруппа3" id="657">
+																<Representation>Compact</Representation>
+																<ExtendedTooltip name="ДПГГруппа3РасширеннаяПодсказка" id="658"/>
+																<ChildItems>
+																	<Button name="ДПГ_ПереместитьВверх" id="192">
+																		<Type>CommandBarButton</Type>
+																		<Representation>Picture</Representation>
+																		<CommandName>Form.Command.ДПГ_ПереместитьВверх</CommandName>
+																		<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																		<ExtendedTooltip name="ДПГ_ПереместитьВверхРасширеннаяПодсказка" id="193"/>
+																	</Button>
+																	<Button name="ДПГ_ПереместитьВниз" id="194">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ДПГ_ПереместитьВниз</CommandName>
+																		<ExtendedTooltip name="ДПГ_ПереместитьВнизРасширеннаяПодсказка" id="195"/>
+																	</Button>
+																</ChildItems>
+															</ButtonGroup>
+															<Button name="ДПГ_ПоказатьКонтрольЗаполнения" id="319">
+																<Type>CommandBarButton</Type>
+																<Representation>PictureAndText</Representation>
+																<CommandName>Form.Command.ДПГ_ПоказатьКонтрольЗаполнения</CommandName>
+																<Picture>
+																	<xr:Ref>CommonPicture.CW_ЗачетВзаимныхТребований</xr:Ref>
+																	<xr:LoadTransparent>true</xr:LoadTransparent>
+																</Picture>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Контроль</v8:content>
+																	</v8:item>
+																</Title>
+																<ExtendedTooltip name="ДПГ_ПоказатьКонтрольЗаполненияРасширеннаяПодсказка" id="320"/>
+															</Button>
+														</ChildItems>
+													</AutoCommandBar>
+													<ExtendedTooltip name="ДПГРасширеннаяПодсказка" id="148"/>
+													<SearchStringAddition name="ДПГСтрокаПоиска" id="149">
+														<AdditionSource>
+															<Item>ДПГ</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ДПГСтрокаПоискаКонтекстноеМеню" id="152"/>
+														<ExtendedTooltip name="ДПГСтрокаПоискаРасширеннаяПодсказка" id="153"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ДПГСостояниеПросмотра" id="154">
+														<AdditionSource>
+															<Item>ДПГ</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ДПГСостояниеПросмотраКонтекстноеМеню" id="157"/>
+														<ExtendedTooltip name="ДПГСостояниеПросмотраРасширеннаяПодсказка" id="158"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ДПГУправлениеПоиском" id="159">
+														<AdditionSource>
+															<Item>ДПГ</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ДПГУправлениеПоискомКонтекстноеМеню" id="162"/>
+														<ExtendedTooltip name="ДПГУправлениеПоискомРасширеннаяПодсказка" id="163"/>
+													</SearchControlAddition>
+													<Events>
+														<Event name="BeforeAddRow">ДПГ_ПередНачаломДобавления</Event>
+														<Event name="BeforeDeleteRow">ДПГ_ПередУдалением</Event>
+														<Event name="OnActivateRow">ДПГ_ПриАктивизацииСтроки</Event>
+														<Event name="DragStart">ДПГ_НачалоПеретаскивания</Event>
+														<Event name="Drag">ДПГ_Перетаскивание</Event>
+														<Event name="BeforeRowChange">ДПГ_ПередНачаломИзменения</Event>
+													</Events>
+													<ChildItems>
+														<InputField name="ДПГ_Параметр" id="167">
+															<DataPath>ДПГ.Параметр_Представление</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Параметр</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="ДПГ_ПараметрКонтекстноеМеню" id="168"/>
+															<ExtendedTooltip name="ДПГ_ПараметрРасширеннаяПодсказка" id="169"/>
+														</InputField>
+														<CheckBoxField name="ДПГ_КонтрольЗаполнения" id="173">
+															<DataPath>ДПГ.КонтрольЗаполнения</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Контроль в г/п</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>Directly</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ДПГ_КонтрольЗаполненияКонтекстноеМеню" id="174"/>
+															<ExtendedTooltip name="ДПГ_КонтрольЗаполненияРасширеннаяПодсказка" id="175"/>
+															<Events>
+																<Event name="OnChange">ДПГ_КонтрольЗаполненияПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<CheckBoxField name="ДПГ_КонтрольЗаполненияРасходы" id="349">
+															<DataPath>ДПГ.КонтрольЗаполненияРасходы</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Контроль в расходах</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ДПГ_КонтрольЗаполненияРасходыКонтекстноеМеню" id="350"/>
+															<ExtendedTooltip name="ДПГ_КонтрольЗаполненияРасходыРасширеннаяПодсказка" id="351"/>
+															<Events>
+																<Event name="OnChange">ДПГ_КонтрольЗаполненияРасходыПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<CheckBoxField name="ДПГ_КонтрольЗаполненияДоходы" id="352">
+															<DataPath>ДПГ.КонтрольЗаполненияДоходы</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Контроль в доходах</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ДПГ_КонтрольЗаполненияДоходыКонтекстноеМеню" id="353"/>
+															<ExtendedTooltip name="ДПГ_КонтрольЗаполненияДоходыРасширеннаяПодсказка" id="354"/>
+															<Events>
+																<Event name="OnChange">ДПГ_КонтрольЗаполненияДоходыПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+													</ChildItems>
+												</Table>
+												<Pages name="КонтрольЗаполненияРеквизитов" id="355">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Контроль заполнения реквизитов</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Контроль заполнения реквизитов</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Height>1</Height>
+													<HorizontalStretch>true</HorizontalStretch>
+													<VerticalStretch>true</VerticalStretch>
+													<PagesRepresentation>TabsOnTop</PagesRepresentation>
+													<ExtendedTooltip name="КонтрольЗаполненияРеквизитовРасширеннаяПодсказка" id="356"/>
+													<ChildItems>
+														<Page name="КонтрольЗаполненияГрузоперевозки" id="311">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Контроль в г/п</v8:content>
+																</v8:item>
+															</Title>
+															<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Контроль заполнения грузоперевозки</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Picture>
+																<xr:Ref>CommonPicture.CW_Грузоперевозки</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<Group>Horizontal</Group>
+															<ExtendedTooltip name="КонтрольЗаполненияГрузоперевозкиРасширеннаяПодсказка" id="312"/>
+															<ChildItems>
+																<UsualGroup name="Группа1" id="313">
+																	<Group>Vertical</Group>
+																	<Behavior>Usual</Behavior>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="314"/>
+																	<ChildItems>
+																		<CheckBoxField name="КонтрольЗаполненияКлиента" id="129">
+																			<DataPath>Объект.КонтрольЗаполненияКлиента</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>клиент</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="КонтрольЗаполненияКлиентаКонтекстноеМеню" id="130"/>
+																			<ExtendedTooltip name="КонтрольЗаполненияКлиентаРасширеннаяПодсказка" id="131"/>
+																		</CheckBoxField>
+																		<CheckBoxField name="КонтрольЗаполненияТипоразмера" id="120">
+																			<DataPath>Объект.КонтрольЗаполненияТипоразмера</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>типоразмер</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="КонтрольЗаполненияТипоразмераКонтекстноеМеню" id="121"/>
+																			<ExtendedTooltip name="КонтрольЗаполненияТипоразмераРасширеннаяПодсказка" id="122"/>
+																		</CheckBoxField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="Группа2" id="315">
+																	<Group>Vertical</Group>
+																	<Behavior>Usual</Behavior>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="316"/>
+																	<ChildItems>
+																		<CheckBoxField name="КонтрольЗаполненияГруза" id="135">
+																			<DataPath>Объект.КонтрольЗаполненияГруза</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>груз</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="КонтрольЗаполненияГрузаКонтекстноеМеню" id="136"/>
+																			<ExtendedTooltip name="КонтрольЗаполненияГрузаРасширеннаяПодсказка" id="137"/>
+																		</CheckBoxField>
+																		<CheckBoxField name="КонтрольЗаполненияМаршрута" id="132">
+																			<DataPath>Объект.КонтрольЗаполненияМаршрута</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>маршрут</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="КонтрольЗаполненияМаршрутаКонтекстноеМеню" id="133"/>
+																			<ExtendedTooltip name="КонтрольЗаполненияМаршрутаРасширеннаяПодсказка" id="134"/>
+																		</CheckBoxField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="Группа3" id="317">
+																	<Group>Vertical</Group>
+																	<Behavior>Usual</Behavior>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="318"/>
+																	<ChildItems>
+																		<CheckBoxField name="КонтрольЗаполненияМенеджераПродаж" id="123">
+																			<DataPath>Объект.КонтрольЗаполненияМенеджераПродаж</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>менеджер продаж</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="КонтрольЗаполненияМенеджераПродажКонтекстноеМеню" id="124"/>
+																			<ExtendedTooltip name="КонтрольЗаполненияМенеджераПродажРасширеннаяПодсказка" id="125"/>
+																		</CheckBoxField>
+																		<CheckBoxField name="КонтрольЗаполненияОперативныйМенеджер" id="126">
+																			<DataPath>Объект.КонтрольЗаполненияОперативногоМенеджера</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>оперативный менеджер</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="КонтрольЗаполненияОперативныйМенеджерКонтекстноеМеню" id="127"/>
+																			<ExtendedTooltip name="КонтрольЗаполненияОперативныйМенеджерРасширеннаяПодсказка" id="128"/>
+																		</CheckBoxField>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</Page>
+														<Page name="КонтрольЗаполненияРасходы" id="357">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Контроль в расходах</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Контроль заполнения расходы</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Picture>
+																<xr:Ref>CommonPicture.CW_РасходыПоГрузоперевозке</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<Group>Horizontal</Group>
+															<ExtendedTooltip name="КонтрольЗаполненияРасходыРасширеннаяПодсказка" id="358"/>
+															<ChildItems>
+																<UsualGroup name="Группа8" id="359">
+																	<Group>Vertical</Group>
+																	<Behavior>Usual</Behavior>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="360"/>
+																	<ChildItems>
+																		<CheckBoxField name="КонтрольЗаполненияКлиентаРасходы" id="377">
+																			<DataPath>Объект.КонтрольЗаполненияКлиентаРасходы</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>клиент</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="КонтрольЗаполненияКлиентаРасходыКонтекстноеМеню" id="378"/>
+																			<ExtendedTooltip name="КонтрольЗаполненияКлиентаРасходыРасширеннаяПодсказка" id="379"/>
+																		</CheckBoxField>
+																		<CheckBoxField name="КонтрольЗаполненияТипоразмераРасходы" id="380">
+																			<DataPath>Объект.КонтрольЗаполненияТипоразмераРасходы</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>типоразмер</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="КонтрольЗаполненияТипоразмераРасходыКонтекстноеМеню" id="381"/>
+																			<ExtendedTooltip name="КонтрольЗаполненияТипоразмераРасходыРасширеннаяПодсказка" id="382"/>
+																		</CheckBoxField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="Группа9" id="361">
+																	<Group>Vertical</Group>
+																	<Behavior>Usual</Behavior>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="362"/>
+																	<ChildItems>
+																		<CheckBoxField name="КонтрольЗаполненияГрузаРасходы" id="371">
+																			<DataPath>Объект.КонтрольЗаполненияГрузаРасходы</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>груз</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="КонтрольЗаполненияГрузаРасходыКонтекстноеМеню" id="372"/>
+																			<ExtendedTooltip name="КонтрольЗаполненияГрузаРасходыРасширеннаяПодсказка" id="373"/>
+																		</CheckBoxField>
+																		<CheckBoxField name="КонтрольЗаполненияМаршрутаРасходы" id="374">
+																			<DataPath>Объект.КонтрольЗаполненияМаршрутаРасходы</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>маршрут</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="КонтрольЗаполненияМаршрутаРасходыКонтекстноеМеню" id="375"/>
+																			<ExtendedTooltip name="КонтрольЗаполненияМаршрутаРасходыРасширеннаяПодсказка" id="376"/>
+																		</CheckBoxField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="Группа10" id="363">
+																	<Group>Vertical</Group>
+																	<Behavior>Usual</Behavior>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="364"/>
+																	<ChildItems>
+																		<CheckBoxField name="КонтрольЗаполненияМенеджераПродажРасходы" id="365">
+																			<DataPath>Объект.КонтрольЗаполненияМенеджераПродажРасходы</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>менеджер продаж</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="КонтрольЗаполненияМенеджераПродажРасходыКонтекстноеМеню" id="366"/>
+																			<ExtendedTooltip name="КонтрольЗаполненияМенеджераПродажРасходыРасширеннаяПодсказка" id="367"/>
+																		</CheckBoxField>
+																		<CheckBoxField name="КонтрольЗаполненияОперативногоМенеджераРасходы" id="368">
+																			<DataPath>Объект.КонтрольЗаполненияОперативногоМенеджераРасходы</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>оперативный менеджер</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="КонтрольЗаполненияОперативногоМенеджераРасходыКонтекстноеМеню" id="369"/>
+																			<ExtendedTooltip name="КонтрольЗаполненияОперативногоМенеджераРасходыРасширеннаяПодсказка" id="370"/>
+																		</CheckBoxField>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</Page>
+														<Page name="КонтрольЗаполненияДоходы" id="383">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Контроль в доходах</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Контроль заполнения доходы</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Picture>
+																<xr:Ref>CommonPicture.CW_ДоходыПоГрузоперевозке</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<Group>Horizontal</Group>
+															<ExtendedTooltip name="КонтрольЗаполненияДоходыРасширеннаяПодсказка" id="384"/>
+															<ChildItems>
+																<UsualGroup name="Группа11" id="385">
+																	<Group>Vertical</Group>
+																	<Behavior>Usual</Behavior>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="386"/>
+																	<ChildItems>
+																		<CheckBoxField name="КонтрольЗаполненияКлиентаДоходы" id="391">
+																			<DataPath>Объект.КонтрольЗаполненияКлиентаДоходы</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>клиент</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="КонтрольЗаполненияКлиентаДоходыКонтекстноеМеню" id="392"/>
+																			<ExtendedTooltip name="КонтрольЗаполненияКлиентаДоходыРасширеннаяПодсказка" id="393"/>
+																		</CheckBoxField>
+																		<CheckBoxField name="КонтрольЗаполненияТипоразмераДоходы" id="394">
+																			<DataPath>Объект.КонтрольЗаполненияТипоразмераДоходы</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>типоразмер</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="КонтрольЗаполненияТипоразмераДоходыКонтекстноеМеню" id="395"/>
+																			<ExtendedTooltip name="КонтрольЗаполненияТипоразмераДоходыРасширеннаяПодсказка" id="396"/>
+																		</CheckBoxField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="Группа12" id="387">
+																	<Group>Vertical</Group>
+																	<Behavior>Usual</Behavior>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="388"/>
+																	<ChildItems>
+																		<CheckBoxField name="КонтрольЗаполненияГрузаДоходы" id="403">
+																			<DataPath>Объект.КонтрольЗаполненияГрузаДоходы</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>груз</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="КонтрольЗаполненияГрузаДоходыКонтекстноеМеню" id="404"/>
+																			<ExtendedTooltip name="КонтрольЗаполненияГрузаДоходыРасширеннаяПодсказка" id="405"/>
+																		</CheckBoxField>
+																		<CheckBoxField name="КонтрольЗаполненияМаршрутаДоходы" id="406">
+																			<DataPath>Объект.КонтрольЗаполненияМаршрутаДоходы</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>маршрут</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="КонтрольЗаполненияМаршрутаДоходыКонтекстноеМеню" id="407"/>
+																			<ExtendedTooltip name="КонтрольЗаполненияМаршрутаДоходыРасширеннаяПодсказка" id="408"/>
+																		</CheckBoxField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="Группа13" id="389">
+																	<Group>Vertical</Group>
+																	<Behavior>Usual</Behavior>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="Группа13РасширеннаяПодсказка" id="390"/>
+																	<ChildItems>
+																		<CheckBoxField name="КонтрольЗаполненияМенеджераПродажДоходы" id="397">
+																			<DataPath>Объект.КонтрольЗаполненияМенеджераПродажДоходы</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>менеджер продаж</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="КонтрольЗаполненияМенеджераПродажДоходыКонтекстноеМеню" id="398"/>
+																			<ExtendedTooltip name="КонтрольЗаполненияМенеджераПродажДоходыРасширеннаяПодсказка" id="399"/>
+																		</CheckBoxField>
+																		<CheckBoxField name="КонтрольЗаполненияОперативногоМенеджераДоходы" id="400">
+																			<DataPath>Объект.КонтрольЗаполненияОперативногоМенеджераДоходы</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>оперативный менеджер</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="КонтрольЗаполненияОперативногоМенеджераДоходыКонтекстноеМеню" id="401"/>
+																			<ExtendedTooltip name="КонтрольЗаполненияОперативногоМенеджераДоходыРасширеннаяПодсказка" id="402"/>
+																		</CheckBoxField>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</Page>
+													</ChildItems>
+												</Pages>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаПараметровЗаявок" id="217">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Параметры заявок</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница параметров заявок</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Picture>
+												<xr:Ref>CommonPicture.CW_Меню</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="СтраницаПараметровЗаявокРасширеннаяПодсказка" id="218"/>
+											<ChildItems>
+												<Table name="ДПЗ" id="222">
+													<Representation>Tree</Representation>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>ДПЗ</DataPath>
+													<RowPictureDataPath>ДПЗ.ИндексКартинки</RowPictureDataPath>
+													<RowsPicture>
+														<xr:Ref>CommonPicture.CW_ДеревоПараметров</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</RowsPicture>
+													<ContextMenu name="ДПЗКонтекстноеМеню" id="223">
+														<ChildItems>
+															<ButtonGroup name="ДПЗКонтекстноеМенюГруппа1" id="483">
+																<ExtendedTooltip name="ДПЗКонтекстноеМенюГруппа1РасширеннаяПодсказка" id="484"/>
+																<ChildItems>
+																	<Button name="ДПЗКонтекстноеМенюДобавить" id="485">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Item.ДПЗ.StandardCommand.Add</CommandName>
+																		<ExtendedTooltip name="ДПЗКонтекстноеМенюДобавитьРасширеннаяПодсказка" id="486"/>
+																	</Button>
+																	<Button name="ДПЗКонтекстноеМенюДПЗ_ДобавитьГруппу" id="489">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ДПЗ_ДобавитьГруппу</CommandName>
+																		<ExtendedTooltip name="ДПЗКонтекстноеМенюДПЗ_ДобавитьГруппуРасширеннаяПодсказка" id="490"/>
+																	</Button>
+																	<Button name="ДПЗКонтекстноеМенюИзменить" id="487">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Item.ДПЗ.StandardCommand.Change</CommandName>
+																		<ExtendedTooltip name="ДПЗКонтекстноеМенюИзменитьРасширеннаяПодсказка" id="488"/>
+																	</Button>
+																</ChildItems>
+															</ButtonGroup>
+															<Button name="ДПЗ_КонтекстноеМеню_Вырезать" id="285">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ДПЗ_Строка_Вырезать</CommandName>
+																<ExtendedTooltip name="ДПЗ_КонтекстноеМеню_ВырезатьРасширеннаяПодсказка" id="286"/>
+															</Button>
+															<Button name="ДПЗ_КонтекстноеМеню_Вставить" id="287">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ДПЗ_Строка_Вставить</CommandName>
+																<ExtendedTooltip name="ДПЗ_КонтекстноеМеню_ВставитьРасширеннаяПодсказка" id="288"/>
+															</Button>
+															<Button name="ДПЗ_КонтекстноеМеню_ПереместитьНаУровеньВверх" id="289">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ДПЗ_ПереместитьНаУровеньВверх</CommandName>
+																<Picture>
+																	<xr:Ref>StdPicture.OpenFile</xr:Ref>
+																	<xr:LoadTransparent>true</xr:LoadTransparent>
+																</Picture>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>На уровень вверх</v8:content>
+																	</v8:item>
+																</Title>
+																<ExtendedTooltip name="ДПЗ_КонтекстноеМеню_ПереместитьНаУровеньВверхРасширеннаяПодсказка" id="290"/>
+															</Button>
+														</ChildItems>
+													</ContextMenu>
+													<AutoCommandBar name="ДПЗКоманднаяПанель" id="224">
+														<Autofill>false</Autofill>
+														<ChildItems>
+															<ButtonGroup name="ДПЗГруппа3" id="659">
+																<Representation>Compact</Representation>
+																<ExtendedTooltip name="ДПЗГруппа3РасширеннаяПодсказка" id="660"/>
+																<ChildItems>
+																	<Button name="ДПЗ_Добавить" id="265">
+																		<Type>CommandBarButton</Type>
+																		<Representation>Picture</Representation>
+																		<CommandName>Form.Item.ДПЗ.StandardCommand.Add</CommandName>
+																		<ExtendedTooltip name="ДПЗ_ДобавитьРасширеннаяПодсказка" id="266"/>
+																	</Button>
+																	<Button name="ДПЗ_ДобавитьГруппу" id="267">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ДПЗ_ДобавитьГруппу</CommandName>
+																		<ExtendedTooltip name="ДПЗ_ДобавитьГруппуРасширеннаяПодсказка" id="268"/>
+																	</Button>
+																	<Button name="ДПЗИзменить" id="411">
+																		<Type>CommandBarButton</Type>
+																		<Representation>Picture</Representation>
+																		<CommandName>Form.Item.ДПЗ.StandardCommand.Change</CommandName>
+																		<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																		<ExtendedTooltip name="ДПЗИзменитьРасширеннаяПодсказка" id="412"/>
+																	</Button>
+																</ChildItems>
+															</ButtonGroup>
+															<Button name="ДПЗ_ПодборПараметров" id="283">
+																<Type>CommandBarButton</Type>
+																<Visible>false</Visible>
+																<Representation>PictureAndText</Representation>
+																<CommandName>Form.Command.ПодборПараметров</CommandName>
+																<Picture>
+																	<xr:Ref>CommonPicture.CW_Курсор</xr:Ref>
+																	<xr:LoadTransparent>true</xr:LoadTransparent>
+																</Picture>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Подбор</v8:content>
+																	</v8:item>
+																</Title>
+																<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																<ExtendedTooltip name="ДПЗ_ПодборПараметровРасширеннаяПодсказка" id="284"/>
+															</Button>
+															<ButtonGroup name="ДПЗГруппа1" id="271">
+																<ExtendedTooltip name="ДПЗГруппа1РасширеннаяПодсказка" id="272"/>
+																<ChildItems>
+																	<Button name="ДПЗ_Удалить" id="269">
+																		<Type>CommandBarButton</Type>
+																		<Representation>Picture</Representation>
+																		<CommandName>Form.Item.ДПЗ.StandardCommand.Delete</CommandName>
+																		<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																		<ExtendedTooltip name="ДПЗ_УдалитьРасширеннаяПодсказка" id="270"/>
+																	</Button>
+																</ChildItems>
+															</ButtonGroup>
+															<ButtonGroup name="ДПЗГруппа2" id="471">
+																<Representation>Compact</Representation>
+																<ExtendedTooltip name="ДПЗГруппа2РасширеннаяПодсказка" id="472"/>
+																<ChildItems>
+																	<Button name="ДПЗ_РазвернутьВсе" id="273">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ДПЗ_РазвернутьВсе</CommandName>
+																		<ExtendedTooltip name="ДПЗ_РазвернутьВсеРасширеннаяПодсказка" id="274"/>
+																	</Button>
+																	<Button name="ДПЗ_СвернутьВсе" id="275">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ДПЗ_СвернутьВсе</CommandName>
+																		<ExtendedTooltip name="ДПЗ_СвернутьВсеРасширеннаяПодсказка" id="276"/>
+																	</Button>
+																	<Button name="ДПЗДПЗ_ВосстановитьСверткуДерево" id="473">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ДПЗ_ВосстановитьСверткуДерево</CommandName>
+																		<Picture>
+																			<xr:Ref>CommonPicture.CW_ДеревоДокументов</xr:Ref>
+																			<xr:LoadTransparent>true</xr:LoadTransparent>
+																		</Picture>
+																		<ExtendedTooltip name="ДПЗДПЗ_ВосстановитьСверткуДеревоРасширеннаяПодсказка" id="474"/>
+																	</Button>
+																	<Popup name="МенюЗаявкаПеренестиПараметры" id="637">
+																		<ToolTip>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Перенести параметры</v8:content>
+																			</v8:item>
+																		</ToolTip>
+																		<Picture>
+																			<xr:Ref>CommonPicture.CW_АвтосинхронизацияМножественная</xr:Ref>
+																			<xr:LoadTransparent>true</xr:LoadTransparent>
+																		</Picture>
+																		<ExtendedTooltip name="МенюЗаявкаПеренестиПараметрыРасширеннаяПодсказка" id="638"/>
+																		<ChildItems>
+																			<Button name="ЗаявкиПеренестиВСоставПараметровЗаказа" id="641">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>Form.Command.ПеренестиВСоставПараметровЗаказа</CommandName>
+																				<ExtendedTooltip name="ЗаявкиПеренестиВСоставПараметровЗаказаРасширеннаяПодсказка" id="642"/>
+																			</Button>
+																			<Button name="ЗаявкиПеренестиВСоставПараметровГрузопереовзки" id="459">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>Form.Command.ПеренестиВСоставПараметровГрузопереовзки</CommandName>
+																				<ExtendedTooltip name="ЗаявкиПеренестиВСоставПараметровГрузопереовзкиРасширеннаяПодсказка" id="460"/>
+																			</Button>
+																		</ChildItems>
+																	</Popup>
+																</ChildItems>
+															</ButtonGroup>
+															<Button name="ДПЗДПЗ_ПереместитьНаУровеньВверх" id="277">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ДПЗ_ПереместитьНаУровеньВверх</CommandName>
+																<Picture>
+																	<xr:Ref>StdPicture.OpenFile</xr:Ref>
+																	<xr:LoadTransparent>true</xr:LoadTransparent>
+																</Picture>
+																<ExtendedTooltip name="ДПЗДПЗ_ПереместитьНаУровеньВверхРасширеннаяПодсказка" id="278"/>
+															</Button>
+															<ButtonGroup name="ДПЗГруппа4" id="661">
+																<Representation>Compact</Representation>
+																<ExtendedTooltip name="ДПЗГруппа4РасширеннаяПодсказка" id="662"/>
+																<ChildItems>
+																	<Button name="ДПЗДПЗ_ПереместитьВверх" id="279">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ДПЗ_ПереместитьВверх</CommandName>
+																		<ExtendedTooltip name="ДПЗДПЗ_ПереместитьВверхРасширеннаяПодсказка" id="280"/>
+																	</Button>
+																	<Button name="ДПЗДПЗ_ПереместитьВниз" id="281">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ДПЗ_ПереместитьВниз</CommandName>
+																		<ExtendedTooltip name="ДПЗДПЗ_ПереместитьВнизРасширеннаяПодсказка" id="282"/>
+																	</Button>
+																</ChildItems>
+															</ButtonGroup>
+															<Button name="ДПЗ_ПоказатьКонтрольЗаполнения" id="347">
+																<Type>CommandBarButton</Type>
+																<Representation>PictureAndText</Representation>
+																<CommandName>Form.Command.ДПЗ_ПоказатьКонтрольЗаполнения</CommandName>
+																<Picture>
+																	<xr:Ref>CommonPicture.CW_ЗачетВзаимныхТребований</xr:Ref>
+																	<xr:LoadTransparent>true</xr:LoadTransparent>
+																</Picture>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Контроль</v8:content>
+																	</v8:item>
+																</Title>
+																<ExtendedTooltip name="ДПЗ_ПоказатьКонтрольЗаполненияРасширеннаяПодсказка" id="348"/>
+															</Button>
+														</ChildItems>
+													</AutoCommandBar>
+													<ExtendedTooltip name="ДПЗРасширеннаяПодсказка" id="225"/>
+													<SearchStringAddition name="ДПЗСтрокаПоиска" id="226">
+														<AdditionSource>
+															<Item>ДПЗ</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ДПЗСтрокаПоискаКонтекстноеМеню" id="227"/>
+														<ExtendedTooltip name="ДПЗСтрокаПоискаРасширеннаяПодсказка" id="228"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ДПЗСостояниеПросмотра" id="229">
+														<AdditionSource>
+															<Item>ДПЗ</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ДПЗСостояниеПросмотраКонтекстноеМеню" id="230"/>
+														<ExtendedTooltip name="ДПЗСостояниеПросмотраРасширеннаяПодсказка" id="231"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ДПЗУправлениеПоиском" id="232">
+														<AdditionSource>
+															<Item>ДПЗ</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ДПЗУправлениеПоискомКонтекстноеМеню" id="233"/>
+														<ExtendedTooltip name="ДПЗУправлениеПоискомРасширеннаяПодсказка" id="234"/>
+													</SearchControlAddition>
+													<Events>
+														<Event name="BeforeAddRow">ДПЗ_ПередНачаломДобавления</Event>
+														<Event name="BeforeDeleteRow">ДПЗ_ПередУдалением</Event>
+														<Event name="OnActivateRow">ДПЗ_ПриАктивизацииСтроки</Event>
+														<Event name="DragStart">ДПЗ_НачалоПеретаскивания</Event>
+														<Event name="Drag">ДПЗ_Перетаскивание</Event>
+														<Event name="BeforeRowChange">ДПЗ_ПередНачаломИзменения</Event>
+													</Events>
+													<ChildItems>
+														<InputField name="ДПЗ_Параметр" id="238">
+															<DataPath>ДПЗ.Параметр_Представление</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Параметр</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="ДПЗ_ПараметрКонтекстноеМеню" id="239"/>
+															<ExtendedTooltip name="ДПЗ_ПараметрРасширеннаяПодсказка" id="240"/>
+														</InputField>
+														<CheckBoxField name="ДПЗ_КонтрольЗаполнения" id="244">
+															<DataPath>ДПЗ.КонтрольЗаполнения</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ДПЗ_КонтрольЗаполненияКонтекстноеМеню" id="245"/>
+															<ExtendedTooltip name="ДПЗ_КонтрольЗаполненияРасширеннаяПодсказка" id="246"/>
+															<Events>
+																<Event name="OnChange">ДПЗ_КонтрольЗаполненияПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+													</ChildItems>
+												</Table>
+												<UsualGroup name="КонтрольЗаполненияЗаявки" id="321">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Контроль заполнения</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Контроль заполнения заявки</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Horizontal</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>StrongSeparation</Representation>
+													<ExtendedTooltip name="КонтрольЗаполненияЗаявкиРасширеннаяПодсказка" id="322"/>
+													<ChildItems>
+														<UsualGroup name="Группа4" id="323">
+															<Group>Vertical</Group>
+															<Behavior>Usual</Behavior>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="324"/>
+															<ChildItems>
+																<CheckBoxField name="КонтрольЗаполненияКлиентаЗаявка" id="332">
+																	<DataPath>Объект.КонтрольЗаполненияКлиентаЗаявка</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>клиент</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="КонтрольЗаполненияКлиентаЗаявкаКонтекстноеМеню" id="333"/>
+																	<ExtendedTooltip name="КонтрольЗаполненияКлиентаЗаявкаРасширеннаяПодсказка" id="334"/>
+																</CheckBoxField>
+																<CheckBoxField name="КонтрольЗаполненияТипоразмераЗаявка" id="329">
+																	<DataPath>Объект.КонтрольЗаполненияТипоразмераЗаявка</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>типоразмер</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="КонтрольЗаполненияТипоразмераЗаявкаКонтекстноеМеню" id="330"/>
+																	<ExtendedTooltip name="КонтрольЗаполненияТипоразмераЗаявкаРасширеннаяПодсказка" id="331"/>
+																</CheckBoxField>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="Группа5" id="325">
+															<Group>Vertical</Group>
+															<Behavior>Usual</Behavior>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="326"/>
+															<ChildItems>
+																<CheckBoxField name="КонтрольЗаполненияГрузаЗаявка" id="335">
+																	<DataPath>Объект.КонтрольЗаполненияГрузаЗаявка</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>груз</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="КонтрольЗаполненияГрузаЗаявкаКонтекстноеМеню" id="336"/>
+																	<ExtendedTooltip name="КонтрольЗаполненияГрузаЗаявкаРасширеннаяПодсказка" id="337"/>
+																</CheckBoxField>
+																<CheckBoxField name="КонтрольЗаполненияМаршрутаЗаявка" id="338">
+																	<DataPath>Объект.КонтрольЗаполненияМаршрутаЗаявка</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>маршрут</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="КонтрольЗаполненияМаршрутаЗаявкаКонтекстноеМеню" id="339"/>
+																	<ExtendedTooltip name="КонтрольЗаполненияМаршрутаЗаявкаРасширеннаяПодсказка" id="340"/>
+																</CheckBoxField>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="Группа6" id="327">
+															<Group>Vertical</Group>
+															<Behavior>Usual</Behavior>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="328"/>
+															<ChildItems>
+																<CheckBoxField name="КонтрольЗаполненияМенеджераПродажЗаявка" id="341">
+																	<DataPath>Объект.КонтрольЗаполненияМенеджераПродажЗаявка</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>менеджер продаж</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="КонтрольЗаполненияМенеджераПродажЗаявкаКонтекстноеМеню" id="342"/>
+																	<ExtendedTooltip name="КонтрольЗаполненияМенеджераПродажЗаявкаРасширеннаяПодсказка" id="343"/>
+																</CheckBoxField>
+																<CheckBoxField name="КонтрольЗаполненияОперативногоМенеджераЗаявка" id="344">
+																	<DataPath>Объект.КонтрольЗаполненияОперативногоМенеджераЗаявка</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>оперативный менеджер</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="КонтрольЗаполненияОперативногоМенеджераЗаявкаКонтекстноеМеню" id="345"/>
+																	<ExtendedTooltip name="КонтрольЗаполненияОперативногоМенеджераЗаявкаРасширеннаяПодсказка" id="346"/>
+																</CheckBoxField>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаПараметровЗаказа" id="533">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница параметров заказа</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница параметров заказа</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СтраницаПараметровЗаказаРасширеннаяПодсказка" id="534"/>
+											<ChildItems>
+												<Table name="ДПЗаказ" id="535">
+													<Representation>Tree</Representation>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>ДПЗаказ</DataPath>
+													<RowPictureDataPath>ДПЗаказ.ИндексКартинки</RowPictureDataPath>
+													<RowsPicture>
+														<xr:Ref>CommonPicture.CW_ДеревоПараметров</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</RowsPicture>
+													<ContextMenu name="ДПЗаказКонтекстноеМеню" id="536">
+														<ChildItems>
+															<ButtonGroup name="ДПЗКонтекстноеМенюГруппа2" id="554">
+																<ExtendedTooltip name="ДПЗКонтекстноеМенюГруппа2РасширеннаяПодсказка" id="555"/>
+																<ChildItems>
+																	<Button name="ДПЗКонтекстноеМенюДобавить1" id="556">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Item.ДПЗ.StandardCommand.Add</CommandName>
+																		<ExtendedTooltip name="ДПЗКонтекстноеМенюДобавить1РасширеннаяПодсказка" id="557"/>
+																	</Button>
+																	<Button name="ДПЗаказКонтекстноеМенюДПЗаказ_ДобавитьГруппу" id="558">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ДПЗаказ_ДобавитьГруппу</CommandName>
+																		<ExtendedTooltip name="ДПЗаказКонтекстноеМенюДПЗаказ_ДобавитьГруппуРасширеннаяПодсказка" id="559"/>
+																	</Button>
+																	<Button name="ДПЗКонтекстноеМенюИзменить1" id="560">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Item.ДПЗ.StandardCommand.Change</CommandName>
+																		<ExtendedTooltip name="ДПЗКонтекстноеМенюИзменить1РасширеннаяПодсказка" id="561"/>
+																	</Button>
+																</ChildItems>
+															</ButtonGroup>
+															<Button name="ДПЗаказ_КонтекстроеМеню_Вырезать" id="562">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ДПЗаказ_Строка_Вырезать</CommandName>
+																<ExtendedTooltip name="ДПЗаказ_КонтекстроеМеню_ВырезатьРасширеннаяПодсказка" id="563"/>
+															</Button>
+															<Button name="ДПЗаказ_КонтекстноеМеню_ПереместитьНаУровеньВверх" id="566">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ДПЗаказ_ПереместитьНаУровеньВверх</CommandName>
+																<Picture>
+																	<xr:Ref>StdPicture.OpenFile</xr:Ref>
+																	<xr:LoadTransparent>true</xr:LoadTransparent>
+																</Picture>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>На уровень вверх</v8:content>
+																	</v8:item>
+																</Title>
+																<ExtendedTooltip name="ДПЗаказ_КонтекстноеМеню_ПереместитьНаУровеньВверхРасширеннаяПодсказка" id="567"/>
+															</Button>
+														</ChildItems>
+													</ContextMenu>
+													<AutoCommandBar name="ДПЗаказКоманднаяПанель" id="537">
+														<Autofill>false</Autofill>
+														<ChildItems>
+															<ButtonGroup name="ДПЗаказГруппа2" id="665">
+																<Representation>Compact</Representation>
+																<ExtendedTooltip name="ДПЗаказГруппа2РасширеннаяПодсказка" id="666"/>
+																<ChildItems>
+																	<Button name="ДПЗаказ_Добавить" id="568">
+																		<Type>CommandBarButton</Type>
+																		<Representation>Picture</Representation>
+																		<CommandName>Form.Item.ДПЗаказ.StandardCommand.Add</CommandName>
+																		<ExtendedTooltip name="ДПЗаказ_ДобавитьРасширеннаяПодсказка" id="569"/>
+																	</Button>
+																	<Button name="ДПЗаказ_ДобавитьГруппу" id="570">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ДПЗаказ_ДобавитьГруппу</CommandName>
+																		<ExtendedTooltip name="ДПЗаказ_ДобавитьГруппуРасширеннаяПодсказка" id="571"/>
+																	</Button>
+																	<Button name="ДПЗаказИзменить" id="572">
+																		<Type>CommandBarButton</Type>
+																		<Representation>Picture</Representation>
+																		<CommandName>Form.Item.ДПЗаказ.StandardCommand.Change</CommandName>
+																		<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																		<ExtendedTooltip name="ДПЗаказИзменитьРасширеннаяПодсказка" id="573"/>
+																	</Button>
+																</ChildItems>
+															</ButtonGroup>
+															<Button name="ДПЗаказ_ПодборПараметров" id="574">
+																<Type>CommandBarButton</Type>
+																<Visible>false</Visible>
+																<Representation>PictureAndText</Representation>
+																<CommandName>Form.Command.ПодборПараметров</CommandName>
+																<Picture>
+																	<xr:Ref>CommonPicture.CW_Курсор</xr:Ref>
+																	<xr:LoadTransparent>true</xr:LoadTransparent>
+																</Picture>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Подбор</v8:content>
+																	</v8:item>
+																</Title>
+																<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																<ExtendedTooltip name="ДПЗаказ_ПодборПараметровРасширеннаяПодсказка" id="575"/>
+															</Button>
+															<ButtonGroup name="ДПЗаказГруппа3" id="576">
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>ДПЗаказ группа3</v8:content>
+																	</v8:item>
+																</Title>
+																<ToolTip>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>ДПЗаказ группа3</v8:content>
+																	</v8:item>
+																</ToolTip>
+																<ExtendedTooltip name="ДПЗаказГруппа3РасширеннаяПодсказка" id="577"/>
+																<ChildItems>
+																	<Button name="ДПЗаказ_Удалить" id="578">
+																		<Type>CommandBarButton</Type>
+																		<Representation>Picture</Representation>
+																		<CommandName>Form.Item.ДПЗаказ.StandardCommand.Delete</CommandName>
+																		<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																		<ExtendedTooltip name="ДПЗаказ_УдалитьРасширеннаяПодсказка" id="579"/>
+																	</Button>
+																</ChildItems>
+															</ButtonGroup>
+															<ButtonGroup name="ДПЗаказГруппа" id="580">
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>ДПЗаказ группа</v8:content>
+																	</v8:item>
+																</Title>
+																<ToolTip>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>ДПЗаказ группа</v8:content>
+																	</v8:item>
+																</ToolTip>
+																<Representation>Compact</Representation>
+																<ExtendedTooltip name="ДПЗаказГруппаРасширеннаяПодсказка" id="581"/>
+																<ChildItems>
+																	<Button name="ДПЗаказ_РазвернутьВсе" id="582">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ДПЗаказ_РазвернутьВсе</CommandName>
+																		<ExtendedTooltip name="ДПЗаказ_РазвернутьВсеРасширеннаяПодсказка" id="583"/>
+																	</Button>
+																	<Button name="ДПЗаказ_СвернутьВсе" id="584">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ДПЗаказ_СвернутьВсе</CommandName>
+																		<ExtendedTooltip name="ДПЗаказ_СвернутьВсеРасширеннаяПодсказка" id="585"/>
+																	</Button>
+																	<Button name="ДПЗаказ_ВосстановитьСверткуДерево" id="586">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ДПЗаказ_ВосстановитьСверткуДерево</CommandName>
+																		<Picture>
+																			<xr:Ref>CommonPicture.CW_ДеревоДокументов</xr:Ref>
+																			<xr:LoadTransparent>true</xr:LoadTransparent>
+																		</Picture>
+																		<ExtendedTooltip name="ДПЗаказ_ВосстановитьСверткуДеревоРасширеннаяПодсказка" id="587"/>
+																	</Button>
+																	<Popup name="МенюЗаказПеренестиПараметры" id="643">
+																		<ToolTip>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Перенести параметры</v8:content>
+																			</v8:item>
+																		</ToolTip>
+																		<Picture>
+																			<xr:Ref>CommonPicture.CW_АвтосинхронизацияМножественная</xr:Ref>
+																			<xr:LoadTransparent>true</xr:LoadTransparent>
+																		</Picture>
+																		<ExtendedTooltip name="МенюЗаказПеренестиПараметрыРасширеннаяПодсказка" id="644"/>
+																		<ChildItems>
+																			<Button name="ЗаказПеренестиВСоставПараметровЗаявки" id="649">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>Form.Command.ПеренестиВСоставПараметровЗаявки</CommandName>
+																				<ExtendedTooltip name="ЗаказПеренестиВСоставПараметровЗаявкиРасширеннаяПодсказка" id="650"/>
+																			</Button>
+																			<Button name="ЗаказПеренестиВСоставПараметровГрузопереовзки" id="647">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>Form.Command.ПеренестиВСоставПараметровГрузопереовзки</CommandName>
+																				<ExtendedTooltip name="ЗаказПеренестиВСоставПараметровГрузопереовзкиРасширеннаяПодсказка" id="648"/>
+																			</Button>
+																		</ChildItems>
+																	</Popup>
+																</ChildItems>
+															</ButtonGroup>
+															<Button name="ДПЗаказ_ПереместитьНаУровеньВверх" id="588">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ДПЗаказ_ПереместитьНаУровеньВверх</CommandName>
+																<Picture>
+																	<xr:Ref>StdPicture.OpenFile</xr:Ref>
+																	<xr:LoadTransparent>true</xr:LoadTransparent>
+																</Picture>
+																<ExtendedTooltip name="ДПЗаказ_ПереместитьНаУровеньВверхРасширеннаяПодсказка" id="589"/>
+															</Button>
+															<ButtonGroup name="ДПЗаказГруппа1" id="663">
+																<Representation>Compact</Representation>
+																<ExtendedTooltip name="ДПЗаказГруппа1РасширеннаяПодсказка" id="664"/>
+																<ChildItems>
+																	<Button name="ДПЗаказ_ПереместитьВверх" id="590">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ДПЗаказ_ПереместитьВверх</CommandName>
+																		<ExtendedTooltip name="ДПЗаказ_ПереместитьВверхРасширеннаяПодсказка" id="591"/>
+																	</Button>
+																	<Button name="ДПЗаказ_ПереместитьВниз" id="592">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ДПЗаказ_ПереместитьВниз</CommandName>
+																		<ExtendedTooltip name="ДПЗаказ_ПереместитьВнизРасширеннаяПодсказка" id="593"/>
+																	</Button>
+																</ChildItems>
+															</ButtonGroup>
+															<Button name="ДПЗаказ_ПоказатьКонтрольЗаполнения" id="594">
+																<Type>CommandBarButton</Type>
+																<Representation>PictureAndText</Representation>
+																<CommandName>Form.Command.ДПЗаказ_ПоказатьКонтрольЗаполнения</CommandName>
+																<Picture>
+																	<xr:Ref>CommonPicture.CW_ЗачетВзаимныхТребований</xr:Ref>
+																	<xr:LoadTransparent>true</xr:LoadTransparent>
+																</Picture>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Контроль</v8:content>
+																	</v8:item>
+																</Title>
+																<ExtendedTooltip name="ДПЗаказ_ПоказатьКонтрольЗаполненияРасширеннаяПодсказка" id="595"/>
+															</Button>
+														</ChildItems>
+													</AutoCommandBar>
+													<ExtendedTooltip name="ДПЗаказРасширеннаяПодсказка" id="538"/>
+													<SearchStringAddition name="ДПЗаказСтрокаПоиска" id="539">
+														<AdditionSource>
+															<Item>ДПЗаказ</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ДПЗаказСтрокаПоискаКонтекстноеМеню" id="540"/>
+														<ExtendedTooltip name="ДПЗаказСтрокаПоискаРасширеннаяПодсказка" id="541"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ДПЗаказСостояниеПросмотра" id="542">
+														<AdditionSource>
+															<Item>ДПЗаказ</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ДПЗаказСостояниеПросмотраКонтекстноеМеню" id="543"/>
+														<ExtendedTooltip name="ДПЗаказСостояниеПросмотраРасширеннаяПодсказка" id="544"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ДПЗаказУправлениеПоиском" id="545">
+														<AdditionSource>
+															<Item>ДПЗаказ</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ДПЗаказУправлениеПоискомКонтекстноеМеню" id="546"/>
+														<ExtendedTooltip name="ДПЗаказУправлениеПоискомРасширеннаяПодсказка" id="547"/>
+													</SearchControlAddition>
+													<Events>
+														<Event name="BeforeAddRow">ДПЗаказ_ПередНачаломДобавления</Event>
+														<Event name="BeforeDeleteRow">ДПЗаказ_ПередУдалением</Event>
+														<Event name="OnActivateRow">ДПЗаказ_ПриАктивизацииСтроки</Event>
+														<Event name="DragStart">ДПЗаказ_НачалоПеретаскивания</Event>
+														<Event name="Drag">ДПЗаказ_Перетаскивание</Event>
+														<Event name="BeforeRowChange">ДПЗаказ_ПередНачаломИзменения</Event>
+													</Events>
+													<ChildItems>
+														<InputField name="ДПЗаказ_Параметр" id="624">
+															<DataPath>ДПЗаказ.Параметр_Представление</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Параметр</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="ДПЗаказ_ПараметрКонтекстноеМеню" id="625"/>
+															<ExtendedTooltip name="ДПЗаказ_ПараметрРасширеннаяПодсказка" id="626"/>
+														</InputField>
+														<CheckBoxField name="ДПЗаказ_КонтрольЗаполнения" id="627">
+															<DataPath>ДПЗаказ.КонтрольЗаполнения</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ДПЗаказ_КонтрольЗаполненияКонтекстноеМеню" id="628"/>
+															<ExtendedTooltip name="ДПЗаказ_КонтрольЗаполненияРасширеннаяПодсказка" id="629"/>
+															<Events>
+																<Event name="OnChange">ДПЗаказ_КонтрольЗаполненияПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+													</ChildItems>
+												</Table>
+												<UsualGroup name="КонтрольЗаполненияЗаказа" id="598">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Контроль заполнения</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Контроль заполнения заявки</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Horizontal</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>StrongSeparation</Representation>
+													<ExtendedTooltip name="КонтрольЗаполненияЗаказаРасширеннаяПодсказка" id="599"/>
+													<ChildItems>
+														<UsualGroup name="Группа7" id="600">
+															<Group>Vertical</Group>
+															<Behavior>Usual</Behavior>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="601"/>
+															<ChildItems>
+																<CheckBoxField name="КонтрольЗаполненияКлиентаЗаказ" id="602">
+																	<DataPath>Объект.КонтрольЗаполненияКлиентаЗаказ</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>клиент</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="КонтрольЗаполненияКлиентаЗаказКонтекстноеМеню" id="603"/>
+																	<ExtendedTooltip name="КонтрольЗаполненияКлиентаЗаказРасширеннаяПодсказка" id="604"/>
+																</CheckBoxField>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="Группа15" id="608">
+															<Group>Vertical</Group>
+															<Behavior>Usual</Behavior>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="Группа15РасширеннаяПодсказка" id="609"/>
+															<ChildItems>
+																<CheckBoxField name="КонтрольЗаполненияГрузаЗаказ" id="610">
+																	<DataPath>Объект.КонтрольЗаполненияГрузаЗаказ</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>груз</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="КонтрольЗаполненияГрузаЗаказКонтекстноеМеню" id="611"/>
+																	<ExtendedTooltip name="КонтрольЗаполненияГрузаЗаказРасширеннаяПодсказка" id="612"/>
+																</CheckBoxField>
+																<CheckBoxField name="КонтрольЗаполненияМаршрутаЗаказ" id="613">
+																	<DataPath>Объект.КонтрольЗаполненияМаршрутаЗаказ</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>маршрут</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="КонтрольЗаполненияМаршрутаЗаказКонтекстноеМеню" id="614"/>
+																	<ExtendedTooltip name="КонтрольЗаполненияМаршрутаЗаказРасширеннаяПодсказка" id="615"/>
+																</CheckBoxField>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="Группа16" id="616">
+															<Group>Vertical</Group>
+															<Behavior>Usual</Behavior>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="Группа16РасширеннаяПодсказка" id="617"/>
+															<ChildItems>
+																<CheckBoxField name="КонтрольЗаполненияМенеджераПродажЗаказ" id="618">
+																	<DataPath>Объект.КонтрольЗаполненияМенеджераПродажЗаказ</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>менеджер продаж</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="КонтрольЗаполненияМенеджераПродажЗаказКонтекстноеМеню" id="619"/>
+																	<ExtendedTooltip name="КонтрольЗаполненияМенеджераПродажЗаказРасширеннаяПодсказка" id="620"/>
+																</CheckBoxField>
+																<CheckBoxField name="КонтрольЗаполненияОперативногоМенеджераЗаказ" id="621">
+																	<DataPath>Объект.КонтрольЗаполненияОперативногоМенеджераЗаказ</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>оперативный менеджер</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="КонтрольЗаполненияОперативногоМенеджераЗаказКонтекстноеМеню" id="622"/>
+																	<ExtendedTooltip name="КонтрольЗаполненияОперативногоМенеджераЗаказРасширеннаяПодсказка" id="623"/>
+																</CheckBoxField>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаПараметрыПутевыхЛистов" id="413">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Параметры путевых листов</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница параметры путевых листов</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Picture>
+												<xr:Ref>CommonPicture.CW_Меню</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="СтраницаПараметрыПутевыхЛистовРасширеннаяПодсказка" id="414"/>
+											<ChildItems>
+												<Table name="ПараметрыПутевыхЛистов" id="415">
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>Объект.ПараметрыПутевыхЛистов</DataPath>
+													<CommandSet>
+														<ExcludedCommand>CancelSearch</ExcludedCommand>
+														<ExcludedCommand>Copy</ExcludedCommand>
+														<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+														<ExcludedCommand>EndEdit</ExcludedCommand>
+														<ExcludedCommand>Find</ExcludedCommand>
+														<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+														<ExcludedCommand>OutputList</ExcludedCommand>
+														<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+														<ExcludedCommand>SelectAll</ExcludedCommand>
+														<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+														<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+														<ExcludedCommand>SortListAsc</ExcludedCommand>
+														<ExcludedCommand>SortListDesc</ExcludedCommand>
+													</CommandSet>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="ПараметрыПутевыхЛистовКонтекстноеМеню" id="416"/>
+													<AutoCommandBar name="ПараметрыПутевыхЛистовКоманднаяПанель" id="417">
+														<ChildItems>
+															<ButtonGroup name="ПараметрыПутевыхЛистовГруппа2" id="677">
+																<Representation>Compact</Representation>
+																<ExtendedTooltip name="ПараметрыПутевыхЛистовГруппа2РасширеннаяПодсказка" id="678"/>
+																<ChildItems>
+																	<Button name="ПараметрыПутевыхЛистовДобавить" id="667">
+																		<Type>CommandBarButton</Type>
+																		<Representation>Picture</Representation>
+																		<CommandName>Form.Item.ПараметрыПутевыхЛистов.StandardCommand.Add</CommandName>
+																		<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+																		<ExtendedTooltip name="ПараметрыПутевыхЛистовДобавитьРасширеннаяПодсказка" id="668"/>
+																	</Button>
+																	<Button name="ПараметрыПутевыхЛистовИзменить" id="669">
+																		<Type>CommandBarButton</Type>
+																		<Representation>Picture</Representation>
+																		<CommandName>Form.Item.ПараметрыПутевыхЛистов.StandardCommand.Change</CommandName>
+																		<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+																		<ExtendedTooltip name="ПараметрыПутевыхЛистовИзменитьРасширеннаяПодсказка" id="670"/>
+																	</Button>
+																</ChildItems>
+															</ButtonGroup>
+															<Button name="ПараметрыПутевыхЛистовУдалить" id="671">
+																<Type>CommandBarButton</Type>
+																<Representation>Picture</Representation>
+																<CommandName>Form.Item.ПараметрыПутевыхЛистов.StandardCommand.Delete</CommandName>
+																<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+																<ExtendedTooltip name="ПараметрыПутевыхЛистовУдалитьРасширеннаяПодсказка" id="672"/>
+															</Button>
+															<ButtonGroup name="ПараметрыПутевыхЛистовГруппа3" id="679">
+																<Representation>Compact</Representation>
+																<ExtendedTooltip name="ПараметрыПутевыхЛистовГруппа3РасширеннаяПодсказка" id="680"/>
+																<ChildItems>
+																	<Button name="ПараметрыПутевыхЛистовПереместитьВверх" id="673">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Item.ПараметрыПутевыхЛистов.StandardCommand.MoveUp</CommandName>
+																		<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+																		<ExtendedTooltip name="ПараметрыПутевыхЛистовПереместитьВверхРасширеннаяПодсказка" id="674"/>
+																	</Button>
+																	<Button name="ПараметрыПутевыхЛистовПереместитьВниз" id="675">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Item.ПараметрыПутевыхЛистов.StandardCommand.MoveDown</CommandName>
+																		<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+																		<ExtendedTooltip name="ПараметрыПутевыхЛистовПереместитьВнизРасширеннаяПодсказка" id="676"/>
+																	</Button>
+																</ChildItems>
+															</ButtonGroup>
+														</ChildItems>
+													</AutoCommandBar>
+													<ExtendedTooltip name="ПараметрыПутевыхЛистовРасширеннаяПодсказка" id="418"/>
+													<SearchStringAddition name="ПараметрыПутевыхЛистовСтрокаПоиска" id="419">
+														<AdditionSource>
+															<Item>ПараметрыПутевыхЛистов</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ПараметрыПутевыхЛистовСтрокаПоискаКонтекстноеМеню" id="420"/>
+														<ExtendedTooltip name="ПараметрыПутевыхЛистовСтрокаПоискаРасширеннаяПодсказка" id="421"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ПараметрыПутевыхЛистовСостояниеПросмотра" id="422">
+														<AdditionSource>
+															<Item>ПараметрыПутевыхЛистов</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ПараметрыПутевыхЛистовСостояниеПросмотраКонтекстноеМеню" id="423"/>
+														<ExtendedTooltip name="ПараметрыПутевыхЛистовСостояниеПросмотраРасширеннаяПодсказка" id="424"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ПараметрыПутевыхЛистовУправлениеПоиском" id="425">
+														<AdditionSource>
+															<Item>ПараметрыПутевыхЛистов</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ПараметрыПутевыхЛистовУправлениеПоискомКонтекстноеМеню" id="426"/>
+														<ExtendedTooltip name="ПараметрыПутевыхЛистовУправлениеПоискомРасширеннаяПодсказка" id="427"/>
+													</SearchControlAddition>
+													<ChildItems>
+														<LabelField name="ПараметрыПутевыхЛистовНомерСтроки" id="428">
+															<DataPath>Объект.ПараметрыПутевыхЛистов.LineNumber</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<Width>1</Width>
+															<ContextMenu name="ПараметрыПутевыхЛистовНомерСтрокиКонтекстноеМеню" id="429"/>
+															<ExtendedTooltip name="ПараметрыПутевыхЛистовНомерСтрокиРасширеннаяПодсказка" id="430"/>
+														</LabelField>
+														<InputField name="ПараметрыПутевыхЛистовРеквизитПутевогоЛиста" id="445">
+															<DataPath>Объект.ПараметрыПутевыхЛистов.РеквизитПутевогоЛиста</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<DropListButton>true</DropListButton>
+															<ChooseType>false</ChooseType>
+															<ContextMenu name="ПараметрыПутевыхЛистовРеквизитПутевогоЛистаКонтекстноеМеню" id="446"/>
+															<ExtendedTooltip name="ПараметрыПутевыхЛистовРеквизитПутевогоЛистаРасширеннаяПодсказка" id="447"/>
+															<Events>
+																<Event name="OnChange">ПараметрыПутевыхЛистовРеквизитПутевогоЛистаПриИзменении</Event>
+																<Event name="StartChoice">ПараметрыПутевыхЛистовРеквизитПутевогоЛистаНачалоВыбора</Event>
+															</Events>
+														</InputField>
+														<InputField name="ПараметрыПутевыхЛистовПараметр" id="434">
+															<DataPath>Объект.ПараметрыПутевыхЛистов.Параметр</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="ПараметрыПутевыхЛистовПараметрКонтекстноеМеню" id="435"/>
+															<ExtendedTooltip name="ПараметрыПутевыхЛистовПараметрРасширеннаяПодсказка" id="436"/>
+															<Events>
+																<Event name="OnChange">ПараметрыПутевыхЛистовПараметрПриИзменении</Event>
+															</Events>
+														</InputField>
+														<ColumnGroup name="ПараметрыПутевыхЛистовГруппа1" id="443">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Направление заполнения</v8:content>
+																</v8:item>
+															</Title>
+															<Group>Horizontal</Group>
+															<ShowInHeader>true</ShowInHeader>
+															<ExtendedTooltip name="ПараметрыПутевыхЛистовГруппа1РасширеннаяПодсказка" id="444"/>
+															<ChildItems>
+																<CheckBoxField name="ПараметрыПутевыхЛистовЧитатьИзГрузоперевозки" id="437">
+																	<DataPath>Объект.ПараметрыПутевыхЛистов.ЧитатьИзГрузоперевозки</DataPath>
+																	<EditMode>EnterOnInput</EditMode>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ПараметрыПутевыхЛистовЧитатьИзГрузоперевозкиКонтекстноеМеню" id="438"/>
+																	<ExtendedTooltip name="ПараметрыПутевыхЛистовЧитатьИзГрузоперевозкиРасширеннаяПодсказка" id="439"/>
+																	<Events>
+																		<Event name="OnChange">ПараметрыПутевыхЛистовЧитатьИзГрузоперевозкиПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+																<CheckBoxField name="ПараметрыПутевыхЛистовЗаполнитьИзПутевогоЛиста" id="440">
+																	<DataPath>Объект.ПараметрыПутевыхЛистов.ЗаполнитьИзПутевогоЛиста</DataPath>
+																	<EditMode>EnterOnInput</EditMode>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ПараметрыПутевыхЛистовЗаполнитьИзПутевогоЛистаКонтекстноеМеню" id="441"/>
+																	<ExtendedTooltip name="ПараметрыПутевыхЛистовЗаполнитьИзПутевогоЛистаРасширеннаяПодсказка" id="442"/>
+																	<Events>
+																		<Event name="OnChange">ПараметрыПутевыхЛистовЗаполнитьИзПутевогоЛистаПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+															</ChildItems>
+														</ColumnGroup>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаПредопределенныеЗначения" id="61">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Предопределённые значения</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Предопределённые значения параметров</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Picture>
+								<xr:Ref>CommonPicture.CW_ЗвездаРедактировать</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="СтраницаПредопределенныеЗначенияРасширеннаяПодсказка" id="62"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаРеквизитыШапки" id="519">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Реквизиты шапки</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа реквизиты шапки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Behavior>Usual</Behavior>
+									<ExtendedTooltip name="ГруппаРеквизитыШапкиРасширеннаяПодсказка" id="520"/>
+									<ChildItems>
+										<Table name="ПредопределенныеЗначенияРеквизитов" id="491">
+											<Height>4</Height>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<DataPath>Объект.ПредопределенныеЗначенияРеквизитов</DataPath>
+											<CommandSet>
+												<ExcludedCommand>Add</ExcludedCommand>
+												<ExcludedCommand>CancelSearch</ExcludedCommand>
+												<ExcludedCommand>Copy</ExcludedCommand>
+												<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+												<ExcludedCommand>Delete</ExcludedCommand>
+												<ExcludedCommand>EndEdit</ExcludedCommand>
+												<ExcludedCommand>Find</ExcludedCommand>
+												<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+												<ExcludedCommand>MoveDown</ExcludedCommand>
+												<ExcludedCommand>MoveUp</ExcludedCommand>
+												<ExcludedCommand>OutputList</ExcludedCommand>
+												<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+												<ExcludedCommand>SelectAll</ExcludedCommand>
+												<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+												<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+												<ExcludedCommand>SortListAsc</ExcludedCommand>
+												<ExcludedCommand>SortListDesc</ExcludedCommand>
+											</CommandSet>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ПредопределенныеЗначенияРеквизитовКонтекстноеМеню" id="492">
+												<Autofill>false</Autofill>
+												<ChildItems>
+													<Button name="ПредопределенныеЗначенияРеквизитовКонтекстноеМенюИзменить" id="531">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Item.ПредопределенныеЗначенияРеквизитов.StandardCommand.Change</CommandName>
+														<ExtendedTooltip name="ПредопределенныеЗначенияРеквизитовКонтекстноеМенюИзменитьРасширеннаяПодсказка" id="532"/>
+													</Button>
+												</ChildItems>
+											</ContextMenu>
+											<AutoCommandBar name="ПредопределенныеЗначенияРеквизитовКоманднаяПанель" id="493">
+												<ChildItems>
+													<Button name="ПредопределенныеЗначенияРеквизитовИзменить" id="525">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<CommandName>Form.Item.ПредопределенныеЗначенияРеквизитов.StandardCommand.Change</CommandName>
+														<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+														<ExtendedTooltip name="ПредопределенныеЗначенияРеквизитовИзменитьРасширеннаяПодсказка" id="526"/>
+													</Button>
+													<Button name="ПредопределенныеЗначенияРеквизитовЗаполнитьСписокРеквизитов" id="529">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ЗаполнитьСписокРеквизитов</CommandName>
+														<ExtendedTooltip name="ПредопределенныеЗначенияРеквизитовЗаполнитьСписокРеквизитовРасширеннаяПодсказка" id="530"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ПредопределенныеЗначенияРеквизитовРасширеннаяПодсказка" id="494"/>
+											<SearchStringAddition name="ПредопределенныеЗначенияРеквизитовСтрокаПоиска" id="495">
+												<AdditionSource>
+													<Item>ПредопределенныеЗначенияРеквизитов</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ПредопределенныеЗначенияРеквизитовСтрокаПоискаКонтекстноеМеню" id="496"/>
+												<ExtendedTooltip name="ПредопределенныеЗначенияРеквизитовСтрокаПоискаРасширеннаяПодсказка" id="497"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ПредопределенныеЗначенияРеквизитовСостояниеПросмотра" id="498">
+												<AdditionSource>
+													<Item>ПредопределенныеЗначенияРеквизитов</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ПредопределенныеЗначенияРеквизитовСостояниеПросмотраКонтекстноеМеню" id="499"/>
+												<ExtendedTooltip name="ПредопределенныеЗначенияРеквизитовСостояниеПросмотраРасширеннаяПодсказка" id="500"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ПредопределенныеЗначенияРеквизитовУправлениеПоиском" id="501">
+												<AdditionSource>
+													<Item>ПредопределенныеЗначенияРеквизитов</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ПредопределенныеЗначенияРеквизитовУправлениеПоискомКонтекстноеМеню" id="502"/>
+												<ExtendedTooltip name="ПредопределенныеЗначенияРеквизитовУправлениеПоискомРасширеннаяПодсказка" id="503"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="Selection">ПредопределенныеЗначенияРеквизитовВыбор</Event>
+												<Event name="BeforeAddRow">ПредопределенныеЗначенияРеквизитовПередНачаломДобавления</Event>
+												<Event name="BeforeDeleteRow">ПредопределенныеЗначенияРеквизитовПередУдалением</Event>
+												<Event name="BeforeRowChange">ПредопределенныеЗначенияРеквизитовПередНачаломИзменения</Event>
+											</Events>
+											<ChildItems>
+												<InputField name="ПредопределенныеЗначенияРеквизитовСинонимРеквизита" id="694">
+													<DataPath>Объект.ПредопределенныеЗначенияРеквизитов.СинонимРеквизита</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ПредопределенныеЗначенияРеквизитовСинонимРеквизитаКонтекстноеМеню" id="695"/>
+													<ExtendedTooltip name="ПредопределенныеЗначенияРеквизитовСинонимРеквизитаРасширеннаяПодсказка" id="696"/>
+												</InputField>
+												<InputField name="ПредопределенныеЗначенияРеквизитовЗначениеРеквизита" id="510">
+													<DataPath>Объект.ПредопределенныеЗначенияРеквизитов.ЗначениеРеквизита</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПредопределенныеЗначенияРеквизитовЗначениеРеквизитаКонтекстноеМеню" id="511"/>
+													<ExtendedTooltip name="ПредопределенныеЗначенияРеквизитовЗначениеРеквизитаРасширеннаяПодсказка" id="512"/>
+												</InputField>
+												<CheckBoxField name="ПредопределенныеЗначенияРеквизитовДляГрузоперевозки" id="513">
+													<DataPath>Объект.ПредопределенныеЗначенияРеквизитов.ДляГрузоперевозки</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<HeaderPicture>
+														<xr:Ref>CommonPicture.CW_Грузоперевозки</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</HeaderPicture>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПредопределенныеЗначенияРеквизитовДляГрузоперевозкиКонтекстноеМеню" id="514"/>
+													<ExtendedTooltip name="ПредопределенныеЗначенияРеквизитовДляГрузоперевозкиРасширеннаяПодсказка" id="515"/>
+												</CheckBoxField>
+												<CheckBoxField name="ПредопределенныеЗначенияРеквизитовДляЗаказа" id="516">
+													<DataPath>Объект.ПредопределенныеЗначенияРеквизитов.ДляЗаказа</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<HeaderPicture>
+														<xr:Ref>CommonPicture.CW_Коробка</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</HeaderPicture>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПредопределенныеЗначенияРеквизитовДляЗаказаКонтекстноеМеню" id="517"/>
+													<ExtendedTooltip name="ПредопределенныеЗначенияРеквизитовДляЗаказаРасширеннаяПодсказка" id="518"/>
+												</CheckBoxField>
+												<CheckBoxField name="ПредопределенныеЗначенияРеквизитовДляЗаявки" id="697">
+													<DataPath>Объект.ПредопределенныеЗначенияРеквизитов.ДляЗаявки</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<HeaderPicture>
+														<xr:Ref>CommonPicture.CW_Заявки</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</HeaderPicture>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПредопределенныеЗначенияРеквизитовДляЗаявкиКонтекстноеМеню" id="698"/>
+													<ExtendedTooltip name="ПредопределенныеЗначенияРеквизитовДляЗаявкиРасширеннаяПодсказка" id="699"/>
+												</CheckBoxField>
+												<CheckBoxField name="ПредопределенныеЗначенияРеквизитовПерезаполнятьЗначение" id="700">
+													<DataPath>Объект.ПредопределенныеЗначенияРеквизитов.ПерезаполнятьЗначение</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<HeaderPicture>
+														<xr:Ref>StdPicture.Refresh</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</HeaderPicture>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПредопределенныеЗначенияРеквизитовПерезаполнятьЗначениеКонтекстноеМеню" id="701"/>
+													<ExtendedTooltip name="ПредопределенныеЗначенияРеквизитовПерезаполнятьЗначениеРасширеннаяПодсказка" id="702"/>
+												</CheckBoxField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа14" id="521">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Параметры</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Behavior>Usual</Behavior>
+									<ExtendedTooltip name="Группа14РасширеннаяПодсказка" id="522"/>
+									<ChildItems>
+										<Table name="ПредопределенныеЗначенияПараметров" id="63">
+											<Height>4</Height>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<EnableStartDrag>true</EnableStartDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>ПредопределенныеЗначенияПараметров</DataPath>
+											<RowPictureDataPath>ПредопределенныеЗначенияПараметров.DefaultPicture</RowPictureDataPath>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<AutoRefresh>false</AutoRefresh>
+											<AutoRefreshPeriod>60</AutoRefreshPeriod>
+											<Period>
+												<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+												<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+												<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+											</Period>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<RestoreCurrentRow>false</RestoreCurrentRow>
+											<TopLevelParent xsi:nil="true"/>
+											<ShowRoot>true</ShowRoot>
+											<AllowRootChoice>false</AllowRootChoice>
+											<UpdateOnDataChange>Auto</UpdateOnDataChange>
+											<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+											<ContextMenu name="ПредопределенныеЗначенияПараметровКонтекстноеМеню" id="64"/>
+											<AutoCommandBar name="ПредопределенныеЗначенияПараметровКоманднаяПанель" id="65">
+												<Autofill>false</Autofill>
+												<ChildItems>
+													<Button name="ПредопределенныеЗначенияПараметровСоздать" id="91">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<CommandName>Form.Item.ПредопределенныеЗначенияПараметров.StandardCommand.Create</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Добавить</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ПредопределенныеЗначенияПараметровСоздатьРасширеннаяПодсказка" id="92"/>
+													</Button>
+													<Button name="ПредопределенныеЗначенияПараметровСкопировать" id="93">
+														<Type>CommandBarButton</Type>
+														<Representation>Picture</Representation>
+														<CommandName>Form.Item.ПредопределенныеЗначенияПараметров.StandardCommand.Copy</CommandName>
+														<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+														<ExtendedTooltip name="ПредопределенныеЗначенияПараметровСкопироватьРасширеннаяПодсказка" id="94"/>
+													</Button>
+													<Button name="ПредопределенныеЗначенияПараметровУдалить" id="95">
+														<Type>CommandBarButton</Type>
+														<Representation>Picture</Representation>
+														<CommandName>Form.Item.ПредопределенныеЗначенияПараметров.StandardCommand.Delete</CommandName>
+														<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+														<ExtendedTooltip name="ПредопределенныеЗначенияПараметровУдалитьРасширеннаяПодсказка" id="96"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ПредопределенныеЗначенияПараметровРасширеннаяПодсказка" id="66"/>
+											<SearchStringAddition name="ПредопределенныеЗначенияПараметровСтрокаПоиска" id="106">
+												<AdditionSource>
+													<Item>ПредопределенныеЗначенияПараметров</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ПредопределенныеЗначенияПараметровСтрокаПоискаКонтекстноеМеню" id="107"/>
+												<ExtendedTooltip name="ПредопределенныеЗначенияПараметровСтрокаПоискаРасширеннаяПодсказка" id="108"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ПредопределенныеЗначенияПараметровСостояниеПросмотра" id="109">
+												<AdditionSource>
+													<Item>ПредопределенныеЗначенияПараметров</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ПредопределенныеЗначенияПараметровСостояниеПросмотраКонтекстноеМеню" id="110"/>
+												<ExtendedTooltip name="ПредопределенныеЗначенияПараметровСостояниеПросмотраРасширеннаяПодсказка" id="111"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ПредопределенныеЗначенияПараметровУправлениеПоиском" id="112">
+												<AdditionSource>
+													<Item>ПредопределенныеЗначенияПараметров</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ПредопределенныеЗначенияПараметровУправлениеПоискомКонтекстноеМеню" id="113"/>
+												<ExtendedTooltip name="ПредопределенныеЗначенияПараметровУправлениеПоискомРасширеннаяПодсказка" id="114"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="ВидСубъекта" id="67">
+													<DataPath>ПредопределенныеЗначенияПараметров.ВидСубъекта</DataPath>
+													<Visible>false</Visible>
+													<ContextMenu name="ВидСубъектаКонтекстноеМеню" id="68"/>
+													<ExtendedTooltip name="ВидСубъектаРасширеннаяПодсказка" id="69"/>
+												</LabelField>
+												<LabelField name="Субъект" id="70">
+													<DataPath>ПредопределенныеЗначенияПараметров.Субъект</DataPath>
+													<Visible>false</Visible>
+													<ContextMenu name="СубъектКонтекстноеМеню" id="71"/>
+													<ExtendedTooltip name="СубъектРасширеннаяПодсказка" id="72"/>
+												</LabelField>
+												<LabelField name="Параметр" id="73">
+													<DataPath>ПредопределенныеЗначенияПараметров.Параметр</DataPath>
+													<ContextMenu name="ПараметрКонтекстноеМеню" id="74"/>
+													<ExtendedTooltip name="ПараметрРасширеннаяПодсказка" id="75"/>
+												</LabelField>
+												<LabelField name="Значение" id="76">
+													<DataPath>ПредопределенныеЗначенияПараметров.Значение</DataPath>
+													<ContextMenu name="ЗначениеКонтекстноеМеню" id="77"/>
+													<ExtendedTooltip name="ЗначениеРасширеннаяПодсказка" id="78"/>
+												</LabelField>
+												<LabelField name="ЗначениеПлан" id="79">
+													<DataPath>ПредопределенныеЗначенияПараметров.ЗначениеПлан</DataPath>
+													<Visible>false</Visible>
+													<ContextMenu name="ЗначениеПланКонтекстноеМеню" id="80"/>
+													<ExtendedTooltip name="ЗначениеПланРасширеннаяПодсказка" id="81"/>
+												</LabelField>
+												<LabelField name="ЗначениеФакт" id="82">
+													<DataPath>ПредопределенныеЗначенияПараметров.ЗначениеФакт</DataPath>
+													<Visible>false</Visible>
+													<ContextMenu name="ЗначениеФактКонтекстноеМеню" id="83"/>
+													<ExtendedTooltip name="ЗначениеФактРасширеннаяПодсказка" id="84"/>
+												</LabelField>
+												<CheckBoxField name="ДляГрузоперевозок" id="464">
+													<DataPath>ПредопределенныеЗначенияПараметров.ДляГрузоперевозок</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<HeaderPicture>
+														<xr:Ref>CommonPicture.CW_Грузоперевозки</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</HeaderPicture>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДляГрузоперевозокКонтекстноеМеню" id="465"/>
+													<ExtendedTooltip name="ДляГрузоперевозокРасширеннаяПодсказка" id="466"/>
+												</CheckBoxField>
+												<CheckBoxField name="ДляЗаказов" id="630">
+													<DataPath>ПредопределенныеЗначенияПараметров.ДляЗаказов</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<HeaderPicture>
+														<xr:Ref>CommonPicture.CW_Коробка</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</HeaderPicture>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДляЗаказовКонтекстноеМеню" id="631"/>
+													<ExtendedTooltip name="ДляЗаказовРасширеннаяПодсказка" id="632"/>
+												</CheckBoxField>
+												<CheckBoxField name="ДляЗаявок" id="461">
+													<DataPath>ПредопределенныеЗначенияПараметров.ДляЗаявок</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<HeaderPicture>
+														<xr:Ref>CommonPicture.CW_Заявки</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</HeaderPicture>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДляЗаявокКонтекстноеМеню" id="462"/>
+													<ExtendedTooltip name="ДляЗаявокРасширеннаяПодсказка" id="463"/>
+												</CheckBoxField>
+												<CheckBoxField name="ДобавлятьАвтоматически" id="85">
+													<DataPath>ПредопределенныеЗначенияПараметров.ДобавлятьАвтоматически</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<HeaderPicture>
+														<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</HeaderPicture>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДобавлятьАвтоматическиКонтекстноеМеню" id="86"/>
+													<ExtendedTooltip name="ДобавлятьАвтоматическиРасширеннаяПодсказка" id="87"/>
+												</CheckBoxField>
+												<CheckBoxField name="ПерезаполнятьАвтоматически" id="88">
+													<DataPath>ПредопределенныеЗначенияПараметров.ПерезаполнятьАвтоматически</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<HeaderPicture>
+														<xr:Ref>StdPicture.Refresh</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</HeaderPicture>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПерезаполнятьАвтоматическиКонтекстноеМеню" id="89"/>
+													<ExtendedTooltip name="ПерезаполнятьАвтоматическиРасширеннаяПодсказка" id="90"/>
+												</CheckBoxField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаБюджет" id="291">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Бюджет</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница бюджет</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Picture>
+								<xr:Ref>CommonPicture.CW_Калькулятор</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="СтраницаБюджетРасширеннаяПодсказка" id="292"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаЗначенияСтатейПоУмолчанию" id="653">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа значения статей по умолчанию</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа значения статей по умолчанию</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЗначенияСтатейПоУмолчаниюРасширеннаяПодсказка" id="654"/>
+									<ChildItems>
+										<UsualGroup name="Расходы" id="297">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Значения по умолчанию для расходных статей</v8:content>
+												</v8:item>
+											</Title>
+											<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Расходы</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>StrongSeparation</Representation>
+											<ExtendedTooltip name="РасходыРасширеннаяПодсказка" id="298"/>
+											<ChildItems>
+												<InputField name="БюджетВалютаРасхода" id="305">
+													<DataPath>Объект.БюджетВалютаРасхода</DataPath>
+													<TitleLocation>Top</TitleLocation>
+													<ChoiceButton>true</ChoiceButton>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Автоматически</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="БюджетВалютаРасходаКонтекстноеМеню" id="306"/>
+													<ExtendedTooltip name="БюджетВалютаРасходаРасширеннаяПодсказка" id="307"/>
+												</InputField>
+												<UsualGroup name="ГруппаКурсВалютыРасходы" id="687">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Курс валюты</v8:content>
+														</v8:item>
+													</Title>
+													<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа курс валюты расходы</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
+													<ExtendedTooltip name="ГруппаКурсВалютыРасходыРасширеннаяПодсказка" id="688"/>
+													<ChildItems>
+														<RadioButtonField name="ТипКурсаВалютыРасхода" id="681">
+															<DataPath>Объект.ТипКурсаВалютыРасхода</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<RadioButtonType>Auto</RadioButtonType>
+															<ColumnsCount>1</ColumnsCount>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>автоматически</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:decimal">0</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>фиксированный</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:decimal">1</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>по дате параметра</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:decimal">2</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="ТипКурсаВалютыРасходаКонтекстноеМеню" id="682"/>
+															<ExtendedTooltip name="ТипКурсаВалютыРасходаРасширеннаяПодсказка" id="683"/>
+															<Events>
+																<Event name="OnChange">ТипКурсаВалютыРасходаПриИзменении</Event>
+															</Events>
+														</RadioButtonField>
+														<InputField name="БюджетДатаКурсаРасхода" id="308">
+															<DataPath>Объект.БюджетДатаКурсаРасхода</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Параметр</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>Top</TitleLocation>
+															<InputHint>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Автоматически</v8:content>
+																</v8:item>
+															</InputHint>
+															<ContextMenu name="БюджетДатаКурсаРасходаКонтекстноеМеню" id="309"/>
+															<ExtendedTooltip name="БюджетДатаКурсаРасходаРасширеннаяПодсказка" id="310"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="Доходы" id="295">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Значения по умолчанию для доходных статей</v8:content>
+												</v8:item>
+											</Title>
+											<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Доходы</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>StrongSeparation</Representation>
+											<ExtendedTooltip name="ДоходыРасширеннаяПодсказка" id="296"/>
+											<ChildItems>
+												<InputField name="БюджетВалютаДохода" id="299">
+													<DataPath>Объект.БюджетВалютаДохода</DataPath>
+													<TitleLocation>Top</TitleLocation>
+													<ChoiceButton>true</ChoiceButton>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Автоматически</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="БюджетВалютаДоходаКонтекстноеМеню" id="300"/>
+													<ExtendedTooltip name="БюджетВалютаДоходаРасширеннаяПодсказка" id="301"/>
+												</InputField>
+												<UsualGroup name="ГруппаКурсВалютыДоходы" id="689">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Курс валюты</v8:content>
+														</v8:item>
+													</Title>
+													<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа курс валюты доходы</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
+													<ExtendedTooltip name="ГруппаКурсВалютыДоходыРасширеннаяПодсказка" id="690"/>
+													<ChildItems>
+														<RadioButtonField name="ТипКурсаВалютыДохода" id="684">
+															<DataPath>Объект.ТипКурсаВалютыДохода</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<RadioButtonType>Auto</RadioButtonType>
+															<ColumnsCount>1</ColumnsCount>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>автоматически</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:decimal">0</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>фиксированный</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:decimal">1</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>по дате параметра</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:decimal">2</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="ТипКурсаВалютыДоходаКонтекстноеМеню" id="685"/>
+															<ExtendedTooltip name="ТипКурсаВалютыДоходаРасширеннаяПодсказка" id="686"/>
+															<Events>
+																<Event name="OnChange">ТипКурсаВалютыДоходаПриИзменении</Event>
+															</Events>
+														</RadioButtonField>
+														<InputField name="БюджетДатаКурсаДохода" id="302">
+															<DataPath>Объект.БюджетДатаКурсаДохода</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Параметр</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>Top</TitleLocation>
+															<InputHint>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Автоматически</v8:content>
+																</v8:item>
+															</InputHint>
+															<ContextMenu name="БюджетДатаКурсаДоходаКонтекстноеМеню" id="303"/>
+															<ExtendedTooltip name="БюджетДатаКурсаДоходаРасширеннаяПодсказка" id="304"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаКомментарий" id="13">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Комментарий</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница комментарий</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Picture>
+								<xr:Ref>CommonPicture.CW_Комментарий</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="СтраницаКомментарийExtendedTooltip" id="59"/>
+							<ChildItems>
+								<InputField name="Комментарий" id="7">
+									<DataPath>Объект.Комментарий</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MultiLine>true</MultiLine>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="КомментарийКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="КомментарийExtendedTooltip" id="60"/>
+								</InputField>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.CW_ТипыПеревозок</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<Columns>
+				<AdditionalColumns table="Объект.ПредопределенныеЗначенияРеквизитов">
+					<Column name="ЗначениеСтроковогоТипа" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Значение строкового типа</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="Объект.ПараметрыПутевыхЛистов"/>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДПГ_ПоказыватьКоличествоПараметров" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ показывать количество параметров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДПГ_СостояниеСвертки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ состояние свертки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.CW_ПараметрыГрузоперевозок</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПредопределенныеЗначенияПараметров" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предопределенные значения параметров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.CW_ПредопределенныеЗначенияПараметров</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ДПГ" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево Параметров Грузоперевозок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="Параметр" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметр</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:ChartOfCharacteristicTypesRef.CW_ПараметрыГрузоперевозок</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Параметр_Представление" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметр представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИндексКартинки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="КонтрольЗаполнения" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контроль заполнения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДинамическийПараметр" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Динамический параметр</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЭтоГруппа" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это группа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторГруппы" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор группы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НаименованиеГруппы" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование группы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="УдалениеРазрешено" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удаление разрешено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Буфер" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Буфер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КонтрольЗаполненияРасходы" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контроль заполнения в расходах</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КонтрольЗаполненияДоходы" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контроль заполнения в доходах</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторВладельца" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор владельца</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:UUID</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="АдресСвойствПараметров" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес свойств параметров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДПГ_ТекущийПараметр" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ текущий параметр</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.CW_ПараметрыГрузоперевозок</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДПГ_ТекущаяГруппа" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ текущая группа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДПГ_БуферОбмена" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ буфер обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ДПЗ" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево Параметров Грузоперевозок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="Параметр" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметр</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:ChartOfCharacteristicTypesRef.CW_ПараметрыГрузоперевозок</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Параметр_Представление" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметр представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИндексКартинки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="КонтрольЗаполнения" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контроль заполнения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДинамическийПараметр" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Динамический параметр</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЭтоГруппа" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это группа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторГруппы" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор группы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НаименованиеГруппы" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование группы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="УдалениеРазрешено" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удаление разрешено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Буфер" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Буфер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторВладельца" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор владельца</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:UUID</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДПЗ_БуферОбмена" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ буфер обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ДПЗ_ПоказыватьКоличествоПараметров" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ показывать количество параметров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДПЗ_СостояниеСвертки" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ состояние свертки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.CW_ПараметрыГрузоперевозок</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Settings>
+		</Attribute>
+		<Attribute name="ДПЗ_ТекущаяГруппа" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ текущая группа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДПЗ_ТекущийПараметр" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ текущий параметр</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.CW_ПараметрыГрузоперевозок</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИндексСтраницыПараметров" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Индекс страницы параметров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтрольЗаполненияЗаявки" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контроль заполнения заявки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтрольЗаполненияРеквизитов" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контроль заполнения реквизитов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДПЗаказ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево Параметров Грузоперевозок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.CW_ИспользуютсяПараметрыВЗаказах</Item>
+			</FunctionalOptions>
+			<Columns>
+				<Column name="Параметр" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметр</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:ChartOfCharacteristicTypesRef.CW_ПараметрыГрузоперевозок</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Параметр_Представление" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметр представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИндексКартинки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="КонтрольЗаполнения" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контроль заполнения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДинамическийПараметр" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Динамический параметр</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЭтоГруппа" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это группа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторГруппы" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор группы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НаименованиеГруппы" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование группы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="УдалениеРазрешено" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удаление разрешено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Буфер" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Буфер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КонтрольЗаполненияРасходы" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контроль заполнения в расходах</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КонтрольЗаполненияДоходы" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контроль заполнения в доходах</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторВладельца" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор владельца</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:UUID</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДПЗаказ_БуферОбмена" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ буфер обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ДПЗаказ_ПоказыватьКоличествоПараметров" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ показывать количество параметров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДПЗаказ_СостояниеСвертки" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ состояние свертки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.CW_ПараметрыГрузоперевозок</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Settings>
+		</Attribute>
+		<Attribute name="ДПЗаказ_ТекущаяГруппа" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ текущая группа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДПЗаказ_ТекущийПараметр" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ текущий параметр</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.CW_ПараметрыГрузоперевозок</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтрольЗаполненияЗаказа" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контроль заполнения заявки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокРеквизитовПутевогоЛиста" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список реквизитов путевого листа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:EnumRef.CW_РеквизитыПутевыхЛистов</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ДПЗ_ТекущийПараметр1" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ текущий параметр</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.CW_ПараметрыГрузоперевозок</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтрольЗаполненияЗаказа1" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контроль заполнения заявки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДПГ_Параметр</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДПГ.ЭтоГруппа</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДПЗ_Параметр</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДПЗ.ЭтоГруппа</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДПГ_КонтрольЗаполнения</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДПГ_КонтрольЗаполненияРасходы</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДПГ_КонтрольЗаполненияДоходы</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДПГ.ЭтоГруппа</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДПГ.ДинамическийПараметр</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ToolTipBackColor</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Отображать</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДПЗ_КонтрольЗаполнения</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДПЗ.ЭтоГруппа</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДПЗ.ДинамическийПараметр</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ToolTipBackColor</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Отображать</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДПГ_Параметр</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДПГ.Буфер</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПараметрыПутевыхЛистов</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ПараметрыПутевыхЛистов.ТипыСоответствуют</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПараметрыПутевыхЛистовЧитатьИзГрузоперевозки</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ПараметрыПутевыхЛистов.РеквизитПутевогоЛиста</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.CW_РеквизитыПутевыхЛистов.Дата</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ПараметрыПутевыхЛистов.РеквизитПутевогоЛиста</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.CW_РеквизитыПутевыхЛистов.Номер</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДПЗаказ_Параметр</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДПЗаказ.ЭтоГруппа</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДПЗаказ_КонтрольЗаполнения</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДПЗаказ.ЭтоГруппа</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДПЗаказ.ДинамическийПараметр</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ToolTipBackColor</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Отображать</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДПЗаказ_Параметр</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДПЗаказ.Буфер</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ДПГ_РазвернутьВсе" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_ГруппировкиРазвернуть</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="11" y="13"/>
+			</Picture>
+			<Action>ДПГ_РазвернутьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПГ_СвернутьВсе" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_ГруппировкиСвернуть</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="11" y="13"/>
+			</Picture>
+			<Action>ДПГ_СвернутьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПодборПараметров" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор параметров</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор параметров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодборПараметров</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПГ_ДобавитьГруппу" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить группу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить группу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateFolder</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДПГ_ДобавитьГруппу</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПГ_ПереместитьВверх" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveUp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДПГ_ПереместитьВверх</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПГ_ПереместитьВниз" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вниз</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вниз</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveDown</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДПГ_ПереместитьВниз</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПГ_Строка_Вырезать" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вырезать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ строка вырезать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДПГ_Строка_Вырезать</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПГ_Строка_Вставить" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действия вырезать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДПГ_Строка_Вставить</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПГ_ПереместитьНаУровеньВверх" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ переместить на уровень вверх</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить на уровень вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДПГ_ПереместитьНаУровеньВверх</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПЗ_ПереместитьНаУровеньВверх" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ переместить на уровень вверх</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить на уровень вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДПЗ_ПереместитьНаУровеньВверх</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПЗ_ДобавитьГруппу" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить группу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить группу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateFolder</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДПЗ_ДобавитьГруппу</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПЗ_РазвернутьВсе" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_ГруппировкиРазвернуть</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="11" y="13"/>
+			</Picture>
+			<Action>ДПЗ_РазвернутьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПЗ_СвернутьВсе" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_ГруппировкиСвернуть</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="11" y="13"/>
+			</Picture>
+			<Action>ДПЗ_СвернутьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПЗ_ПереместитьВверх" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveUp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДПЗ_ПереместитьВверх</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПЗ_ПереместитьВниз" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вниз</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вниз</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveDown</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДПЗ_ПереместитьВниз</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПЗ_Строка_Вставить" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действия вырезать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДПЗ_Строка_Вставить</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПЗ_Строка_Вырезать" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вырезать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ строка вырезать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДПЗ_Строка_Вырезать</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПГ_ПоказатьКонтрольЗаполнения" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать контроль заполнения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать/скрыть контроль заполнения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДПГ_ПоказатьКонтрольЗаполнения</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПЗ_ПоказатьКонтрольЗаполнения" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать контроль заполнения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать/скрыть контроль заполнения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДПЗ_ПоказатьКонтрольЗаполнения</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПеренестиВСоставПараметровЗаявки" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В состав параметров заявки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в состав параметров заявки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_Заявки</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПеренестиВСоставПараметровЗаявки</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.CW_ИспользованиеЗаявок</Item>
+			</FunctionalOptions>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ПеренестиВСоставПараметровГрузопереовзки" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В состав параметров грузоперевозки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в состав параметров грузопереовзки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_Грузоперевозки</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПеренестиВСоставПараметровГрузопереовзки</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ДПГ_ВосстановитьСверткуДерево" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ восстановить свертку дерево</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Воостановить структуру дерева по настройкам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДПГ_ВосстановитьСверткуДерево</Action>
+		</Command>
+		<Command name="ДПЗ_ВосстановитьСверткуДерево" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ восстановить свертку дерево</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Воостановить структуру дерева по настройкам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДПЗ_ВосстановитьСверткуДерево</Action>
+		</Command>
+		<Command name="ЗаполнитьСписокРеквизитов" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить список реквизитов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьСписокРеквизитов</Action>
+			<Representation>Picture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ДПЗаказ_ВосстановитьСверткуДерево" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ восстановить свертку дерево</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Воостановить структуру дерева по настройкам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДПЗаказ_ВосстановитьСверткуДерево</Action>
+		</Command>
+		<Command name="ДПЗаказ_ДобавитьГруппу" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить группу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить группу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateFolder</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДПЗаказ_ДобавитьГруппу</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПЗаказ_ПереместитьВверх" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveUp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДПЗаказ_ПереместитьВверх</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПЗаказ_ПереместитьВниз" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вниз</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вниз</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveDown</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДПЗаказ_ПереместитьВниз</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПЗаказ_ПереместитьНаУровеньВверх" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ переместить на уровень вверх</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить на уровень вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДПЗаказ_ПереместитьНаУровеньВверх</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПЗаказ_ПоказатьКонтрольЗаполнения" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать контроль заполнения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать/скрыть контроль заполнения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДПЗаказ_ПоказатьКонтрольЗаполнения</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПЗаказ_РазвернутьВсе" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_ГруппировкиРазвернуть</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="11" y="13"/>
+			</Picture>
+			<Action>ДПЗаказ_РазвернутьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПЗаказ_СвернутьВсе" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_ГруппировкиСвернуть</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="11" y="13"/>
+			</Picture>
+			<Action>ДПЗаказ_СвернутьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПЗаказ_Строка_Вставить" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действия вырезать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДПЗаказ_Строка_Вставить</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДПЗаказ_Строка_Вырезать" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вырезать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДПГ строка вырезать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДПЗаказ_Строка_Вырезать</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПеренестиВСоставПараметровЗаказа" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В состав параметров заказа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в состав параметров заявки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_Коробка</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПеренестиВСоставПараметровЗаказа</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.CW_ИспользованиеЗаявок</Item>
+			</FunctionalOptions>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>3:230cfd96-3fc6-4079-9925-d38308c0dd70</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>1</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>3:87a92af2-4ed1-453c-9d56-786d15b421da</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>2</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>3:6cf5aa3e-7196-4ae7-9fb2-ea8dceb96002</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.CW_ПредопределенныеЗначенияПараметров.Command.ОткрытьПредопределенныеЗначенияПараметров</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.CW_СлужебныйВыполненПереход.StandardCommand.OpenByValue.Объект</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>3</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

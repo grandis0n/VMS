@@ -1,0 +1,1558 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Согласование</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>OpenFromMainServer</ExcludedCommand>
+		<ExcludedCommand>OpenFromStandaloneServer</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОбъектСогласования" id="211">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект согласования</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа объект согласования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаОбъектСогласованияРасширеннаяПодсказка" id="212"/>
+			<ChildItems>
+				<LabelField name="ОбъектСогласования" id="152">
+					<DataPath>ОбъектСогласования</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Hiperlink>true</Hiperlink>
+					<ContextMenu name="ОбъектСогласованияКонтекстноеМеню" id="153"/>
+					<ExtendedTooltip name="ОбъектСогласованияРасширеннаяПодсказка" id="154"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСогласование" id="67">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа согласование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа согласование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСогласованиеРасширеннаяПодсказка" id="68"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЭтапыСогласования" id="207">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Этапы согласования</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа этапы согласования</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="ГруппаЭтапыСогласованияРасширеннаяПодсказка" id="208"/>
+					<ChildItems>
+						<Table name="ЭтапыСогласования" id="115">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ЭтапыСогласования</DataPath>
+							<RowPictureDataPath>ЭтапыСогласования.ИндексКартинки</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.CW_КоллекцияСостоянияЭтапаСогласования</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</RowsPicture>
+							<CommandSet>
+								<ExcludedCommand>CancelSearch</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+								<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+								<ExcludedCommand>SearchHistory</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЭтапыСогласованияКонтекстноеМеню" id="116">
+								<Autofill>false</Autofill>
+							</ContextMenu>
+							<AutoCommandBar name="ЭтапыСогласованияКоманднаяПанель" id="117">
+								<ChildItems>
+									<ButtonGroup name="ЭтапыСогласованияГруппа1" id="150">
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="ЭтапыСогласованияГруппа1РасширеннаяПодсказка" id="151"/>
+										<ChildItems>
+											<Button name="ЭтапыСогласованияДобавить" id="146">
+												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
+												<CommandName>Form.Item.ЭтапыСогласования.StandardCommand.Add</CommandName>
+												<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+												<ExtendedTooltip name="ЭтапыСогласованияДобавитьРасширеннаяПодсказка" id="147"/>
+											</Button>
+											<Button name="ЭтапыСогласованияСкопировать" id="226">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>Form.Item.ЭтапыСогласования.StandardCommand.Copy</CommandName>
+												<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+												<ExtendedTooltip name="ЭтапыСогласованияСкопироватьРасширеннаяПодсказка" id="227"/>
+											</Button>
+											<Button name="ИзменитьНаименование" id="186">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ИзменитьНаименование</CommandName>
+												<ExtendedTooltip name="ИзменитьНаименованиеРасширеннаяПодсказка" id="187"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ПорядокСогласования" id="184">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Порядок согласования</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Порядок согласования</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="ПорядокСогласованияРасширеннаяПодсказка" id="185"/>
+										<ChildItems>
+											<Button name="КомандаПараллельное" id="180">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.КомандаПараллельное</CommandName>
+												<ExtendedTooltip name="КомандаПараллельноеРасширеннаяПодсказка" id="181"/>
+											</Button>
+											<Button name="КомандаПоследовательное" id="182">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.КомандаПоследовательное</CommandName>
+												<ExtendedTooltip name="КомандаПоследовательноеРасширеннаяПодсказка" id="183"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="СогласованиеНачать" id="168">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СогласованиеНачать</CommandName>
+										<ExtendedTooltip name="СогласованиеНачатьРасширеннаяПодсказка" id="169"/>
+									</Button>
+									<Button name="КомандаЗавершатьАвтоматически" id="237">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ЗавершатьАвтоматически</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.CW_СераяТочка</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="КомандаЗавершатьАвтоматическиРасширеннаяПодсказка" id="238"/>
+									</Button>
+									<ButtonGroup name="КнопкиЗавершенияСогласования" id="178">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Кнопки завершения согласования</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Кнопки завершения согласования</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="КнопкиЗавершенияСогласованияРасширеннаяПодсказка" id="179"/>
+										<ChildItems>
+											<Button name="СогласованиеОтмена" id="172">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СогласованиеОтмена</CommandName>
+												<ExtendedTooltip name="СогласованиеОтменаРасширеннаяПодсказка" id="173"/>
+											</Button>
+											<Button name="СогласованиеЗавершить" id="164">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СогласованиеЗавершить</CommandName>
+												<ExtendedTooltip name="СогласованиеЗавершитьРасширеннаяПодсказка" id="165"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="ЭтапыСогласованияПечатьЛистаСогласования" id="230">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПечатьЛистаСогласования</CommandName>
+										<ExtendedTooltip name="ЭтапыСогласованияПечатьЛистаСогласованияРасширеннаяПодсказка" id="231"/>
+									</Button>
+									<Button name="ЭтапыСогласованияОбновить" id="216">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Обновить</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.Refresh</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ЭтапыСогласованияОбновитьРасширеннаяПодсказка" id="217"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЭтапыСогласованияРасширеннаяПодсказка" id="118"/>
+							<SearchStringAddition name="ЭтапыСогласованияСтрокаПоиска" id="119">
+								<AdditionSource>
+									<Item>ЭтапыСогласования</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭтапыСогласованияСтрокаПоискаКонтекстноеМеню" id="120"/>
+								<ExtendedTooltip name="ЭтапыСогласованияСтрокаПоискаРасширеннаяПодсказка" id="121"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЭтапыСогласованияСостояниеПросмотра" id="122">
+								<AdditionSource>
+									<Item>ЭтапыСогласования</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭтапыСогласованияСостояниеПросмотраКонтекстноеМеню" id="123"/>
+								<ExtendedTooltip name="ЭтапыСогласованияСостояниеПросмотраРасширеннаяПодсказка" id="124"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЭтапыСогласованияУправлениеПоиском" id="125">
+								<AdditionSource>
+									<Item>ЭтапыСогласования</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭтапыСогласованияУправлениеПоискомКонтекстноеМеню" id="126"/>
+								<ExtendedTooltip name="ЭтапыСогласованияУправлениеПоискомРасширеннаяПодсказка" id="127"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ЭтапыСогласованияВыбор</Event>
+								<Event name="BeforeAddRow">ЭтапыСогласованияПередНачаломДобавления</Event>
+								<Event name="OnActivateRow">ЭтапыСогласованияПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ЭтапыСогласованияНаименование" id="188">
+									<DataPath>ЭтапыСогласования.Наименование</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЭтапыСогласованияНаименованиеКонтекстноеМеню" id="189"/>
+									<ExtendedTooltip name="ЭтапыСогласованияНаименованиеРасширеннаяПодсказка" id="190"/>
+								</InputField>
+								<InputField name="Инициатор" id="131">
+									<DataPath>ЭтапыСогласования.Инициатор</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнициаторКонтекстноеМеню" id="132"/>
+									<ExtendedTooltip name="ИнициаторРасширеннаяПодсказка" id="133"/>
+								</InputField>
+								<InputField name="ЭтапыПорядокСогласования" id="218">
+									<DataPath>ЭтапыСогласования.ПорядокСогласования</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЭтапыПорядокСогласованияКонтекстноеМеню" id="219"/>
+									<ExtendedTooltip name="ЭтапыПорядокСогласованияРасширеннаяПодсказка" id="220"/>
+								</InputField>
+								<InputField name="СостояниеСогласования" id="140">
+									<DataPath>ЭтапыСогласования.СостояниеСогласования</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СостояниеСогласованияКонтекстноеМеню" id="141"/>
+									<ExtendedTooltip name="СостояниеСогласованияРасширеннаяПодсказка" id="142"/>
+								</InputField>
+								<InputField name="ДатаНачала" id="137">
+									<DataPath>ЭтапыСогласования.ДатаНачала</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Начат</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='dd.MM.yyyy HH:mm'</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='dd.MM.yyyy HH:mm'</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="138"/>
+									<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="139"/>
+								</InputField>
+								<ColumnGroup name="ЭтапыСогласованияГруппа2" id="235">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Завершение</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="ЭтапыСогласованияГруппа2РасширеннаяПодсказка" id="236"/>
+									<ChildItems>
+										<InputField name="ПлановаяДатаЗавершения" id="143">
+											<DataPath>ЭтапыСогласования.ПлановаяДатаЗавершения</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>План</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ='dd.MM.yyyy HH:mm'</v8:content>
+												</v8:item>
+											</Format>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ='dd.MM.yyyy HH:mm'</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="ПлановаяДатаЗавершенияКонтекстноеМеню" id="144"/>
+											<ExtendedTooltip name="ПлановаяДатаЗавершенияРасширеннаяПодсказка" id="145"/>
+										</InputField>
+										<InputField name="ЭтапыСогласованияДатаЗавершения" id="213">
+											<DataPath>ЭтапыСогласования.ДатаЗавершения</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Факт</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЭтапыСогласованияДатаЗавершенияКонтекстноеМеню" id="214"/>
+											<ExtendedTooltip name="ЭтапыСогласованияДатаЗавершенияРасширеннаяПодсказка" id="215"/>
+										</InputField>
+										<CheckBoxField name="ЭтапыСогласованияАвтоматическоеЗавершение" id="232">
+											<DataPath>ЭтапыСогласования.АвтоматическоеЗавершение</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Авто</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ЭтапыСогласованияАвтоматическоеЗавершениеКонтекстноеМеню" id="233"/>
+											<ExtendedTooltip name="ЭтапыСогласованияАвтоматическоеЗавершениеРасширеннаяПодсказка" id="234"/>
+										</CheckBoxField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаМаршрутСогласования" id="209">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Маршрут согласования</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа маршрут согласования</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="ГруппаМаршрутСогласованияРасширеннаяПодсказка" id="210"/>
+					<ChildItems>
+						<Table name="МаршрутСогласования" id="69">
+							<Representation>List</Representation>
+							<ReadOnly>true</ReadOnly>
+							<SelectionMode>SingleRow</SelectionMode>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>МаршрутСогласования</DataPath>
+							<RowPictureDataPath>МаршрутСогласования.ИндексКартинки</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.CW_КоллекцияСостоянияСогласованияСтроки</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</RowsPicture>
+							<CommandSet>
+								<ExcludedCommand>CancelSearch</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+								<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+								<ExcludedCommand>SearchHistory</ExcludedCommand>
+								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="МаршрутСогласованияКонтекстноеМеню" id="70">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<ButtonGroup name="МаршрутСогласованияКонтекстноеМенюГруппа1" id="203">
+										<ExtendedTooltip name="МаршрутСогласованияКонтекстноеМенюГруппа1РасширеннаяПодсказка" id="204"/>
+										<ChildItems>
+											<Button name="МаршрутСогласованияКонтекстноеМенюСогласованиеСоглсовано" id="228">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СогласованиеСоглсовано</CommandName>
+												<ExtendedTooltip name="МаршрутСогласованияКонтекстноеМенюСогласованиеСоглсованоРасширеннаяПодсказка" id="229"/>
+											</Button>
+											<Button name="МаршрутСогласованияКонтекстноеМенюСогласованиеОтклонить" id="201">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СогласованиеОтклонить</CommandName>
+												<ExtendedTooltip name="МаршрутСогласованияКонтекстноеМенюСогласованиеОтклонитьРасширеннаяПодсказка" id="202"/>
+											</Button>
+											<Button name="МаршрутСогласованияКонтекстноеМенюСогласованиеКомментарий" id="199">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СогласованиеКомментарий</CommandName>
+												<ExtendedTooltip name="МаршрутСогласованияКонтекстноеМенюСогласованиеКомментарийРасширеннаяПодсказка" id="200"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="КонтекстноеМенюПеремещение" id="205">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Контекстное меню перемещение</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Контекстное меню перемещение</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="КонтекстноеМенюПеремещениеРасширеннаяПодсказка" id="206"/>
+										<ChildItems>
+											<Button name="КонтекстноеМенюПереместитьВверх" id="191">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.МаршрутСогласования.StandardCommand.MoveUp</CommandName>
+												<ExtendedTooltip name="КонтекстноеМенюПереместитьВверхРасширеннаяПодсказка" id="192"/>
+											</Button>
+											<Button name="КонтекстноеМенюПереместитьВниз" id="193">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.МаршрутСогласования.StandardCommand.MoveDown</CommandName>
+												<ExtendedTooltip name="КонтекстноеМенюПереместитьВнизРасширеннаяПодсказка" id="194"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="МаршрутСогласованияКонтекстноеМенюОтпрвитьПисьмо" id="195">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОтпрвитьПисьмо</CommandName>
+										<ExtendedTooltip name="МаршрутСогласованияКонтекстноеМенюОтпрвитьПисьмоРасширеннаяПодсказка" id="196"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="МаршрутСогласованияКоманднаяПанель" id="71">
+								<ChildItems>
+									<ButtonGroup name="МаршрутСогласованияОсновныеКнопки" id="111">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Маршрут согласования основные кнопки</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Маршрут согласования основные кнопки</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="МаршрутСогласованияОсновныеКнопкиРасширеннаяПодсказка" id="112"/>
+										<ChildItems>
+											<Button name="Добавить" id="103">
+												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
+												<CommandName>Form.Item.МаршрутСогласования.StandardCommand.Add</CommandName>
+												<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+												<ExtendedTooltip name="ДобавитьРасширеннаяПодсказка" id="104"/>
+											</Button>
+											<Button name="Удалить" id="105">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>Form.Item.МаршрутСогласования.StandardCommand.Delete</CommandName>
+												<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+												<ExtendedTooltip name="УдалитьРасширеннаяПодсказка" id="106"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="ЗаполнитьПоШаблону" id="155">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ЗаполнитьПоШаблону</CommandName>
+										<ExtendedTooltip name="ЗаполнитьПоШаблонуРасширеннаяПодсказка" id="156"/>
+									</Button>
+									<ButtonGroup name="МаршрутСогласованияПеремещение" id="113">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Маршрут согласования перемещение</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Маршрут согласования перемещение</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="МаршрутСогласованияПеремещениеРасширеннаяПодсказка" id="114"/>
+										<ChildItems>
+											<Button name="ПереместитьВверх" id="107">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.МаршрутСогласования.StandardCommand.MoveUp</CommandName>
+												<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+												<ExtendedTooltip name="ПереместитьВверхРасширеннаяПодсказка" id="108"/>
+											</Button>
+											<Button name="ПереместитьВниз" id="109">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.МаршрутСогласования.StandardCommand.MoveDown</CommandName>
+												<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+												<ExtendedTooltip name="ПереместитьВнизРасширеннаяПодсказка" id="110"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="МаршрутСогласованияГруппа4" id="176">
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="МаршрутСогласованияГруппа4РасширеннаяПодсказка" id="177"/>
+										<ChildItems>
+											<Button name="СогласованиеСоглсовано" id="174">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СогласованиеСоглсовано</CommandName>
+												<ExtendedTooltip name="СогласованиеСоглсованоРасширеннаяПодсказка" id="175"/>
+											</Button>
+											<Button name="СогласованиеОтклонить" id="170">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СогласованиеОтклонить</CommandName>
+												<ExtendedTooltip name="СогласованиеОтклонитьРасширеннаяПодсказка" id="171"/>
+											</Button>
+											<Button name="СогласованиеКомментарий" id="166">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СогласованиеКомментарий</CommandName>
+												<ExtendedTooltip name="СогласованиеКомментарийРасширеннаяПодсказка" id="167"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="ОтпрвитьПисьмо" id="162">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОтпрвитьПисьмо</CommandName>
+										<ExtendedTooltip name="ОтпрвитьПисьмоРасширеннаяПодсказка" id="163"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="МаршрутСогласованияРасширеннаяПодсказка" id="72"/>
+							<SearchStringAddition name="МаршрутСогласованияСтрокаПоиска" id="73">
+								<AdditionSource>
+									<Item>МаршрутСогласования</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МаршрутСогласованияСтрокаПоискаКонтекстноеМеню" id="74"/>
+								<ExtendedTooltip name="МаршрутСогласованияСтрокаПоискаРасширеннаяПодсказка" id="75"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="МаршрутСогласованияСостояниеПросмотра" id="76">
+								<AdditionSource>
+									<Item>МаршрутСогласования</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МаршрутСогласованияСостояниеПросмотраКонтекстноеМеню" id="77"/>
+								<ExtendedTooltip name="МаршрутСогласованияСостояниеПросмотраРасширеннаяПодсказка" id="78"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="МаршрутСогласованияУправлениеПоиском" id="79">
+								<AdditionSource>
+									<Item>МаршрутСогласования</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="МаршрутСогласованияУправлениеПоискомКонтекстноеМеню" id="80"/>
+								<ExtendedTooltip name="МаршрутСогласованияУправлениеПоискомРасширеннаяПодсказка" id="81"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeEditEnd">МаршрутСогласованияПередОкончаниемРедактирования</Event>
+								<Event name="OnChange">МаршрутСогласованияПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="МаршрутСогласованияГруппаСогласования" id="82">
+									<DataPath>МаршрутСогласования.ГруппаСогласования</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МаршрутСогласованияГруппаСогласованияКонтекстноеМеню" id="83"/>
+									<ExtendedTooltip name="МаршрутСогласованияГруппаСогласованияРасширеннаяПодсказка" id="84"/>
+									<Events>
+										<Event name="OnChange">МаршрутСогласованияГруппаСогласованияПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="МаршрутСогласованияПользователь" id="85">
+									<DataPath>МаршрутСогласования.Пользователь</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<OpenButton>true</OpenButton>
+									<CreateButton>false</CreateButton>
+									<QuickChoice>true</QuickChoice>
+									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+									<ContextMenu name="МаршрутСогласованияПользовательКонтекстноеМеню" id="86"/>
+									<ExtendedTooltip name="МаршрутСогласованияПользовательРасширеннаяПодсказка" id="87"/>
+									<Events>
+										<Event name="AutoComplete">МаршрутСогласованияПользовательАвтоПодбор</Event>
+										<Event name="StartChoice">МаршрутСогласованияПользовательНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="МаршрутСогласованияСрокСогласования" id="97">
+									<DataPath>МаршрутСогласования.СрокСогласования</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>5</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="МаршрутСогласованияСрокСогласованияКонтекстноеМеню" id="98"/>
+									<ExtendedTooltip name="МаршрутСогласованияСрокСогласованияРасширеннаяПодсказка" id="99"/>
+								</InputField>
+								<InputField name="МаршрутСогласованияПлановаяДата" id="100">
+									<DataPath>МаршрутСогласования.ПлановаяДата</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='dd.MM.yyyy HH:mm'</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='dd.MM.yyyy HH:mm'</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="МаршрутСогласованияПлановаяДатаКонтекстноеМеню" id="101"/>
+									<ExtendedTooltip name="МаршрутСогласованияПлановаяДатаРасширеннаяПодсказка" id="102"/>
+								</InputField>
+								<InputField name="МаршрутСогласованияДатаСобытия" id="91">
+									<DataPath>МаршрутСогласования.ДатаСобытия</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='dd.MM.yyyy HH:mm'</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='dd.MM.yyyy HH:mm'</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="МаршрутСогласованияДатаСобытияКонтекстноеМеню" id="92"/>
+									<ExtendedTooltip name="МаршрутСогласованияДатаСобытияРасширеннаяПодсказка" id="93"/>
+								</InputField>
+								<InputField name="МаршрутСогласованияСобытие" id="88">
+									<DataPath>МаршрутСогласования.Событие</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МаршрутСогласованияСобытиеКонтекстноеМеню" id="89"/>
+									<ExtendedTooltip name="МаршрутСогласованияСобытиеРасширеннаяПодсказка" id="90"/>
+								</InputField>
+								<InputField name="МаршрутСогласованияЗамечания" id="94">
+									<DataPath>МаршрутСогласования.Замечания</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МаршрутСогласованияЗамечанияКонтекстноеМеню" id="95"/>
+									<ExtendedTooltip name="МаршрутСогласованияЗамечанияРасширеннаяПодсказка" id="96"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКомментарий" id="224">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа комментарий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:ToolTipBackColor</BackColor>
+			<ExtendedTooltip name="ГруппаКомментарийРасширеннаяПодсказка" id="225"/>
+			<ChildItems>
+				<InputField name="ЭтапыСогласованияКомменатрий" id="221">
+					<DataPath>Items.ЭтапыСогласования.CurrentData.Комментарий</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MultiLine>true</MultiLine>
+					<BackColor>style:ToolTipBackColor</BackColor>
+					<ContextMenu name="ЭтапыСогласованияКомменатрийКонтекстноеМеню" id="222"/>
+					<ExtendedTooltip name="ЭтапыСогласованияКомменатрийРасширеннаяПодсказка" id="223"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="МаршрутСогласования" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маршрут согласования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ГруппаСогласования" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа согласования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.CW_ГруппыСогласования</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Пользователь" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Событие" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Событие</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.CW_СобытияСогласования</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДатаСобытия" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата события</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Замечания" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Замечания</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СрокСогласования" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок, час</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПлановаяДата" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Плановая дата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТекстЧас" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текст час</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Получено" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Продолжительность" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Продолжительность</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИндексКартинки" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОжидаетСогласования" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ожидает согласования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Завершен" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Завершен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЭтапыСогласования" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этапы согласования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ЭтапСогласования" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Этап согласования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.CW_ЭтапыСогласования</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Инициатор" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инициатор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПорядокСогласования" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Порядок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.CW_ПорядокСогласованияОбъектов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДатаНачала" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата начала</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="СостояниеСогласования" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.CW_СостоянияСогласования</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПлановаяДатаЗавершения" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Плановая дата завершения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИндексКартинки" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Завершен" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Завершен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДатаЗавершения" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата завершения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Комментарий" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="АвтоматическоеЗавершение" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Автоматическое завершение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ОбъектСогласования" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект согласования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.CW_ОбъектыСогласования</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтапСогласования" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этап согласования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.CW_ЭтапыСогласования</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РазрешеноИнициироватьСогласование" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешено инициировать согласование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийПользовательЗамещает" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий пользователь замещает</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийПользовательИнициатор" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий пользователь инициатор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторОбъекта" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор объекта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовМетаданных</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ЭтапыСогласования</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ЭтапыСогласования.ЭтапСогласования</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">ЭтапСогласования</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>МаршрутСогласованияТекстЧас</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">МаршрутСогласования.СрокСогласования</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#808080</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="false" italic="true" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>час(ов)</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>МаршрутСогласования</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">МаршрутСогласования.ОжидаетСогласования</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ЭтапыСогласования</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ЭтапыСогласования.Завершен</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#808080</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьПоШаблону" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить маршрут согласования по шаблону</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_Звезда</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьПоШаблону</Action>
+		</Command>
+		<Command name="СогласованиеНачать" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начать процедуру согласования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СогласованиеНачать</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.CW_ИспользуетсяСогласованиеОбъектов</Item>
+			</FunctionalOptions>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СогласованиеОтклонить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_Стоп16</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СогласованиеОтклонить</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.CW_ИспользуетсяСогласованиеОбъектов</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="СогласованиеОтмена" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить согласования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_Запрет</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СогласованиеОтмена</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.CW_ИспользуетсяСогласованиеОбъектов</Item>
+			</FunctionalOptions>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ОтпрвитьПисьмо" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отпрвить письмо</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить письмо пользователю</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ОтправитьЭлектронноеПисьмо</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтпрвитьПисьмо</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.CW_ОповещатьПоЭлектроннойПочте</Item>
+			</FunctionalOptions>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="СогласованиеКомментарий" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить комментарий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_Комментарий</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СогласованиеКомментарий</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.CW_ИспользуетсяСогласованиеОбъектов</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="СогласованиеЗавершить" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить согласование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_ФлагФиниш</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СогласованиеЗавершить</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.CW_ИспользуетсяСогласованиеОбъектов</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="СогласованиеСоглсовано" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Согласовано</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Согласовано</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ОтгрузкаРазрешена</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СогласованиеСоглсовано</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.CW_ИспользуетсяСогласованиеОбъектов</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="КомандаПараллельное" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параллельное</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параллельное согласование документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_ПараллельноеСогласование</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаПараллельное</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="КомандаПоследовательное" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Последовательное</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Последовательное согласование документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_ПоследовательноеСогласование</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаПоследовательное</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ИзменитьНаименование" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить наименование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить наименование этапа согласования (добавить комментарий)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИзменитьНаименование</Action>
+		</Command>
+		<Command name="Обновить" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Обновить</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПечатьЛистаСогласования" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лист согласования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Print</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПечатьЛистаСогласования</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗавершатьАвтоматически" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авто</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматическое завершение согласования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗавершатьАвтоматически</Action>
+		</Command>
+	</Commands>
+</Form>

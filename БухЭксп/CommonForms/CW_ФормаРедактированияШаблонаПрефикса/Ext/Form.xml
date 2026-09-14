@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>OpenFromMainServer</ExcludedCommand>
+		<ExcludedCommand>OpenFromStandaloneServer</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="15">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="16"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="17">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="18"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа2" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Префикс номера</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<InputField name="ШаблонНомера" id="1">
+					<DataPath>ШаблонНомера</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ШаблонНомераКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ШаблонНомераРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<LabelDecoration name="ПримерНомера" id="21">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Font bold="true" kind="AutoFont"/>
+					<BackColor>style:ToolTipBackColor</BackColor>
+					<ContextMenu name="ПримерНомераКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ПримерНомераРасширеннаяПодсказка" id="23"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступные префиксы</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<Table name="СписокШаблоновПрефикса" id="24">
+					<Representation>List</Representation>
+					<Height>5</Height>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<VerticalStretch>false</VerticalStretch>
+					<DataPath>СписокШаблоновПрефикса</DataPath>
+					<RowPictureDataPath>СписокШаблоновПрефикса.Picture</RowPictureDataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>CancelSearch</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>Find</ExcludedCommand>
+						<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+						<ExcludedCommand>Pickup</ExcludedCommand>
+						<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+						<ExcludedCommand>SearchHistory</ExcludedCommand>
+						<ExcludedCommand>SelectAll</ExcludedCommand>
+						<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+						<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+					</CommandSet>
+					<ContextMenu name="СписокШаблоновПрефиксаКонтекстноеМеню" id="25"/>
+					<AutoCommandBar name="СписокШаблоновПрефиксаКоманднаяПанель" id="26">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<ButtonGroup name="СписокШаблоновПрефиксаГруппа2" id="53">
+								<Representation>Compact</Representation>
+								<ExtendedTooltip name="СписокШаблоновПрефиксаГруппа2РасширеннаяПодсказка" id="54"/>
+								<ChildItems>
+									<Button name="СписокШаблоновПрефиксаУстановитьФлажки" id="49">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.СписокШаблоновПрефикса.StandardCommand.CheckAll</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="СписокШаблоновПрефиксаУстановитьФлажкиРасширеннаяПодсказка" id="50"/>
+									</Button>
+									<Button name="СписокШаблоновПрефиксаСнятьФлажки" id="51">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.СписокШаблоновПрефикса.StandardCommand.UncheckAll</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="СписокШаблоновПрефиксаСнятьФлажкиРасширеннаяПодсказка" id="52"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<ButtonGroup name="СписокШаблоновПрефиксаГруппа1" id="47">
+								<Representation>Compact</Representation>
+								<ExtendedTooltip name="СписокШаблоновПрефиксаГруппа1РасширеннаяПодсказка" id="48"/>
+								<ChildItems>
+									<Button name="СписокШаблоновПрефиксаПереместитьВниз" id="43">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.СписокШаблоновПрефикса.StandardCommand.MoveDown</CommandName>
+										<ExtendedTooltip name="СписокШаблоновПрефиксаПереместитьВнизРасширеннаяПодсказка" id="44"/>
+									</Button>
+									<Button name="СписокШаблоновПрефиксаПереместитьВверх" id="45">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.СписокШаблоновПрефикса.StandardCommand.MoveUp</CommandName>
+										<ExtendedTooltip name="СписокШаблоновПрефиксаПереместитьВверхРасширеннаяПодсказка" id="46"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СписокШаблоновПрефиксаРасширеннаяПодсказка" id="27"/>
+					<SearchStringAddition name="СписокШаблоновПрефиксаСтрокаПоиска" id="28">
+						<AdditionSource>
+							<Item>СписокШаблоновПрефикса</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокШаблоновПрефиксаСтрокаПоискаКонтекстноеМеню" id="29"/>
+						<ExtendedTooltip name="СписокШаблоновПрефиксаСтрокаПоискаРасширеннаяПодсказка" id="30"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокШаблоновПрефиксаСостояниеПросмотра" id="31">
+						<AdditionSource>
+							<Item>СписокШаблоновПрефикса</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокШаблоновПрефиксаСостояниеПросмотраКонтекстноеМеню" id="32"/>
+						<ExtendedTooltip name="СписокШаблоновПрефиксаСостояниеПросмотраРасширеннаяПодсказка" id="33"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокШаблоновПрефиксаУправлениеПоиском" id="34">
+						<AdditionSource>
+							<Item>СписокШаблоновПрефикса</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокШаблоновПрефиксаУправлениеПоискомКонтекстноеМеню" id="35"/>
+						<ExtendedTooltip name="СписокШаблоновПрефиксаУправлениеПоискомРасширеннаяПодсказка" id="36"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnChange">СписокШаблоновПрефиксаПриИзменении</Event>
+					</Events>
+					<ChildItems>
+						<CheckBoxField name="СписокШаблоновПрефиксаПометка" id="40">
+							<DataPath>СписокШаблоновПрефикса.Check</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СписокШаблоновПрефиксаПометкаКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="СписокШаблоновПрефиксаПометкаРасширеннаяПодсказка" id="42"/>
+							<Events>
+								<Event name="OnChange">СписокШаблоновПрефиксаПометкаПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="СписокШаблоновПрефиксаЗначение" id="37">
+							<DataPath>СписокШаблоновПрефикса.Value</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокШаблоновПрефиксаЗначениеКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="СписокШаблоновПрефиксаЗначениеРасширеннаяПодсказка" id="39"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ШаблонНомера" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Префикс номера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДобавитьПрефиксОрганизации" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>в пределах организации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДобавитьПрефиксГод" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>в предалах года</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДобавитьПрефиксМесяц" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>в предалах месяца</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокШаблоновПрефикса" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список шаблонов префикса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Settings>
+		</Attribute>
+		<Attribute name="ИмяКонстанты" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя константы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДлинаЧисловйЧасти" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длина числовй части</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьИЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьИЗакрыть</Action>
+		</Command>
+	</Commands>
+</Form>

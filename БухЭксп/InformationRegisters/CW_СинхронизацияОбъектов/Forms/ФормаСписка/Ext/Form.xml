@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Обмен" id="26">
+			<DataPath>Обмен</DataPath>
+			<BackColor>style:ToolTipBackColor</BackColor>
+			<ContextMenu name="ОбменКонтекстноеМеню" id="27"/>
+			<ExtendedTooltip name="ОбменExtendedTooltip" id="28"/>
+			<Events>
+				<Event name="OnChange">ОбменПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>Top</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<CommandSet>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Create</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="29"/>
+			<SearchStringAddition name="СписокSearchString" id="42">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокSearchStringContextMenu" id="43"/>
+				<ExtendedTooltip name="СписокSearchStringExtendedTooltip" id="44"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокViewStatus" id="45">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокViewStatusContextMenu" id="46"/>
+				<ExtendedTooltip name="СписокViewStatusExtendedTooltip" id="47"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокSearchControl" id="48">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокSearchControlContextMenu" id="49"/>
+				<ExtendedTooltip name="СписокSearchControlExtendedTooltip" id="50"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Источник_Идентификатор" id="4">
+					<DataPath>Список.Источник_Идентификатор</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обмен</v8:content>
+						</v8:item>
+					</Title>
+					<Width>10</Width>
+					<ContextMenu name="Источник_ИдентификаторКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="Источник_ИдентификаторExtendedTooltip" id="30"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаИсточник" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Источник</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа источник</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГруппаИсточникExtendedTooltip" id="31"/>
+					<ChildItems>
+						<LabelField name="Источник_Тип" id="16">
+							<DataPath>Список.Источник_Тип</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тип</v8:content>
+								</v8:item>
+							</Title>
+							<Width>20</Width>
+							<BackColor>web:Cream</BackColor>
+							<ContextMenu name="Источник_ТипКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="Источник_ТипExtendedTooltip" id="32"/>
+						</LabelField>
+						<LabelField name="Источник_УИД" id="6">
+							<DataPath>Список.Источник_УИД</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Идентификатор</v8:content>
+								</v8:item>
+							</Title>
+							<Width>18</Width>
+							<BackColor>web:Cream</BackColor>
+							<Font faceName="Tahoma" height="9" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+							<ContextMenu name="Источник_УИДКонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="Источник_УИДExtendedTooltip" id="33"/>
+						</LabelField>
+						<LabelField name="Источник_СИ" id="8">
+							<DataPath>Список.Источник_СИ</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Идентификатор</v8:content>
+								</v8:item>
+							</Title>
+							<Width>18</Width>
+							<BackColor>web:Cream</BackColor>
+							<Font faceName="Tahoma" height="9" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+							<ContextMenu name="Источник_СИКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="Источник_СИExtendedTooltip" id="34"/>
+						</LabelField>
+						<LabelField name="Источник_Наименование" id="14">
+							<DataPath>Список.Источник_Наименование</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Наименование</v8:content>
+								</v8:item>
+							</Title>
+							<Width>25</Width>
+							<BackColor>web:Cream</BackColor>
+							<ContextMenu name="Источник_НаименованиеКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="Источник_НаименованиеExtendedTooltip" id="35"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаПриемник" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приёмник</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа приемник</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГруппаПриемникExtendedTooltip" id="36"/>
+					<ChildItems>
+						<LabelField name="Приемник_УИД" id="12">
+							<DataPath>Список.Приемник_УИД</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Идентификатор</v8:content>
+								</v8:item>
+							</Title>
+							<BackColor>web:AliceBlue</BackColor>
+							<Font faceName="Tahoma" height="9" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+							<ContextMenu name="Приемник_УИДКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="Приемник_УИДExtendedTooltip" id="37"/>
+						</LabelField>
+						<LabelField name="Приемник_Объект" id="10">
+							<DataPath>Список.Приемник_Объект</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Объект</v8:content>
+								</v8:item>
+							</Title>
+							<BackColor>web:AliceBlue</BackColor>
+							<ContextMenu name="Приемник_ОбъектКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="Приемник_ОбъектExtendedTooltip" id="38"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="ПолитикаСинхронизации" id="20">
+					<DataPath>Список.ПолитикаСинхронизации</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ПолитикаСинхронизацииКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПолитикаСинхронизацииExtendedTooltip" id="39"/>
+				</LabelField>
+				<LabelField name="ДопИнфо" id="18">
+					<DataPath>Список.ДопИнфо</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительная информация</v8:content>
+						</v8:item>
+					</Title>
+					<Width>10</Width>
+					<ContextMenu name="ДопИнфоКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ДопИнфоExtendedTooltip" id="40"/>
+				</LabelField>
+				<CheckBoxField name="флНезавершена" id="22">
+					<DataPath>Список.флНезавершена</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Признак автосинхронизации</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="флНезавершенаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="флНезавершенаExtendedTooltip" id="41"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	РегистрСведенийCW_СинхронизацияОбъектов.Источник_Идентификатор,
+	РегистрСведенийCW_СинхронизацияОбъектов.Источник_УИД,
+	РегистрСведенийCW_СинхронизацияОбъектов.Источник_СИ,
+	РегистрСведенийCW_СинхронизацияОбъектов.Приемник_Объект,
+	РегистрСведенийCW_СинхронизацияОбъектов.Приемник_УИД,
+	РегистрСведенийCW_СинхронизацияОбъектов.Источник_Наименование,
+	РегистрСведенийCW_СинхронизацияОбъектов.Источник_Тип,
+	РегистрСведенийCW_СинхронизацияОбъектов.ДопИнфо,
+	РегистрСведенийCW_СинхронизацияОбъектов.ПолитикаСинхронизации,
+	РегистрСведенийCW_СинхронизацияОбъектов.флНезавершена
+ИЗ
+	РегистрСведений.CW_СинхронизацияОбъектов КАК РегистрСведенийCW_СинхронизацияОбъектов
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;Обмен = НЕОПРЕДЕЛЕНО
+				ТОГДА ИСТИНА
+			ИНАЧЕ РегистрСведенийCW_СинхронизацияОбъектов.Источник_Идентификатор = &amp;Обмен
+		КОНЕЦ</QueryText>
+				<MainTable>InformationRegister.CW_СинхронизацияОбъектов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Обмен" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.CW_Обмены</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

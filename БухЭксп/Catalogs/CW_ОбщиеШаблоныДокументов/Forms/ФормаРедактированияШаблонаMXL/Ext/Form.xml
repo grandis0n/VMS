@@ -1,0 +1,861 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Редактирование шаблона</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаИмпортМакета" id="518">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ИмпортМакета</CommandName>
+				<ExtendedTooltip name="ФормаИмпортМакетаРасширеннаяПодсказка" id="519"/>
+			</Button>
+			<Button name="ФормаЭкспортМакета" id="520">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЭкспортМакета</CommandName>
+				<ExtendedTooltip name="ФормаЭкспортМакетаРасширеннаяПодсказка" id="521"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="552">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="553"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="НаименованиеКод" id="348">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование, код</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование код</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="НаименованиеКодРасширеннаяПодсказка" id="349"/>
+			<ChildItems>
+				<InputField name="Наименование" id="70">
+					<DataPath>Объект.Description</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="72"/>
+				</InputField>
+				<InputField name="ИмяФормата" id="558">
+					<DataPath>Объект.ИмяФормата</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Формат</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Top</TitleLocation>
+					<ContextMenu name="ИмяФорматаКонтекстноеМеню" id="559"/>
+					<ExtendedTooltip name="ИмяФорматаРасширеннаяПодсказка" id="560"/>
+				</InputField>
+				<InputField name="НазначениеШаблона" id="454">
+					<DataPath>Объект.НазначениеШаблона</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<TitleLocation>Top</TitleLocation>
+					<CreateButton>false</CreateButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ContextMenu name="НазначениеШаблонаКонтекстноеМеню" id="455"/>
+					<ExtendedTooltip name="НазначениеШаблонаРасширеннаяПодсказка" id="456"/>
+					<Events>
+						<Event name="OnChange">НазначениеШаблонаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Код" id="345">
+					<DataPath>Объект.Code</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<TitleLocation>Top</TitleLocation>
+					<ContextMenu name="КодКонтекстноеМеню" id="346"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="347"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастройкиКолонтитулов" id="569">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки колонтитулов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки колонтитулов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаНастройкиКолонтитуловРасширеннаяПодсказка" id="570"/>
+			<ChildItems>
+				<CheckBoxField name="ВыводитьКолонтитулы" id="571">
+					<DataPath>Объект.ВыводитьКолонтитулы</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыводитьКолонтитулыКонтекстноеМеню" id="572"/>
+					<ExtendedTooltip name="ВыводитьКолонтитулыРасширеннаяПодсказка" id="573"/>
+					<Events>
+						<Event name="OnChange">ВыводитьВерхнийКолонтитулПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<Button name="ОткрытьНастройкиКолонтитулов" id="574">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ОткрытьНастройкиКолонтитулов</CommandName>
+					<ExtendedTooltip name="ОткрытьНастройкиКолонтитуловРасширеннаяПодсказка" id="575"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа4" id="550">
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:NavigationColor</BackColor>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="551"/>
+			<ChildItems>
+				<CommandBar name="Группа3" id="466">
+					<CommandSource>Item.ТабличныйДокумент</CommandSource>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="467"/>
+					<ChildItems>
+						<ButtonGroup name="ТабличныйДокументГруппа2" id="486">
+							<Representation>Compact</Representation>
+							<ExtendedTooltip name="ТабличныйДокументГруппа2РасширеннаяПодсказка" id="487"/>
+							<ChildItems>
+								<Button name="ТабличныйДокументПолужирный" id="480">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.Bold</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументПолужирныйРасширеннаяПодсказка" id="481"/>
+								</Button>
+								<Button name="ТабличныйДокументНаклонный" id="482">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.Italic</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументНаклонныйРасширеннаяПодсказка" id="483"/>
+								</Button>
+								<Button name="ТабличныйДокументПодчеркивание" id="484">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.Underline</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументПодчеркиваниеРасширеннаяПодсказка" id="485"/>
+								</Button>
+								<Button name="ТабличныйДокументШрифт" id="478">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.Font</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументШрифтРасширеннаяПодсказка" id="479"/>
+								</Button>
+							</ChildItems>
+						</ButtonGroup>
+						<ButtonGroup name="ТабличныйДокументГруппа4" id="516">
+							<Representation>Compact</Representation>
+							<ExtendedTooltip name="ТабличныйДокументГруппа4РасширеннаяПодсказка" id="517"/>
+							<ChildItems>
+								<Button name="ТабличныйДокументЦветТекста" id="514">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.TextColor</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументЦветТекстаРасширеннаяПодсказка" id="515"/>
+								</Button>
+								<Button name="ТабличныйДокументЦветФона" id="512">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.BackColor</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументЦветФонаРасширеннаяПодсказка" id="513"/>
+								</Button>
+							</ChildItems>
+						</ButtonGroup>
+						<Button name="ТабличныйДокументКартинка" id="522">
+							<Type>CommandBarButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.Picture</CommandName>
+							<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+							<ExtendedTooltip name="ТабличныйДокументКартинкаРасширеннаяПодсказка" id="523"/>
+						</Button>
+						<ButtonGroup name="ТабличныйДокументГруппа1" id="476">
+							<Representation>Compact</Representation>
+							<ExtendedTooltip name="ТабличныйДокументГруппа1РасширеннаяПодсказка" id="477"/>
+							<ChildItems>
+								<Button name="ТабличныйДокументВыровнятьВлево" id="474">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.AlignLeft</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументВыровнятьВлевоРасширеннаяПодсказка" id="475"/>
+								</Button>
+								<Button name="ТабличныйДокументВыровнятьВправо" id="470">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.AlignRight</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументВыровнятьВправоРасширеннаяПодсказка" id="471"/>
+								</Button>
+								<Button name="ТабличныйДокументВыровнятьПоЦентру" id="472">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.AlignCenter</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументВыровнятьПоЦентруРасширеннаяПодсказка" id="473"/>
+								</Button>
+								<Button name="ТабличныйДокументВыровнятьПоШирине" id="468">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.AlignJustify</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументВыровнятьПоШиринеРасширеннаяПодсказка" id="469"/>
+								</Button>
+							</ChildItems>
+						</ButtonGroup>
+						<ButtonGroup name="ТабличныйДокументГруппа3" id="510">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Границы</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>Compact</Representation>
+							<ExtendedTooltip name="ТабличныйДокументГруппа3РасширеннаяПодсказка" id="511"/>
+							<ChildItems>
+								<Button name="ТабличныйДокументГраницаСверху" id="490">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.BorderTop</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументГраницаСверхуРасширеннаяПодсказка" id="491"/>
+								</Button>
+								<Button name="ТабличныйДокументГраницаСнизу" id="494">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.BorderBottom</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументГраницаСнизуРасширеннаяПодсказка" id="495"/>
+								</Button>
+								<Button name="ТабличныйДокументГраницаСлева" id="488">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.BorderLeft</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументГраницаСлеваРасширеннаяПодсказка" id="489"/>
+								</Button>
+								<Button name="ТабличныйДокументГраницаСправа" id="492">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.BorderRight</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументГраницаСправаРасширеннаяПодсказка" id="493"/>
+								</Button>
+								<Button name="ТабличныйДокументГраницаВокруг" id="498">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.BorderOutline</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументГраницаВокругРасширеннаяПодсказка" id="499"/>
+								</Button>
+								<Button name="ТабличныйДокументГраницаВнутри" id="500">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.BorderInside</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументГраницаВнутриРасширеннаяПодсказка" id="501"/>
+								</Button>
+								<Button name="ТабличныйДокументГраницаВезде" id="496">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.BorderAll</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументГраницаВездеРасширеннаяПодсказка" id="497"/>
+								</Button>
+								<Button name="ТабличныйДокументТолстаяГраницаСверху" id="504">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.ThickBorderTop</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументТолстаяГраницаСверхуРасширеннаяПодсказка" id="505"/>
+								</Button>
+								<Button name="ТабличныйДокументТолстаяГраницаСнизу" id="506">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.ThickBorderBottom</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументТолстаяГраницаСнизуРасширеннаяПодсказка" id="507"/>
+								</Button>
+								<Button name="ТабличныйДокументТолстаяГраницаВокруг" id="502">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.ThickBorderOutline</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументТолстаяГраницаВокругРасширеннаяПодсказка" id="503"/>
+								</Button>
+								<Button name="ТабличныйДокументНетГраницы" id="508">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.BorderNone</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументНетГраницыРасширеннаяПодсказка" id="509"/>
+								</Button>
+							</ChildItems>
+						</ButtonGroup>
+						<ButtonGroup name="ТабличныйДокументГруппа5" id="528">
+							<Representation>Compact</Representation>
+							<ExtendedTooltip name="ТабличныйДокументГруппа5РасширеннаяПодсказка" id="529"/>
+							<ChildItems>
+								<Button name="ТабличныйДокументОтменить" id="524">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.Undo</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументОтменитьРасширеннаяПодсказка" id="525"/>
+								</Button>
+								<Button name="ТабличныйДокументВернуть" id="526">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.Redo</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ТабличныйДокументВернутьРасширеннаяПодсказка" id="527"/>
+								</Button>
+							</ChildItems>
+						</ButtonGroup>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="452">
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="453"/>
+			<ChildItems>
+				<SpreadSheetDocumentField name="ТабличныйДокумент" id="276">
+					<DataPath>ТабличныйДокумент</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<TitleLocation>None</TitleLocation>
+					<ShowGrid>true</ShowGrid>
+					<ShowHeaders>true</ShowHeaders>
+					<Edit>true</Edit>
+					<ContextMenu name="ТабличныйДокументКонтекстноеМеню" id="277"/>
+					<ExtendedTooltip name="ТабличныйДокументРасширеннаяПодсказка" id="278"/>
+					<Events>
+						<Event name="OnChange">ТабличныйДокументПриИзменении</Event>
+					</Events>
+				</SpreadSheetDocumentField>
+				<UsualGroup name="ГруппаПараметры" id="460">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="461"/>
+					<ChildItems>
+						<Table name="ПараметрыШаблона" id="530">
+							<Representation>Tree</Representation>
+							<SelectionMode>SingleRow</SelectionMode>
+							<Header>false</Header>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<DataPath>ПараметрыШаблона</DataPath>
+							<RowPictureDataPath>ПараметрыШаблона.ИндексКартинки</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.ПиктограммыЭлементов</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</RowsPicture>
+							<CommandSet>
+								<ExcludedCommand>CancelSearch</ExcludedCommand>
+								<ExcludedCommand>ChangeHistory</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>Create</ExcludedCommand>
+								<ExcludedCommand>CreateFolder</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>DynamicListStandardSettings</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+								<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+								<ExcludedCommand>GetURL</ExcludedCommand>
+								<ExcludedCommand>HierarchicalList</ExcludedCommand>
+								<ExcludedCommand>LevelDown</ExcludedCommand>
+								<ExcludedCommand>LevelUp</ExcludedCommand>
+								<ExcludedCommand>List</ExcludedCommand>
+								<ExcludedCommand>ListSettings</ExcludedCommand>
+								<ExcludedCommand>LoadDynamicListSettings</ExcludedCommand>
+								<ExcludedCommand>MoveItem</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>Refresh</ExcludedCommand>
+								<ExcludedCommand>SaveDynamicListSettings</ExcludedCommand>
+								<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+								<ExcludedCommand>SearchHistory</ExcludedCommand>
+								<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+								<ExcludedCommand>Tree</ExcludedCommand>
+							</CommandSet>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>false</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="ПараметрыШаблонаКонтекстноеМеню" id="531">
+								<ChildItems>
+									<Button name="ПараметрыШаблонаКонтекстноеМенюИзменить" id="556">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ПараметрыШаблона.StandardCommand.Change</CommandName>
+										<ExtendedTooltip name="ПараметрыШаблонаКонтекстноеМенюИзменитьРасширеннаяПодсказка" id="557"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="ПараметрыШаблонаКоманднаяПанель" id="532">
+								<ChildItems>
+									<Button name="ПараметрыШаблонаИзменить" id="554">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.ПараметрыШаблона.StandardCommand.Change</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="ПараметрыШаблонаИзменитьРасширеннаяПодсказка" id="555"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПараметрыШаблонаРасширеннаяПодсказка" id="533"/>
+							<SearchStringAddition name="ПараметрыШаблонаСтрокаПоиска" id="534">
+								<AdditionSource>
+									<Item>ПараметрыШаблона</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПараметрыШаблонаСтрокаПоискаКонтекстноеМеню" id="535"/>
+								<ExtendedTooltip name="ПараметрыШаблонаСтрокаПоискаРасширеннаяПодсказка" id="536"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПараметрыШаблонаСостояниеПросмотра" id="537">
+								<AdditionSource>
+									<Item>ПараметрыШаблона</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПараметрыШаблонаСостояниеПросмотраКонтекстноеМеню" id="538"/>
+								<ExtendedTooltip name="ПараметрыШаблонаСостояниеПросмотраРасширеннаяПодсказка" id="539"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПараметрыШаблонаУправлениеПоиском" id="540">
+								<AdditionSource>
+									<Item>ПараметрыШаблона</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПараметрыШаблонаУправлениеПоискомКонтекстноеМеню" id="541"/>
+								<ExtendedTooltip name="ПараметрыШаблонаУправлениеПоискомРасширеннаяПодсказка" id="542"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ПараметрыШаблонаВыбор</Event>
+								<Event name="BeforeAddRow">ПараметрыШаблонаПередНачаломДобавления</Event>
+								<Event name="DragStart">ПараметрыШаблонаНачалоПеретаскивания</Event>
+								<Event name="BeforeRowChange">ПараметрыШаблонаПередНачаломИзменения</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ШаблоныНаименование" id="543">
+									<DataPath>ПараметрыШаблона.Наименование</DataPath>
+									<ContextMenu name="ШаблоныНаименованиеКонтекстноеМеню" id="544"/>
+									<ExtendedTooltip name="ШаблоныНаименованиеРасширеннаяПодсказка" id="545"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ГруппаМасштаб" id="561">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Масштаб подписи и печати</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа масштаб</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="ГруппаМасштабРасширеннаяПодсказка" id="562"/>
+							<ChildItems>
+								<InputField name="МасштабПечати" id="563">
+									<DataPath>Объект.МасштабПечати</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Печать</v8:content>
+										</v8:item>
+									</Title>
+									<Width>4</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ClearButton>true</ClearButton>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="МасштабПечатиКонтекстноеМеню" id="564"/>
+									<ExtendedTooltip name="МасштабПечатиРасширеннаяПодсказка" id="565"/>
+									<Events>
+										<Event name="OnChange">МасштабПечатиПриИзменении</Event>
+										<Event name="Tuning">МасштабПечатиПриИзменении</Event>
+										<Event name="Clearing">МасштабПечатиОчистка</Event>
+									</Events>
+								</InputField>
+								<InputField name="МасштабПодписи" id="566">
+									<DataPath>Объект.МасштабПодписи</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подпись</v8:content>
+										</v8:item>
+									</Title>
+									<Width>4</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ClearButton>true</ClearButton>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="МасштабПодписиКонтекстноеМеню" id="567"/>
+									<ExtendedTooltip name="МасштабПодписиРасширеннаяПодсказка" id="568"/>
+									<Events>
+										<Event name="OnChange">МасштабПодписиПриИзменении</Event>
+										<Event name="Tuning">МасштабПодписиПриИзменении</Event>
+										<Event name="Clearing">МасштабПодписиОчистка</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Комментарий" id="457">
+							<DataPath>Объект.Комментарий</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<MultiLine>true</MultiLine>
+							<BackColor>style:ToolTipBackColor</BackColor>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="458"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="459"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.CW_ОбщиеШаблоныДокументов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТабличныйДокумент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табличный документ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЦветФонаЗаменяемогоПараметра" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет фона заменяемого параметра</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:Color</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрыШаблона" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ПараметрыШаблона</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникCW_МакросыШаблоновДокументов.Ссылка КАК Ссылка,
+	СправочникCW_МакросыШаблоновДокументов.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникCW_МакросыШаблоновДокументов.Родитель КАК Родитель,
+	СправочникCW_МакросыШаблоновДокументов.ЭтоГруппа КАК ЭтоГруппа,
+	СправочникCW_МакросыШаблоновДокументов.Код КАК Код,
+	СправочникCW_МакросыШаблоновДокументов.Наименование КАК Наименование,
+	СправочникCW_МакросыШаблоновДокументов.Идентификатор КАК Идентификатор,
+	СправочникCW_МакросыШаблоновДокументов.НазначениеШаблона КАК НазначениеШаблона,
+	СправочникCW_МакросыШаблоновДокументов.НеИспользуется КАК НеИспользуется,
+	СправочникCW_МакросыШаблоновДокументов.Рассчитывается КАК Рассчитывается,
+	СправочникCW_МакросыШаблоновДокументов.Формула КАК Формула,
+	СправочникCW_МакросыШаблоновДокументов.ФорматВывода КАК ФорматВывода,
+	СправочникCW_МакросыШаблоновДокументов.ПредопределеннаяФункция КАК ПредопределеннаяФункция,
+	СправочникCW_МакросыШаблоновДокументов.Предопределенный КАК Предопределенный,
+	СправочникCW_МакросыШаблоновДокументов.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных,
+	ВЫБОР
+		КОГДА СправочникCW_МакросыШаблоновДокументов.ЭтоГруппа
+			ТОГДА 0
+		ИНАЧЕ 3
+	КОНЕЦ + ВЫБОР
+		КОГДА СправочникCW_МакросыШаблоновДокументов.ПредопределеннаяФункция = ЗНАЧЕНИЕ(Справочник.CW_ПредопреленныеФункцииШаблоновДокументов.ПустаяССылка)
+			ТОГДА 0
+		ИНАЧЕ 2
+	КОНЕЦ КАК ИндексКартинки
+ИЗ
+	Справочник.CW_МакросыШаблоновДокументов КАК СправочникCW_МакросыШаблоновДокументов
+ГДЕ
+	СправочникCW_МакросыШаблоновДокументов.ПометкаУдаления = ЛОЖЬ
+	И СправочникCW_МакросыШаблоновДокументов.НеИспользуется = ЛОЖЬ</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УДАЛИТЬМониторинговыйПараметрРеквизит</dcssch:dataPath>
+					<dcssch:field>УДАЛИТЬМониторинговыйПараметрРеквизит</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПутьКДанным</dcssch:dataPath>
+					<dcssch:field>ПутьКДанным</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Рассчитывается</dcssch:dataPath>
+					<dcssch:field>Рассчитывается</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УДАЛИТЬЗначениеКонтрольнойДаты</dcssch:dataPath>
+					<dcssch:field>УДАЛИТЬЗначениеКонтрольнойДаты</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УДАЛИТЬРеквизитОбъекта</dcssch:dataPath>
+					<dcssch:field>УДАЛИТЬРеквизитОбъекта</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФорматВывода</dcssch:dataPath>
+					<dcssch:field>ФорматВывода</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УДАЛИТЬФорматВыводаРеквизитаОбъекта</dcssch:dataPath>
+					<dcssch:field>УДАЛИТЬФорматВыводаРеквизитаОбъекта</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УДАЛИТЬМониторинговыйПараметр</dcssch:dataPath>
+					<dcssch:field>УДАЛИТЬМониторинговыйПараметр</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
+					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Родитель</dcssch:dataPath>
+					<dcssch:field>Родитель</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЭтоГруппа</dcssch:dataPath>
+					<dcssch:field>ЭтоГруппа</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Код</dcssch:dataPath>
+					<dcssch:field>Код</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Наименование</dcssch:dataPath>
+					<dcssch:field>Наименование</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Идентификатор</dcssch:dataPath>
+					<dcssch:field>Идентификатор</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НазначениеШаблона</dcssch:dataPath>
+					<dcssch:field>НазначениеШаблона</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НеИспользуется</dcssch:dataPath>
+					<dcssch:field>НеИспользуется</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Формула</dcssch:dataPath>
+					<dcssch:field>Формула</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПредопределеннаяФункция</dcssch:dataPath>
+					<dcssch:field>ПредопределеннаяФункция</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
+					<dcssch:field>Предопределенный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИндексКартинки</dcssch:dataPath>
+					<dcssch:field>ИндексКартинки</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<MainTable>Catalog.CW_МакросыШаблоновДокументов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="РедактированиеМакросовДоступно" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактирование макросов доступно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсходныеПодписьШиринаВысота" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исходные подпись ширина высота</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ИсходныеПечатьШиринаВысота" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исходные печать ширина высота</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="АдресНастроекКолонтитулов" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес настроек колонтитулов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ШаблоныНаименование</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ПараметрыШаблона.НазначениеШаблона</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">Объект.НазначениеШаблона</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Видимость</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ИмпортМакета" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Импорт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Импорт макета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИмпортМакета</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ЭкспортМакета" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Экспорт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Экспорт макета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЭкспортМакета</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ОткрытьНастройкиКолонтитулов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть настройки колонтитулов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьНастройкиКолонтитулов</Action>
+		</Command>
+	</Commands>
+</Form>

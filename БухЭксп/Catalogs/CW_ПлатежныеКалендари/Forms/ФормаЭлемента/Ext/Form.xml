@@ -1,0 +1,746 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа2" id="79">
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="80"/>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="20">
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="21"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="ПроизводственынйКалендарь" id="10">
+					<DataPath>Объект.ПроизводственынйКалендарь</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ПроизводственынйКалендарьКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ПроизводственынйКалендарьРасширеннаяПодсказка" id="12"/>
+					<Events>
+						<Event name="OnChange">ПроизводственынйКалендарьПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="104">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="105"/>
+			<ChildItems>
+				<Page name="СтраницаКалендарь" id="106">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница календарь</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница календарь</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаКалендарьРасширеннаяПодсказка" id="107"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКалендарь" id="31">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа календарь</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа календарь</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКалендарьРасширеннаяПодсказка" id="32"/>
+							<ChildItems>
+								<UsualGroup name="Группа1" id="27">
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="28"/>
+									<ChildItems>
+										<InputField name="Год" id="17">
+											<DataPath>ГодКалендаря</DataPath>
+											<TitleLocation>Top</TitleLocation>
+											<SpinButton>true</SpinButton>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧГ=0</v8:content>
+												</v8:item>
+											</EditFormat>
+											<Font bold="true" kind="AutoFont"/>
+											<ContextMenu name="ГодКонтекстноеМеню" id="18"/>
+											<ExtendedTooltip name="ГодРасширеннаяПодсказка" id="19"/>
+											<Events>
+												<Event name="OnChange">ГодПриИзменении</Event>
+											</Events>
+										</InputField>
+										<Button name="ФормаПараметрыЗаполнения" id="95">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПараметрыЗаполнения</CommandName>
+											<ExtendedTooltip name="ФормаПараметрыЗаполненияРасширеннаяПодсказка" id="96"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<CalendarField name="ДатаКалендаря" id="22">
+									<DataPath>ДатаКалендаря</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>1</Width>
+									<Height>19</Height>
+									<WidthInMonths>6</WidthInMonths>
+									<HeightInMonths>2</HeightInMonths>
+									<ContextMenu name="ДатаКалендаряКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="ДатаКалендаряРасширеннаяПодсказка" id="24"/>
+									<Events>
+										<Event name="OnPeriodOutput">ДатаКалендаряПриВыводеПериода</Event>
+										<Event name="Selection">ДатаКалендаряВыбор</Event>
+									</Events>
+								</CalendarField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПараметрыЗаполнения" id="108">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница параметры заполнения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница параметры заполнения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаПараметрыЗаполненияРасширеннаяПодсказка" id="109"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПараметрыЗаполнения" id="33">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметры заполнения</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа параметры заполнения</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПараметрыЗаполненияРасширеннаяПодсказка" id="34"/>
+							<ChildItems>
+								<UsualGroup name="Группа5" id="127">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Период заполнения</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="128"/>
+									<ChildItems>
+										<InputField name="ГодКалендаря" id="124">
+											<DataPath>ГодКалендаря</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Год календаря</v8:content>
+												</v8:item>
+											</Title>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧЦ=4; ЧГ=0</v8:content>
+												</v8:item>
+											</EditFormat>
+											<Font bold="true" kind="AutoFont"/>
+											<ContextMenu name="ГодКалендаряКонтекстноеМеню" id="125"/>
+											<ExtendedTooltip name="ГодКалендаряРасширеннаяПодсказка" id="126"/>
+										</InputField>
+										<InputField name="ДатаНачала" id="38">
+											<DataPath>ДатаНачала</DataPath>
+											<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="39"/>
+											<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="40"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа4" id="81">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вариант заполнения</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="82"/>
+									<ChildItems>
+										<RadioButtonField name="ВариантЗаполнения" id="35">
+											<DataPath>Объект.ВариантЗаполнения</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ColumnsCount>1</ColumnsCount>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>по дням недели</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">0</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>по шаблону</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">1</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ВариантЗаполненияКонтекстноеМеню" id="36"/>
+											<ExtendedTooltip name="ВариантЗаполненияРасширеннаяПодсказка" id="37"/>
+											<Events>
+												<Event name="OnChange">ВариантЗаполненияПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа7" id="129">
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="130"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация1" id="133">
+											<ContextMenu name="Декорация1КонтекстноеМеню" id="134"/>
+											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="135"/>
+										</LabelDecoration>
+										<UsualGroup name="Группа8" id="131">
+											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="132"/>
+											<ChildItems>
+												<CheckBoxField name="УчитыватьВыходныеДни" id="57">
+													<DataPath>Объект.УчитыватьВыходныеДни</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="УчитыватьВыходныеДниКонтекстноеМеню" id="58"/>
+													<ExtendedTooltip name="УчитыватьВыходныеДниРасширеннаяПодсказка" id="59"/>
+												</CheckBoxField>
+												<CheckBoxField name="УчитыватьНерабочиеДни" id="121">
+													<DataPath>Объект.УчитыватьНерабочиеДни</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="УчитыватьНерабочиеДниКонтекстноеМеню" id="122"/>
+													<ExtendedTooltip name="УчитыватьНерабочиеДниРасширеннаяПодсказка" id="123"/>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<Table name="ДниНедели" id="41">
+									<Representation>List</Representation>
+									<Header>false</Header>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<DataPath>ДниНедели</DataPath>
+									<RowPictureDataPath>ДниНедели.Picture</RowPictureDataPath>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>CancelSearch</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>CheckAll</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+										<ExcludedCommand>EndEdit</ExcludedCommand>
+										<ExcludedCommand>Find</ExcludedCommand>
+										<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+										<ExcludedCommand>MoveDown</ExcludedCommand>
+										<ExcludedCommand>MoveUp</ExcludedCommand>
+										<ExcludedCommand>Pickup</ExcludedCommand>
+										<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+										<ExcludedCommand>SearchHistory</ExcludedCommand>
+										<ExcludedCommand>SelectAll</ExcludedCommand>
+										<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+										<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+										<ExcludedCommand>SortListAsc</ExcludedCommand>
+										<ExcludedCommand>SortListDesc</ExcludedCommand>
+										<ExcludedCommand>UncheckAll</ExcludedCommand>
+									</CommandSet>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отмеченные дни недели будут включены в платежный календарь</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ContextMenu name="ДниНеделиКонтекстноеМеню" id="42"/>
+									<AutoCommandBar name="ДниНеделиКоманднаяПанель" id="43"/>
+									<ExtendedTooltip name="ДниНеделиРасширеннаяПодсказка" id="44"/>
+									<SearchStringAddition name="ДниНеделиСтрокаПоиска" id="45">
+										<AdditionSource>
+											<Item>ДниНедели</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДниНеделиСтрокаПоискаКонтекстноеМеню" id="46"/>
+										<ExtendedTooltip name="ДниНеделиСтрокаПоискаРасширеннаяПодсказка" id="47"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ДниНеделиСостояниеПросмотра" id="48">
+										<AdditionSource>
+											<Item>ДниНедели</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДниНеделиСостояниеПросмотраКонтекстноеМеню" id="49"/>
+										<ExtendedTooltip name="ДниНеделиСостояниеПросмотраРасширеннаяПодсказка" id="50"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ДниНеделиУправлениеПоиском" id="51">
+										<AdditionSource>
+											<Item>ДниНедели</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ДниНеделиУправлениеПоискомКонтекстноеМеню" id="52"/>
+										<ExtendedTooltip name="ДниНеделиУправлениеПоискомРасширеннаяПодсказка" id="53"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<CheckBoxField name="ДниНеделиПометка" id="101">
+											<DataPath>ДниНедели.Check</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ДниНеделиПометкаКонтекстноеМеню" id="102"/>
+											<ExtendedTooltip name="ДниНеделиПометкаРасширеннаяПодсказка" id="103"/>
+										</CheckBoxField>
+										<InputField name="ДниНеделиЗначение" id="54">
+											<DataPath>ДниНедели.Value</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДниНеделиЗначениеКонтекстноеМеню" id="55"/>
+											<ExtendedTooltip name="ДниНеделиЗначениеРасширеннаяПодсказка" id="56"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<Table name="ШаблонЗаполнения" id="60">
+									<Header>false</Header>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.ШаблонЗаполнения</DataPath>
+									<CommandSet>
+										<ExcludedCommand>CancelSearch</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+										<ExcludedCommand>EndEdit</ExcludedCommand>
+										<ExcludedCommand>Find</ExcludedCommand>
+										<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+										<ExcludedCommand>OutputList</ExcludedCommand>
+										<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+										<ExcludedCommand>SearchHistory</ExcludedCommand>
+										<ExcludedCommand>SelectAll</ExcludedCommand>
+										<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+										<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+										<ExcludedCommand>SortListAsc</ExcludedCommand>
+										<ExcludedCommand>SortListDesc</ExcludedCommand>
+									</CommandSet>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отмеченные дни будут включены в платежный календарь</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ШаблонЗаполненияКонтекстноеМеню" id="61"/>
+									<AutoCommandBar name="ШаблонЗаполненияКоманднаяПанель" id="62">
+										<ChildItems>
+											<ButtonGroup name="ШаблонЗаполненияГруппа1" id="91">
+												<Representation>Compact</Representation>
+												<ExtendedTooltip name="ШаблонЗаполненияГруппа1РасширеннаяПодсказка" id="92"/>
+												<ChildItems>
+													<Button name="ШаблонЗаполненияДобавить" id="83">
+														<Type>CommandBarButton</Type>
+														<Representation>Picture</Representation>
+														<CommandName>Form.Item.ШаблонЗаполнения.StandardCommand.Add</CommandName>
+														<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+														<ExtendedTooltip name="ШаблонЗаполненияДобавитьРасширеннаяПодсказка" id="84"/>
+													</Button>
+													<Button name="ШаблонЗаполненияУдалить" id="85">
+														<Type>CommandBarButton</Type>
+														<Representation>Picture</Representation>
+														<CommandName>Form.Item.ШаблонЗаполнения.StandardCommand.Delete</CommandName>
+														<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+														<ExtendedTooltip name="ШаблонЗаполненияУдалитьРасширеннаяПодсказка" id="86"/>
+													</Button>
+												</ChildItems>
+											</ButtonGroup>
+											<ButtonGroup name="ШаблонЗаполненияГруппа2" id="93">
+												<Representation>Compact</Representation>
+												<ExtendedTooltip name="ШаблонЗаполненияГруппа2РасширеннаяПодсказка" id="94"/>
+												<ChildItems>
+													<Button name="ШаблонЗаполненияПереместитьВверх" id="87">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Item.ШаблонЗаполнения.StandardCommand.MoveUp</CommandName>
+														<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+														<ExtendedTooltip name="ШаблонЗаполненияПереместитьВверхРасширеннаяПодсказка" id="88"/>
+													</Button>
+													<Button name="ШаблонЗаполненияПереместитьВниз" id="89">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Item.ШаблонЗаполнения.StandardCommand.MoveDown</CommandName>
+														<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+														<ExtendedTooltip name="ШаблонЗаполненияПереместитьВнизРасширеннаяПодсказка" id="90"/>
+													</Button>
+												</ChildItems>
+											</ButtonGroup>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ШаблонЗаполненияРасширеннаяПодсказка" id="63"/>
+									<SearchStringAddition name="ШаблонЗаполненияСтрокаПоиска" id="64">
+										<AdditionSource>
+											<Item>ШаблонЗаполнения</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ШаблонЗаполненияСтрокаПоискаКонтекстноеМеню" id="65"/>
+										<ExtendedTooltip name="ШаблонЗаполненияСтрокаПоискаРасширеннаяПодсказка" id="66"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ШаблонЗаполненияСостояниеПросмотра" id="67">
+										<AdditionSource>
+											<Item>ШаблонЗаполнения</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ШаблонЗаполненияСостояниеПросмотраКонтекстноеМеню" id="68"/>
+										<ExtendedTooltip name="ШаблонЗаполненияСостояниеПросмотраРасширеннаяПодсказка" id="69"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ШаблонЗаполненияУправлениеПоиском" id="70">
+										<AdditionSource>
+											<Item>ШаблонЗаполнения</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ШаблонЗаполненияУправлениеПоискомКонтекстноеМеню" id="71"/>
+										<ExtendedTooltip name="ШаблонЗаполненияУправлениеПоискомРасширеннаяПодсказка" id="72"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="ШаблонЗаполненияНомерСтроки" id="73">
+											<DataPath>Объект.ШаблонЗаполнения.LineNumber</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<FixingInTable>Left</FixingInTable>
+											<ShowInHeader>false</ShowInHeader>
+											<ShowInFooter>false</ShowInFooter>
+											<ContextMenu name="ШаблонЗаполненияНомерСтрокиКонтекстноеМеню" id="74"/>
+											<ExtendedTooltip name="ШаблонЗаполненияНомерСтрокиРасширеннаяПодсказка" id="75"/>
+										</LabelField>
+										<CheckBoxField name="ШаблонЗаполненияВключитьВКалендарь" id="76">
+											<DataPath>Объект.ШаблонЗаполнения.ВключитьВКалендарь</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<ShowInFooter>false</ShowInFooter>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ШаблонЗаполненияВключитьВКалендарьКонтекстноеМеню" id="77"/>
+											<ExtendedTooltip name="ШаблонЗаполненияВключитьВКалендарьРасширеннаяПодсказка" id="78"/>
+										</CheckBoxField>
+									</ChildItems>
+								</Table>
+								<UsualGroup name="Группа6" id="119">
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="120"/>
+									<ChildItems>
+										<Button name="Назад" id="115">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.Назад</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;&lt; Назад</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="НазадРасширеннаяПодсказка" id="116"/>
+										</Button>
+										<Button name="ЗаполнитьКалендарь" id="99">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ЗаполнитьКалендарь</CommandName>
+											<BackColor>style:ActivityColor</BackColor>
+											<Font bold="true" kind="AutoFont"/>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Результат &gt;&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЗаполнитьКалендарьРасширеннаяПодсказка" id="100"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.CW_ПлатежныеКалендари</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ГодКалендаря" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Год</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаКалендаря" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата календаря</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДниКалендаря" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дни календаря</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ДниПроизводственногоКалендаря" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дни календаря</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ДатаНачала" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить с даты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДниНедели" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дни недели</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПоказатьСкрытьПараметрыЗаполнения" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать скрыть параметры заполнения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МодифицированностьКалендаря" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Модифицированность календаря</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредыдущийГодКалендаря" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Год</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьКалендарь" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить календарь</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить календарь</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьКалендарь</Action>
+			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ПараметрыЗаполнения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить календарь</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры заполнения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.CW_Звезда</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПараметрыЗаполнения</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Назад" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Назад</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.CW_ДанныеПлатежногоКалендаря.StandardCommand.OpenByValue.ПлатежныйКалендарь</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

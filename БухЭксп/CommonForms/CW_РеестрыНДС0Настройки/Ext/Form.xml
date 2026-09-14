@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Реестры НДС 0%</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>OpenFromMainServer</ExcludedCommand>
+		<ExcludedCommand>OpenFromStandaloneServer</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПараметр" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметр приложения декларации для подтверждения НДС 0%</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа параметр</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<BackColor>style:ГруппаОперацийФонГруппы</BackColor>
+			<ExtendedTooltip name="ГруппаПараметрРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<InputField name="ПараметрПриложенияРеестра" id="1">
+					<DataPath>МониторинговыйПараметрПриложения</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<Width>40</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПараметрПриложенияРеестраКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ПараметрПриложенияРеестраРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">ПараметрПриложенияРеестраПриИзменении</Event>
+					</Events>
+				</InputField>
+				<Button name="ПомщникНастройкиРеестрНДС05" id="33">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ПомощникНастройкиРеестрНДС0</CommandName>
+					<ExtendedTooltip name="ПомщникНастройкиРеестрНДС05РасширеннаяПодсказка" id="34"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПодменаПеревозок" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подмена грузоперевозок</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа параметр</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<BackColor>style:ГруппаОперацийФонГруппы</BackColor>
+			<ExtendedTooltip name="ГруппаПодменаПеревозокРасширеннаяПодсказка" id="45"/>
+			<ChildItems>
+				<CheckBoxField name="ИспользуетсяПодменаГрузоперевозок" id="35">
+					<DataPath>ИспользуетсяПодменаГрузоперевозок</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользуетсяПодменаГрузоперевозокКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ИспользуетсяПодменаГрузоперевозокРасширеннаяПодсказка" id="37"/>
+					<Events>
+						<Event name="OnChange">ИспользуетсяПодменаГрузоперевозокПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="Группа4" id="46">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<InputField name="ПараметрТребуетсяПодменаГрузоперевозок" id="41">
+							<DataPath>ПараметрТребуетсяПодменаГрузоперевозок</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+							<ContextMenu name="ПараметрТребуетсяПодменаГрузоперевозокКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="ПараметрТребуетсяПодменаГрузоперевозокРасширеннаяПодсказка" id="43"/>
+							<Events>
+								<Event name="OnChange">ПараметрТребуетсяПодменаГрузоперевозокПриИзменении</Event>
+								<Event name="StartChoice">ПараметрТребуетсяПодменаГрузоперевозокНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ПараметрГрузоперевозкаДляЗамены" id="38">
+							<DataPath>ПараметрГрузоперевозкаДляЗамены</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+							<ContextMenu name="ПараметрГрузоперевозкаДляЗаменыКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="ПараметрГрузоперевозкаДляЗаменыРасширеннаяПодсказка" id="40"/>
+							<Events>
+								<Event name="OnChange">ПараметрГрузоперевозкаДляЗаменыПриИзменении</Event>
+								<Event name="StartChoice">ПараметрГрузоперевозкаДляЗаменыНачалоВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПодписка" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписка</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подписка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<BackColor>style:ГруппаОперацийФонГруппы</BackColor>
+			<ExtendedTooltip name="ГруппаПодпискаРасширеннаяПодсказка" id="7"/>
+			<ChildItems>
+				<UsualGroup name="Группа1" id="23">
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="24"/>
+					<ChildItems>
+						<LabelField name="РегНомер" id="20">
+							<DataPath>РегНомер</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Регистрационный номер</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Top</TitleLocation>
+							<Width>16</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+							</Border>
+							<BackColor>#FFFFFF</BackColor>
+							<ContextMenu name="РегНомерКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="РегНомерРасширеннаяПодсказка" id="22"/>
+						</LabelField>
+						<LabelField name="НазваниеКомпании" id="17">
+							<DataPath>НазваниеКомпании</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Организация</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Top</TitleLocation>
+							<Width>40</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+							</Border>
+							<BackColor>#FFFFFF</BackColor>
+							<ContextMenu name="НазваниеКомпанииКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="НазваниеКомпанииРасширеннаяПодсказка" id="19"/>
+						</LabelField>
+						<LabelField name="Статус" id="14">
+							<DataPath>Статус</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>Top</TitleLocation>
+							<Width>15</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+							</Border>
+							<BackColor>#FFFFFF</BackColor>
+							<Font bold="true" kind="AutoFont"/>
+							<ContextMenu name="СтатусКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="16"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа2" id="25">
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="26"/>
+					<ChildItems>
+						<LabelField name="ТекущийТариф" id="11">
+							<DataPath>ТекущийТариф</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тариф</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+							</Border>
+							<BackColor>#FFFFFF</BackColor>
+							<Font bold="true" kind="AutoFont"/>
+							<ContextMenu name="ТекущийТарифКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ТекущийТарифРасширеннаяПодсказка" id="13"/>
+						</LabelField>
+						<LabelField name="ДатаОкончания" id="8">
+							<DataPath>ДатаОкончания</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Срок действия</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Top</TitleLocation>
+							<Width>15</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+							</Border>
+							<BackColor>#FFFFFF</BackColor>
+							<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="10"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа3" id="31">
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="32"/>
+					<ChildItems>
+						<Button name="ОбщаяКомандаCW_РеестрыНДС0ПродлениеПодписки" id="27">
+							<Type>Hyperlink</Type>
+							<CommandName>CommonCommand.CW_РеестрыНДС0ПродлитьПодписку</CommandName>
+							<ExtendedTooltip name="ОбщаяКомандаCW_РеестрыНДС0ПродлениеПодпискиРасширеннаяПодсказка" id="28"/>
+						</Button>
+						<Button name="ОбщаяКомандаCW_РеестрыНДС0СписокСчетов" id="29">
+							<Type>Hyperlink</Type>
+							<CommandName>CommonCommand.CW_РеестрыНДС0СписокСчетов</CommandName>
+							<ExtendedTooltip name="ОбщаяКомандаCW_РеестрыНДС0СписокСчетовРасширеннаяПодсказка" id="30"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="МониторинговыйПараметрПриложения" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметр</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.CW_ПараметрыГрузоперевозок</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НазваниеКомпании" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Название компании</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РегНомер" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рег номер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Статус" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийТариф" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий тариф</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаНачала" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действует с</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаОкончания" id="8">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользуетсяПодменаГрузоперевозок" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используется подмена грузоперевозок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрТребуетсяПодменаГрузоперевозок" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметр "Требуется подмена грузоперевозок"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.CW_ПараметрыГрузоперевозок</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+			<FunctionalOptions>
+				<Item>FunctionalOption.CW_РеестрыНДС0ИспользуетсяПодменаГрузоперевозок</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ПараметрГрузоперевозкаДляЗамены" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметр "Грузоперевозка для замены"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.CW_ПараметрыГрузоперевозок</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+			<FunctionalOptions>
+				<Item>FunctionalOption.CW_РеестрыНДС0ИспользуетсяПодменаГрузоперевозок</Item>
+			</FunctionalOptions>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПомощникНастройкиРеестрНДС0" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Помощник настройки заполнения параметра</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Помощник настройки реестр НДС0</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПомощникНастройкиРеестрНДС0</Action>
+		</Command>
+	</Commands>
+</Form>
